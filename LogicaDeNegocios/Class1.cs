@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
+    /*Sergio Campoverde*/
     public class Class1
     {
 

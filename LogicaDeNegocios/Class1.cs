@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
+    /*Rnny gomez */
     public class Class1
     {
 

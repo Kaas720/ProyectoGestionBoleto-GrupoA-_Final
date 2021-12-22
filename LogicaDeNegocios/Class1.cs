@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
-{
+{/*Dennis*/
     public class Class1
     {
 

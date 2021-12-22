@@ -32,11 +32,13 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaAdministrador));
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
             this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +48,7 @@ namespace Presentacion
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Hora_Sistema = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Fecha_Hora_Sistema = new System.Windows.Forms.Timer(this.components);
@@ -53,8 +56,10 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelSuperior
@@ -118,6 +123,7 @@ namespace Presentacion
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.panel2.Controls.Add(this.guna2CirclePictureBox1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -125,6 +131,21 @@ namespace Presentacion
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(205, 168);
             this.panel2.TabIndex = 1;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(58, 42);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(92, 85);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox1.TabIndex = 4;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
             // 
             // label3
             // 
@@ -254,12 +275,25 @@ namespace Presentacion
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.panel4.Controls.Add(this.guna2PictureBox1);
             this.panel4.Controls.Add(this.Hora_Sistema);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(0, 35);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(922, 42);
             this.panel4.TabIndex = 3;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, -5);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 47);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // Hora_Sistema
             // 
@@ -277,7 +311,7 @@ namespace Presentacion
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(89, 9);
+            this.label4.Location = new System.Drawing.Point(98, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(214, 18);
             this.label4.TabIndex = 0;
@@ -311,9 +345,11 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,6 +373,8 @@ namespace Presentacion
         private System.Windows.Forms.Label Hora_Sistema;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer Fecha_Hora_Sistema;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
 

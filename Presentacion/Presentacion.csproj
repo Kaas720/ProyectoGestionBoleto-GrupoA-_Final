@@ -70,6 +70,12 @@
     <Compile Include="SGA_Administrador\VentanaAdministrador.designer.cs">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGA_Cooperativa\Ventana_principal_cooperativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Cooperativa\Ventana_principal_cooperativa.designer.cs">
+      <DependentUpon>Ventana_principal_cooperativa.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioCliente\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="SGA_Administrador\VentanaAdministrador.resx">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Cooperativa\Ventana_principal_cooperativa.resx">
+      <DependentUpon>Ventana_principal_cooperativa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>

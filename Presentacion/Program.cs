@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SGA.SGA_Pasajero;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal_Usuario());
+            Application.Run(new Pasjero());
         }
     }
 }

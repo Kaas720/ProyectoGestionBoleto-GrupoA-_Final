@@ -32,5 +32,18 @@ namespace Presentacion
         {
             Application.Exit();
         }
+
+        private void BotonCierreDeAplicacion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void BotonParaMinimizarVentana_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

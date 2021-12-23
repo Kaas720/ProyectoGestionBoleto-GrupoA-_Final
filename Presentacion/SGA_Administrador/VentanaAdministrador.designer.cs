@@ -125,6 +125,7 @@ namespace Presentacion
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(205, 168);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label3
             // 
@@ -182,12 +183,13 @@ namespace Presentacion
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 55;
-            this.iconButton4.Location = new System.Drawing.Point(0, 269);
+            this.iconButton4.Location = new System.Drawing.Point(0, 267);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(205, 87);
             this.iconButton4.TabIndex = 3;
             this.iconButton4.Text = "HISTORIAL";
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton3
             // 
@@ -202,12 +204,13 @@ namespace Presentacion
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 55;
-            this.iconButton3.Location = new System.Drawing.Point(0, 179);
+            this.iconButton3.Location = new System.Drawing.Point(0, 177);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(205, 90);
             this.iconButton3.TabIndex = 2;
             this.iconButton3.Text = "REPORTE";
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -222,12 +225,13 @@ namespace Presentacion
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 55;
-            this.iconButton2.Location = new System.Drawing.Point(0, 89);
+            this.iconButton2.Location = new System.Drawing.Point(0, 87);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(205, 90);
             this.iconButton2.TabIndex = 1;
             this.iconButton2.Text = "ELIMINAR";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -245,11 +249,12 @@ namespace Presentacion
             this.iconButton1.Location = new System.Drawing.Point(0, 0);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(205, 89);
+            this.iconButton1.Size = new System.Drawing.Size(205, 87);
             this.iconButton1.TabIndex = 0;
             this.iconButton1.Text = "REGISTRAR";
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // panel4
             // 

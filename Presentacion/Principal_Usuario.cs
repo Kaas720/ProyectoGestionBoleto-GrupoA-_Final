@@ -45,5 +45,17 @@ namespace Presentacion
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            RegistroCliente cl = new RegistroCliente();
+            cl.ShowDialog();
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            Comprar ob = new Comprar();
+            ob.ShowDialog();
+        }
     }
 }

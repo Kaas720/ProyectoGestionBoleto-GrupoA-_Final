@@ -10,7 +10,11 @@ namespace LogicaDeNegocios.Modulo_de_cliente
     {
         private int idCliente;
 
-     public Cliente(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña, int idCliente)
+        public Cliente(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña) : base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
+        {
+        }
+
+        public Cliente(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña, int idCliente)
          : base(cedula, nombre, sexo, telefono, correo, ciudad,  usuario, contraseña)
         {
           this.idCliente = idCliente;

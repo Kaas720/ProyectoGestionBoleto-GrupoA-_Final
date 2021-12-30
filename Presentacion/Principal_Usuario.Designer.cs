@@ -130,7 +130,7 @@ namespace Presentacion
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.panel1.Controls.Add(this.Hora_Sistema);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(0, 35);
+            this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(922, 42);
             this.panel1.TabIndex = 8;

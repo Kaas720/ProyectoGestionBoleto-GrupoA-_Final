@@ -29,5 +29,10 @@ namespace Presentacion
             obj.Show();
             this.Hide();
         }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

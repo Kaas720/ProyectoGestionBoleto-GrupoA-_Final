@@ -99,5 +99,13 @@ namespace Presentacion
         {
 
         }
+
+        private void BotonCierreDeAplicacion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

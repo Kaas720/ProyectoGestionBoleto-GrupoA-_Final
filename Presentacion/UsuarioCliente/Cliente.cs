@@ -27,5 +27,13 @@ namespace Presentacion
             Comprar obj = new Comprar();
             obj.ShowDialog();
         }
+
+        private void BotonCierreDeAplicacion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

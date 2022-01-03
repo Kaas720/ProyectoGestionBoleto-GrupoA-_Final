@@ -71,6 +71,8 @@ namespace Presentacion
                     dgvCliente.Rows[n].Cells[6].Value = txtUsuario.Text;
                     dgvCliente.Rows[n].Cells[7].Value = txtTelefono.Text;
                     adm.Limpiar(txtCedula, txtNombre, cmbSexo, txtTelefono, txtCorreo, txtCiudad, txtUsuario, txtContraseña);
+                    Cliente ob = new Cliente();
+                    ob.ShowDialog();
                 }
             }
             else
@@ -107,5 +109,6 @@ namespace Presentacion
                 Application.Exit();
             }
         }
+
     }
 }

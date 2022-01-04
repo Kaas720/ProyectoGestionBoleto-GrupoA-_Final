@@ -35,5 +35,34 @@ namespace Presentacion
                 Application.Exit();
             }
         }
+
+        private void guna2Button5_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void cbOrigen_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(cbOrigen.Text) && String.IsNullOrEmpty(cbDestino.Text))
+            {
+                cbHorario.Visible = false;
+            }
+            else
+            {
+                cbHorario.Visible = true;
+            }
+        }
+
+        private void cbDestino_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(cbOrigen.Text) && String.IsNullOrEmpty(cbDestino.Text))
+            {
+                cbHorario.Visible = false;
+            }
+            else
+            {
+                cbHorario.Visible = true;
+            }
+        }
     }
 }

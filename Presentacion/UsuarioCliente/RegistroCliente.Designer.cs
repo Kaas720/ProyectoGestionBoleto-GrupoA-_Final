@@ -30,17 +30,15 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
-            this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Hora_Sistema = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,9 +69,9 @@ namespace Presentacion
             this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.btnSalir = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
@@ -90,7 +88,6 @@ namespace Presentacion
             this.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.PanelSuperior.Controls.Add(this.Fecha_Sistema);
             this.PanelSuperior.Controls.Add(this.BotonParaMinimizarVentana);
-            this.PanelSuperior.Controls.Add(this.BotonCierreDeAplicacion);
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
             this.PanelSuperior.Name = "PanelSuperior";
@@ -105,9 +102,8 @@ namespace Presentacion
             this.Fecha_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Fecha_Sistema.Location = new System.Drawing.Point(372, 11);
             this.Fecha_Sistema.Name = "Fecha_Sistema";
-            this.Fecha_Sistema.Size = new System.Drawing.Size(60, 20);
+            this.Fecha_Sistema.Size = new System.Drawing.Size(0, 20);
             this.Fecha_Sistema.TabIndex = 2;
-            this.Fecha_Sistema.Text = "LABEL";
             this.Fecha_Sistema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BotonParaMinimizarVentana
@@ -125,27 +121,11 @@ namespace Presentacion
             this.BotonParaMinimizarVentana.TabIndex = 1;
             this.BotonParaMinimizarVentana.TabStop = false;
             // 
-            // BotonCierreDeAplicacion
-            // 
-            this.BotonCierreDeAplicacion.BackColor = System.Drawing.Color.Transparent;
-            this.BotonCierreDeAplicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonCierreDeAplicacion.ForeColor = System.Drawing.Color.Yellow;
-            this.BotonCierreDeAplicacion.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.BotonCierreDeAplicacion.IconColor = System.Drawing.Color.Yellow;
-            this.BotonCierreDeAplicacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonCierreDeAplicacion.IconSize = 37;
-            this.BotonCierreDeAplicacion.Location = new System.Drawing.Point(874, 5);
-            this.BotonCierreDeAplicacion.Name = "BotonCierreDeAplicacion";
-            this.BotonCierreDeAplicacion.Size = new System.Drawing.Size(41, 37);
-            this.BotonCierreDeAplicacion.TabIndex = 0;
-            this.BotonCierreDeAplicacion.TabStop = false;
-            this.BotonCierreDeAplicacion.Click += new System.EventHandler(this.BotonCierreDeAplicacion_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.guna2HtmlLabel9);
             this.panel1.Controls.Add(this.Hora_Sistema);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(922, 42);
@@ -161,17 +141,6 @@ namespace Presentacion
             this.Hora_Sistema.Size = new System.Drawing.Size(80, 24);
             this.Hora_Sistema.TabIndex = 1;
             this.Hora_Sistema.Text = "17:51:10";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(89, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 18);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "BIENVENIDO A VIAJEROS S.A";
             // 
             // panel2
             // 
@@ -200,9 +169,9 @@ namespace Presentacion
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(430, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
+            this.label2.Size = new System.Drawing.Size(96, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "USUARIO";
+            this.label2.Text = "REGISTRATE";
             // 
             // guna2HtmlLabel1
             // 
@@ -483,21 +452,21 @@ namespace Presentacion
             // 
             this.dgvCliente.AllowUserToAddRows = false;
             this.dgvCliente.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCliente.BackgroundColor = System.Drawing.Color.White;
             this.dgvCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvCliente.ColumnHeadersHeight = 21;
             this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cedula,
@@ -508,14 +477,14 @@ namespace Presentacion
             this.Ciudad,
             this.Usuario,
             this.Contraseña});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvCliente.EnableHeadersVisualStyles = false;
             this.dgvCliente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCliente.Location = new System.Drawing.Point(28, 422);
@@ -646,6 +615,18 @@ namespace Presentacion
             this.btnSalir.Size = new System.Drawing.Size(144, 45);
             this.btnSalir.TabIndex = 36;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(302, 8);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(319, 26);
+            this.guna2HtmlLabel9.TabIndex = 4;
+            this.guna2HtmlLabel9.Text = "Sistema de Gestion de AutoBuses";
             // 
             // RegistroCliente
             // 
@@ -680,7 +661,6 @@ namespace Presentacion
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -697,10 +677,8 @@ namespace Presentacion
         private System.Windows.Forms.Panel PanelSuperior;
         private System.Windows.Forms.Label Fecha_Sistema;
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
-        private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Hora_Sistema;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -731,5 +709,6 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Contraseña;
         private Guna.UI2.WinForms.Guna2Button btnSalir;
         private Guna.UI2.WinForms.Guna2Button btnGuardar;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
     }
 }

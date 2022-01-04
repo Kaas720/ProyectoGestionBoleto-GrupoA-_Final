@@ -36,8 +36,8 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2, Version=2.0.2.6, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.6\lib\net40\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.2.7, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.7\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -79,19 +79,19 @@
     <Compile Include="UsuarioCliente\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioCliente\Cliente.Designer.cs">
+    <Compile Include="UsuarioCliente\Cliente.designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioCliente\Comprar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioCliente\Comprar.Designer.cs">
+    <Compile Include="UsuarioCliente\Comprar.designer.cs">
       <DependentUpon>Comprar.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioCliente\RegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioCliente\RegistroCliente.Designer.cs">
+    <Compile Include="UsuarioCliente\RegistroCliente.designer.cs">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Principal_Usuario.resx">

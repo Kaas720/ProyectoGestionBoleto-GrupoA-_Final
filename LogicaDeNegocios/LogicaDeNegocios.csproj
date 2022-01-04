@@ -55,6 +55,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Modulo de administrador\Administrador.cs" />
     <Compile Include="Modulo de cliente\AdmCliente.cs" />
+    <Compile Include="Modulo de cliente\Boleto.cs" />
     <Compile Include="Modulo de cliente\Cliente.cs" />
     <Compile Include="Modulo de cliente\Validacion.cs" />
     <Compile Include="Modulo de vendedor\Vendedor.cs" />

@@ -23,6 +23,11 @@ namespace Presentacion
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             nuevodatos.conectar();
+            string text = "administrador";
+            if ()
+            {
+                metodoAdministradorLogin()
+            }
         }
     }
 }

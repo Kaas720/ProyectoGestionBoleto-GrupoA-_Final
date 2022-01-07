@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicaDeNegocios.Modulo_de_cliente;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,30 @@ namespace Presentacion.UsuarioCliente
 {
     public partial class ActualizarCliente : Form
     {
-        public ActualizarCliente()
+        AdmCliente adm = AdmCliente.GetAdm();
+        Validacion v = new Validacion();
+        string cedula = "";
+
+        public ActualizarCliente(string cedula)
         {
             InitializeComponent();
+            this.cedula = cedula;
+            adm.Inicializar(txtCedula, txtNombre, cmbSexo, txtTelefono, txtCorreo, txtCiudad, txtUsuario, txtContraseña, cedula);
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            string telefono = txtTelefono.Text.Trim(), ciudad = txtCiudad.Text.Trim();
+            if (!v.EsVacioAc(telefono, ciudad))
+            {
+                adm.Modificar(cedula, telefono, ciudad);
+                MessageBox.Show("Datos actualizados correctamente");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Existe un campo vacio");
+            }
         }
     }
 }

@@ -476,6 +476,7 @@ namespace Presentacion.UsuarioCliente
             this.btnActualizar.Size = new System.Drawing.Size(144, 45);
             this.btnActualizar.TabIndex = 50;
             this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // ActualizarCliente
             // 

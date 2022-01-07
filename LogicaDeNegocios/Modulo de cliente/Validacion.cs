@@ -19,5 +19,15 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             }
             return x;
         }
+
+        public bool EsVacioAc(string telefono, string ciudad)
+        {
+            bool x = false;
+            if (string.IsNullOrEmpty(telefono)||string.IsNullOrEmpty(ciudad))
+            {
+                x = true;
+            }
+            return x;
+        }
     }
 }

@@ -21,11 +21,41 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             lista = new List<Cliente>();
         }
 
+        public void Inicializar(Guna2TextBox txtCedula, Guna2TextBox txtNombre, Guna2ComboBox cmbSexo, Guna2TextBox txtTelefono, Guna2TextBox txtCorreo, Guna2TextBox txtCiudad, Guna2TextBox txtUsuario, Guna2TextBox txtContraseña, string cedula)
+        {
+            for(int i =0; i < lista.Count; i++)
+            {
+                if (lista[i].Cedula.CompareTo(cedula) == 0)
+                {
+                    txtCedula.Enabled = false;
+                    txtNombre.Enabled = false;
+                    cmbSexo.Enabled = false;
+                    txtTelefono.Text = lista[i].Telefono;
+                    txtCorreo.Enabled = false;
+                    txtCiudad.Text = lista[i].Ciudad;
+                    txtUsuario.Enabled = false;
+                    txtContraseña.Enabled = false;
+                }
+            }
+        }
+
         public static AdmCliente GetAdm()
         {
             if (adm == null)
                 adm = new AdmCliente();
             return adm;
+        }
+
+        public void Modificar(string telefono, string ciudad, string cedula)
+        {
+            for(int i = 0; i < lista.Count; i++)
+            {
+                if (lista[i].Cedula.CompareTo(cedula) == 0)
+                {
+                    lista[i].Telefono = telefono;
+                    lista[i].Ciudad = ciudad;
+                }
+            }
         }
 
         public int GetLista()

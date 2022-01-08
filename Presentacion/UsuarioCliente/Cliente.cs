@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentacion.UsuarioCliente;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Presentacion
 {
     public partial class Cliente : Form
     {
-        public Cliente()
+        string cedula;
+        public Cliente(string cedula)
         {
             InitializeComponent();
+            this.cedula = cedula;
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -64,7 +67,8 @@ namespace Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            ActualizarCliente ob = new ActualizarCliente(this.cedula);
+            ob.ShowDialog();
         }
     }
 }

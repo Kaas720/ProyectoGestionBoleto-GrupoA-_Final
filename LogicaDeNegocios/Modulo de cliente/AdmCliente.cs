@@ -28,12 +28,17 @@ namespace LogicaDeNegocios.Modulo_de_cliente
                 if (lista[i].Cedula.CompareTo(cedula) == 0)
                 {
                     txtCedula.Enabled = false;
+                    txtNombre.Text = lista[i].Nombre;
                     txtNombre.Enabled = false;
+                    cmbSexo.Text = lista[i].Sexo;
                     cmbSexo.Enabled = false;
                     txtTelefono.Text = lista[i].Telefono;
+                    txtCorreo.Text = lista[i].Correo;
                     txtCorreo.Enabled = false;
                     txtCiudad.Text = lista[i].Ciudad;
+                    txtUsuario.Text = lista[i].Usuario;
                     txtUsuario.Enabled = false;
+                    txtContraseña.Text = lista[i].Contraseña;
                     txtContraseña.Enabled = false;
                 }
             }

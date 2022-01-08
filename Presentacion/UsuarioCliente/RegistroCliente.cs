@@ -17,11 +17,6 @@ namespace Presentacion
         Validacion v = new Validacion();
         private string cedula;
 
-        public RegistroCliente(string cedula)
-        {
-            this.cedula = cedula;
-        }
-
         public RegistroCliente()
         {
             InitializeComponent();
@@ -35,7 +30,7 @@ namespace Presentacion
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-            Cliente obj = new Cliente();
+            Cliente obj = new Cliente(cedula);
             obj.Show();
             this.Hide();
         }
@@ -70,9 +65,11 @@ namespace Presentacion
                     dgvCliente.Rows[n].Cells[5].Value = txtCiudad.Text;
                     dgvCliente.Rows[n].Cells[6].Value = txtUsuario.Text;
                     dgvCliente.Rows[n].Cells[7].Value = txtTelefono.Text;
+                    Cliente ob = new Cliente(txtCedula.Text);
+                
                     adm.Limpiar(txtCedula, txtNombre, cmbSexo, txtTelefono, txtCorreo, txtCiudad, txtUsuario, txtContraseña);
-                    Cliente ob = new Cliente();
                     ob.ShowDialog();
+                    
                 }
             }
             else

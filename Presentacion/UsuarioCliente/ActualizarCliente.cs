@@ -15,13 +15,13 @@ namespace Presentacion.UsuarioCliente
     {
         AdmCliente adm = AdmCliente.GetAdm();
         Validacion v = new Validacion();
-        string cedula = "";
-
+        string cedula;
+        
         public ActualizarCliente(string cedula)
         {
             InitializeComponent();
-            this.cedula = cedula;
             adm.Inicializar(txtCedula, txtNombre, cmbSexo, txtTelefono, txtCorreo, txtCiudad, txtUsuario, txtContraseña, cedula);
+            this.cedula = cedula;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -37,6 +37,11 @@ namespace Presentacion.UsuarioCliente
             {
                 MessageBox.Show("Existe un campo vacio");
             }
+        }
+
+        private void ActualizarCliente_Shown(object sender, EventArgs e)
+        {
+            txtCedula.Text = cedula;
         }
     }
 }

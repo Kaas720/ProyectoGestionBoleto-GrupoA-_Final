@@ -269,6 +269,7 @@ namespace Presentacion.UsuarioCliente
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderText = "";
+            this.txtCorreo.ReadOnly = true;
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.ShadowDecoration.Parent = this.txtCorreo;
             this.txtCorreo.Size = new System.Drawing.Size(197, 36);
@@ -508,6 +509,7 @@ namespace Presentacion.UsuarioCliente
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ActualizarCliente";
             this.Text = "ActualizarCliente";
+            this.Shown += new System.EventHandler(this.ActualizarCliente_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.PanelSuperior.ResumeLayout(false);

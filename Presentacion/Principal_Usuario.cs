@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using LogicaDeNegocios.Modulo_de_cliente;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace Presentacion
 {
     public partial class Principal_Usuario : Form
     {
+        AdmCliente cliente = AdmCliente.GetAdm();
         public Principal_Usuario()
         {
             InitializeComponent();
+          //  cliente.Conectar();
         }
 
         private void guna2HtmlLabel3_Click(object sender, EventArgs e)
@@ -49,13 +53,41 @@ namespace Presentacion
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             RegistroCliente cl = new RegistroCliente();
-            cl.ShowDialog();
+            cl.Show();
+            this.Hide();
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
             Comprar ob = new Comprar();
-            ob.ShowDialog();
+            ob.Show();
+            this.Hide();
         }
+
+        private void cbOrigen_Click(object sender, EventArgs e)
+        {
+           
+            if (String.IsNullOrEmpty(cbOrigen.Text) && String.IsNullOrEmpty(cbDestino.Text))
+            {
+                cbHorario.Visible = false;
+            }
+            else
+            {
+                cbHorario.Visible = true;
+            }
+        }
+
+        private void cbDestino_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(cbOrigen.Text) && String.IsNullOrEmpty(cbDestino.Text))
+            {
+                cbHorario.Visible = false;
+            }
+            else
+            {
+                cbHorario.Visible = true;
+            }
+        }
+
     }
 }

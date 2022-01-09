@@ -12,7 +12,7 @@ namespace Datos.Coneccion
         private static string conexionDB = "server=localhost;user id=root;password=admin;database=sga";
         private MySqlConnection conection = null;
         public MySqlConnection Conection { get => this.conection; set => this.conection = value; }
-
+        /**/
         public string Conectar()
         {
             try

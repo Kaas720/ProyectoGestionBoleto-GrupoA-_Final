@@ -21,9 +21,11 @@ namespace Presentacion
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
+
+            this.Hide();
+            Principal_Usuario principal = new Principal_Usuario();
+            principal.Show();
             this.Dispose();
-
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

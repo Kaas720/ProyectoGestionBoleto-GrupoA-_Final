@@ -17,6 +17,11 @@ namespace Presentacion
         Validacion v = new Validacion();
         private string cedula;
 
+        public RegistroCliente(string cedula)
+        {
+            this.cedula = cedula;
+        }
+
         public RegistroCliente()
         {
             InitializeComponent();
@@ -42,12 +47,13 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+           // int id = 0;
             string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text.Trim(), sexo = cmbSexo.Text.Trim(),
                 telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(), ciudad = txtCiudad.Text.Trim(),
                 usuario = txtUsuario.Text.Trim(), contraseña = txtContraseña.Text.Trim();
             string contenido = "";
-            if (!adm.Vacio(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña))
-            {
+            contenido = (cedula + nombre + sexo+ telefono+ correo+ ciudad+ usuario+ contraseña);
+            //{
                 bool existe = v.ValidarCedula(cedula);
                 if (existe == false)
                 {
@@ -55,7 +61,7 @@ namespace Presentacion
                 }
                 else
                 {
-                    contenido = adm.Guardar(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña);
+                   contenido = adm.Guardar(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña);
                     int n = dgvCliente.Rows.Add();
                     dgvCliente.Rows[n].Cells[0].Value = txtCedula.Text;
                     dgvCliente.Rows[n].Cells[1].Value = txtNombre.Text;
@@ -64,16 +70,14 @@ namespace Presentacion
                     dgvCliente.Rows[n].Cells[4].Value = txtCorreo.Text;
                     dgvCliente.Rows[n].Cells[5].Value = txtCiudad.Text;
                     dgvCliente.Rows[n].Cells[6].Value = txtUsuario.Text;
-                    dgvCliente.Rows[n].Cells[7].Value = txtTelefono.Text;
-                    Cliente ob = new Cliente(txtCedula.Text);
-                
+                    dgvCliente.Rows[n].Cells[7].Value = txtContraseña.Text;
                     adm.Limpiar(txtCedula, txtNombre, cmbSexo, txtTelefono, txtCorreo, txtCiudad, txtUsuario, txtContraseña);
-                    ob.ShowDialog();
-                    
+                this.Hide();
+                Cliente ob = new Cliente(cedula);
+                    ob.Show();
+                
                 }
-            }
-            else
-                MessageBox.Show("Falta ingresar campos");
+           
         }
 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
@@ -93,28 +97,12 @@ namespace Presentacion
                 return;
             }
         }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BotonCierreDeAplicacion_Click(object sender, EventArgs e)
-        {
-           /* if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }*/
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Principal_Usuario principal = new Principal_Usuario();
+            principal.Show();
             this.Dispose();
-        }
-
-        private void guna2Button1_Click_1(object sender, EventArgs e)
-        {
-           
         }
     }
 }

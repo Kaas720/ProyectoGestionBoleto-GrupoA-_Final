@@ -88,7 +88,7 @@
     <Compile Include="UsuarioCliente\Comprar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioCliente\Comprar.designer.cs">
+    <Compile Include="UsuarioCliente\Comprar.Designer.cs">
       <DependentUpon>Comprar.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioCliente\RegistroCliente.cs">

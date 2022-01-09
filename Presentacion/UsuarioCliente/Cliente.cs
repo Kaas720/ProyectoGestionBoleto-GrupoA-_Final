@@ -33,11 +33,20 @@ namespace Presentacion
 
         private void BotonCierreDeAplicacion_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("¿Está seguro de cerrar sesión?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Hide();
+                Principal_Usuario principal = new Principal_Usuario();
+                principal.Show();
+                this.Dispose();
+            }
         }
 
         private void guna2Button5_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
+            Principal_Usuario principal = new Principal_Usuario();
+            principal.Show();
             this.Dispose();
         }
 
@@ -67,8 +76,8 @@ namespace Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            ActualizarCliente ob = new ActualizarCliente(this.cedula);
-            ob.ShowDialog();
+            ActualizarCliente cliente = new ActualizarCliente(this.cedula);
+            cliente.Show();
         }
     }
 }

@@ -39,6 +39,9 @@
     <Reference Include="Guna.UI2, Version=2.0.2.8, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.8\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="JetBrains.Annotations, Version=2021.2.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.2021.2.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />

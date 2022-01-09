@@ -1,17 +1,21 @@
 ﻿using Guna.UI2.WinForms;
-using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Datos;
+using LogicaDeNegocios.RegistroDB;
 
 namespace LogicaDeNegocios.Modulo_de_cliente
 {
     public class AdmCliente
     {
+       // RegistroCliente datos = new RegistroCliente();
+        Conexion conexion = new Conexion();
         List<Cliente> lista = null;
         private static AdmCliente adm = null;
-        Cliente c = null;
+        Cliente cliente = null;
         Validacion v = new Validacion();
 
         public List<Cliente> Lista { get => lista; set => lista = value; }
@@ -83,9 +87,10 @@ namespace LogicaDeNegocios.Modulo_de_cliente
         public string Guardar(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña)
         {
             string x = "No se creo el objeto";
-            c = new Cliente(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña);
-            x = c.ToString();
-            lista.Add(c);
+            cliente = new Cliente(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña);
+          //  datos.InsertarCliente(cliente);
+            x = cliente.ToString();
+            lista.Add(cliente);
             return x;
         }
 
@@ -99,6 +104,20 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             txtCiudad.Clear();
             txtUsuario.Clear();
             txtContraseña.Clear();
+        }
+        public void Conectar()
+        {
+            string mensaje = "";
+            mensaje = conexion.Conectar();
+            if (mensaje[0] == '1')
+            {
+                MessageBox.Show("Conexion Satisfactoria");
+            }
+            else
+            {
+                MessageBox.Show("Error " + mensaje);
+            }
+            conexion.Cerrar();
         }
     }
 }

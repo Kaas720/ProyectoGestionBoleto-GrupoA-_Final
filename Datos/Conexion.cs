@@ -1,15 +1,18 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Threading.Tasks;
 
-namespace Datos.Coneccion
+namespace Datos
 {
     public class Conexion
     {
-        private static string conexionDB = "server=localhost;user id=root;password=admin;database=sga";
+        private static string conexionDB = "Server=MYSQL5045.site4now.net;Database=db_a7eb45_sga;Uid=a7eb45_sga;Pwd=1234emelec";
+            //"user id=a7eb45_sga;server=MYSQL5045.site4now.net;database=db_a7eb45_sga";
+            
         private MySqlConnection conection = null;
         public MySqlConnection Conection { get => this.conection; set => this.conection = value; }
         /**/

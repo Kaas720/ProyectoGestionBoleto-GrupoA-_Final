@@ -18,7 +18,7 @@ namespace Presentacion
         public Principal_Usuario()
         {
             InitializeComponent();
-          //  cliente.Conectar();
+          cliente.Conectar();
         }
 
         private void guna2HtmlLabel3_Click(object sender, EventArgs e)

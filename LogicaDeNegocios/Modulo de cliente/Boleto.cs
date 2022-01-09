@@ -40,7 +40,7 @@ namespace LogicaDeNegocios.Modulo_de_cliente
         public double Precio { get => precio; set => precio = value; }
         public double Impuesto { get => impuesto; set => impuesto = value; }
 
-        public string ToString() {
+        public override string ToString() {
             return "lugarSalida: " + lugarOrigen + "lugarDestino: " + lugarDestino + "fechaSalida: " + fechaSalida + "horaSalida" + horaSalida + "fechaEmision: " + fechaEmision +
             "cantidadBoleto: " + cantidadBoleto + "precio: " + precio + "impuesto: " + impuesto;
         }

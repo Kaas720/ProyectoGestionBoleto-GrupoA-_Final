@@ -99,12 +99,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LogicaDeNegocios\LogicaDeNegocios.csproj">
-      <Project>{83c47f94-b08d-41f2-b4d2-7031057e76f0}</Project>
-      <Name>LogicaDeNegocios</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>

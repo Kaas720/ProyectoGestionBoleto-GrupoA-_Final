@@ -30,28 +30,34 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSeccion));
             this.NombreUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.Contrasenausuario = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TextoInicioSesion = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.RadioButtonAdministrador = new Guna.UI2.WinForms.Guna2RadioButton();
             this.RadioButtonCooperativa = new Guna.UI2.WinForms.Guna2RadioButton();
             this.RadioButtonChofer = new Guna.UI2.WinForms.Guna2RadioButton();
             this.RadioButtonCliente = new Guna.UI2.WinForms.Guna2RadioButton();
             this.PanelSuperior = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Hora_Sistema = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Fecha_Hora_Sistema = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TextoInicioSesion = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.PanelSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // NombreUsuario
@@ -68,7 +74,7 @@ namespace Presentacion
             this.NombreUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NombreUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.NombreUsuario.HoverState.Parent = this.NombreUsuario;
-            this.NombreUsuario.Location = new System.Drawing.Point(293, 230);
+            this.NombreUsuario.Location = new System.Drawing.Point(270, 238);
             this.NombreUsuario.Name = "NombreUsuario";
             this.NombreUsuario.PasswordChar = '\0';
             this.NombreUsuario.PlaceholderText = "Usuario";
@@ -91,24 +97,14 @@ namespace Presentacion
             this.Contrasenausuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Contrasenausuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Contrasenausuario.HoverState.Parent = this.Contrasenausuario;
-            this.Contrasenausuario.Location = new System.Drawing.Point(293, 291);
+            this.Contrasenausuario.Location = new System.Drawing.Point(270, 294);
             this.Contrasenausuario.Name = "Contrasenausuario";
-            this.Contrasenausuario.PasswordChar = '\0';
+            this.Contrasenausuario.PasswordChar = '*';
             this.Contrasenausuario.PlaceholderText = "Contraseña";
             this.Contrasenausuario.SelectedText = "";
             this.Contrasenausuario.ShadowDecoration.Parent = this.Contrasenausuario;
             this.Contrasenausuario.Size = new System.Drawing.Size(200, 36);
             this.Contrasenausuario.TabIndex = 1;
-            // 
-            // TextoInicioSesion
-            // 
-            this.TextoInicioSesion.BackColor = System.Drawing.Color.Transparent;
-            this.TextoInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextoInicioSesion.Location = new System.Drawing.Point(293, 103);
-            this.TextoInicioSesion.Name = "TextoInicioSesion";
-            this.TextoInicioSesion.Size = new System.Drawing.Size(190, 33);
-            this.TextoInicioSesion.TabIndex = 2;
-            this.TextoInicioSesion.Text = "Inicio de secion";
             // 
             // guna2Button1
             // 
@@ -122,7 +118,7 @@ namespace Presentacion
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(293, 353);
+            this.guna2Button1.Location = new System.Drawing.Point(270, 356);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(200, 45);
@@ -213,36 +209,7 @@ namespace Presentacion
             this.PanelSuperior.Name = "PanelSuperior";
             this.PanelSuperior.Size = new System.Drawing.Size(707, 35);
             this.PanelSuperior.TabIndex = 8;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Yellow;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MinusSquare;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Yellow;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 34;
-            this.iconPictureBox1.Location = new System.Drawing.Point(629, 2);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(39, 34);
-            this.iconPictureBox1.TabIndex = 4;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.Yellow;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.Yellow;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 37;
-            this.iconPictureBox2.Location = new System.Drawing.Point(663, 0);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(41, 37);
-            this.iconPictureBox2.TabIndex = 3;
-            this.iconPictureBox2.TabStop = false;
+            this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
             // Fecha_Sistema
             // 
@@ -250,7 +217,7 @@ namespace Presentacion
             this.Fecha_Sistema.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.Fecha_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Fecha_Sistema.Location = new System.Drawing.Point(308, 9);
+            this.Fecha_Sistema.Location = new System.Drawing.Point(280, 9);
             this.Fecha_Sistema.Name = "Fecha_Sistema";
             this.Fecha_Sistema.Size = new System.Drawing.Size(60, 20);
             this.Fecha_Sistema.TabIndex = 2;
@@ -260,6 +227,7 @@ namespace Presentacion
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.panel4.Controls.Add(this.guna2PictureBox2);
             this.panel4.Controls.Add(this.Hora_Sistema);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(0, 32);
@@ -296,40 +264,122 @@ namespace Presentacion
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.RadioButtonAdministrador);
             this.groupBox1.Controls.Add(this.RadioButtonCooperativa);
             this.groupBox1.Controls.Add(this.RadioButtonChofer);
             this.groupBox1.Controls.Add(this.RadioButtonCliente);
-            this.groupBox1.Location = new System.Drawing.Point(201, 151);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox1.Location = new System.Drawing.Point(184, 155);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(381, 63);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Roles";
             // 
+            // TextoInicioSesion
+            // 
+            this.TextoInicioSesion.BackColor = System.Drawing.Color.Transparent;
+            this.TextoInicioSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TextoInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextoInicioSesion.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.TextoInicioSesion.Location = new System.Drawing.Point(270, 106);
+            this.TextoInicioSesion.Name = "TextoInicioSesion";
+            this.TextoInicioSesion.Size = new System.Drawing.Size(190, 33);
+            this.TextoInicioSesion.TabIndex = 2;
+            this.TextoInicioSesion.Text = "Inicio de secion";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(26, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(68, 42);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 12;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.MinusSquare;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 34;
+            this.iconPictureBox1.Location = new System.Drawing.Point(629, 2);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(39, 34);
+            this.iconPictureBox1.TabIndex = 4;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 37;
+            this.iconPictureBox2.Location = new System.Drawing.Point(663, 0);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(41, 37);
+            this.iconPictureBox2.TabIndex = 3;
+            this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.salvapantallas_textura_elegante_blanco_23_2148421855;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 74);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(707, 364);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 11;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // InicioSeccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(705, 432);
+            this.Controls.Add(this.TextoInicioSesion);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.TextoInicioSesion);
             this.Controls.Add(this.Contrasenausuario);
             this.Controls.Add(this.NombreUsuario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.PanelSuperior);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InicioSeccion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InicioSeccion";
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +389,6 @@ namespace Presentacion
 
         private Guna.UI2.WinForms.Guna2TextBox NombreUsuario;
         private Guna.UI2.WinForms.Guna2TextBox Contrasenausuario;
-        private Guna.UI2.WinForms.Guna2HtmlLabel TextoInicioSesion;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2RadioButton RadioButtonAdministrador;
         private Guna.UI2.WinForms.Guna2RadioButton RadioButtonCooperativa;
@@ -354,5 +403,9 @@ namespace Presentacion
         private System.Windows.Forms.Label Hora_Sistema;
         private System.Windows.Forms.Timer Fecha_Hora_Sistema;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel TextoInicioSesion;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

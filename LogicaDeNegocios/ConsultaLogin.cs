@@ -10,17 +10,15 @@ namespace LogicaDeNegocios
     public class ConsultaLogin
     {
         Procedimientos procedimientos = new Procedimientos();
-        public void Login(string usuario, string password, int rol)
+        public bool Login(string usuario, string password, int rol)
         {
+            bool bandera = false;
             if (procedimientos.IniciasSeccion(usuario, password, rol))
             {
-                Console.WriteLine("VIVAHP");
+                bandera = true;
 
             }
-            else
-            {
-                Console.WriteLine("IGUALMENTEHP");
-            }
+            return bandera;
         }
     }
 }

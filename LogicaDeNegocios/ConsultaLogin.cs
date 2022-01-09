@@ -10,9 +10,9 @@ namespace LogicaDeNegocios
     public class ConsultaLogin
     {
         Procedimientos procedimientos = new Procedimientos();
-        public void Login(string usuario, string password)
+        public void Login(string usuario, string password, int rol)
         {
-            if (procedimientos.IniciasSeccion(usuario, password))
+            if (procedimientos.IniciasSeccion(usuario, password, rol))
             {
                 Console.WriteLine("VIVAHP");
 

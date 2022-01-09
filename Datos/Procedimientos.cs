@@ -10,7 +10,7 @@ namespace Datos
 {
     public class Procedimientos
     {
-        public bool IniciasSeccion(string usuario, string password)
+        public bool IniciasSeccion(string usuario, string password,int rol)
         {
             string nom=null;
             MySqlCommand mySqlCommand;
@@ -21,16 +21,12 @@ namespace Datos
                 mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
                 mySqlCommand.Parameters.AddWithValue("@usuarioFx",usuario);
                 mySqlCommand.Parameters.AddWithValue("@contrasenaFx", password);
-                mySqlCommand.Parameters.AddWithValue("@rolUsuario", 1);
-                Console.WriteLine(usuario+"           m      "+password);
+                mySqlCommand.Parameters.AddWithValue("@rolUsuario", rol);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
-
                 while (lector.Read())
                 {
                     nom = lector.GetString(1);
                 }
-                Console.WriteLine(nom);
-
             }
             catch (Exception ex)
             {

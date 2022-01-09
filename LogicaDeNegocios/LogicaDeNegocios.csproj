@@ -41,13 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ConsultaLogin.cs" />
     <Compile Include="Modulo de administrador\Administrador.cs" />
     <Compile Include="Modulo de cliente\AdmCliente.cs" />
     <Compile Include="Modulo de cliente\Cliente.cs" />
     <Compile Include="Modulo de vendedor\Vendedor.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{07b8dc40-4481-4e9f-83a7-2a033f9a8d6c}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

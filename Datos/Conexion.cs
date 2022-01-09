@@ -15,7 +15,7 @@ namespace Datos
 
         private MySqlConnection sqlconnection = null;
         public MySqlConnection Connection { get => sqlconnection; set => sqlconnection = value; }
-        public void conectar()
+        public MySqlConnection conectar()
         {
             try
             {
@@ -28,8 +28,8 @@ namespace Datos
             {
                 MessageBox.Show(x.ToString());
             }
+            return Connection;
         }
-
         public void cerrar()
         {
             try
@@ -43,5 +43,7 @@ namespace Datos
                 MessageBox.Show(x.ToString());
             }
         }
+
+
     }
 }

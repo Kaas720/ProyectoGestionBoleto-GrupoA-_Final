@@ -1,4 +1,5 @@
-﻿using Datos;
+﻿
+using LogicaDeNegocios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace Presentacion
     
     public partial class InicioSeccion : Form
     {
-        Conexion nuevodatos = new Conexion();
+        ConsultaLogin consulta = new ConsultaLogin();
         public InicioSeccion()
         {
             InitializeComponent();
@@ -22,12 +23,18 @@ namespace Presentacion
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            nuevodatos.conectar();
-            string text = "administrador";
-            if ()
-            {
-                metodoAdministradorLogin()
-            }
+            string Usuario = NombreUsuario.Text;
+            string password = Contrasenausuario.Text; 
+            consulta.Login(Usuario,password);
+            
+            
+        }
+
+        private void Fecha_Hora_Sistema_Tick(object sender, EventArgs e)
+        {
+
+            Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
+            Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

@@ -6,12 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Datos;
 using LogicaDeNegocios.RegistroDB;
+using MySqlConnector;
 
 namespace LogicaDeNegocios.Modulo_de_cliente
 {
     public class AdmCliente
     {
-       // RegistroCliente datos = new RegistroCliente();
+        RegistroCliente datos = new RegistroCliente();
         Conexion conexion = new Conexion();
         List<Cliente> lista = null;
         private static AdmCliente adm = null;
@@ -88,7 +89,7 @@ namespace LogicaDeNegocios.Modulo_de_cliente
         {
             string x = "No se creo el objeto";
             cliente = new Cliente(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña);
-          //  datos.InsertarCliente(cliente);
+            datos.InsertarCliente(cliente);
             x = cliente.ToString();
             lista.Add(cliente);
             return x;
@@ -105,19 +106,11 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             txtUsuario.Clear();
             txtContraseña.Clear();
         }
-        public void Conectar()
+        public MySqlConnection Conectar()
         {
-            string mensaje = "";
-            mensaje = conexion.Conectar();
-            if (mensaje[0] == '1')
-            {
-                MessageBox.Show("Conexion Satisfactoria");
-            }
-            else
-            {
-                MessageBox.Show("Error " + mensaje);
-            }
-            conexion.Cerrar();
+           MySqlConnection conectado = new MySqlConnection();
+            conexion.conectar();
+            return conectado;
         }
     }
 }

@@ -1,48 +1,48 @@
-﻿using MySql.Data.MySqlClient;
+﻿//using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Threading.Tasks;
+using MySqlConnector;
 
 namespace Datos
 {
     public class Conexion
     {
-        private static string conexionDB = "Server=MYSQL5045.site4now.net;Database=db_a7eb45_sga;Uid=a7eb45_sga;Pwd=1234emelec";
-            //"user id=a7eb45_sga;server=MYSQL5045.site4now.net;database=db_a7eb45_sga";
-            
+        private static string conexion_DB_externa = "Server=MYSQL5045.site4now.net;Database=db_a7eb45_sga;Uid=a7eb45_sga;Pwd=1234emelec";
         private MySqlConnection conection = null;
-        public MySqlConnection Conection { get => this.conection; set => this.conection = value; }
+        public MySqlConnection Connection { get => this.conection; set => this.conection = value; }
         /**/
-        public string Conectar()
+        public MySqlConnection conectar()
         {
             try
             {
-                conection = new MySqlConnection();
-                Conection.ConnectionString  = conexionDB;
-                Conection.Open();
-                return "1";
+                Connection = new MySqlConnection();
+                Connection.ConnectionString = conexion_DB_externa;
+                Connection.Open();
+              //  MessageBox.Show("Se conecto");
             }
-            catch (MySqlException ex)
+            catch (SqlException x)
             {
-                MessageBox.Show(ex.ToString());
-                return "0";
+                MessageBox.Show(x.ToString());
             }
-            
+            return Connection;
         }
+
         public string Cerrar()
         {
+            string conection ="" ;
             try
             {
-                Conection.Close();
-                return "1";
+               Connection.Close();
+              return  conection;
             }
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.ToString());
-                return "0";
+                return conection;
             }
            
         }

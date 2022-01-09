@@ -1,12 +1,12 @@
-﻿using MySql.Data.MySqlClient;
+﻿//using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using LogicaDeNegocios.Modulo_de_cliente;
 using Datos;
-//using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace LogicaDeNegocios.RegistroDB
-{/*
+{
     public class RegistroCliente
     {
         Conexion conexion;
@@ -51,25 +51,25 @@ namespace LogicaDeNegocios.RegistroDB
             parameterContraseña.Direction = System.Data.ParameterDirection.Input;
             parameterContraseña.Value = cliente.Contraseña;
             comando.Parameters.Add(parameterContraseña);
-           /* MySqlCommand mySqlCommand;
+            /*MySqlCommand mySqlCommand;
             Conexion conexion = new Conexion();
                    
                 mySqlCommand = new MySqlCommand();
                 mySqlCommand.CommandText = "spl_insertar_cliente";
                 mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                mySqlCommand.Parameters.AddWithValue("@Cedula1", cliente.Cedula);
-                mySqlCommand.Parameters.AddWithValue("@Nombre2", cliente.Nombre);
-                mySqlCommand.Parameters.AddWithValue("@Sexo3", cliente.Sexo);
-                mySqlCommand.Parameters.AddWithValue("@Telefono4", cliente.Telefono);
-                mySqlCommand.Parameters.AddWithValue("@Correo5", cliente.Correo);
-                mySqlCommand.Parameters.AddWithValue("@Ciudad6", cliente.Ciudad);
-                mySqlCommand.Parameters.AddWithValue("@Usuario7", cliente.Usuario);
-                mySqlCommand.Parameters.AddWithValue("@Contrasena8", cliente.Contraseña);*
+                mySqlCommand.Parameters.AddWithValue("@Cedula", cliente.Cedula);
+                mySqlCommand.Parameters.AddWithValue("@Nombre", cliente.Nombre);
+                mySqlCommand.Parameters.AddWithValue("@Sexo", cliente.Sexo);
+                mySqlCommand.Parameters.AddWithValue("@Telefono", cliente.Telefono);
+                mySqlCommand.Parameters.AddWithValue("@Correo", cliente.Correo);
+                mySqlCommand.Parameters.AddWithValue("@Ciudad", cliente.Ciudad);
+                mySqlCommand.Parameters.AddWithValue("@Usuario", cliente.Usuario);
+                mySqlCommand.Parameters.AddWithValue("@Contrasena", cliente.Contraseña);*/
             try
             {
 
-                conexion.Conectar();
-                  comando.Connection = conexion.Conection;
+                conexion.conectar();
+                  comando.Connection = conexion.Connection;
                   comando.ExecuteNonQuery();
 
                 }
@@ -79,5 +79,5 @@ namespace LogicaDeNegocios.RegistroDB
                 }
                 conexion.Cerrar();          
             }
-        }*/
+        }
 }

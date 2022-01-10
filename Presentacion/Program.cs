@@ -1,4 +1,5 @@
-﻿using SGA.SGA_Pasajero;
+﻿using Presentacion.SGA_Chofer;
+using SGA.SGA_Pasajero;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pasjero());
+            Application.Run(new Chofer());
         }
     }
 }

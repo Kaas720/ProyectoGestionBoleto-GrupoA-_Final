@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtcedula = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtnombre = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtsexo = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,6 +62,7 @@
             this.Fecha_Sistema = new System.Windows.Forms.Label();
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
             this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
+            this.Fecha_Hora_Sistema = new System.Windows.Forms.Timer(this.components);
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.PanelSuperior.SuspendLayout();
@@ -83,7 +85,7 @@
             this.txtcedula.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtcedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcedula.HoverState.Parent = this.txtcedula;
-            this.txtcedula.Location = new System.Drawing.Point(652, 220);
+            this.txtcedula.Location = new System.Drawing.Point(705, 213);
             this.txtcedula.Name = "txtcedula";
             this.txtcedula.PasswordChar = '\0';
             this.txtcedula.PlaceholderText = "Cedula";
@@ -107,7 +109,7 @@
             this.txtnombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtnombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtnombre.HoverState.Parent = this.txtnombre;
-            this.txtnombre.Location = new System.Drawing.Point(652, 278);
+            this.txtnombre.Location = new System.Drawing.Point(705, 271);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.PasswordChar = '\0';
             this.txtnombre.PlaceholderText = "Nombre";
@@ -131,7 +133,7 @@
             this.txtsexo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtsexo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsexo.HoverState.Parent = this.txtsexo;
-            this.txtsexo.Location = new System.Drawing.Point(652, 404);
+            this.txtsexo.Location = new System.Drawing.Point(705, 397);
             this.txtsexo.Name = "txtsexo";
             this.txtsexo.PasswordChar = '\0';
             this.txtsexo.PlaceholderText = "Sexo";
@@ -155,7 +157,7 @@
             this.txtlicencia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtlicencia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtlicencia.HoverState.Parent = this.txtlicencia;
-            this.txtlicencia.Location = new System.Drawing.Point(652, 346);
+            this.txtlicencia.Location = new System.Drawing.Point(705, 339);
             this.txtlicencia.Name = "txtlicencia";
             this.txtlicencia.PasswordChar = '\0';
             this.txtlicencia.PlaceholderText = "Licencia";
@@ -179,7 +181,7 @@
             this.txtcontraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtcontraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcontraseña.HoverState.Parent = this.txtcontraseña;
-            this.txtcontraseña.Location = new System.Drawing.Point(652, 651);
+            this.txtcontraseña.Location = new System.Drawing.Point(705, 644);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.PasswordChar = '\0';
             this.txtcontraseña.PlaceholderText = "Contraseña";
@@ -203,7 +205,7 @@
             this.txtusuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtusuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusuario.HoverState.Parent = this.txtusuario;
-            this.txtusuario.Location = new System.Drawing.Point(652, 593);
+            this.txtusuario.Location = new System.Drawing.Point(705, 586);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.PasswordChar = '\0';
             this.txtusuario.PlaceholderText = "Usuario";
@@ -227,7 +229,7 @@
             this.txtcorreo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtcorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcorreo.HoverState.Parent = this.txtcorreo;
-            this.txtcorreo.Location = new System.Drawing.Point(652, 525);
+            this.txtcorreo.Location = new System.Drawing.Point(705, 518);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.PasswordChar = '\0';
             this.txtcorreo.PlaceholderText = "Correo";
@@ -251,7 +253,7 @@
             this.txttelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txttelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttelefono.HoverState.Parent = this.txttelefono;
-            this.txttelefono.Location = new System.Drawing.Point(652, 467);
+            this.txttelefono.Location = new System.Drawing.Point(705, 460);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.PasswordChar = '\0';
             this.txttelefono.PlaceholderText = "Telefono";
@@ -272,7 +274,7 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(553, 746);
+            this.guna2Button1.Location = new System.Drawing.Point(606, 739);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
@@ -283,7 +285,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(451, 240);
+            this.label1.Location = new System.Drawing.Point(504, 233);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 17;
@@ -292,7 +294,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(451, 298);
+            this.label2.Location = new System.Drawing.Point(504, 291);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 18;
@@ -301,7 +303,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(451, 366);
+            this.label3.Location = new System.Drawing.Point(504, 359);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 16);
             this.label3.TabIndex = 19;
@@ -310,7 +312,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(451, 424);
+            this.label4.Location = new System.Drawing.Point(504, 417);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 20;
@@ -319,7 +321,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(451, 487);
+            this.label5.Location = new System.Drawing.Point(504, 480);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 21;
@@ -328,7 +330,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(451, 545);
+            this.label6.Location = new System.Drawing.Point(504, 538);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 16);
             this.label6.TabIndex = 22;
@@ -337,7 +339,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(451, 613);
+            this.label7.Location = new System.Drawing.Point(504, 606);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 16);
             this.label7.TabIndex = 23;
@@ -346,7 +348,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(451, 671);
+            this.label8.Location = new System.Drawing.Point(504, 664);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 16);
             this.label8.TabIndex = 24;
@@ -368,7 +370,7 @@
             this.Hora_Sistema.AutoSize = true;
             this.Hora_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hora_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Hora_Sistema.Location = new System.Drawing.Point(1097, 40);
+            this.Hora_Sistema.Location = new System.Drawing.Point(1069, 41);
             this.Hora_Sistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Hora_Sistema.Name = "Hora_Sistema";
             this.Hora_Sistema.Size = new System.Drawing.Size(103, 29);
@@ -519,6 +521,7 @@
             this.PanelSuperior.Name = "PanelSuperior";
             this.PanelSuperior.Size = new System.Drawing.Size(1235, 51);
             this.PanelSuperior.TabIndex = 2;
+            this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
             // Fecha_Sistema
             // 
@@ -526,7 +529,7 @@
             this.Fecha_Sistema.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.Fecha_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Fecha_Sistema.Location = new System.Drawing.Point(496, 14);
+            this.Fecha_Sistema.Location = new System.Drawing.Point(480, 14);
             this.Fecha_Sistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Fecha_Sistema.Name = "Fecha_Sistema";
             this.Fecha_Sistema.Size = new System.Drawing.Size(74, 25);
@@ -549,6 +552,7 @@
             this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(52, 42);
             this.BotonParaMinimizarVentana.TabIndex = 1;
             this.BotonParaMinimizarVentana.TabStop = false;
+            this.BotonParaMinimizarVentana.Click += new System.EventHandler(this.BotonParaMinimizarVentana_Click);
             // 
             // BotonCierreDeAplicacion
             // 
@@ -565,6 +569,12 @@
             this.BotonCierreDeAplicacion.Size = new System.Drawing.Size(55, 46);
             this.BotonCierreDeAplicacion.TabIndex = 0;
             this.BotonCierreDeAplicacion.TabStop = false;
+            this.BotonCierreDeAplicacion.Click += new System.EventHandler(this.BotonCierreDeAplicacion_Click);
+            // 
+            // Fecha_Hora_Sistema
+            // 
+            this.Fecha_Hora_Sistema.Enabled = true;
+            this.Fecha_Hora_Sistema.Tick += new System.EventHandler(this.Fecha_Hora_Sistema_Tick);
             // 
             // Chofer
             // 
@@ -642,5 +652,6 @@
         private System.Windows.Forms.Label Fecha_Sistema;
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
         private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
+        private System.Windows.Forms.Timer Fecha_Hora_Sistema;
     }
 }

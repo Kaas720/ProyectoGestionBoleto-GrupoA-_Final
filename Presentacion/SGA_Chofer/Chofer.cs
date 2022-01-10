@@ -52,14 +52,5 @@ namespace Presentacion.SGA_Chofer
 
         }
 
-        private void Chofer_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

@@ -72,8 +72,8 @@ namespace Presentacion
                     dgvCliente.Rows[n].Cells[6].Value = txtUsuario.Text;
                     dgvCliente.Rows[n].Cells[7].Value = txtContraseña.Text;
                     adm.Limpiar(txtCedula, txtNombre, cmbSexo, txtTelefono, txtCorreo, txtCiudad, txtUsuario, txtContraseña);
-                this.Hide();
-                Cliente ob = new Cliente(cedula);
+                    this.Hide();
+                    Cliente ob = new Cliente(cedula);
                     ob.Show();
                 
                 }

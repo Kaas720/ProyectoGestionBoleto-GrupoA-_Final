@@ -42,9 +42,7 @@ namespace LogicaDeNegocios.Modulo_de_cliente
                     txtCorreo.Enabled = false;
                     txtCiudad.Text = lista[i].Ciudad;
                     txtUsuario.Text = lista[i].Usuario;
-                    txtUsuario.Enabled = false;
                     txtContraseña.Text = lista[i].Contraseña;
-                    txtContraseña.Enabled = false;
                 }
             }
         }

@@ -27,7 +27,7 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         /*--------------------------------------------------------------------*/
-        ConsultaLogin consulta = new ConsultaLogin();
+        ConsultasProcedimientos consulta = new ConsultasProcedimientos();
         public InicioSeccion()
         {
             InitializeComponent();

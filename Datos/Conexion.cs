@@ -34,7 +34,6 @@ namespace Datos
             try
             {
                 Connection.Close();
-                MessageBox.Show("Se Desconecto");
             }
             catch (Exception x)
             {

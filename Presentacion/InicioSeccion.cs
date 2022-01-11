@@ -40,7 +40,16 @@ namespace Presentacion
             int rol = Rol();
             if (ValidacionCamposVacios(Usuario, password, rol))
             {
-                ConsultarLoginBD(Usuario, password, rol);
+                try
+                {
+                    ConsultarLoginBD(Usuario, password, rol);
+
+                }
+                catch (ControlExcepcion ex)
+                {
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+               
             }
             else
             {

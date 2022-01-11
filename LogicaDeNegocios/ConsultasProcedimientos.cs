@@ -20,7 +20,7 @@ namespace LogicaDeNegocios
             }
             else
             {
-                throw new Exception("Usuario y/o contrasena incorrecta");
+                throw new ControlExcepcion("Usuario y/o contrasena incorrecta");
             }
             return bandera;
         }

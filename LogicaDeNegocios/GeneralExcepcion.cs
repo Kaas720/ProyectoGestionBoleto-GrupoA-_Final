@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
-    public class GeneralExcepcion:Exception
+    public class ControlExcepcion : Exception
     {
         String message;
-        public GeneralExcepcion(String message) : base(message)
+        public ControlExcepcion(String message) : base(message)
         {
-            this.message = "Hola";
             Console.WriteLine(this.message);
         }
     }

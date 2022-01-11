@@ -30,23 +30,27 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Cooperativa_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo_pasaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbDestino = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbOrigen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbCooperativa = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BotonComprar = new FontAwesome.Sharp.IconButton();
             this.botonRegistroUsuario = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.BotonInicioSesion = new FontAwesome.Sharp.IconButton();
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
@@ -56,11 +60,7 @@ namespace Presentacion
             this.Hora_Sistema = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.Cooperativa_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo_pasaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad_boleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seleccion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel4.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -81,7 +81,7 @@ namespace Presentacion
             this.panel4.Controls.Add(this.cbOrigen);
             this.panel4.Controls.Add(this.guna2HtmlLabel6);
             this.panel4.Controls.Add(this.guna2HtmlLabel5);
-            this.panel4.Controls.Add(this.guna2ComboBox1);
+            this.panel4.Controls.Add(this.cbCooperativa);
             this.panel4.Controls.Add(this.guna2HtmlLabel3);
             this.panel4.Location = new System.Drawing.Point(215, 75);
             this.panel4.Name = "panel4";
@@ -90,56 +90,71 @@ namespace Presentacion
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.BorderRadius = 15;
             this.guna2GroupBox1.Controls.Add(this.guna2DataGridView1);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(26, 145);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(658, 244);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(658, 235);
             this.guna2GroupBox1.TabIndex = 14;
             this.guna2GroupBox1.Text = "ELEGIR RUTA";
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.guna2DataGridView1.AllowUserToAddRows = false;
+            this.guna2DataGridView1.AllowUserToDeleteRows = false;
+            this.guna2DataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.ColumnHeadersHeight = 21;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cooperativa_nombre,
             this.Hora_Salida,
-            this.Costo_pasaje,
-            this.Cantidad_boleto,
-            this.Seleccion});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Costo_pasaje});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(9, 53);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
+            this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(629, 182);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(629, 170);
             this.guna2DataGridView1.TabIndex = 13;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -163,6 +178,24 @@ namespace Presentacion
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Cooperativa_nombre
+            // 
+            this.Cooperativa_nombre.HeaderText = "Cooperativa";
+            this.Cooperativa_nombre.Name = "Cooperativa_nombre";
+            this.Cooperativa_nombre.ReadOnly = true;
+            // 
+            // Hora_Salida
+            // 
+            this.Hora_Salida.HeaderText = "Hora de salida";
+            this.Hora_Salida.Name = "Hora_Salida";
+            this.Hora_Salida.ReadOnly = true;
+            // 
+            // Costo_pasaje
+            // 
+            this.Costo_pasaje.HeaderText = "Precio";
+            this.Costo_pasaje.Name = "Costo_pasaje";
+            this.Costo_pasaje.ReadOnly = true;
+            // 
             // cbDestino
             // 
             this.cbDestino.AutoRoundedCorners = true;
@@ -183,6 +216,7 @@ namespace Presentacion
             this.cbDestino.ShadowDecoration.Parent = this.cbDestino;
             this.cbDestino.Size = new System.Drawing.Size(171, 36);
             this.cbDestino.TabIndex = 11;
+            this.cbDestino.SelectedIndexChanged += new System.EventHandler(this.cbDestino_SelectedIndexChanged);
             // 
             // cbOrigen
             // 
@@ -204,6 +238,7 @@ namespace Presentacion
             this.cbOrigen.ShadowDecoration.Parent = this.cbOrigen;
             this.cbOrigen.Size = new System.Drawing.Size(157, 36);
             this.cbOrigen.TabIndex = 10;
+            this.cbOrigen.SelectedIndexChanged += new System.EventHandler(this.cbOrigen_SelectedIndexChanged);
             // 
             // guna2HtmlLabel6
             // 
@@ -225,32 +260,26 @@ namespace Presentacion
             this.guna2HtmlLabel5.TabIndex = 7;
             this.guna2HtmlLabel5.Text = "Lugar de origen";
             // 
-            // guna2ComboBox1
+            // cbCooperativa
             // 
-            this.guna2ComboBox1.AutoRoundedCorners = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 17;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Rutas Orenses",
-            "Cooperativa Playas",
-            "Cooperativa Loja",
-            "Cooperativa Cariamanga",
-            "Cooperatiba Loja"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(467, 84);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(217, 36);
-            this.guna2ComboBox1.TabIndex = 6;
+            this.cbCooperativa.AutoRoundedCorners = true;
+            this.cbCooperativa.BackColor = System.Drawing.Color.Transparent;
+            this.cbCooperativa.BorderRadius = 17;
+            this.cbCooperativa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbCooperativa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCooperativa.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCooperativa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbCooperativa.FocusedState.Parent = this.cbCooperativa;
+            this.cbCooperativa.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbCooperativa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbCooperativa.HoverState.Parent = this.cbCooperativa;
+            this.cbCooperativa.ItemHeight = 30;
+            this.cbCooperativa.ItemsAppearance.Parent = this.cbCooperativa;
+            this.cbCooperativa.Location = new System.Drawing.Point(467, 84);
+            this.cbCooperativa.Name = "cbCooperativa";
+            this.cbCooperativa.ShadowDecoration.Parent = this.cbCooperativa;
+            this.cbCooperativa.Size = new System.Drawing.Size(217, 36);
+            this.cbCooperativa.TabIndex = 6;
             // 
             // guna2HtmlLabel3
             // 
@@ -268,7 +297,7 @@ namespace Presentacion
             this.panel2.Controls.Add(this.guna2HtmlLabel2);
             this.panel2.Controls.Add(this.BotonComprar);
             this.panel2.Controls.Add(this.botonRegistroUsuario);
-            this.panel2.Controls.Add(this.iconButton3);
+            this.panel2.Controls.Add(this.BotonInicioSesion);
             this.panel2.Location = new System.Drawing.Point(0, 75);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
@@ -336,28 +365,29 @@ namespace Presentacion
             this.botonRegistroUsuario.UseVisualStyleBackColor = false;
             this.botonRegistroUsuario.Click += new System.EventHandler(this.btnComprar_Click);
             // 
-            // iconButton3
+            // BotonInicioSesion
             // 
-            this.iconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.SystemColors.Info;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(217, 120);
-            this.iconButton3.TabIndex = 12;
-            this.iconButton3.Text = "INICIAR SESIÓN";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.BotonInicioSesion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BotonInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.BotonInicioSesion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BotonInicioSesion.FlatAppearance.BorderSize = 0;
+            this.BotonInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonInicioSesion.ForeColor = System.Drawing.SystemColors.Info;
+            this.BotonInicioSesion.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.BotonInicioSesion.IconColor = System.Drawing.Color.White;
+            this.BotonInicioSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BotonInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonInicioSesion.Location = new System.Drawing.Point(0, 0);
+            this.BotonInicioSesion.Name = "BotonInicioSesion";
+            this.BotonInicioSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BotonInicioSesion.Size = new System.Drawing.Size(217, 120);
+            this.BotonInicioSesion.TabIndex = 12;
+            this.BotonInicioSesion.Text = "INICIAR SESIÓN";
+            this.BotonInicioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonInicioSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonInicioSesion.UseVisualStyleBackColor = false;
+            this.BotonInicioSesion.Click += new System.EventHandler(this.BotonInicioSesion_Click);
             // 
             // PanelSuperior
             // 
@@ -370,6 +400,7 @@ namespace Presentacion
             this.PanelSuperior.Name = "PanelSuperior";
             this.PanelSuperior.Size = new System.Drawing.Size(927, 35);
             this.PanelSuperior.TabIndex = 31;
+            this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
             // Fecha_Sistema
             // 
@@ -467,35 +498,10 @@ namespace Presentacion
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // Cooperativa_nombre
+            // timer1
             // 
-            this.Cooperativa_nombre.HeaderText = "Cooperativa";
-            this.Cooperativa_nombre.Name = "Cooperativa_nombre";
-            this.Cooperativa_nombre.ReadOnly = true;
-            // 
-            // Hora_Salida
-            // 
-            this.Hora_Salida.HeaderText = "Hora de salida";
-            this.Hora_Salida.Name = "Hora_Salida";
-            this.Hora_Salida.ReadOnly = true;
-            // 
-            // Costo_pasaje
-            // 
-            this.Costo_pasaje.HeaderText = "Precio";
-            this.Costo_pasaje.Name = "Costo_pasaje";
-            this.Costo_pasaje.ReadOnly = true;
-            // 
-            // Cantidad_boleto
-            // 
-            this.Cantidad_boleto.HeaderText = "Cantidad";
-            this.Cantidad_boleto.Name = "Cantidad_boleto";
-            this.Cantidad_boleto.ReadOnly = true;
-            // 
-            // Seleccion
-            // 
-            this.Seleccion.HeaderText = "Selecionar";
-            this.Seleccion.Name = "Seleccion";
-            this.Seleccion.ReadOnly = true;
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Principal_Usuario
             // 
@@ -537,7 +543,7 @@ namespace Presentacion
         private Guna.UI2.WinForms.Guna2ComboBox cbOrigen;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbCooperativa;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel PanelSuperior;
@@ -547,7 +553,7 @@ namespace Presentacion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Hora_Sistema;
         private System.Windows.Forms.Label label4;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton BotonInicioSesion;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
@@ -556,8 +562,7 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Cooperativa_nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora_Salida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo_pasaje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad_boleto;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccion;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

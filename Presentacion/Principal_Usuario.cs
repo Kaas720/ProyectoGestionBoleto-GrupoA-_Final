@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,17 @@ namespace Presentacion
 {
     public partial class Principal_Usuario : Form
     {
+        /*Codigo para arrastrar la ventana a cualquier parte de la pantalla*/
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private void PanelSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        /*--------------------------------------------------------------------*/
         ConsultasProcedimientos procedimientos = new ConsultasProcedimientos();
         public Principal_Usuario()
         {
@@ -63,6 +75,54 @@ namespace Presentacion
                 Application.Exit();
             }
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
+            Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void cbOrigen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Comprobar_combo_vacio())
+            {
+                string origen = cbOrigen.Text;
+                string Destino = cbDestino.Text;
+                EliminarComboElementos();
+                procedimientos.LlenarComboCooperativa(cbCooperativa,origen,Destino);
+            }
+        }
+        private void cbDestino_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Comprobar_combo_vacio())
+            {
+                string origen = cbOrigen.Text;
+                string Destino = cbDestino.Text;
+                EliminarComboElementos();
+                procedimientos.LlenarComboCooperativa(cbCooperativa, origen, Destino);
+
+            }
+        }
+
+        private bool Comprobar_combo_vacio()
+        {
+            bool bandera = false;
+            if (!cbOrigen.SelectedIndex.Equals(-1) && !cbDestino.SelectedIndex.Equals(-1))
+            {
+                bandera = true;
+            }
+            return bandera;
+        }
+        private void EliminarComboElementos()
+        {
+                cbCooperativa.Items.Clear();
+        }
+
+        private void BotonInicioSesion_Click(object sender, EventArgs e)
+        {
+            InicioSeccion iniciosesion = new InicioSeccion();
+            iniciosesion.Show();
         }
     }
 }

@@ -160,5 +160,8 @@
   <ItemGroup>
     <None Include="Resources\pngtree-blue-big-car-illustration-cartoon-shuttle-blue-bus-gray-glass-png-image_454310.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chrono_Transparente.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

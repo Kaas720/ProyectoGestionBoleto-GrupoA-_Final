@@ -76,7 +76,6 @@ namespace Presentacion
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrecta por favor revise sus datos");
                 NombreUsuario.Text = null;
                 Contrasenausuario.Text = null;
             }

@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsultasProcedimientos.cs" />
+    <Compile Include="GeneralExcepcion.cs" />
     <Compile Include="Modula Venta\Ruta.cs" />
     <Compile Include="Modulo de administrador\Administrador.cs" />
     <Compile Include="Modulo de cliente\AdmCliente.cs" />

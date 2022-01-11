@@ -26,6 +26,7 @@ namespace Datos
             catch (SqlException x)
             {
                 MessageBox.Show(x.ToString());
+               
             }
             return Connection;
         }

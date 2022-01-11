@@ -18,6 +18,10 @@ namespace LogicaDeNegocios
             {
                 bandera = true;
             }
+            else
+            {
+                throw new Exception("Usuario y/o contrasena incorrecta");
+            }
             return bandera;
         }
 
@@ -25,16 +29,25 @@ namespace LogicaDeNegocios
         {
             List<string> ciudad = new List<string>();
             ciudad = procedimientos.CargarCiudad();
-            if (ciudad.Count==0)
+            if (ciudad.Count!=0)
             {
-                Console.WriteLine("ListaVacia");
-            }
-            else
-            {
-                foreach(string ciudadfx in ciudad)
+                foreach (string ciudadfx in ciudad)
                 {
                     cbOrigen.Items.Add(ciudadfx);
                     cbDestino.Items.Add(ciudadfx);
+                }
+            }
+        }
+
+        public void LlenarComboCooperativa(ComboBox cbCooperativa, string origen, string destino)
+        {
+            List<string> coopeativa = new List<string>();
+            coopeativa = procedimientos.CargarCooperativa(origen,destino);
+            if (coopeativa.Count != 0)
+            {
+                foreach (string coopeativafx in coopeativa)
+                {
+                    cbCooperativa.Items.Add(coopeativafx);
                 }
             }
         }

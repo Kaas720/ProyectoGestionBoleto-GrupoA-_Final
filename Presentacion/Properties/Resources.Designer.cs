@@ -63,6 +63,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chrono_Transparente {
+            get {
+                object obj = ResourceManager.GetObject("Chrono_Transparente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d4wzusy_073e2814_3c19_4379_8264_dbb7c3e97d6d {
             get {
                 object obj = ResourceManager.GetObject("d4wzusy-073e2814-3c19-4379-8264-dbb7c3e97d6d", resourceCulture);

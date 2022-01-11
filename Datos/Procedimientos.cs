@@ -40,6 +40,29 @@ namespace Datos
             return bandera;
         }
 
+        public List<string> CargarCooperativa(string origen, string destino)
+        {
+            List<string> cooperativa = new List<string>();
+            try
+            {
+                MySqlCommand mySqlCommand = ConectarProcedimiento("ProcesoBuscarCooperativa");
+                mySqlCommand.Parameters.AddWithValue("@SalidaFx", origen);
+                mySqlCommand.Parameters.AddWithValue("@SestinoFX", destino);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    cooperativa.Add(lector["nombreCooperativa"].ToString());
+                }
+                con.cerrar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            }
+            return cooperativa;
+        }
+
         public List<string> CargarCiudad()
         {
             List<string> ciudad = new List<string>();

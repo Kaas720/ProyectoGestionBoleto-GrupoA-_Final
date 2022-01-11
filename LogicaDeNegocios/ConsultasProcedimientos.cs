@@ -1,4 +1,5 @@
 ﻿using Datos;
+using LogicaDeNegocios.Modulo_Boleto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,6 +51,12 @@ namespace LogicaDeNegocios
                     cbCooperativa.Items.Add(coopeativafx);
                 }
             }
+        }
+
+        public void LLenarGrit(string origen, string destino,string cooperativa,ComboBox cbCooperativa)
+        {
+            LlenarinformacionDataGrid llenarinformacionDataGrid = null;
+            //llenarinformacionDataGrid = procedimientos.LllenarDataGrid( origen,  destino, cooperativa);
         }
     }
 }

@@ -43,13 +43,11 @@ namespace Presentacion
                 try
                 {
                     ConsultarLoginBD(Usuario, password, rol);
-
                 }
                 catch (ControlExcepcion ex)
                 {
                     MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-               
+                }       
             }
             else
             {

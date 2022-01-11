@@ -124,5 +124,25 @@ namespace Presentacion
             InicioSeccion iniciosesion = new InicioSeccion();
             iniciosesion.Show();
         }
+
+        private void cbCooperativa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Validacion_Cooperativa() && Comprobar_combo_vacio())
+            {
+                string origen = cbOrigen.Text;
+                string Destino = cbDestino.Text;
+                string cooperativa = cbCooperativa.Text;
+                procedimientos.LLenarGrit(origen, Destino, cooperativa,cbCooperativa);
+            }
+        }
+
+        private bool Validacion_Cooperativa()
+        {   
+            if (!cbCooperativa.SelectedIndex.Equals(-1))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

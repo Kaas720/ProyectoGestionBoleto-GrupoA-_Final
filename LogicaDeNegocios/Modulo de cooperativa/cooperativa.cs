@@ -8,5 +8,6 @@ namespace LogicaDeNegocios.Modulo_de_cooperativa
 {
     internal class cooperativa
     {
+        string nombre_cooperativa;
     }
 }

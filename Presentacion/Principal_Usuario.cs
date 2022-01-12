@@ -54,19 +54,7 @@ namespace Presentacion
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            if (!ValidarDataGridVacio())
-            {
-                MessageBox.Show("Por favor seleccionar un horario!");
-            }
-            else
-            {
-                Comprar comprar = new Comprar();
-                Program.principal.Hide();
-                comprar.Show();
-            }
-        }
+        
 
         private bool ValidarDataGridVacio()
         {
@@ -79,9 +67,9 @@ namespace Presentacion
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            Comprar ob = new Comprar();
+            /*Comprar ob = new Comprar();
             ob.Show();
-            this.Hide();
+            this.Hide();*/
         }
         /*Metodos para la venta en general*/
         private void BotonCierreDeAplicacion_Click_1(object sender, EventArgs e)
@@ -166,6 +154,23 @@ namespace Presentacion
         private void BotonParaMinimizarVentana_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void BotonComprar_Click(object sender, EventArgs e)
+        {
+                if (!ValidarDataGridVacio())
+                {
+                    MessageBox.Show("Por favor seleccionar un horario!");
+                }
+                else
+                {
+                int x = DataGridInf.CurrentCell.RowIndex;
+                string xx = DataGridInf.Rows[x].Cells[0].Value.ToString();
+                MessageBox.Show(x+""+xx);
+                ////Comprar comprar = new Comprar();
+                // Program.principal.Hide();
+                // comprar.Show();
+            }
         }
     }
 }

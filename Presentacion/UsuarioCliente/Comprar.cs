@@ -13,7 +13,7 @@ namespace Presentacion
 {
     public partial class Comprar : Form
     {
-        public Comprar()
+        public Comprar(string cooperativa, string fechaSalida, string horaSalida)
         {
             InitializeComponent();
         }
@@ -56,6 +56,29 @@ namespace Presentacion
         {
             this.Close();
             Program.principal.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if(verificarCamposVacios())
+            {
+                int valor = Convert.ToInt32(CarritoBtn.Text);
+                valor += 1;
+                CarritoBtn.Text = "" + valor;
+            }
+        }
+
+        private bool verificarCamposVacios()
+        {
+            if (txtCedula.Text.Length != 0 && TxtNombre.Text.Length != 0 && !CbAsientos.SelectedIndex.Equals(-1))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Campos vacios llenar todos los campos.");
+                return false;
+            }
         }
         /*--------------------------------------------------------------------*/
     }

@@ -24,8 +24,8 @@ namespace Presentacion
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            Comprar obj = new Comprar();
-            obj.ShowDialog();
+            //Comprar obj = new Comprar();
+           // obj.ShowDialog();
         }
     }
 }

@@ -349,7 +349,7 @@ namespace Presentacion
             this.BotonComprar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonComprar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BotonComprar.UseVisualStyleBackColor = false;
-            this.BotonComprar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.BotonComprar.Click += new System.EventHandler(this.BotonComprar_Click);
             // 
             // botonRegistroUsuario
             // 

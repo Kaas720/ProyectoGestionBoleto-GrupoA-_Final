@@ -18,12 +18,9 @@ namespace Datos
             try
             {
                 string ConnectionString = "server=localhost; database=PruebaAc; Uid=root; pwd=kevin1234;";
-
                 conexion = new MySqlConnection(ConnectionString);
                 conexion.Open();
-
                 Console.WriteLine("Se abrio la conexion desde la capa de acceso a datos");
-
             }
             catch (SqlException ex)
             {
@@ -51,11 +48,8 @@ namespace Datos
             comannd.Parameters.AddWithValue("@param_correo", param_correo);
             comannd.Parameters.AddWithValue("@param_usuario", param_usuario);
             comannd.Parameters.AddWithValue("@param_contraseña", param_contraseña);
-
-
             int resultado_operacion = Convert.ToInt32(comannd.ExecuteScalar());
             cerrar_conexion(conexion);
-
             return resultado_operacion;
 
         }

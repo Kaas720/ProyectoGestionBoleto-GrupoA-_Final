@@ -52,11 +52,9 @@ namespace LogicaDeNegocios
                 }
             }
         }
-
-        public void LLenarGrit(string origen, string destino,string cooperativa,ComboBox cbCooperativa)
+        public void LLenarGrit(string origen, string destino, string cooperativa, DataGridView dataGridInf)
         {
-            LlenarinformacionDataGrid llenarinformacionDataGrid = null;
-            //llenarinformacionDataGrid = procedimientos.LllenarDataGrid( origen,  destino, cooperativa);
+            procedimientos.LllenarDataGrid(origen, destino, cooperativa, dataGridInf);
         }
     }
 }

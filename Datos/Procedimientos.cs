@@ -1,6 +1,5 @@
 ﻿using MySqlConnector;
 using System;
-using LogicaDeNegocios;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,11 +63,30 @@ namespace Datos
             return cooperativa;
         }
 
-        /*public global::LogicaDeNegocios.Modulo_Boleto.LlenarinformacionDataGrid LllenarDataGrid(string origen, string destino, string cooperativa)
+        public void LllenarDataGrid(string origen, string destino, string cooperativa, DataGridView dataGridInf)
         {
-            throw new NotImplementedException();
-        }*/
-
+            try
+            {
+                MySqlCommand mySqlCommand = ConectarProcedimiento("ProcesoLlenarDataGrid");
+                mySqlCommand.Parameters.AddWithValue("@SalidaFx", origen);
+                mySqlCommand.Parameters.AddWithValue("@DestinoFX", destino);
+                mySqlCommand.Parameters.AddWithValue("@CooperativaFX", cooperativa);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    int numerofila = dataGridInf.Rows.Count;
+                    dataGridInf.Rows.Add(1);
+                    dataGridInf.Rows[numerofila].Cells[0].Value = lector["nombreCooperativa"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[1].Value = lector["HoraSalida"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[2].Value = lector["Precio"].ToString();
+                }
+                con.cerrar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         public List<string> CargarCiudad()
         {
             List<string> ciudad = new List<string>();

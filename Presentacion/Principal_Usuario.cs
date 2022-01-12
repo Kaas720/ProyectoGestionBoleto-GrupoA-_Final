@@ -104,7 +104,6 @@ namespace Presentacion
 
             }
         }
-
         private bool Comprobar_combo_vacio()
         {
             bool bandera = false;
@@ -117,6 +116,7 @@ namespace Presentacion
         private void EliminarComboElementos()
         {
                 cbCooperativa.Items.Clear();
+                DataGridInf.Rows.Clear();
         }
 
         private void BotonInicioSesion_Click(object sender, EventArgs e)
@@ -132,7 +132,7 @@ namespace Presentacion
                 string origen = cbOrigen.Text;
                 string Destino = cbDestino.Text;
                 string cooperativa = cbCooperativa.Text;
-                procedimientos.LLenarGrit(origen, Destino, cooperativa,cbCooperativa);
+                procedimientos.LLenarGrit(origen, Destino, cooperativa,DataGridInf);
             }
         }
 

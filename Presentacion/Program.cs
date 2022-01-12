@@ -11,12 +11,14 @@ namespace Presentacion
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        /// 
+        public static Principal_Usuario principal;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Comprar());
+            Application.Run(principal = new Principal_Usuario());
         }
     }
 }

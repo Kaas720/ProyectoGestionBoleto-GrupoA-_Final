@@ -37,6 +37,10 @@ namespace Presentacion
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DataGridInf = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Cooperativa_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo_pasaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbDestino = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbOrigen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,10 +62,6 @@ namespace Presentacion
             this.label4 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Cooperativa_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo_pasaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridInf)).BeginInit();
@@ -180,6 +180,30 @@ namespace Presentacion
             this.DataGridInf.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridInf.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridInf.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Cooperativa_nombre
+            // 
+            this.Cooperativa_nombre.HeaderText = "Cooperativa";
+            this.Cooperativa_nombre.Name = "Cooperativa_nombre";
+            this.Cooperativa_nombre.ReadOnly = true;
+            // 
+            // Hora_Salida
+            // 
+            this.Hora_Salida.HeaderText = "Hora de salida";
+            this.Hora_Salida.Name = "Hora_Salida";
+            this.Hora_Salida.ReadOnly = true;
+            // 
+            // FechaSalida
+            // 
+            this.FechaSalida.HeaderText = "Fecha Salida";
+            this.FechaSalida.Name = "FechaSalida";
+            this.FechaSalida.ReadOnly = true;
+            // 
+            // Costo_pasaje
+            // 
+            this.Costo_pasaje.HeaderText = "Precio";
+            this.Costo_pasaje.Name = "Costo_pasaje";
+            this.Costo_pasaje.ReadOnly = true;
             // 
             // cbDestino
             // 
@@ -415,6 +439,7 @@ namespace Presentacion
             this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(39, 34);
             this.BotonParaMinimizarVentana.TabIndex = 1;
             this.BotonParaMinimizarVentana.TabStop = false;
+            this.BotonParaMinimizarVentana.Click += new System.EventHandler(this.BotonParaMinimizarVentana_Click_1);
             // 
             // BotonCierreDeAplicacion
             // 
@@ -489,30 +514,6 @@ namespace Presentacion
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Cooperativa_nombre
-            // 
-            this.Cooperativa_nombre.HeaderText = "Cooperativa";
-            this.Cooperativa_nombre.Name = "Cooperativa_nombre";
-            this.Cooperativa_nombre.ReadOnly = true;
-            // 
-            // Hora_Salida
-            // 
-            this.Hora_Salida.HeaderText = "Hora de salida";
-            this.Hora_Salida.Name = "Hora_Salida";
-            this.Hora_Salida.ReadOnly = true;
-            // 
-            // FechaSalida
-            // 
-            this.FechaSalida.HeaderText = "Fecha Salida";
-            this.FechaSalida.Name = "FechaSalida";
-            this.FechaSalida.ReadOnly = true;
-            // 
-            // Costo_pasaje
-            // 
-            this.Costo_pasaje.HeaderText = "Precio";
-            this.Costo_pasaje.Name = "Costo_pasaje";
-            this.Costo_pasaje.ReadOnly = true;
-            // 
             // Principal_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,7 +525,7 @@ namespace Presentacion
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal_Usuario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.TopMost = true;
             this.panel4.ResumeLayout(false);

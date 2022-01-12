@@ -62,7 +62,9 @@ namespace Presentacion
             }
             else
             {
-                MessageBox.Show("Eres un Saying nivel Diossss");
+                Comprar comprar = new Comprar();
+                Program.principal.Hide();
+                comprar.Show();
             }
         }
 
@@ -137,6 +139,7 @@ namespace Presentacion
         {
             InicioSeccion iniciosesion = new InicioSeccion();
             iniciosesion.Show();
+            Program.principal.Hide();
         }
 
         private void cbCooperativa_SelectedIndexChanged(object sender, EventArgs e)
@@ -158,6 +161,11 @@ namespace Presentacion
                 return true;
             }
             return false;
+        }
+
+        private void BotonParaMinimizarVentana_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

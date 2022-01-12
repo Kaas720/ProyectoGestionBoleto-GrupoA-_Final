@@ -47,6 +47,8 @@ namespace Presentacion
                 catch (ControlExcepcion ex)
                 {
                     MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    NombreUsuario.Text = null;
+                    Contrasenausuario.Text = null;
                 }       
             }
             else
@@ -80,11 +82,6 @@ namespace Presentacion
                         Console.WriteLine("4");
                         break;
                 }
-            }
-            else
-            {
-                NombreUsuario.Text = null;
-                Contrasenausuario.Text = null;
             }
         }
         /*Metodo para validar si existen campos vacios*/
@@ -139,6 +136,12 @@ namespace Presentacion
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void BotonRetroceder_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.principal.Show();
         }
     }
 }

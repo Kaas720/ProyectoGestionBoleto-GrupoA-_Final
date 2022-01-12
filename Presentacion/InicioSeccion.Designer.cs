@@ -51,6 +51,7 @@ namespace Presentacion
             this.TextoInicioSesion = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -201,13 +202,14 @@ namespace Presentacion
             // PanelSuperior
             // 
             this.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.PanelSuperior.Controls.Add(this.BotonRetroceder);
             this.PanelSuperior.Controls.Add(this.iconPictureBox1);
             this.PanelSuperior.Controls.Add(this.iconPictureBox2);
             this.PanelSuperior.Controls.Add(this.Fecha_Sistema);
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(707, 35);
+            this.PanelSuperior.Size = new System.Drawing.Size(707, 37);
             this.PanelSuperior.TabIndex = 8;
             this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
@@ -351,6 +353,25 @@ namespace Presentacion
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // BotonRetroceder
+            // 
+            this.BotonRetroceder.BackColor = System.Drawing.Color.Transparent;
+            this.BotonRetroceder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonRetroceder.FlatAppearance.BorderSize = 0;
+            this.BotonRetroceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BotonRetroceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BotonRetroceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonRetroceder.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
+            this.BotonRetroceder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BotonRetroceder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BotonRetroceder.IconSize = 37;
+            this.BotonRetroceder.Location = new System.Drawing.Point(0, 3);
+            this.BotonRetroceder.Name = "BotonRetroceder";
+            this.BotonRetroceder.Size = new System.Drawing.Size(59, 32);
+            this.BotonRetroceder.TabIndex = 40;
+            this.BotonRetroceder.UseVisualStyleBackColor = false;
+            this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
+            // 
             // InicioSeccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -368,7 +389,7 @@ namespace Presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InicioSeccion";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "InicioSeccion";
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
@@ -407,5 +428,6 @@ namespace Presentacion
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private FontAwesome.Sharp.IconButton BotonRetroceder;
     }
 }

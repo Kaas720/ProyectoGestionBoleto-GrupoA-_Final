@@ -54,6 +54,37 @@ namespace Datos
 
         }
 
+        /*Lucio Johann*/
+        public String insertar(List<ClsParametroChofer> lst)
+        {
+            String msj = "";
+            try
+            {
+                MySqlConnection conexion = abrir_conexion();
+
+                string cadena = "INSERT INTO Leccion (cedula,nombre,licencia,sexo,telefono,correo,usuario,contraseña)" +// AQUI VA LOS PARAMETROS DE LA BD
+                    " VALUES (@cedula,@nombre,@licencia,@sexo,@telefono,@correo,@usuario,@contraseña)";
+                MySqlCommand comando = new MySqlCommand(cadena, conexion);
+
+                comando.Parameters.AddWithValue("@cedula", lst[0].Cedula);
+                comando.Parameters.AddWithValue("@nombre", lst[0].Nombre);
+                comando.Parameters.AddWithValue("@licencia", lst[0].Licencia);
+                comando.Parameters.AddWithValue("@sexo", lst[0].Sexo);
+                comando.Parameters.AddWithValue("@telefono", lst[0].Telefono);
+                comando.Parameters.AddWithValue("@correo", lst[0].Correo);
+                comando.Parameters.AddWithValue("@usuario", lst[0].Usuario);
+                comando.Parameters.AddWithValue("@contraseña", lst[0].Contraseña);
+
+                int resultado = Convert.ToInt32(comando.ExecuteNonQuery());
+                msj = "Registrado con éxito, " + resultado;
+                cerrar_conexion(conexion);
+            }
+            catch (Exception ex)
+            {
+                msj = "Error al registrar los datos\nMotivo:\n" + ex;
+            }
+            return msj;
+        }
 
 
     }

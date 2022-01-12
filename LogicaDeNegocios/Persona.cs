@@ -43,5 +43,7 @@ namespace LogicaDeNegocios
             return "Cedula: " + cedula + "Nombre: " + nombre + "Sexo: " + sexo + "Telefono: " + telefono + "Correo: " + correo + "Ciudad: " + ciudad + "Usuario: " + usuario +"Contraseña: "+ contraseña;
 
         }
+        /* Lucio Johann*/
+        public virtual string registrar() { return ""; }
     }
 }

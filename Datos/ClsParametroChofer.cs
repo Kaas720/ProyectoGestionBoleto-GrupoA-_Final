@@ -13,14 +13,14 @@ namespace Datos
         private String nombre;
         private String licencia;
         private String sexo;
-        private Int16 telefono;
+        private String telefono;
         private String correo;
         private String usuario;
         private String contraseña;
 
 
         public ClsParametroChofer() {}
-        public ClsParametroChofer(string cedula, string nombre, string licencia, string sexo, Int16 telefono, string correo, string usuario, string contraseña)
+        public ClsParametroChofer(string cedula, string nombre, string licencia, string sexo, string telefono, string correo, string usuario, string contraseña)
         {
             this.cedula = cedula;
             this.nombre = nombre;
@@ -58,7 +58,7 @@ namespace Datos
         }
 
 
-        public Int16 Telefono
+        public String Telefono
         {
             get { return telefono; }
             set { telefono = value; }

@@ -7,31 +7,46 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocios.Modulo_de_chofer
 {
-    public class ClsChofer
+    public class ClsChofer: Persona
     {
-        private string cedula;
-        private String nombre;
+        private int idChofer;
         private String licencia;
-        private String sexo;
-        private Int16 telefono;
-        private String correo;
-        private String usuario;
-        private String contraseña;
+        private Double sueldo;
+
+
+
 
         ClsManejador M = new ClsManejador();
 
-        public ClsChofer(string cedula, string nombre, string licencia, string sexo, Int16 telefono, string correo, string usuario, string contraseña)
-        {
-            this.cedula = cedula;
-            this.nombre = nombre;
-            this.licencia = licencia;
-            this.sexo = sexo;
-            this.telefono = telefono;
-            this.correo = correo;
-            this.usuario = usuario;
-            this.contraseña = contraseña;
-        }
+        /* Lucio Johann*/
+
         public ClsChofer() { }
+        public ClsChofer(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña, int idChofer, string Licencia, double Sueldo)
+         : base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
+        {
+            this.idChofer = idChofer;
+            this.Licencia = Licencia;
+            this.sueldo = Sueldo;
+
+        }
+        public int IdChofer
+        {
+            get { return idChofer; }
+            set { idChofer = value; }
+        }
+
+        public String Licencia
+        {
+            get { return licencia; }
+            set { licencia = value; }
+        }
+
+        public Double Sueldo
+        {
+            get { return sueldo; }
+            set { sueldo= value; }
+        }
+
 
 
         public int actualizar_x_cedula(string cedula, String nombre, String licencia, String sexo, Int16 telefono, String correo, String usuario, String contraseña)
@@ -39,6 +54,15 @@ namespace LogicaDeNegocios.Modulo_de_chofer
             return M.actualizar_chofer_individual(cedula, nombre, licencia, sexo, telefono, correo, usuario, contraseña);
         }
 
+        /* Lucio Johann*/
+        public override string registrar()
+        {
+            string msj;
 
+            List<ClsParametroChofer> lst = new List<ClsParametroChofer>();
+            lst.Add(new ClsParametroChofer(Cedula, Nombre, Licencia, Sexo, Telefono, Correo,Usuario, Contraseña));
+            msj = M.insertar(lst);
+            return msj;
+        }
     }
 }

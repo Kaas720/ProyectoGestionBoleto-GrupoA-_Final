@@ -56,9 +56,23 @@ namespace Presentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            RegistroCliente cl = new RegistroCliente();
-            cl.Show();
-            this.Hide();
+            if (!ValidarDataGridVacio())
+            {
+                MessageBox.Show("Por favor seleccionar un horario!");
+            }
+            else
+            {
+                MessageBox.Show("Eres un Saying nivel Diossss");
+            }
+        }
+
+        private bool ValidarDataGridVacio()
+        {
+            if (DataGridInf.SelectedRows.Count > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
@@ -133,6 +147,7 @@ namespace Presentacion
                 string Destino = cbDestino.Text;
                 string cooperativa = cbCooperativa.Text;
                 procedimientos.LLenarGrit(origen, Destino, cooperativa,DataGridInf);
+                DataGridInf.ClearSelection();
             }
         }
 

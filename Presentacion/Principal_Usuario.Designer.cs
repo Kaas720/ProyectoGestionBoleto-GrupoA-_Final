@@ -37,9 +37,6 @@ namespace Presentacion
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DataGridInf = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Cooperativa_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo_pasaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbDestino = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbOrigen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -61,6 +58,10 @@ namespace Presentacion
             this.label4 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Cooperativa_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo_pasaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridInf)).BeginInit();
@@ -129,6 +130,7 @@ namespace Presentacion
             this.DataGridInf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cooperativa_nombre,
             this.Hora_Salida,
+            this.FechaSalida,
             this.Costo_pasaje});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -141,6 +143,7 @@ namespace Presentacion
             this.DataGridInf.EnableHeadersVisualStyles = false;
             this.DataGridInf.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridInf.Location = new System.Drawing.Point(9, 53);
+            this.DataGridInf.MultiSelect = false;
             this.DataGridInf.Name = "DataGridInf";
             this.DataGridInf.ReadOnly = true;
             this.DataGridInf.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -177,24 +180,6 @@ namespace Presentacion
             this.DataGridInf.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridInf.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridInf.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Cooperativa_nombre
-            // 
-            this.Cooperativa_nombre.HeaderText = "Cooperativa";
-            this.Cooperativa_nombre.Name = "Cooperativa_nombre";
-            this.Cooperativa_nombre.ReadOnly = true;
-            // 
-            // Hora_Salida
-            // 
-            this.Hora_Salida.HeaderText = "Hora de salida";
-            this.Hora_Salida.Name = "Hora_Salida";
-            this.Hora_Salida.ReadOnly = true;
-            // 
-            // Costo_pasaje
-            // 
-            this.Costo_pasaje.HeaderText = "Precio";
-            this.Costo_pasaje.Name = "Costo_pasaje";
-            this.Costo_pasaje.ReadOnly = true;
             // 
             // cbDestino
             // 
@@ -504,6 +489,30 @@ namespace Presentacion
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // Cooperativa_nombre
+            // 
+            this.Cooperativa_nombre.HeaderText = "Cooperativa";
+            this.Cooperativa_nombre.Name = "Cooperativa_nombre";
+            this.Cooperativa_nombre.ReadOnly = true;
+            // 
+            // Hora_Salida
+            // 
+            this.Hora_Salida.HeaderText = "Hora de salida";
+            this.Hora_Salida.Name = "Hora_Salida";
+            this.Hora_Salida.ReadOnly = true;
+            // 
+            // FechaSalida
+            // 
+            this.FechaSalida.HeaderText = "Fecha Salida";
+            this.FechaSalida.Name = "FechaSalida";
+            this.FechaSalida.ReadOnly = true;
+            // 
+            // Costo_pasaje
+            // 
+            this.Costo_pasaje.HeaderText = "Precio";
+            this.Costo_pasaje.Name = "Costo_pasaje";
+            this.Costo_pasaje.ReadOnly = true;
+            // 
             // Principal_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,10 +569,11 @@ namespace Presentacion
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridInf;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cooperativa_nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora_Salida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaSalida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo_pasaje;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -78,7 +78,8 @@ namespace Datos
                     dataGridInf.Rows.Add(1);
                     dataGridInf.Rows[numerofila].Cells[0].Value = lector["nombreCooperativa"].ToString();
                     dataGridInf.Rows[numerofila].Cells[1].Value = lector["HoraSalida"].ToString();
-                    dataGridInf.Rows[numerofila].Cells[2].Value = lector["Precio"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[2].Value = lector["FechaSalida"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[3].Value = lector["Precio"].ToString();
                 }
                 con.cerrar();
             }

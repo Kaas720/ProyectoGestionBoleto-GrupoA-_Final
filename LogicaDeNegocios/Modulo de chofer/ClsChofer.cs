@@ -20,7 +20,8 @@ namespace LogicaDeNegocios.Modulo_de_chofer
 
         /* Lucio Johann*/
 
-        public ClsChofer() { }
+        public  ClsChofer() {}
+
         public ClsChofer(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña, int idChofer, string Licencia, double Sueldo)
          : base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
         {

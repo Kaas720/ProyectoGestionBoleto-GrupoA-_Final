@@ -247,6 +247,7 @@ namespace Presentacion.UsuarioCliente
             this.txtNombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtNombre.DisabledState.Parent = this.txtNombre;
             this.txtNombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNombre.Enabled = false;
             this.txtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombre.FocusedState.Parent = this.txtNombre;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -272,6 +273,7 @@ namespace Presentacion.UsuarioCliente
             this.txtCedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCedula.DisabledState.Parent = this.txtCedula;
             this.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCedula.Enabled = false;
             this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCedula.FocusedState.Parent = this.txtCedula;
             this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -422,6 +424,7 @@ namespace Presentacion.UsuarioCliente
             this.Sexo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Sexo.DisabledState.Parent = this.Sexo;
             this.Sexo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Sexo.Enabled = false;
             this.Sexo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sexo.FocusedState.Parent = this.Sexo;
             this.Sexo.Font = new System.Drawing.Font("Segoe UI", 9F);

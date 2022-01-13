@@ -73,15 +73,13 @@ namespace Datos
             string mensaje = "";
             try
             {
-                MySqlCommand comando = new MySqlCommand();
-                comando.Connection = con.conectar();
-                comando.CommandText = "ModificarCliente";
+                MySqlCommand comando = ConectarProcedimiento("ModificarCliente");
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@Cedula", cedula);
-                comando.Parameters.AddWithValue("@Telefono", telefono);
-                comando.Parameters.AddWithValue("@Correo", correo);
-                comando.Parameters.AddWithValue("@Usuario", usuario);
-                comando.Parameters.AddWithValue("@Contraseña", contrasena);
+                comando.Parameters.AddWithValue("@Cedula1", cedula);
+                comando.Parameters.AddWithValue("@Telefono1", telefono);
+                comando.Parameters.AddWithValue("@Correo1", correo);
+                comando.Parameters.AddWithValue("@Usuario1", usuario);
+                comando.Parameters.AddWithValue("@Contraseña1", contrasena);
                 comando.ExecuteNonQuery();
                 con.Cerrar();
                 mensaje = "Se actualizaron los campos correctamente";

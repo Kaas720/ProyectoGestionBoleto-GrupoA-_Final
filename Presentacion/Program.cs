@@ -17,7 +17,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ActualizarCliente("0302527742"));
+            Application.Run(new Principal_Usuario());
             /*Vamos mm*/
         }
     }

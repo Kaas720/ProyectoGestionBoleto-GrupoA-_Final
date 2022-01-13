@@ -62,15 +62,21 @@ namespace Presentacion
         {
             if(verificarCamposVacios())
             {
-                int valor = Convert.ToInt32(CarritoBtn.Text);
-                valor += 1;
-                CarritoBtn.Text = "" + valor;
+
+                CambiarTextoCarrito();
             }
+        }
+
+        private void CambiarTextoCarrito()
+        {
+            int valor = Convert.ToInt32(CarritoBtn.Text);
+            valor += 1;
+            CarritoBtn.Text = Convert.ToString(valor);
         }
 
         private bool verificarCamposVacios()
         {
-            if (txtCedula.Text.Length != 0 && TxtNombre.Text.Length != 0 && !CbAsientos.SelectedIndex.Equals(-1))
+            if (txtCedula.Text.Length != 0 && TxtNombre.Text.Length != 0 && !TxTNumeroAsientos.SelectedIndex.Equals(-1))
             {
                 return true;
             }

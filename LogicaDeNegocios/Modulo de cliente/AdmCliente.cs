@@ -12,6 +12,7 @@ namespace LogicaDeNegocios.Modulo_de_cliente
 {
     public class AdmCliente
     {
+        Procedimientos procedimientos = new Procedimientos();
         RegistroCliente datos = new RegistroCliente();
         Conexion conexion = new Conexion();
         List<Cliente> lista = null;
@@ -26,25 +27,15 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             lista = new List<Cliente>();
         }
 
-        public void Inicializar(Guna2TextBox txtCedula, Guna2TextBox txtNombre, Guna2ComboBox cmbSexo, Guna2TextBox txtTelefono, Guna2TextBox txtCorreo, Guna2TextBox txtCiudad, Guna2TextBox txtUsuario, Guna2TextBox txtContraseña, string cedula)
+        public void Inicializar(Guna2TextBox txtCedula, Guna2TextBox txtNombre, Guna2TextBox cmbSexo, Guna2TextBox txtTelefono, Guna2TextBox txtCorreo, Guna2TextBox txtCiudad, Guna2TextBox txtUsuario, Guna2TextBox txtContraseña, string cedula)
         {
-            for(int i =0; i < lista.Count; i++)
-            {
-                if (lista[i].Cedula.CompareTo(cedula) == 0)
-                {
-                    txtCedula.Enabled = false;
-                    txtNombre.Text = lista[i].Nombre;
-                    txtNombre.Enabled = false;
-                    cmbSexo.Text = lista[i].Sexo;
-                    cmbSexo.Enabled = false;
-                    txtTelefono.Text = lista[i].Telefono;
-                    txtCorreo.Text = lista[i].Correo;
-                    txtCorreo.Enabled = false;
-                    txtCiudad.Text = lista[i].Ciudad;
-                    txtUsuario.Text = lista[i].Usuario;
-                    txtContraseña.Text = lista[i].Contraseña;
-                }
-            }
+            List<string> TraerInformacion = new List<string>();
+            TraerInformacion = procedimientos.BuscarCliente(cedula);
+            txtNombre.Text = TraerInformacion[0].ToString();
+            txtTelefono.Text = TraerInformacion[2].ToString();
+            cmbSexo.Text = TraerInformacion[1].ToString();
+            txtTelefono.Text = TraerInformacion[2].ToString();
+            txtUsuario.Text = TraerInformacion[3].ToString();
         }
 
         public static AdmCliente GetAdm()

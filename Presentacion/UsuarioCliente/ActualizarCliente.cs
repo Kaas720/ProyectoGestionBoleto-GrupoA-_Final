@@ -20,16 +20,16 @@ namespace Presentacion.UsuarioCliente
         public ActualizarCliente(string cedula)
         {
             InitializeComponent();
-            adm.Inicializar(txtCedula, txtNombre, cmbSexo, txtTelefono, txtCorreo, txtCiudad, txtUsuario, txtContraseña, cedula);
+            adm.Inicializar(txtCedula, txtNombre, Sexo, txtTelefono, txtCorreo, txtCiudad, txtUsuario, txtContraseña, cedula);
             this.cedula = cedula;
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            string telefono = txtTelefono.Text.Trim(), ciudad = txtCiudad.Text.Trim();
-            if (!v.EsVacioAc(telefono, ciudad))
+            string cedula = txtCedula.Text, telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text, usuario = txtUsuario.Text, contrasena = txtContraseña.Text;
+            if (!v.EsVacioAc(telefono, correo, correo, contrasena))
             {
-                adm.Modificar(cedula, telefono, ciudad);
+                adm.Modificar(cedula, telefono, usuario, contrasena);
                 MessageBox.Show("Datos actualizados correctamente");
                 this.Close();
             }

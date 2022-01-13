@@ -1,4 +1,7 @@
-﻿using System;
+﻿using EntidadesDelProyecto;
+using LogicaDeNegocios;
+using Presentacion.UsuarioCliente;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +16,29 @@ namespace Presentacion
 {
     public partial class Comprar : Form
     {
+        string boletos;
+        ConsultaProcedimientosGenerarBoleto consultasProcedemientos = new ConsultaProcedimientosGenerarBoleto();
+        List<string> boletosNuveos = new List<string>();
         public Comprar(string cooperativa, string fechaSalida, string horaSalida)
         {
             InitializeComponent();
+            LlenarInformacionAutomaticamente(cooperativa, fechaSalida, horaSalida);        
+        }
+
+        private void LlenarInformacionAutomaticamente(string cooperativa, string fechaSalida, string horaSalida)
+        {
+            List<GenerarInformacionBoleto> generarInformacionBoleto = consultasProcedemientos.generarInformacionBoleto(cooperativa, fechaSalida, horaSalida);
+            foreach (GenerarInformacionBoleto item in generarInformacionBoleto)
+            {
+                TxtCooperativa.Text = item.Cooperativa;
+                TxtDestino.Text = item.Lugardestino;
+                TxtFechaSalida.Text = item.FechaSalida;
+                TxtHoraSalida.Text = item.HoraSalida;
+                TxtLugarSalida.Text = item.LugarSalida;
+                TxtNumeroDisco.Text = item.Numerodico;
+                TxtPrecio.Text = item.Precio;
+                consultasProcedemientos.LlenarComboAsientos(item.BusId,CbNumeroAsientos);
+            }
         }
 
         private void guna2Button7_Click(object sender, EventArgs e)
@@ -62,9 +85,27 @@ namespace Presentacion
         {
             if(verificarCamposVacios())
             {
-
                 CambiarTextoCarrito();
+                LLenarInformacionBoletoCarro();
+                VaciarCampos();
+                
             }
+        }
+
+        private void LLenarInformacionBoletoCarro()
+        {
+            boletos += Environment.NewLine + "/-----------------------------------/" + Environment.NewLine + "Cedula: " + txtCedula.Text + Environment.NewLine + "Nombre: " + TxtNombre.Text + Environment.NewLine
+            + "Cooperativa: " + TxtCooperativa.Text + Environment.NewLine + "Hora Salida: " + TxtHoraSalida.Text + Environment.NewLine
+            + "Fecha Salida: " + TxtFechaSalida.Text + Environment.NewLine + "Disco del bus: " + TxtNumeroDisco.Text + Environment.NewLine
+            + "Asiento:" + CbNumeroAsientos.Text;
+            boletosNuveos.Add(CbNumeroAsientos.Text);
+        }
+
+        private void VaciarCampos()
+        {
+            txtCedula.Text = null;
+            TxtNombre.Text = null;
+            CbNumeroAsientos.Items.Remove(CbNumeroAsientos.Text);
         }
 
         private void CambiarTextoCarrito()
@@ -76,7 +117,7 @@ namespace Presentacion
 
         private bool verificarCamposVacios()
         {
-            if (txtCedula.Text.Length != 0 && TxtNombre.Text.Length != 0 && !TxTNumeroAsientos.SelectedIndex.Equals(-1))
+            if (txtCedula.Text.Length != 0 && TxtNombre.Text.Length != 0 && !CbNumeroAsientos.SelectedIndex.Equals(-1))
             {
                 return true;
             }
@@ -86,6 +127,18 @@ namespace Presentacion
                 return false;
             }
         }
-        /*--------------------------------------------------------------------*/
+
+        private void CarritoBtn_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(CarritoBtn.Text)==0)
+            {
+                MessageBox.Show("No hay boletos agregados al carrito");
+            }
+            else
+            {
+                Pagar pagar = new Pagar(boletos,TxtCooperativa.Text,TxtFechaSalida.Text,TxtHoraSalida.Text);
+                pagar.ShowDialog();
+            }
+        }
     }
 }

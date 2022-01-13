@@ -165,11 +165,12 @@ namespace Presentacion
                 else
                 {
                 int x = DataGridInf.CurrentCell.RowIndex;
-                string xx = DataGridInf.Rows[x].Cells[0].Value.ToString();
-                MessageBox.Show(x+""+xx);
-                ////Comprar comprar = new Comprar();
-                // Program.principal.Hide();
-                // comprar.Show();
+                string cooperativa = DataGridInf.Rows[x].Cells[0].Value.ToString();
+                string fecha_salida = DataGridInf.Rows[x].Cells[1].Value.ToString();
+                string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
+                Comprar comprar = new Comprar(cooperativa, fecha_salida, horario_salida);
+                Program.principal.Hide();
+                comprar.Show();
             }
         }
     }

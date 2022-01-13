@@ -88,6 +88,12 @@
     <Compile Include="UsuarioCliente\Comprar.Designer.cs">
       <DependentUpon>Comprar.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioCliente\Pagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioCliente\Pagar.Designer.cs">
+      <DependentUpon>Pagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioCliente\RegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <EmbeddedResource Include="UsuarioCliente\Comprar.resx">
       <DependentUpon>Comprar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioCliente\Pagar.resx">
+      <DependentUpon>Pagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\RegistroCliente.resx">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +146,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EntidadesDelProyecto\EntidadesDelProyecto.csproj">
+      <Project>{19033910-1266-4B0F-B951-0C98AD3690E5}</Project>
+      <Name>EntidadesDelProyecto</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogicaDeNegocios\LogicaDeNegocios.csproj">
       <Project>{83c47f94-b08d-41f2-b4d2-7031057e76f0}</Project>
       <Name>LogicaDeNegocios</Name>

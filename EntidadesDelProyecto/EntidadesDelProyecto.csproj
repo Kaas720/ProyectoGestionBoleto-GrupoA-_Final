@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83C47F94-B08D-41F2-B4D2-7031057E76F0}</ProjectGuid>
+    <ProjectGuid>{19033910-1266-4B0F-B951-0C98AD3690E5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogicaDeNegocios</RootNamespace>
-    <AssemblyName>LogicaDeNegocios</AssemblyName>
+    <RootNamespace>EntidadesDelProyecto</RootNamespace>
+    <AssemblyName>EntidadesDelProyecto</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,27 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultaProcedimientosGenerarBoleto.cs" />
-    <Compile Include="ConsultasProcedimientos.cs" />
-    <Compile Include="GeneralExcepcion.cs" />
-    <Compile Include="Modula Venta\Ruta.cs" />
-    <Compile Include="Modulo Boleto\LlenarinformacionDataGrid.cs" />
-    <Compile Include="Modulo de administrador\Administrador.cs" />
-    <Compile Include="Modulo de cliente\AdmCliente.cs" />
-    <Compile Include="Modulo de cliente\Cliente.cs" />
-    <Compile Include="Modulo de vendedor\Vendedor.cs" />
-    <Compile Include="Persona.cs" />
+    <Compile Include="GenerarInformacionBoleto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Datos\Datos.csproj">
-      <Project>{07b8dc40-4481-4e9f-83a7-2a033f9a8d6c}</Project>
-      <Name>Datos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EntidadesDelProyecto\EntidadesDelProyecto.csproj">
-      <Project>{19033910-1266-4B0F-B951-0C98AD3690E5}</Project>
-      <Name>EntidadesDelProyecto</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

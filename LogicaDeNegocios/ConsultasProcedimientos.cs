@@ -56,5 +56,6 @@ namespace LogicaDeNegocios
         {
             procedimientos.LllenarDataGrid(origen, destino, cooperativa, dataGridInf);
         }
+    
     }
 }

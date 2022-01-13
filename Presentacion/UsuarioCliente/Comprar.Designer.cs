@@ -51,11 +51,11 @@ namespace Presentacion
             this.label4 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TxtFechaEmision = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TxTNumeroAsientos = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.TxtFechaSalida = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CbNumeroAsientos = new Guna.UI2.WinForms.Guna2ComboBox();
             this.TxtNumeroDisco = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtCooperativa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TxtFechaSalida = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TxtDestino = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtHoraSalida = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtLugarSalida = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtPrecio = new Guna.UI2.WinForms.Guna2TextBox();
@@ -85,9 +85,9 @@ namespace Presentacion
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(408, 271);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(135, 24);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(142, 24);
             this.guna2HtmlLabel10.TabIndex = 11;
-            this.guna2HtmlLabel10.Text = "Número de asiento:";
+            this.guna2HtmlLabel10.Text = "Asientos disponibles:";
             // 
             // guna2HtmlLabel9
             // 
@@ -116,11 +116,11 @@ namespace Presentacion
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(408, 182);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(407, 141);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(123, 24);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(121, 24);
             this.guna2HtmlLabel7.TabIndex = 8;
-            this.guna2HtmlLabel7.Text = "Fecha de emision:";
+            this.guna2HtmlLabel7.Text = "Lugar de destino:";
             // 
             // guna2HtmlLabel6
             // 
@@ -138,7 +138,7 @@ namespace Presentacion
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(408, 141);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(408, 182);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(110, 24);
             this.guna2HtmlLabel5.TabIndex = 6;
@@ -151,9 +151,9 @@ namespace Presentacion
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(88, 141);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(112, 24);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(116, 24);
             this.guna2HtmlLabel4.TabIndex = 5;
-            this.guna2HtmlLabel4.Text = "Lugar de salida:";
+            this.guna2HtmlLabel4.Text = "Lugar de origen:";
             // 
             // guna2HtmlLabel3
             // 
@@ -306,11 +306,11 @@ namespace Presentacion
             this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox1.BorderRadius = 20;
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2GroupBox1.Controls.Add(this.TxtFechaEmision);
-            this.guna2GroupBox1.Controls.Add(this.TxTNumeroAsientos);
+            this.guna2GroupBox1.Controls.Add(this.TxtFechaSalida);
+            this.guna2GroupBox1.Controls.Add(this.CbNumeroAsientos);
             this.guna2GroupBox1.Controls.Add(this.TxtNumeroDisco);
             this.guna2GroupBox1.Controls.Add(this.TxtCooperativa);
-            this.guna2GroupBox1.Controls.Add(this.TxtFechaSalida);
+            this.guna2GroupBox1.Controls.Add(this.TxtDestino);
             this.guna2GroupBox1.Controls.Add(this.TxtHoraSalida);
             this.guna2GroupBox1.Controls.Add(this.TxtLugarSalida);
             this.guna2GroupBox1.Controls.Add(this.TxtPrecio);
@@ -348,94 +348,54 @@ namespace Presentacion
             this.guna2HtmlLabel2.TabIndex = 50;
             this.guna2HtmlLabel2.Text = "Precio:";
             // 
-            // TxtFechaEmision
+            // TxtFechaSalida
             // 
-            this.TxtFechaEmision.AutoRoundedCorners = true;
-            this.TxtFechaEmision.BorderRadius = 11;
-            this.TxtFechaEmision.Cursor = System.Windows.Forms.Cursors.NoMove2D;
-            this.TxtFechaEmision.DefaultText = "";
-            this.TxtFechaEmision.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtFechaEmision.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtFechaEmision.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtFechaEmision.DisabledState.Parent = this.TxtFechaEmision;
-            this.TxtFechaEmision.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtFechaEmision.Enabled = false;
-            this.TxtFechaEmision.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtFechaEmision.FocusedState.Parent = this.TxtFechaEmision;
-            this.TxtFechaEmision.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtFechaEmision.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtFechaEmision.HoverState.Parent = this.TxtFechaEmision;
-            this.TxtFechaEmision.Location = new System.Drawing.Point(548, 182);
-            this.TxtFechaEmision.Name = "TxtFechaEmision";
-            this.TxtFechaEmision.PasswordChar = '\0';
-            this.TxtFechaEmision.PlaceholderText = "";
-            this.TxtFechaEmision.SelectedText = "";
-            this.TxtFechaEmision.ShadowDecoration.Parent = this.TxtFechaEmision;
-            this.TxtFechaEmision.Size = new System.Drawing.Size(176, 24);
-            this.TxtFechaEmision.TabIndex = 49;
+            this.TxtFechaSalida.AutoRoundedCorners = true;
+            this.TxtFechaSalida.BorderRadius = 11;
+            this.TxtFechaSalida.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            this.TxtFechaSalida.DefaultText = "";
+            this.TxtFechaSalida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtFechaSalida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtFechaSalida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtFechaSalida.DisabledState.Parent = this.TxtFechaSalida;
+            this.TxtFechaSalida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtFechaSalida.Enabled = false;
+            this.TxtFechaSalida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtFechaSalida.FocusedState.Parent = this.TxtFechaSalida;
+            this.TxtFechaSalida.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtFechaSalida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtFechaSalida.HoverState.Parent = this.TxtFechaSalida;
+            this.TxtFechaSalida.Location = new System.Drawing.Point(548, 182);
+            this.TxtFechaSalida.Name = "TxtFechaSalida";
+            this.TxtFechaSalida.PasswordChar = '\0';
+            this.TxtFechaSalida.PlaceholderText = "";
+            this.TxtFechaSalida.SelectedText = "";
+            this.TxtFechaSalida.ShadowDecoration.Parent = this.TxtFechaSalida;
+            this.TxtFechaSalida.Size = new System.Drawing.Size(176, 24);
+            this.TxtFechaSalida.TabIndex = 49;
             // 
-            // TxTNumeroAsientos
+            // CbNumeroAsientos
             // 
-            this.TxTNumeroAsientos.AutoRoundedCorners = true;
-            this.TxTNumeroAsientos.BackColor = System.Drawing.Color.Transparent;
-            this.TxTNumeroAsientos.BorderRadius = 17;
-            this.TxTNumeroAsientos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.TxTNumeroAsientos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TxTNumeroAsientos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxTNumeroAsientos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxTNumeroAsientos.FocusedState.Parent = this.TxTNumeroAsientos;
-            this.TxTNumeroAsientos.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TxTNumeroAsientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.TxTNumeroAsientos.HoverState.Parent = this.TxTNumeroAsientos;
-            this.TxTNumeroAsientos.ItemHeight = 30;
-            this.TxTNumeroAsientos.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40"});
-            this.TxTNumeroAsientos.ItemsAppearance.Parent = this.TxTNumeroAsientos;
-            this.TxTNumeroAsientos.Location = new System.Drawing.Point(548, 266);
-            this.TxTNumeroAsientos.Margin = new System.Windows.Forms.Padding(2);
-            this.TxTNumeroAsientos.Name = "TxTNumeroAsientos";
-            this.TxTNumeroAsientos.ShadowDecoration.Parent = this.TxTNumeroAsientos;
-            this.TxTNumeroAsientos.Size = new System.Drawing.Size(176, 36);
-            this.TxTNumeroAsientos.TabIndex = 48;
+            this.CbNumeroAsientos.AutoRoundedCorners = true;
+            this.CbNumeroAsientos.BackColor = System.Drawing.Color.Transparent;
+            this.CbNumeroAsientos.BorderRadius = 17;
+            this.CbNumeroAsientos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CbNumeroAsientos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbNumeroAsientos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbNumeroAsientos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbNumeroAsientos.FocusedState.Parent = this.CbNumeroAsientos;
+            this.CbNumeroAsientos.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CbNumeroAsientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CbNumeroAsientos.HoverState.Parent = this.CbNumeroAsientos;
+            this.CbNumeroAsientos.IntegralHeight = false;
+            this.CbNumeroAsientos.ItemHeight = 30;
+            this.CbNumeroAsientos.ItemsAppearance.Parent = this.CbNumeroAsientos;
+            this.CbNumeroAsientos.Location = new System.Drawing.Point(555, 266);
+            this.CbNumeroAsientos.Margin = new System.Windows.Forms.Padding(2);
+            this.CbNumeroAsientos.Name = "CbNumeroAsientos";
+            this.CbNumeroAsientos.ShadowDecoration.Parent = this.CbNumeroAsientos;
+            this.CbNumeroAsientos.Size = new System.Drawing.Size(169, 36);
+            this.CbNumeroAsientos.TabIndex = 48;
             // 
             // TxtNumeroDisco
             // 
@@ -491,31 +451,31 @@ namespace Presentacion
             this.TxtCooperativa.Size = new System.Drawing.Size(183, 24);
             this.TxtCooperativa.TabIndex = 45;
             // 
-            // TxtFechaSalida
+            // TxtDestino
             // 
-            this.TxtFechaSalida.AutoRoundedCorners = true;
-            this.TxtFechaSalida.BorderRadius = 11;
-            this.TxtFechaSalida.Cursor = System.Windows.Forms.Cursors.NoMove2D;
-            this.TxtFechaSalida.DefaultText = "";
-            this.TxtFechaSalida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtFechaSalida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtFechaSalida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtFechaSalida.DisabledState.Parent = this.TxtFechaSalida;
-            this.TxtFechaSalida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtFechaSalida.Enabled = false;
-            this.TxtFechaSalida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtFechaSalida.FocusedState.Parent = this.TxtFechaSalida;
-            this.TxtFechaSalida.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtFechaSalida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtFechaSalida.HoverState.Parent = this.TxtFechaSalida;
-            this.TxtFechaSalida.Location = new System.Drawing.Point(548, 139);
-            this.TxtFechaSalida.Name = "TxtFechaSalida";
-            this.TxtFechaSalida.PasswordChar = '\0';
-            this.TxtFechaSalida.PlaceholderText = "";
-            this.TxtFechaSalida.SelectedText = "";
-            this.TxtFechaSalida.ShadowDecoration.Parent = this.TxtFechaSalida;
-            this.TxtFechaSalida.Size = new System.Drawing.Size(176, 24);
-            this.TxtFechaSalida.TabIndex = 44;
+            this.TxtDestino.AutoRoundedCorners = true;
+            this.TxtDestino.BorderRadius = 11;
+            this.TxtDestino.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            this.TxtDestino.DefaultText = "";
+            this.TxtDestino.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtDestino.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtDestino.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtDestino.DisabledState.Parent = this.TxtDestino;
+            this.TxtDestino.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtDestino.Enabled = false;
+            this.TxtDestino.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtDestino.FocusedState.Parent = this.TxtDestino;
+            this.TxtDestino.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtDestino.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtDestino.HoverState.Parent = this.TxtDestino;
+            this.TxtDestino.Location = new System.Drawing.Point(548, 139);
+            this.TxtDestino.Name = "TxtDestino";
+            this.TxtDestino.PasswordChar = '\0';
+            this.TxtDestino.PlaceholderText = "";
+            this.TxtDestino.SelectedText = "";
+            this.TxtDestino.ShadowDecoration.Parent = this.TxtDestino;
+            this.TxtDestino.Size = new System.Drawing.Size(176, 24);
+            this.TxtDestino.TabIndex = 44;
             // 
             // TxtHoraSalida
             // 
@@ -688,6 +648,7 @@ namespace Presentacion
             this.CarritoBtn.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.CarritoBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CarritoBtn.UseVisualStyleBackColor = false;
+            this.CarritoBtn.Click += new System.EventHandler(this.CarritoBtn_Click);
             // 
             // timer1
             // 
@@ -748,14 +709,14 @@ namespace Presentacion
         private Guna.UI2.WinForms.Guna2TextBox TxtPrecio;
         private Guna.UI2.WinForms.Guna2TextBox TxtNombre;
         private Guna.UI2.WinForms.Guna2TextBox txtCedula;
-        private Guna.UI2.WinForms.Guna2ComboBox TxTNumeroAsientos;
+        private Guna.UI2.WinForms.Guna2ComboBox CbNumeroAsientos;
         private Guna.UI2.WinForms.Guna2TextBox TxtNumeroDisco;
         private Guna.UI2.WinForms.Guna2TextBox TxtCooperativa;
-        private Guna.UI2.WinForms.Guna2TextBox TxtFechaSalida;
+        private Guna.UI2.WinForms.Guna2TextBox TxtDestino;
         private Guna.UI2.WinForms.Guna2TextBox TxtHoraSalida;
         private Guna.UI2.WinForms.Guna2TextBox TxtLugarSalida;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox TxtFechaEmision;
+        private Guna.UI2.WinForms.Guna2TextBox TxtFechaSalida;
         private System.Windows.Forms.Timer timer1;
     }
 }

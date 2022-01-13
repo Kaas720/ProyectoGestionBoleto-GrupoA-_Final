@@ -27,10 +27,9 @@ namespace Presentacion.UsuarioCliente
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             string cedula = txtCedula.Text, telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text, usuario = txtUsuario.Text, contrasena = txtContraseña.Text;
-            if (!v.EsVacioAc(telefono, correo, correo, contrasena))
+            if (!v.EsVacioAc(telefono, correo, usuario, contrasena))
             {
-                adm.Modificar(cedula, telefono, usuario, contrasena);
-                MessageBox.Show("Datos actualizados correctamente");
+                MessageBox.Show(adm.Modificar(cedula, telefono, correo, usuario, contrasena));
                 this.Close();
             }
             else

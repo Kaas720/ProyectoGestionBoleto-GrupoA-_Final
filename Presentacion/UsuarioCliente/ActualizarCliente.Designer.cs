@@ -206,7 +206,6 @@ namespace Presentacion.UsuarioCliente
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderText = "";
-            this.txtCorreo.ReadOnly = true;
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.ShadowDecoration.Parent = this.txtCorreo;
             this.txtCorreo.Size = new System.Drawing.Size(197, 36);

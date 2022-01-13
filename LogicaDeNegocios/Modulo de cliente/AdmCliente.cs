@@ -1,12 +1,8 @@
-﻿using Guna.UI2.WinForms;
-using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Datos;
+﻿using Datos;
+using Guna.UI2.WinForms;
 using LogicaDeNegocios.RegistroDB;
 using MySqlConnector;
+using System.Collections.Generic;
 
 namespace LogicaDeNegocios.Modulo_de_cliente
 {
@@ -32,10 +28,8 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             List<string> TraerInformacion = new List<string>();
             TraerInformacion = procedimientos.BuscarCliente(cedula);
             txtNombre.Text = TraerInformacion[0].ToString();
-            txtTelefono.Text = TraerInformacion[2].ToString();
             cmbSexo.Text = TraerInformacion[1].ToString();
-            txtTelefono.Text = TraerInformacion[2].ToString();
-            txtUsuario.Text = TraerInformacion[3].ToString();
+            txtCiudad.Text = TraerInformacion[4].ToString();
         }
 
         public static AdmCliente GetAdm()
@@ -45,16 +39,9 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             return adm;
         }
 
-        public void Modificar(string telefono, string ciudad, string cedula)
+        public string Modificar(string cedula, string telefono, string correo, string usuario, string contrasena)
         {
-            for(int i = 0; i < lista.Count; i++)
-            {
-                if (lista[i].Cedula.CompareTo(cedula) == 0)
-                {
-                    lista[i].Telefono = telefono;
-                    lista[i].Ciudad = ciudad;
-                }
-            }
+            return procedimientos.ActualizarCliente(cedula, telefono, correo, usuario, contrasena);
         }
 
         public int GetLista()
@@ -65,8 +52,8 @@ namespace LogicaDeNegocios.Modulo_de_cliente
         public bool Vacio(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña)
         {
             bool x = false;
-            if(string.IsNullOrEmpty(cedula.Trim())||string.IsNullOrEmpty(nombre.Trim())||string.IsNullOrEmpty(sexo.Trim())||
-                string.IsNullOrEmpty(telefono.Trim())||string.IsNullOrEmpty(correo.Trim())||string.IsNullOrEmpty(ciudad.Trim())||
+            if (string.IsNullOrEmpty(cedula.Trim()) || string.IsNullOrEmpty(nombre.Trim()) || string.IsNullOrEmpty(sexo.Trim()) ||
+                string.IsNullOrEmpty(telefono.Trim()) || string.IsNullOrEmpty(correo.Trim()) || string.IsNullOrEmpty(ciudad.Trim()) ||
                 string.IsNullOrEmpty(usuario.Trim()) || string.IsNullOrEmpty(contraseña.Trim()))
             {
                 x = true;
@@ -97,7 +84,7 @@ namespace LogicaDeNegocios.Modulo_de_cliente
         }
         public MySqlConnection Conectar()
         {
-           MySqlConnection conectado = new MySqlConnection();
+            MySqlConnection conectado = new MySqlConnection();
             conexion.conectar();
             return conectado;
         }

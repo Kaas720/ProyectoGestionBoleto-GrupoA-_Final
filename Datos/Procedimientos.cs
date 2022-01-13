@@ -68,6 +68,33 @@ namespace Datos
             return Cliente;
         }
 
+        public string ActualizarCliente(string cedula, string telefono, string correo, string usuario, string contrasena)
+        {
+            string mensaje = "";
+            try
+            {
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = con.conectar();
+                comando.CommandText = "ModificarCliente";
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Cedula", cedula);
+                comando.Parameters.AddWithValue("@Telefono", telefono);
+                comando.Parameters.AddWithValue("@Correo", correo);
+                comando.Parameters.AddWithValue("@Usuario", usuario);
+                comando.Parameters.AddWithValue("@Contraseña", contrasena);
+                comando.ExecuteNonQuery();
+                con.Cerrar();
+                mensaje = "Se actualizaron los campos correctamente";
+            }
+            catch(MySqlException ex)
+            {
+
+                mensaje = "Se ha producido un error al actualizar los datos"+ ex;
+            }
+            return mensaje;
+        }
+
+
         public List<string> CargarCooperativa(string origen, string destino)
         {
             List<string> cooperativa = new List<string>();

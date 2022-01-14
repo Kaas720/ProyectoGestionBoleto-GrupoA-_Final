@@ -29,7 +29,7 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             TraerInformacion = procedimientos.BuscarCliente(cedula);
             txtNombre.Text = TraerInformacion[0].ToString();
             cmbSexo.Text = TraerInformacion[1].ToString();
-            txtUsuario.Text = TraerInformacion[4].ToString();
+            txtCiudad.Text = TraerInformacion[4].ToString();
         }
 
         public static AdmCliente GetAdm()

@@ -172,6 +172,7 @@ namespace Presentacion.UsuarioCliente
             this.txtCiudad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCiudad.DisabledState.Parent = this.txtCiudad;
             this.txtCiudad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCiudad.Enabled = false;
             this.txtCiudad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCiudad.FocusedState.Parent = this.txtCiudad;
             this.txtCiudad.Font = new System.Drawing.Font("Segoe UI", 9F);

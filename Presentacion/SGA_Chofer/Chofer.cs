@@ -35,7 +35,7 @@ namespace Presentacion.SGA_Chofer
             try
             {
 
-                int resultado = chofer.actualizar_x_cedula( txtcedula.Text, txtnombre.Text, txtlicencia.Text, txtsexo.Text, Int16.Parse(txttelefono.Text), txtcorreo.Text, txtusuario.Text, txtcontraseña.Text);
+                int resultado = chofer.actualizar_x_cedula( txtcedula.Text, txtnombre.Text, txtlicencia.Text, txtsexo.Text, txttelefono.Text, txtcorreo.Text, txtciudad.Text,  txtusuario.Text, txtcontraseña.Text, Int16.Parse(CmbBoxCo.Text), CmbBoxEs.Text);
                 if (resultado == 0)
                 {
                     MessageBox.Show("Los datos se actualizon correctamente");

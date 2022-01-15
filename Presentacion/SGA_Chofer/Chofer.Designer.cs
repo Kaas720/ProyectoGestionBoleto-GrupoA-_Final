@@ -63,6 +63,12 @@
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
             this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.Fecha_Hora_Sistema = new System.Windows.Forms.Timer(this.components);
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtciudad = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.CmbBoxCo = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CmbBoxEs = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.PanelSuperior.SuspendLayout();
@@ -181,7 +187,7 @@
             this.txtcontraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtcontraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcontraseña.HoverState.Parent = this.txtcontraseña;
-            this.txtcontraseña.Location = new System.Drawing.Point(705, 644);
+            this.txtcontraseña.Location = new System.Drawing.Point(707, 702);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.PasswordChar = '\0';
             this.txtcontraseña.PlaceholderText = "Contraseña";
@@ -205,7 +211,7 @@
             this.txtusuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtusuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusuario.HoverState.Parent = this.txtusuario;
-            this.txtusuario.Location = new System.Drawing.Point(705, 586);
+            this.txtusuario.Location = new System.Drawing.Point(707, 644);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.PasswordChar = '\0';
             this.txtusuario.PlaceholderText = "Usuario";
@@ -274,7 +280,7 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(606, 739);
+            this.guna2Button1.Location = new System.Drawing.Point(604, 904);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
@@ -287,7 +293,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(504, 233);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 16);
+            this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 17;
             this.label1.Text = "Cedula:";
             // 
@@ -296,7 +302,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(504, 291);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 16);
+            this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 18;
             this.label2.Text = "Nombre:";
             // 
@@ -305,7 +311,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(504, 359);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.Size = new System.Drawing.Size(64, 17);
             this.label3.TabIndex = 19;
             this.label3.Text = "Licencia:";
             // 
@@ -314,7 +320,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(504, 417);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 16);
+            this.label4.Size = new System.Drawing.Size(43, 17);
             this.label4.TabIndex = 20;
             this.label4.Text = "Sexo:";
             // 
@@ -323,7 +329,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(504, 480);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 16);
+            this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 21;
             this.label5.Text = "Telefono:";
             // 
@@ -332,25 +338,25 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(504, 538);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 16);
+            this.label6.Size = new System.Drawing.Size(55, 17);
             this.label6.TabIndex = 22;
             this.label6.Text = "Correo:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(504, 606);
+            this.label7.Location = new System.Drawing.Point(506, 664);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 16);
+            this.label7.Size = new System.Drawing.Size(61, 17);
             this.label7.TabIndex = 23;
             this.label7.Text = "Usuario:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(504, 664);
+            this.label8.Location = new System.Drawing.Point(506, 722);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 16);
+            this.label8.Size = new System.Drawing.Size(85, 17);
             this.label8.TabIndex = 24;
             this.label8.Text = "Contraseña:";
             // 
@@ -457,7 +463,7 @@
             this.radioButton2.ForeColor = System.Drawing.Color.White;
             this.radioButton2.Location = new System.Drawing.Point(27, 341);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(88, 20);
+            this.radioButton2.Size = new System.Drawing.Size(89, 21);
             this.radioButton2.TabIndex = 7;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "IMPRIMIR";
@@ -481,7 +487,7 @@
             this.radioButton1.ForeColor = System.Drawing.Color.White;
             this.radioButton1.Location = new System.Drawing.Point(27, 227);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(127, 20);
+            this.radioButton1.Size = new System.Drawing.Size(130, 21);
             this.radioButton1.TabIndex = 5;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "EDITAR PERFIL";
@@ -494,7 +500,7 @@
             this.label9.Location = new System.Drawing.Point(130, 179);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 16);
+            this.label9.Size = new System.Drawing.Size(0, 17);
             this.label9.TabIndex = 3;
             // 
             // label10
@@ -576,11 +582,116 @@
             this.Fecha_Hora_Sistema.Enabled = true;
             this.Fecha_Hora_Sistema.Tick += new System.EventHandler(this.Fecha_Hora_Sistema_Tick);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(506, 603);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 17);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "Ciudad:";
+            // 
+            // txtciudad
+            // 
+            this.txtciudad.BorderRadius = 10;
+            this.txtciudad.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtciudad.DefaultText = "";
+            this.txtciudad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtciudad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtciudad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtciudad.DisabledState.Parent = this.txtciudad;
+            this.txtciudad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtciudad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtciudad.FocusedState.Parent = this.txtciudad;
+            this.txtciudad.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtciudad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtciudad.HoverState.Parent = this.txtciudad;
+            this.txtciudad.Location = new System.Drawing.Point(707, 583);
+            this.txtciudad.Name = "txtciudad";
+            this.txtciudad.PasswordChar = '\0';
+            this.txtciudad.PlaceholderText = "Ciudad";
+            this.txtciudad.SelectedText = "";
+            this.txtciudad.ShadowDecoration.Parent = this.txtciudad;
+            this.txtciudad.Size = new System.Drawing.Size(230, 36);
+            this.txtciudad.TabIndex = 28;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(504, 781);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(88, 17);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "Cooperativa:";
+            // 
+            // CmbBoxCo
+            // 
+            this.CmbBoxCo.BackColor = System.Drawing.Color.Transparent;
+            this.CmbBoxCo.BorderRadius = 10;
+            this.CmbBoxCo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbBoxCo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbBoxCo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbBoxCo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbBoxCo.FocusedState.Parent = this.CmbBoxCo;
+            this.CmbBoxCo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbBoxCo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CmbBoxCo.HoverState.Parent = this.CmbBoxCo;
+            this.CmbBoxCo.ItemHeight = 30;
+            this.CmbBoxCo.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.CmbBoxCo.ItemsAppearance.Parent = this.CmbBoxCo;
+            this.CmbBoxCo.Location = new System.Drawing.Point(707, 762);
+            this.CmbBoxCo.Name = "CmbBoxCo";
+            this.CmbBoxCo.ShadowDecoration.Parent = this.CmbBoxCo;
+            this.CmbBoxCo.Size = new System.Drawing.Size(230, 36);
+            this.CmbBoxCo.TabIndex = 32;
+            // 
+            // CmbBoxEs
+            // 
+            this.CmbBoxEs.BackColor = System.Drawing.Color.Transparent;
+            this.CmbBoxEs.BorderRadius = 10;
+            this.CmbBoxEs.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CmbBoxEs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbBoxEs.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbBoxEs.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CmbBoxEs.FocusedState.Parent = this.CmbBoxEs;
+            this.CmbBoxEs.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CmbBoxEs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CmbBoxEs.HoverState.Parent = this.CmbBoxEs;
+            this.CmbBoxEs.ItemHeight = 30;
+            this.CmbBoxEs.Items.AddRange(new object[] {
+            "A",
+            "R"});
+            this.CmbBoxEs.ItemsAppearance.Parent = this.CmbBoxEs;
+            this.CmbBoxEs.Location = new System.Drawing.Point(707, 827);
+            this.CmbBoxEs.Name = "CmbBoxEs";
+            this.CmbBoxEs.ShadowDecoration.Parent = this.CmbBoxEs;
+            this.CmbBoxEs.Size = new System.Drawing.Size(230, 36);
+            this.CmbBoxEs.TabIndex = 34;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(506, 846);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 17);
+            this.label17.TabIndex = 33;
+            this.label17.Text = "Estado:";
+            // 
             // Chofer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1219, 813);
+            this.ClientSize = new System.Drawing.Size(1219, 984);
+            this.Controls.Add(this.CmbBoxEs);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.CmbBoxCo);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txtciudad);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -653,5 +764,11 @@
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
         private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
         private System.Windows.Forms.Timer Fecha_Hora_Sistema;
+        private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2TextBox txtciudad;
+        private System.Windows.Forms.Label label16;
+        private Guna.UI2.WinForms.Guna2ComboBox CmbBoxCo;
+        private Guna.UI2.WinForms.Guna2ComboBox CmbBoxEs;
+        private System.Windows.Forms.Label label17;
     }
 }

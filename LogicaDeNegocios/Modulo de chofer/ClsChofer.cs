@@ -10,10 +10,10 @@ namespace LogicaDeNegocios.Modulo_de_chofer
     public class ClsChofer: Persona
     {
         
+
         private String licencia;
         private Int16 idCooperativa;
         private String estado;
-
 
 
 
@@ -55,9 +55,9 @@ namespace LogicaDeNegocios.Modulo_de_chofer
 
 
 
-        public int actualizar_x_cedula(string cedula, String nombre, String licencia, String sexo, Int16 telefono, String correo, String usuario, String contraseña)
+        public int actualizar_x_cedula(String cedula, String nombre, String sexo, String telefono, String correo, String ciudad, String usuario, String contraseña, String licencia, Int16 idCooperativa, String estado)
         {
-            return M.actualizar_chofer_individual(cedula, nombre, licencia, sexo, telefono, correo, usuario, contraseña);
+            return M.actualizar_chofer_individual(cedula, nombre, licencia, sexo, telefono, correo,ciudad, usuario, contraseña, idCooperativa, estado);
         }
 
         /* Lucio Johann*/
@@ -66,7 +66,7 @@ namespace LogicaDeNegocios.Modulo_de_chofer
             string msj;
 
             List<ClsParametroChofer> lst = new List<ClsParametroChofer>();
-            lst.Add(new ClsParametroChofer(Cedula, Nombre, Licencia, Sexo, Telefono, Correo,Usuario, Contraseña));
+            lst.Add(new ClsParametroChofer(Cedula, Nombre, Licencia, Sexo, Telefono, Correo, Ciudad,Usuario, Contraseña, IdCooperativa, Estado));
             msj = M.insertar(lst);
             return msj;
         }

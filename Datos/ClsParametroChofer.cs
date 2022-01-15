@@ -9,27 +9,34 @@ namespace Datos
     public class ClsParametroChofer
     {
 
-        private string cedula;
+        private String cedula;
         private String nombre;
         private String licencia;
         private String sexo;
         private String telefono;
         private String correo;
+        private String ciudad;
         private String usuario;
         private String contraseña;
+        private Int16 idCooperativa;
+        private String estado;
 
 
         public ClsParametroChofer() {}
-        public ClsParametroChofer(string cedula, string nombre, string licencia, string sexo, string telefono, string correo, string usuario, string contraseña)
+        public ClsParametroChofer(String cedula, String nombre, String sexo, String telefono, String correo, String ciudad, String usuario, String contraseña, String licencia, Int16 idCooperativa, String estado) 
         {
+
             this.cedula = cedula;
             this.nombre = nombre;
-            this.licencia = licencia;
             this.sexo = sexo;
             this.telefono = telefono;
+            this.ciudad = ciudad;
             this.correo = correo;
             this.usuario = usuario;
             this.contraseña = contraseña;
+            this.licencia = licencia;
+            this.idCooperativa = idCooperativa;
+            this.estado = estado;
         }
 
         //Getter and Setter fields
@@ -70,6 +77,13 @@ namespace Datos
             set { correo = value; }
         }
 
+        public String Ciudad
+        {
+            get { return ciudad; }
+            set { ciudad = value; }
+        }
+
+
         public String Usuario
         {
             get { return usuario; }
@@ -80,6 +94,18 @@ namespace Datos
         {
             get { return contraseña; }
             set { contraseña = value; }
+        }
+
+        public Int16 IdCooperativa
+        {
+            get { return idCooperativa; }
+            set { idCooperativa = value; }
+        }
+
+        public String Estado
+        {
+            get { return estado; }
+            set { estado = value; }
         }
 
     }

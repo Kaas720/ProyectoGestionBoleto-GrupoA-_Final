@@ -18,7 +18,7 @@ namespace Datos
 
             try
             {
-                string ConnectionString = "Server=MYSQL5045.site4now.net; Database=db_a7eb45_sga; Uid=a7eb45_sga; Pwd=1234emelec";
+                string ConnectionString = "server=localhost; database=sga; Uid=root; pwd=kevin1234;";
                 conexion = new MySqlConnection(ConnectionString);
                 conexion.Open();
                 Console.WriteLine("Se abrio la conexion desde la capa de acceso a datos");
@@ -36,10 +36,10 @@ namespace Datos
             Console.WriteLine("Se cerro la conexion desde la capa de acceso a datos");
         }
 
-        public int actualizar_chofer_individual(string param_cedula, String param_nombre, String param_licencia, String param_sexo, Int16 param_telefono, String param_correo, String param_usuario, String param_contraseña)
+        public int actualizar_chofer_individual(String param_cedula, String param_nombre, String param_licencia, String param_sexo, String param_telefono, String param_correo, String param_ciudad, String param_usuario, String param_contraseña, Int16 param_idCooperativa, String param_estado)
         {
             MySqlConnection conexion = abrir_conexion();
-            string actualizar = "update pruebac set cedula=@param_cedula, nombre=@param_nombre, licencia=@param_licencia, sexo=@param_sexo, telefono=@param_telefono, correo=@param_correo, usuario=@param_usuario, contraseña=@param_contraseña WHERE cedula=@param_cedula";
+            string actualizar = "update chofer set cedula=@param_cedula, nombre=@param_nombre, licencia=@param_licencia, sexo=@param_sexo, teléfono=@param_telefono, correo=@param_correo, ciudad=@param_ciudad, usuario=@param_usuario, contraseña=@param_contraseña, idCooperativa=@param_idCooperativa,  estado=@param_estado WHERE cedula=@param_cedula";
             MySqlCommand comannd = new MySqlCommand(actualizar, conexion);
             comannd.Parameters.AddWithValue("@param_cedula", param_cedula); // a la variable de tip Mysql comand agregar un valor al parametro
             comannd.Parameters.AddWithValue("@param_nombre", param_nombre); // Parametro a remplazar en la cadena de conxion o insert , con lo que venga de la capa logica
@@ -47,8 +47,11 @@ namespace Datos
             comannd.Parameters.AddWithValue("@param_sexo", param_sexo);
             comannd.Parameters.AddWithValue("@param_telefono", param_telefono);
             comannd.Parameters.AddWithValue("@param_correo", param_correo);
+            comannd.Parameters.AddWithValue("@param_ciudad", param_ciudad);
             comannd.Parameters.AddWithValue("@param_usuario", param_usuario);
             comannd.Parameters.AddWithValue("@param_contraseña", param_contraseña);
+            comannd.Parameters.AddWithValue("@param_idCooperativa", param_idCooperativa);
+            comannd.Parameters.AddWithValue("@param_estado", param_estado);
             int resultado_operacion = Convert.ToInt32(comannd.ExecuteScalar());
             cerrar_conexion(conexion);
             return resultado_operacion;

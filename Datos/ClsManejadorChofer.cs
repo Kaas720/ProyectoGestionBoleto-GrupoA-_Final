@@ -24,17 +24,17 @@ namespace Datos
 
 
 
-            comannd.Parameters.AddWithValue("@param_cedula", param_cedula); // a la variable de tip Mysql comand agregar un valor al parametro
-            comannd.Parameters.AddWithValue("@param_nombre", param_nombre); // Parametro a remplazar en la cadena de conxion o insert , con lo que venga de la capa logica
-            comannd.Parameters.AddWithValue("@param_licencia", param_licencia);
-            comannd.Parameters.AddWithValue("@param_sexo", param_sexo);
-            comannd.Parameters.AddWithValue("@param_telefono", param_telefono);
-            comannd.Parameters.AddWithValue("@param_correo", param_correo);
-            comannd.Parameters.AddWithValue("@param_ciudad", param_ciudad);
-            comannd.Parameters.AddWithValue("@param_usuario", param_usuario);
-            comannd.Parameters.AddWithValue("@param_contraseña", param_contraseña);
-            comannd.Parameters.AddWithValue("@param_idCooperativa", param_idCooperativa);
-            comannd.Parameters.AddWithValue("@param_estado", param_estado);
+            comannd.Parameters.AddWithValue("param_cedula", param_cedula); // a la variable de tip Mysql comand agregar un valor al parametro
+            comannd.Parameters.AddWithValue("param_nombre", param_nombre); // Parametro a remplazar en la cadena de conxion o insert , con lo que venga de la capa logica
+            comannd.Parameters.AddWithValue("param_licencia", param_licencia);
+            comannd.Parameters.AddWithValue("param_sexo", param_sexo);
+            comannd.Parameters.AddWithValue("param_telefono", param_telefono);
+            comannd.Parameters.AddWithValue("param_correo", param_correo);
+            comannd.Parameters.AddWithValue("param_ciudad", param_ciudad);
+            comannd.Parameters.AddWithValue("param_usuario", param_usuario);
+            comannd.Parameters.AddWithValue("param_contraseña", param_contraseña);
+            comannd.Parameters.AddWithValue("param_idCooperativa", param_idCooperativa);
+            comannd.Parameters.AddWithValue("param_estado", param_estado);
             int resultado_operacion = Convert.ToInt32(comannd.ExecuteScalar());
             ManejadorChofer.cerrar_conexion(conexion);
             return resultado_operacion;

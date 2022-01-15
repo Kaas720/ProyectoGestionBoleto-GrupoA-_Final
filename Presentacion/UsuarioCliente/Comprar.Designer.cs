@@ -579,6 +579,7 @@ namespace Presentacion
             this.TxtNombre.ShadowDecoration.Parent = this.TxtNombre;
             this.TxtNombre.Size = new System.Drawing.Size(246, 24);
             this.TxtNombre.TabIndex = 40;
+            this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
             // 
             // txtCedula
             // 
@@ -604,6 +605,7 @@ namespace Presentacion
             this.txtCedula.ShadowDecoration.Parent = this.txtCedula;
             this.txtCedula.Size = new System.Drawing.Size(231, 24);
             this.txtCedula.TabIndex = 39;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // guna2Button1
             // 

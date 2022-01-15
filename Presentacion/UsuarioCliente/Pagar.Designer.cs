@@ -32,13 +32,13 @@ namespace Presentacion.UsuarioCliente
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.InfBoleto = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPagar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -56,7 +56,7 @@ namespace Presentacion.UsuarioCliente
             this.guna2GroupBox1.BorderRadius = 20;
             this.guna2GroupBox1.Controls.Add(this.guna2Button2);
             this.guna2GroupBox1.Controls.Add(this.InfBoleto);
-            this.guna2GroupBox1.Controls.Add(this.guna2Button1);
+            this.guna2GroupBox1.Controls.Add(this.btnPagar);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Ivory;
@@ -66,6 +66,27 @@ namespace Presentacion.UsuarioCliente
             this.guna2GroupBox1.Size = new System.Drawing.Size(605, 374);
             this.guna2GroupBox1.TabIndex = 37;
             this.guna2GroupBox1.Text = "Información boleto";
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.AutoRoundedCorners = true;
+            this.guna2Button2.BorderRadius = 20;
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(446, 227);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(138, 42);
+            this.guna2Button2.TabIndex = 14;
+            this.guna2Button2.Text = "CANCELAR";
             // 
             // InfBoleto
             // 
@@ -101,26 +122,27 @@ namespace Presentacion.UsuarioCliente
             this.InfBoleto.TabIndex = 13;
             this.InfBoleto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // guna2Button1
+            // btnPagar
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(446, 141);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(138, 42);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "PAGAR";
+            this.btnPagar.AutoRoundedCorners = true;
+            this.btnPagar.BorderRadius = 20;
+            this.btnPagar.CheckedState.Parent = this.btnPagar;
+            this.btnPagar.CustomImages.Parent = this.btnPagar;
+            this.btnPagar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPagar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPagar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPagar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPagar.DisabledState.Parent = this.btnPagar;
+            this.btnPagar.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnPagar.ForeColor = System.Drawing.Color.White;
+            this.btnPagar.HoverState.Parent = this.btnPagar;
+            this.btnPagar.Location = new System.Drawing.Point(446, 141);
+            this.btnPagar.Name = "btnPagar";
+            this.btnPagar.ShadowDecoration.Parent = this.btnPagar;
+            this.btnPagar.Size = new System.Drawing.Size(138, 42);
+            this.btnPagar.TabIndex = 12;
+            this.btnPagar.Text = "PAGAR";
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // guna2Panel1
             // 
@@ -180,27 +202,6 @@ namespace Presentacion.UsuarioCliente
             this.BotonRetroceder.UseVisualStyleBackColor = false;
             this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
             // 
-            // guna2Button2
-            // 
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BorderRadius = 20;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(446, 227);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(138, 42);
-            this.guna2Button2.TabIndex = 14;
-            this.guna2Button2.Text = "CANCELAR";
-            // 
             // Pagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,7 +226,7 @@ namespace Presentacion.UsuarioCliente
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnPagar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private FontAwesome.Sharp.IconButton BotonRetroceder;
         private Guna.UI2.WinForms.Guna2TextBox InfBoleto;

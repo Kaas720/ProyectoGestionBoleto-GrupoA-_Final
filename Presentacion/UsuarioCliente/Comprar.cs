@@ -1,5 +1,6 @@
 ﻿using EntidadesDelProyecto;
 using LogicaDeNegocios;
+using LogicaDeNegocios.Modulo_de_cliente;
 using Presentacion.UsuarioCliente;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace Presentacion
 {
     public partial class Comprar : Form
     {
+        Validacion validacion = new Validacion();
         string boletos;
         ConsultaProcedimientosGenerarBoleto consultasProcedemientos = new ConsultaProcedimientosGenerarBoleto();
         List<string> boletosNuveos = new List<string>();
@@ -81,20 +83,10 @@ namespace Presentacion
             Program.principal.Show();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            if(verificarCamposVacios())
-            {
-                CambiarTextoCarrito();
-                LLenarInformacionBoletoCarro();
-                VaciarCampos();
-                
-            }
-        }
 
         private void LLenarInformacionBoletoCarro()
         {
-            boletos += Environment.NewLine + "/-----------------------------------/" + Environment.NewLine + "Cedula: " + txtCedula.Text + Environment.NewLine + "Nombre: " + TxtNombre.Text + Environment.NewLine
+            boletos += Environment.NewLine + "/-----------------------------------/" + Environment.NewLine + "Cedula: "+ txtCedula.Text + Environment.NewLine + "Nombre: " + TxtNombre.Text + Environment.NewLine
             + "Cooperativa: " + TxtCooperativa.Text + Environment.NewLine + "Hora Salida: " + TxtHoraSalida.Text + Environment.NewLine
             + "Fecha Salida: " + TxtFechaSalida.Text + Environment.NewLine + "Disco del bus: " + TxtNumeroDisco.Text + Environment.NewLine
             + "Asiento:" + CbNumeroAsientos.Text;
@@ -117,17 +109,25 @@ namespace Presentacion
 
         private bool verificarCamposVacios()
         {
-            if (txtCedula.Text.Length != 0 && TxtNombre.Text.Length != 0 && !CbNumeroAsientos.SelectedIndex.Equals(-1))
+            bool campo = false;
+            if(validacion.ValidarCedula(txtCedula.Text)!= true ||  String.IsNullOrEmpty(TxtNombre.Text)  ||  String.IsNullOrEmpty(CbNumeroAsientos.Text))
             {
-                return true;
+                campo = true;
+                MessageBox.Show("Existen campos vacios");
             }
-            else
-            {
-                MessageBox.Show("Campos vacios llenar todos los campos.");
-                return false;
-            }
+            return campo;
         }
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+     
+            if (!verificarCamposVacios())
+            { 
+            CambiarTextoCarrito();
+                LLenarInformacionBoletoCarro();
+                VaciarCampos();
+            }
 
+        }
         private void CarritoBtn_Click(object sender, EventArgs e)
         {
             if (Convert.ToInt32(CarritoBtn.Text)==0)
@@ -138,6 +138,25 @@ namespace Presentacion
             {
                 Pagar pagar = new Pagar(boletos,TxtCooperativa.Text,TxtFechaSalida.Text,TxtHoraSalida.Text);
                 pagar.ShowDialog();
+            }
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) &&
+                 (e.KeyChar != Convert.ToChar(Keys.Space)))
+            {
+                e.Handled = true;
+                return;
             }
         }
     }

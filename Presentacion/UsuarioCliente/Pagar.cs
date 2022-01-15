@@ -32,5 +32,10 @@ namespace Presentacion.UsuarioCliente
         {
             this.Close();
         }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

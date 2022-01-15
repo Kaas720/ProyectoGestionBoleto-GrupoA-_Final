@@ -17,7 +17,7 @@ namespace LogicaDeNegocios.Modulo_de_chofer
 
 
 
-        ClsManejador M = new ClsManejador();
+        ClsManejadorChofer M = new ClsManejadorChofer();
 
         /* Lucio Johann*/
 
@@ -26,13 +26,7 @@ namespace LogicaDeNegocios.Modulo_de_chofer
         
         }
 
-        public ClsChofer(String cedula, String nombre, String sexo, String telefono, String correo, String ciudad, String usuario, String contraseña, String licencia, Int16 idCooperativa, String estado) : base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
-        {
-           
-            this.licencia = licencia;
-            this.idCooperativa = idCooperativa;
-            this.estado = estado;
-        }
+
    
 
         public String Licencia
@@ -63,12 +57,43 @@ namespace LogicaDeNegocios.Modulo_de_chofer
         /* Lucio Johann*/
         public override string registrar()
         {
-            string msj;
-
+            ClsParametroChofer coferp = new ClsParametroChofer();
             List<ClsParametroChofer> lst = new List<ClsParametroChofer>();
-            lst.Add(new ClsParametroChofer(Cedula, Nombre, Licencia, Sexo, Telefono, Correo, Ciudad,Usuario, Contraseña, IdCooperativa, Estado));
-            msj = M.insertar(lst);
+            string msj;
+            try
+            {
+
+                coferp.Nombre = this.Nombre;
+                coferp.Cedula = this.Cedula;
+                coferp.Licencia = this.Licencia;
+                coferp.Sexo = this.Sexo;
+                coferp.Telefono = this.Telefono;
+                coferp.Correo = this.Correo;
+                coferp.Ciudad = this.Ciudad;
+                coferp.Usuario = this.Usuario;
+                coferp.Contraseña = this.Contraseña;
+                coferp.IdCooperativa = this.IdCooperativa;
+                coferp.Estado = this.Estado;
+
+
+                //Pasar los parámetros hacia la capa de acceso a datos
+                lst.Add(coferp);
+                M.insertar_chofer(lst);
+
+
+                msj = "Insertado correctamente";
+
+            }
+            catch (Exception ex)
+            {
+                msj = "Error al insertar los datos";
+                return msj;
+                throw ex;
+            }
+
             return msj;
         }
+
+
     }
 }

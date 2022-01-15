@@ -23,21 +23,10 @@ namespace Datos
 
 
         public ClsParametroChofer() {}
-        public ClsParametroChofer(String cedula, String nombre, String sexo, String telefono, String correo, String ciudad, String usuario, String contraseña, String licencia, Int16 idCooperativa, String estado) 
-        {
 
-            this.cedula = cedula;
-            this.nombre = nombre;
-            this.sexo = sexo;
-            this.telefono = telefono;
-            this.ciudad = ciudad;
-            this.correo = correo;
-            this.usuario = usuario;
-            this.contraseña = contraseña;
-            this.licencia = licencia;
-            this.idCooperativa = idCooperativa;
-            this.estado = estado;
-        }
+
+
+
 
         //Getter and Setter fields
         public string Cedula

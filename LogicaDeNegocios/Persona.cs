@@ -17,6 +17,8 @@ namespace LogicaDeNegocios
         private string usuario;
         private string contraseña;
 
+        public Persona() { }
+
         public Persona(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña)
         {
             this.cedula = cedula;

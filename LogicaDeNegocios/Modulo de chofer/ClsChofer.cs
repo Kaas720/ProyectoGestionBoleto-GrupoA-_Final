@@ -9,9 +9,10 @@ namespace LogicaDeNegocios.Modulo_de_chofer
 {
     public class ClsChofer: Persona
     {
-        private int idChofer;
+        
         private String licencia;
-        private Double sueldo;
+        private Int16 idCooperativa;
+        private String estado;
 
 
 
@@ -20,21 +21,19 @@ namespace LogicaDeNegocios.Modulo_de_chofer
 
         /* Lucio Johann*/
 
-        public  ClsChofer() {}
-
-        public ClsChofer(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña, int idChofer, string Licencia, double Sueldo)
-         : base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
-        {
-            this.idChofer = idChofer;
-            this.Licencia = Licencia;
-            this.sueldo = Sueldo;
-
+        public  ClsChofer() {
+        
+        
         }
-        public int IdChofer
+
+        public ClsChofer(String cedula, String nombre, String sexo, String telefono, String correo, String ciudad, String usuario, String contraseña, String licencia, Int16 idCooperativa, String estado) : base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
         {
-            get { return idChofer; }
-            set { idChofer = value; }
+           
+            this.licencia = licencia;
+            this.idCooperativa = idCooperativa;
+            this.estado = estado;
         }
+   
 
         public String Licencia
         {
@@ -42,10 +41,16 @@ namespace LogicaDeNegocios.Modulo_de_chofer
             set { licencia = value; }
         }
 
-        public Double Sueldo
+        public Int16 IdCooperativa
         {
-            get { return sueldo; }
-            set { sueldo= value; }
+            get { return idCooperativa; }
+            set { idCooperativa = value; }
+        }
+
+        public String Estado
+        {
+            get { return estado; }
+            set { estado = value; }
         }
 
 

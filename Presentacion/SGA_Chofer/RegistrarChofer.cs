@@ -30,7 +30,7 @@ namespace Presentacion.SGA_Chofer
                 ch.Licencia = txtlicencia.Text;
                 ch.Sexo = txtsexo.Text;
                 ch.Telefono = txttelefono.Text;
-                ch.Correo = txtcorreo.Text
+                ch.Correo = txtcorreo.Text;
                 ch.Usuario = txtusuario.Text;
                 ch.Contraseña = txtcontraseña.Text;
 
@@ -48,7 +48,7 @@ namespace Presentacion.SGA_Chofer
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al registrar, verifique que todos los datos sean ingresados.");
+                MessageBox.Show("Error al registrar, verifique que todos los datos sean ingresados." + ex);
             }
         }
     }

@@ -67,9 +67,9 @@ namespace Presentacion
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            /*Comprar ob = new Comprar();
-            ob.Show();
-            this.Hide();*/
+            RegistroCliente registroCliente = new RegistroCliente();
+            registroCliente.Show();
+            Program.principal.Hide();
         }
         /*Metodos para la venta en general*/
         private void BotonCierreDeAplicacion_Click_1(object sender, EventArgs e)

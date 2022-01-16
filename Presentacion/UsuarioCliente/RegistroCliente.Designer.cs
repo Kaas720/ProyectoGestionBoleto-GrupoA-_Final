@@ -30,9 +30,9 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -65,14 +65,13 @@ namespace Presentacion
             this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
-            this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Hora_Sistema = new System.Windows.Forms.Label();
+            this.FechaHora = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,80 +90,80 @@ namespace Presentacion
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(74, 101);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(52, 22);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(55, 24);
             this.guna2HtmlLabel1.TabIndex = 18;
             this.guna2HtmlLabel1.Text = "Cedula:";
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(74, 156);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(61, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel2.TabIndex = 19;
             this.guna2HtmlLabel2.Text = "Nombre:";
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(74, 205);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(38, 22);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(39, 24);
             this.guna2HtmlLabel3.TabIndex = 20;
             this.guna2HtmlLabel3.Text = "Sexo:";
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(74, 263);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(65, 22);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel4.TabIndex = 21;
             this.guna2HtmlLabel4.Text = "Telefono:";
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(501, 101);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(51, 22);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(53, 24);
             this.guna2HtmlLabel5.TabIndex = 22;
             this.guna2HtmlLabel5.Text = "Correo:";
             // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(501, 156);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(50, 22);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(53, 24);
             this.guna2HtmlLabel6.TabIndex = 23;
             this.guna2HtmlLabel6.Text = "Ciudad";
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(501, 205);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(56, 22);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(61, 24);
             this.guna2HtmlLabel7.TabIndex = 24;
             this.guna2HtmlLabel7.Text = "Usuario:";
             // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(501, 263);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(80, 22);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(84, 24);
             this.guna2HtmlLabel8.TabIndex = 25;
             this.guna2HtmlLabel8.Text = "Contraseña:";
             // 
@@ -380,21 +379,21 @@ namespace Presentacion
             // 
             this.dgvCliente.AllowUserToAddRows = false;
             this.dgvCliente.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCliente.BackgroundColor = System.Drawing.Color.White;
             this.dgvCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCliente.ColumnHeadersHeight = 21;
             this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cedula,
@@ -405,14 +404,14 @@ namespace Presentacion
             this.Ciudad,
             this.Usuario,
             this.Contraseña});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCliente.EnableHeadersVisualStyles = false;
             this.dgvCliente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCliente.Location = new System.Drawing.Point(12, 389);
@@ -523,7 +522,7 @@ namespace Presentacion
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.HoverState.Parent = this.btnGuardar;
-            this.btnGuardar.Location = new System.Drawing.Point(393, 319);
+            this.btnGuardar.Location = new System.Drawing.Point(393, 318);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
             this.btnGuardar.Size = new System.Drawing.Size(144, 45);
@@ -542,12 +541,12 @@ namespace Presentacion
             this.PanelSuperior.Controls.Add(this.BotonRetroceder);
             this.PanelSuperior.Controls.Add(this.Fecha_Sistema);
             this.PanelSuperior.Controls.Add(this.BotonParaMinimizarVentana);
-            this.PanelSuperior.Controls.Add(this.BotonCierreDeAplicacion);
-            this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.PanelSuperior.Location = new System.Drawing.Point(-1, 0);
             this.PanelSuperior.Name = "PanelSuperior";
             this.PanelSuperior.Size = new System.Drawing.Size(935, 35);
             this.PanelSuperior.TabIndex = 37;
+            this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
             // BotonRetroceder
             // 
@@ -566,6 +565,7 @@ namespace Presentacion
             this.BotonRetroceder.Size = new System.Drawing.Size(59, 31);
             this.BotonRetroceder.TabIndex = 39;
             this.BotonRetroceder.UseVisualStyleBackColor = false;
+            this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
             // 
             // Fecha_Sistema
             // 
@@ -589,27 +589,12 @@ namespace Presentacion
             this.BotonParaMinimizarVentana.IconColor = System.Drawing.Color.Yellow;
             this.BotonParaMinimizarVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BotonParaMinimizarVentana.IconSize = 34;
-            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(840, 7);
+            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(874, 6);
             this.BotonParaMinimizarVentana.Name = "BotonParaMinimizarVentana";
             this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(39, 34);
             this.BotonParaMinimizarVentana.TabIndex = 1;
             this.BotonParaMinimizarVentana.TabStop = false;
-            // 
-            // BotonCierreDeAplicacion
-            // 
-            this.BotonCierreDeAplicacion.BackColor = System.Drawing.Color.Transparent;
-            this.BotonCierreDeAplicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonCierreDeAplicacion.ForeColor = System.Drawing.Color.Yellow;
-            this.BotonCierreDeAplicacion.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.BotonCierreDeAplicacion.IconColor = System.Drawing.Color.Yellow;
-            this.BotonCierreDeAplicacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonCierreDeAplicacion.IconSize = 37;
-            this.BotonCierreDeAplicacion.Location = new System.Drawing.Point(855, 4);
-            this.BotonCierreDeAplicacion.Name = "BotonCierreDeAplicacion";
-            this.BotonCierreDeAplicacion.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.BotonCierreDeAplicacion.Size = new System.Drawing.Size(64, 37);
-            this.BotonCierreDeAplicacion.TabIndex = 0;
-            this.BotonCierreDeAplicacion.TabStop = false;
+            this.BotonParaMinimizarVentana.Click += new System.EventHandler(this.BotonParaMinimizarVentana_Click);
             // 
             // panel1
             // 
@@ -644,6 +629,11 @@ namespace Presentacion
             this.Hora_Sistema.Size = new System.Drawing.Size(80, 24);
             this.Hora_Sistema.TabIndex = 1;
             this.Hora_Sistema.Text = "17:51:10";
+            // 
+            // FechaHora
+            // 
+            this.FechaHora.Enabled = true;
+            this.FechaHora.Tick += new System.EventHandler(this.FechaHora_Tick);
             // 
             // RegistroCliente
             // 
@@ -680,7 +670,6 @@ namespace Presentacion
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -722,9 +711,9 @@ namespace Presentacion
         private FontAwesome.Sharp.IconButton BotonRetroceder;
         private System.Windows.Forms.Label Fecha_Sistema;
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
-        private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label Hora_Sistema;
+        private System.Windows.Forms.Timer FechaHora;
     }
 }

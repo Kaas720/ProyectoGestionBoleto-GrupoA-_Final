@@ -1,6 +1,7 @@
 ﻿
 using LogicaDeNegocios.Modulo_de_cliente;
 using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 namespace Presentacion
 {
@@ -107,6 +108,32 @@ namespace Presentacion
             Principal_Usuario principal = new Principal_Usuario();
             principal.Show();
             this.Dispose();
+        }
+
+        private void BotonRetroceder_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.principal.Show();
+        }
+
+        private void FechaHora_Tick(object sender, EventArgs e)
+        {
+            Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
+            Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void BotonParaMinimizarVentana_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private void PanelSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

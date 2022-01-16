@@ -28,7 +28,11 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             TraerInformacion = procedimientos.BuscarCliente(cedula);
             txtNombre.Text = TraerInformacion[0].ToString();
             cmbSexo.Text = TraerInformacion[1].ToString();
+            txtTelefono.Text = TraerInformacion[2].ToString();
+            txtCorreo.Text = TraerInformacion[3].ToString();
             txtCiudad.Text = TraerInformacion[4].ToString();
+            txtUsuario.Text = TraerInformacion[5].ToString();
+            txtContraseña.Text = TraerInformacion[6].ToString();
         }
 
         public static AdmCliente GetAdm()
@@ -49,11 +53,10 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             return lista.Count;
         }
 
-        public string Guardar(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña)
+        public string Guardar(Cliente cliente)
         {
             string x = "No se creo el objeto";
-            cliente = new Cliente(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña);
-           datos.InsertarCliente(cliente);
+            datos.InsertarCliente(cliente);
             x = cliente.ToString();
             lista.Add(cliente);
             return x;

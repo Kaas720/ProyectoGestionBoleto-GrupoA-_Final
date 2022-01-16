@@ -9,6 +9,7 @@ namespace Presentacion
         AdmCliente adm = AdmCliente.GetAdm();
         Validacion valida = new Validacion();
         private string cedula;
+        Cliente cliente = new Cliente();
 
         public RegistroCliente(string cedula)
         {
@@ -28,7 +29,7 @@ namespace Presentacion
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-            Cliente obj = new Cliente(cedula);
+            FrmCliente obj = new FrmCliente(cedula);
             obj.Show();
             this.Hide();
         }
@@ -40,7 +41,15 @@ namespace Presentacion
             string contenido = "";
             if (!EsVacio())
             {
-               contenido = adm.Guardar(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña);
+                cliente.Cedula = txtCedula.Text;
+                cliente.Nombre = txtNombre.Text;
+                cliente.Sexo = cmbSexo.Text;
+                cliente.Telefono = txtTelefono.Text;
+                cliente.Correo = txtCorreo.Text;
+                cliente.Ciudad = txtCiudad.Text;
+                cliente.Usuario = txtUsuario.Text;
+                cliente.Contraseña = txtContraseña.Text;
+                contenido = adm.Guardar(cliente);
                 int n = dgvCliente.Rows.Add();
                 dgvCliente.Rows[n].Cells[0].Value = txtCedula.Text;
                 dgvCliente.Rows[n].Cells[1].Value = txtNombre.Text;
@@ -52,7 +61,7 @@ namespace Presentacion
                 dgvCliente.Rows[n].Cells[7].Value = txtContraseña.Text;
                 Limpiar();
                 this.Hide();
-                Cliente ob = new Cliente(cedula);
+                FrmCliente ob = new FrmCliente(cedula);
                 ob.Show();
             }
             else

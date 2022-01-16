@@ -48,10 +48,9 @@
     <Compile Include="Modula Venta\Ruta.cs" />
     <Compile Include="Modulo Boleto\LlenarinformacionDataGrid.cs" />
     <Compile Include="Modulo de administrador\Administrador.cs" />
-    <Compile Include="Modulo de cliente\AdmCliente.cs" />
-    <Compile Include="Modulo de cliente\Cliente.cs" />
-    <Compile Include="Modulo de cliente\Validacion.cs" />
+    <Compile Include="Validacion.cs" />
     <Compile Include="Modulo de vendedor\Vendedor.cs" />
+    <Compile Include="Modulo Procedimiento Registro\RegistroClienteProcedimiento.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -64,6 +63,12 @@
       <Project>{19033910-1266-4B0F-B951-0C98AD3690E5}</Project>
       <Name>EntidadesDelProyecto</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modulo de cliente\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

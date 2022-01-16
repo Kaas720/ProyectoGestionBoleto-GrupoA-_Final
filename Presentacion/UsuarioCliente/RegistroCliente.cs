@@ -1,16 +1,20 @@
 ﻿
-using LogicaDeNegocios.Modulo_de_cliente;
+using LogicaDeNegocios.Modulo_Procedimiento_Registro;
+
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using EntidadesDelProyecto;
+using LogicaDeNegocios;
+
 namespace Presentacion
 {
     public partial class RegistroCliente : Form
     {
-       // AdmCliente adm = AdmCliente.GetAdm();
-        Validacion valida = new Validacion();
-        private string cedula;
 
+        
+        private string cedula;
+        RegistroClienteProcedimiento registroClienteProcedimiento = new RegistroClienteProcedimiento();
         public RegistroCliente(string cedula)
         {
             this.cedula = cedula;
@@ -36,37 +40,27 @@ namespace Presentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text.Trim(), sexo = cmbSexo.Text.Trim(),
-                telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(), ciudad = txtCiudad.Text.Trim(),
-                usuario = txtUsuario.Text.Trim(), contraseña = txtContraseña.Text.Trim();
-            string contenido = "";
+                telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(),
+                contraseña = txtContraseña.Text.Trim();
+            
             if (!EsVacio())
             {
-               //contenido = adm.Guardar(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña);
-                int n = dgvCliente.Rows.Add();
-                dgvCliente.Rows[n].Cells[0].Value = txtCedula.Text;
-                dgvCliente.Rows[n].Cells[1].Value = txtNombre.Text;
-                dgvCliente.Rows[n].Cells[2].Value = cmbSexo.Text;
-                dgvCliente.Rows[n].Cells[3].Value = txtTelefono.Text;
-                dgvCliente.Rows[n].Cells[4].Value = txtCorreo.Text;
-                dgvCliente.Rows[n].Cells[5].Value = txtCiudad.Text;
-                dgvCliente.Rows[n].Cells[6].Value = txtUsuario.Text;
-                dgvCliente.Rows[n].Cells[7].Value = txtContraseña.Text;
+                CredencialUsuario credencial = new CredencialUsuario(cedula, nombre, sexo, telefono, correo, contraseña);
+                registroClienteProcedimiento.RegistrarCliente(credencial);
+                MessageBox.Show("Registro realizado con exito");
                 Limpiar();
-                this.Hide();
-               // Cliente ob = new Cliente(cedula);
-                //ob.Show();
             }
             else
             {
-                MessageBox.Show("Existen campos vacios");
+                MessageBox.Show("Existe campos incorrectos");
             }
         }
         public bool EsVacio()
         {
+            Validacion valida = new Validacion();
             bool campo = false;
-            if (valida.ValidarCedula(txtCedula.Text) != true || string.IsNullOrEmpty(txtNombre.Text) || (string.IsNullOrEmpty(cmbSexo.Text) ||
-                string.IsNullOrEmpty(txtTelefono.Text) || string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtCiudad.Text) ||
-                string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text)))
+           if (valida.ValidarCedula(txtCedula.Text) != true || string.IsNullOrEmpty(txtNombre.Text) || (string.IsNullOrEmpty(cmbSexo.Text) ||
+                string.IsNullOrEmpty(txtTelefono.Text) || string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text)))
             {
                 campo = true;
             }
@@ -79,8 +73,6 @@ namespace Presentacion
             cmbSexo.Text = null;
             txtTelefono.Clear();
             txtCorreo.Clear();
-            txtCiudad.Clear();
-            txtUsuario.Clear();
             txtContraseña.Clear();
         }
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LogicaDeNegocios.Modulo_de_cliente
+namespace LogicaDeNegocios
 {
     public class Validacion
     {
@@ -15,7 +15,6 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             if (cedula.Length != 10)
             {
                 x = false;
-                MessageBox.Show("La cedula debe tener 10 digitos");
             }
             return x;
         }

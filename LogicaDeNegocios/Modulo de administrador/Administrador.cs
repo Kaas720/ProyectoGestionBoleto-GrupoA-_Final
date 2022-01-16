@@ -1,29 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace LogicaDeNegocios.Modulo_de_cliente
 {
-   public class Administrador:Persona
+   public class Administrador : Usuarios
     {
-        private int idAdministrador;
-        private string sueldo;
+        
+        private string usuario;
+        private string contraseña;
+        private double sueldo;
 
-        public Administrador(int idAdministrador, string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña, string sueldo)
-         :base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
+        public Administrador() { }
+        public Administrador(string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña, double sueldo)
+         :base(cedula, nombre, sexo, telefono, correo, ciudad)
         {
-            this.idAdministrador = idAdministrador;
+            this.usuario = usuario;
+            this.contraseña = contraseña;
             this.sueldo = sueldo;
         }
-
-        public string Sueldo { get => sueldo; set => sueldo = value; }
-        public int IdAdministrador { get => idAdministrador; set => idAdministrador = value; }
+        public string Usuario { get => usuario; set => usuario = value; }
+        public string Contraseña { get => contraseña; set => contraseña = value; }
+        public double Sueldo { get => sueldo; set => sueldo = value; }
 
         public override string ToString()
         {
-            return idAdministrador + base.ToString() + "Sueldo: " + sueldo;
+            return base.ToString() + "Sueldo: " + sueldo + usuario + contraseña;
         }
     }
 }

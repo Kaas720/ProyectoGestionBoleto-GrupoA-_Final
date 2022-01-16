@@ -1,4 +1,5 @@
-﻿using Presentacion.UsuarioCliente;
+﻿
+using Presentacion.UsarioCliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace Presentacion
 {
     public partial class Cliente : Form
     {
+        
         string cedula;
         public Cliente(string cedula)
         {

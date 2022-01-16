@@ -6,24 +6,27 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocios.Modulo_de_vendedor
 {
-    public class Vendedor: Persona
+    public class Vendedor: Usuarios
     {
-        private int idVendedor;
+        private string usuario;
+        private string contraseña;
         private double sueldo;
 
-        public Vendedor(int idVendedor, string cedula, string nombre, string sexo, string telefono, string correo, string ciudad, string usuario, string contraseña, double sueldo)
-            :base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
+        public Vendedor() { }
+        public Vendedor(string usuario, string contraseña, double sueldo)
+            //:base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
         {
-            this.idVendedor = idVendedor;
             this.sueldo = sueldo;
+            this.usuario = usuario;
+            this.contraseña = contraseña;
         }
-
+        public string Usuario { get => usuario; set => usuario = value; }
+        public string Contraseña { get => contraseña; set => contraseña = value; }
         public double Sueldo { get => sueldo; set => sueldo = value; }
-        public int IdVendedor { get => idVendedor; set => idVendedor = value; }
 
         public override string ToString()
         {
-            return idVendedor + base.ToString()+"Sueldo: " +sueldo;
+            return base.ToString() + "Sueldo: " + sueldo + usuario + contraseña;
         }
     }
 }

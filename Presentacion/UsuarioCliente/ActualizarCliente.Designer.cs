@@ -1,5 +1,5 @@
 ﻿
-namespace Presentacion.UsuarioCliente
+namespace Presentacion.UsarioCliente
 {
     partial class ActualizarCliente
     {

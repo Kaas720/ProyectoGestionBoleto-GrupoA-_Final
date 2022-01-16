@@ -14,44 +14,7 @@ namespace LogicaDeNegocios.RegistroDB
          conexion = new Conexion(); }
         public void InsertarCliente(Cliente cliente)
         {
-           
-            MySqlCommand comando = new MySqlCommand();
-            comando.CommandText = "spl_insertar_cliente";
-            comando.CommandType = System.Data.CommandType.StoredProcedure;
-            //Lista de parámetros para el procedimeinto almacenado
-            MySqlParameter parameterCedula = new MySqlParameter("@Cedula", MySqlDbType.VarChar);
-            parameterCedula.Direction = System.Data.ParameterDirection.Input;
-            parameterCedula.Value = cliente.Cedula;
-            comando.Parameters.Add(parameterCedula);
-            MySqlParameter parameterNombre = new MySqlParameter("@Nombre", MySqlDbType.VarChar);
-            parameterNombre.Direction = System.Data.ParameterDirection.Input;
-            parameterNombre.Value = cliente.Nombre;
-            comando.Parameters.Add(parameterNombre);
-            MySqlParameter parameterSexo = new MySqlParameter("@Sexo", MySqlDbType.VarChar);
-            parameterSexo.Direction = System.Data.ParameterDirection.Input;
-            parameterSexo.Value = cliente.Sexo;
-            comando.Parameters.Add(parameterSexo);
-            MySqlParameter parameterTelefono = new MySqlParameter("@Telefono", MySqlDbType.VarChar);
-            parameterTelefono.Direction = System.Data.ParameterDirection.Input;
-            parameterTelefono.Value = cliente.Telefono;
-            comando.Parameters.Add(parameterTelefono);
-            MySqlParameter parameterCorreo = new MySqlParameter("@Correo", MySqlDbType.VarChar);
-            parameterCorreo.Direction = System.Data.ParameterDirection.Input;
-            parameterCorreo.Value = cliente.Correo;
-            comando.Parameters.Add(parameterCorreo);
-            MySqlParameter parameterCiudad = new MySqlParameter("@Ciudad", MySqlDbType.VarChar);
-            parameterCiudad.Direction = System.Data.ParameterDirection.Input;
-            parameterCiudad.Value = cliente.Ciudad;
-            comando.Parameters.Add(parameterCiudad);
-            MySqlParameter parameterUsuario = new MySqlParameter("@Usuario", MySqlDbType.VarChar);
-            parameterUsuario.Direction = System.Data.ParameterDirection.Input;
-            parameterUsuario.Value = cliente.Usuario;
-            comando.Parameters.Add(parameterUsuario);
-            MySqlParameter parameterContraseña = new MySqlParameter("@Contraseña", MySqlDbType.VarChar);
-            parameterContraseña.Direction = System.Data.ParameterDirection.Input;
-            parameterContraseña.Value = cliente.Contraseña;
-            comando.Parameters.Add(parameterContraseña);
-            /*MySqlCommand mySqlCommand;
+            MySqlCommand mySqlCommand;
             Conexion conexion = new Conexion();
                    
                 mySqlCommand = new MySqlCommand();
@@ -64,13 +27,13 @@ namespace LogicaDeNegocios.RegistroDB
                 mySqlCommand.Parameters.AddWithValue("@Correo", cliente.Correo);
                 mySqlCommand.Parameters.AddWithValue("@Ciudad", cliente.Ciudad);
                 mySqlCommand.Parameters.AddWithValue("@Usuario", cliente.Usuario);
-                mySqlCommand.Parameters.AddWithValue("@Contrasena", cliente.Contraseña);*/
+                mySqlCommand.Parameters.AddWithValue("@Contraseña", cliente.Contraseña);
             try
             {
 
                 conexion.conectar();
-                  comando.Connection = conexion.Connection;
-                  comando.ExecuteNonQuery();
+                  mySqlCommand.Connection = conexion.Connection;
+                  mySqlCommand.ExecuteNonQuery();
 
                 }
                 catch (MySqlException ex)

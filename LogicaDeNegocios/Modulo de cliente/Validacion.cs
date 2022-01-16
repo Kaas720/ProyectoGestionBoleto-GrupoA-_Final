@@ -11,23 +11,23 @@ namespace LogicaDeNegocios.Modulo_de_cliente
     {
         public bool ValidarCedula(string cedula)
         {
-            bool x = true;
+            bool cadena = true;
             if (cedula.Length != 10)
             {
-                x = false;
+                cadena = false;
                 MessageBox.Show("La cedula debe tener 10 digitos");
             }
-            return x;
+            return cadena;
         }
 
         public bool EsVacioAc(string telefono, string ciudad, string usuario, string contrasena)
         {
-            bool x = false;
+            bool cadena = false;
             if (string.IsNullOrEmpty(telefono)||string.IsNullOrEmpty(ciudad))
             {
-                x = true;
+                cadena = true;
             }
-            return x;
+            return cadena;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using LogicaDeNegocios.Modulo_de_cliente;
+﻿//using LogicaDeNegocios.Modulo_de_cliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +13,7 @@ namespace Presentacion
 {
     public partial class Comprar : Form
     {
-        Boleto boleto = new Boleto();
+      // Boleto boleto = new Boleto();
         public Comprar()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace Presentacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            System.DateTime date = new System.DateTime();
+            //DateTime date = new System.DateTime();
             string cedula = txtCedula.Text.Trim(),
                 nombre = txtNombre.Text.Trim(),
                 lugarOrigen = txtOrigen.Text.Trim(),

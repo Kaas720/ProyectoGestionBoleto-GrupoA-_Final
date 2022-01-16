@@ -31,19 +31,13 @@ namespace Presentacion.SGA_Chofer
                 ch.Sexo = txtsexo.Text;
                 ch.Telefono = txttelefono.Text;
                 ch.Correo = txtcorreo.Text;
+                ch.Ciudad = txtciudad.Text;
                 ch.Usuario = txtusuario.Text;
                 ch.Contraseña = txtcontraseña.Text;
-
-               /* if (this.rutaImagen == null)
-                {
-
-                    cl.RutaImagen = Path.Combine(Environment.CurrentDirectory, "..\\..\\default.png");
-
-                }
-                else
-                {
-                    cl.RutaImagen = this.rutaImagen;
-                }*/
+                ch.IdCooperativa =Int16.Parse(txtidcooperativa.Text);
+               
+                ch.Estado = txtestado.Text;
+    //////////////
                 MessageBox.Show(ch.registrar());
             }
             catch (Exception ex)

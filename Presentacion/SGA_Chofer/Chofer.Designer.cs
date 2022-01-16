@@ -715,6 +715,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Chofer";
             this.Text = "Chofer";
+            this.Load += new System.EventHandler(this.Chofer_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);

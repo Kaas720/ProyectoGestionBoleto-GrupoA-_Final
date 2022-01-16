@@ -49,8 +49,8 @@ namespace Datos
             {
                 MySqlConnection conexion = ManejadorChofer.abrir_conexion();
 
-                string cadena = "INSERT INTO Leccion (cedula,nombre,licencia,sexo,telefono,correo,usuario,contraseña)" +// AQUI VA LOS PARAMETROS DE LA BD
-                    " VALUES (@cedula,@nombre,@licencia,@sexo,@telefono,@correo,@usuario,@contraseña)";
+                string cadena = "INSERT INTO Leccion (cedula,nombre,licencia,sexo,telefono,correo,ciudad,usuario,contraseña,idcooperativa,estado)" +// AQUI VA LOS PARAMETROS DE LA BD
+                    " VALUES (@cedula,@nombre,@licencia,@sexo,@telefono,@correo,@ciudad,@usuario,@contraseña,@idcooperativa,@estado)";
                 MySqlCommand comando = new MySqlCommand(cadena, conexion);
 
                 comando.Parameters.AddWithValue("@cedula", lst[0].Cedula);
@@ -59,8 +59,12 @@ namespace Datos
                 comando.Parameters.AddWithValue("@sexo", lst[0].Sexo);
                 comando.Parameters.AddWithValue("@telefono", lst[0].Telefono);
                 comando.Parameters.AddWithValue("@correo", lst[0].Correo);
+                comando.Parameters.AddWithValue("@ciudad", lst[0].Ciudad);
                 comando.Parameters.AddWithValue("@usuario", lst[0].Usuario);
                 comando.Parameters.AddWithValue("@contraseña", lst[0].Contraseña);
+                comando.Parameters.AddWithValue("@idcooperativa", lst[0].IdCooperativa);
+                
+                comando.Parameters.AddWithValue("@estado", lst[0].Estado);
 
                 int resultado = Convert.ToInt32(comando.ExecuteNonQuery());
                 msj = "Registrado con éxito, " + resultado;

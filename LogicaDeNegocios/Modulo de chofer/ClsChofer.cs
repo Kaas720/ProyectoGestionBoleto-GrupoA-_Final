@@ -26,9 +26,6 @@ namespace LogicaDeNegocios.Modulo_de_chofer
         
         }
 
-
-   
-
         public String Licencia
         {
             get { return licencia; }
@@ -73,6 +70,7 @@ namespace LogicaDeNegocios.Modulo_de_chofer
                 coferp.Usuario = this.Usuario;
                 coferp.Contraseña = this.Contraseña;
                 coferp.IdCooperativa = this.IdCooperativa;
+                
                 coferp.Estado = this.Estado;
 
 

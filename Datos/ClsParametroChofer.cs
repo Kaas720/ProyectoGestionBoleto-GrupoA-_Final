@@ -19,6 +19,7 @@ namespace Datos
         private String usuario;
         private String contraseña;
         private Int16 idCooperativa;
+       
         private String estado;
 
 

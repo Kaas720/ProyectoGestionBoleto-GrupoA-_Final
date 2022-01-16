@@ -35,7 +35,6 @@ namespace Datos.Procedimientos_Registrar
                     mySqlCommand.Parameters.AddWithValue("@Telefono", Cliente.Telefono);
                     mySqlCommand.Parameters.AddWithValue("@Correo", Cliente.Correo);
                     mySqlCommand.Parameters.AddWithValue("@Contraseña", Cliente.Contrasena);
-                    Console.WriteLine(Cliente.Cedula, Cliente.Nombre);
                 }
                 mySqlCommand.ExecuteReader();
                 con.cerrar();

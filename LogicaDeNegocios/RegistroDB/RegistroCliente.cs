@@ -1,6 +1,4 @@
-﻿//using MySql.Data.MySqlClient;
-using System.Windows.Forms;
-using System.Data.SqlClient;
+﻿using System.Windows.Forms;
 using LogicaDeNegocios.Modulo_de_cliente;
 using Datos;
 using MySqlConnector;
@@ -30,7 +28,6 @@ namespace LogicaDeNegocios.RegistroDB
                 mySqlCommand.Parameters.AddWithValue("@Contraseña", cliente.Contraseña);
             try
             {
-
                 conexion.conectar();
                   mySqlCommand.Connection = conexion.Connection;
                   mySqlCommand.ExecuteNonQuery();

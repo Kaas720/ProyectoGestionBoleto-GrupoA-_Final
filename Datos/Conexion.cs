@@ -22,7 +22,7 @@ namespace Datos
                 Connection = new MySqlConnection();
                 Connection.ConnectionString = conexion_DB_externa;
                 Connection.Open();
-                MessageBox.Show("Se conecto");
+               // MessageBox.Show("Se conecto");
             }
             catch (SqlException x)
             {

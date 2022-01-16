@@ -550,7 +550,7 @@ namespace Presentacion
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.HoverState.Parent = this.btnGuardar;
-            this.btnGuardar.Location = new System.Drawing.Point(386, 483);
+            this.btnGuardar.Location = new System.Drawing.Point(390, 483);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
@@ -580,7 +580,7 @@ namespace Presentacion
             this.btnSalir.Size = new System.Drawing.Size(216, 69);
             this.btnSalir.TabIndex = 36;
             this.btnSalir.Text = "Cancelar";
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // guna2Elipse1
             // 

@@ -1,11 +1,6 @@
 ﻿
 using LogicaDeNegocios.Modulo_de_cliente;
-using Presentacion.UsarioCliente;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Presentacion
 {
@@ -105,13 +100,13 @@ namespace Presentacion
                 return;
             }
         }
-        private void btnSalir_Click(object sender, EventArgs e)
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             Principal_Usuario principal = new Principal_Usuario();
             principal.Show();
             this.Dispose();
         }
-
     }
 }

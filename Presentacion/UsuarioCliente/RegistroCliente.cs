@@ -12,7 +12,7 @@ namespace Presentacion
     public partial class RegistroCliente : Form
     {
 
-        
+
         private string cedula;
         RegistroClienteProcedimiento registroClienteProcedimiento = new RegistroClienteProcedimiento();
         public RegistroCliente(string cedula)
@@ -33,8 +33,8 @@ namespace Presentacion
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-           // Cliente obj = new Cliente(cedula);
-           // obj.Show();
+            // Cliente obj = new Cliente(cedula);
+            // obj.Show();
             this.Hide();
         }
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -42,30 +42,75 @@ namespace Presentacion
             string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text.Trim(), sexo = cmbSexo.Text.Trim(),
                 telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(),
                 contraseña = txtContraseña.Text.Trim();
-            
-            if (!EsVacio())
+            BorrarAlerta();
+            if (validar())
             {
                 CredencialUsuario credencial = new CredencialUsuario(cedula, nombre, sexo, telefono, correo, contraseña);
                 registroClienteProcedimiento.RegistrarCliente(credencial);
                 MessageBox.Show("Registro realizado con exito");
+             
                 Limpiar();
+                this.Hide();
+                Cliente cliente = new Cliente();
+                cliente.Show();
             }
-            else
-            {
-                MessageBox.Show("Existe campos incorrectos");
-            }
+           
         }
-        public bool EsVacio()
-        {
+        private bool validar() {
             Validacion valida = new Validacion();
-            bool campo = false;
-           if (valida.ValidarCedula(txtCedula.Text) != true || string.IsNullOrEmpty(txtNombre.Text) || (string.IsNullOrEmpty(cmbSexo.Text) ||
-                string.IsNullOrEmpty(txtTelefono.Text) || string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text)))
+            bool campo = true;
+            if (valida.ValidarCedula(txtCedula.Text) != true)
             {
-                campo = true;
+                campo = false;
+                errorProvider1.SetError(txtCedula, "Se esperaba 10 numeros.");
+            }
+            if (txtNombre.Text == "")
+            {
+                campo = false;
+                errorProvider1.SetError(txtNombre, "Ingrese su nombre completo.");
+            }
+            if (valida.ValidarTelefono(txtTelefono.Text) != true)
+            {
+                campo = false;
+                errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
+            }
+            if (cmbSexo.SelectedIndex < 0)
+            {
+                campo = false;
+                errorProvider1.SetError(cmbSexo, "Selecione un tipo de genero.");
+            }
+            if (txtCorreo.Text == "")
+            {
+                campo = false;
+                errorProvider1.SetError(txtCorreo, "Ingrese su correo electronico.");
+            }
+            if (txtContraseña.Text == "")
+            {
+                campo = false;
+                errorProvider1.SetError(txtContraseña, "Ingrese una contraseña.");
             }
             return campo;
         }
+        private void BorrarAlerta()
+        {
+            errorProvider1.SetError(txtCedula, "");
+            errorProvider1.SetError(txtNombre, "");
+            errorProvider1.SetError(txtTelefono, "");
+            errorProvider1.SetError(cmbSexo, "");
+            errorProvider1.SetError(txtCorreo, "");
+            errorProvider1.SetError(txtContraseña, "");
+        }
+        //public bool EsVacio()
+        //{
+        //    Validacion valida = new Validacion();
+        //    bool campo = false;
+        //   if (valida.ValidarCedula(txtCedula.Text) != true || string.IsNullOrEmpty(txtNombre.Text) || (string.IsNullOrEmpty(cmbSexo.Text) ||
+        //        string.IsNullOrEmpty(txtTelefono.Text) || string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text)))
+        //    {
+        //        campo = true;
+        //    }
+        //    return campo;
+        //}
         public void Limpiar()
         {
             txtCedula.Clear();
@@ -126,6 +171,42 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void txtCedula_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            int digito;
+            if (!int.TryParse(txtCedula.Text, out digito))
+            {
+                errorProvider1.SetError(txtCedula, "Se esperaba 10 numeros.");
+            }
+            else
+            {
+                errorProvider1.SetError(txtCedula, "");
+            }
+        }
+
+        private void txtNombre_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            int nombre;
+            if (!int.TryParse(txtCedula.Text, out nombre))
+            {
+                errorProvider1.SetError(txtCedula, "Se esperaba su nombre.");
+            }
+            else
+            {
+                errorProvider1.SetError(txtCedula, "");
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) &&
+                 (e.KeyChar != Convert.ToChar(Keys.Space)))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

@@ -19,5 +19,15 @@ namespace LogicaDeNegocios
             return x;
         }
 
+        public bool ValidarTelefono(string telefono)
+        {
+            bool campo = true;
+            if (telefono.Length != 10)
+            {
+                campo = false;
+            }
+            return campo;
+        }
+
     }
 }

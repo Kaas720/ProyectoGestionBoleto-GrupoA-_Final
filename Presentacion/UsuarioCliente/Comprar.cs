@@ -113,32 +113,54 @@ namespace Presentacion
             if(validacion.ValidarCedula(txtCedula.Text)!= true ||  String.IsNullOrEmpty(TxtNombre.Text)  ||  String.IsNullOrEmpty(CbNumeroAsientos.Text))
             {
                 campo = true;
-                MessageBox.Show("Existen campos vacios");
+                throw new ControlExcepcion(" Campos invalidos!");
             }
             return campo;
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-     
-            if (!verificarCamposVacios())
-            { 
-            CambiarTextoCarrito();
-                LLenarInformacionBoletoCarro();
-                VaciarCampos();
+
+            try
+            {
+                if (!verificarCamposVacios())
+                {
+                    CambiarTextoCarrito();
+                    LLenarInformacionBoletoCarro();
+                    VaciarCampos();
+                }
             }
+            catch(ControlExcepcion ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
 
         }
         private void CarritoBtn_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(CarritoBtn.Text)==0)
+            try
             {
-                MessageBox.Show("No hay boletos agregados al carrito");
+                if (ValidarCarrito())
+                {
+                    Pagar pagar = new Pagar(boletos, TxtCooperativa.Text, TxtFechaSalida.Text, TxtHoraSalida.Text);
+                    pagar.ShowDialog();
+                }
             }
-            else
+            catch (ControlExcepcion ex)
             {
-                Pagar pagar = new Pagar(boletos,TxtCooperativa.Text,TxtFechaSalida.Text,TxtHoraSalida.Text);
-                pagar.ShowDialog();
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+
+        private bool ValidarCarrito()
+        {
+            if (Convert.ToInt32(CarritoBtn.Text) == 0)
+            {
+                throw new ControlExcepcion("No hay boletos agregados al carrito");
+                return false;
+            }
+            return true;
         }
 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)

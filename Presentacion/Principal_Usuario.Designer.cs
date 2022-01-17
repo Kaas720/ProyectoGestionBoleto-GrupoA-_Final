@@ -84,10 +84,9 @@ namespace Presentacion
             this.panel4.Controls.Add(this.guna2HtmlLabel5);
             this.panel4.Controls.Add(this.cbCooperativa);
             this.panel4.Controls.Add(this.guna2HtmlLabel3);
-            this.panel4.Location = new System.Drawing.Point(322, 115);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Location = new System.Drawing.Point(215, 75);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1068, 606);
+            this.panel4.Size = new System.Drawing.Size(712, 394);
             this.panel4.TabIndex = 29;
             // 
             // guna2GroupBox1
@@ -96,11 +95,10 @@ namespace Presentacion
             this.guna2GroupBox1.Controls.Add(this.DataGridInf);
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(39, 223);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(26, 145);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(987, 362);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(658, 235);
             this.guna2GroupBox1.TabIndex = 14;
             this.guna2GroupBox1.Text = "ELEGIR RUTA";
             // 
@@ -144,8 +142,7 @@ namespace Presentacion
             this.DataGridInf.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridInf.EnableHeadersVisualStyles = false;
             this.DataGridInf.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridInf.Location = new System.Drawing.Point(14, 82);
-            this.DataGridInf.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DataGridInf.Location = new System.Drawing.Point(9, 53);
             this.DataGridInf.MultiSelect = false;
             this.DataGridInf.Name = "DataGridInf";
             this.DataGridInf.ReadOnly = true;
@@ -161,7 +158,7 @@ namespace Presentacion
             this.DataGridInf.RowHeadersVisible = false;
             this.DataGridInf.RowHeadersWidth = 62;
             this.DataGridInf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridInf.Size = new System.Drawing.Size(944, 262);
+            this.DataGridInf.Size = new System.Drawing.Size(629, 170);
             this.DataGridInf.TabIndex = 13;
             this.DataGridInf.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridInf.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -228,11 +225,10 @@ namespace Presentacion
             this.cbDestino.HoverState.Parent = this.cbDestino;
             this.cbDestino.ItemHeight = 30;
             this.cbDestino.ItemsAppearance.Parent = this.cbDestino;
-            this.cbDestino.Location = new System.Drawing.Point(382, 129);
-            this.cbDestino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbDestino.Location = new System.Drawing.Point(255, 84);
             this.cbDestino.Name = "cbDestino";
             this.cbDestino.ShadowDecoration.Parent = this.cbDestino;
-            this.cbDestino.Size = new System.Drawing.Size(254, 36);
+            this.cbDestino.Size = new System.Drawing.Size(171, 36);
             this.cbDestino.TabIndex = 11;
             this.cbDestino.SelectedIndexChanged += new System.EventHandler(this.cbDestino_SelectedIndexChanged);
             // 
@@ -251,11 +247,10 @@ namespace Presentacion
             this.cbOrigen.HoverState.Parent = this.cbOrigen;
             this.cbOrigen.ItemHeight = 30;
             this.cbOrigen.ItemsAppearance.Parent = this.cbOrigen;
-            this.cbOrigen.Location = new System.Drawing.Point(39, 129);
-            this.cbOrigen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbOrigen.Location = new System.Drawing.Point(26, 84);
             this.cbOrigen.Name = "cbOrigen";
             this.cbOrigen.ShadowDecoration.Parent = this.cbOrigen;
-            this.cbOrigen.Size = new System.Drawing.Size(234, 36);
+            this.cbOrigen.Size = new System.Drawing.Size(157, 36);
             this.cbOrigen.TabIndex = 10;
             this.cbOrigen.SelectedIndexChanged += new System.EventHandler(this.cbOrigen_SelectedIndexChanged);
             // 
@@ -263,10 +258,9 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(398, 74);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(265, 48);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(215, 34);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(144, 26);
             this.guna2HtmlLabel6.TabIndex = 9;
             this.guna2HtmlLabel6.Text = "Lugar de destino";
             // 
@@ -274,10 +268,9 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(52, 74);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(35, 48);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(202, 34);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(137, 26);
             this.guna2HtmlLabel5.TabIndex = 7;
             this.guna2HtmlLabel5.Text = "Lugar de origen";
             // 
@@ -296,11 +289,10 @@ namespace Presentacion
             this.cbCooperativa.HoverState.Parent = this.cbCooperativa;
             this.cbCooperativa.ItemHeight = 30;
             this.cbCooperativa.ItemsAppearance.Parent = this.cbCooperativa;
-            this.cbCooperativa.Location = new System.Drawing.Point(700, 129);
-            this.cbCooperativa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbCooperativa.Location = new System.Drawing.Point(467, 84);
             this.cbCooperativa.Name = "cbCooperativa";
             this.cbCooperativa.ShadowDecoration.Parent = this.cbCooperativa;
-            this.cbCooperativa.Size = new System.Drawing.Size(324, 36);
+            this.cbCooperativa.Size = new System.Drawing.Size(217, 36);
             this.cbCooperativa.TabIndex = 6;
             this.cbCooperativa.SelectedIndexChanged += new System.EventHandler(this.cbCooperativa_SelectedIndexChanged);
             // 
@@ -308,10 +300,9 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(776, 74);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(517, 48);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(165, 34);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(108, 26);
             this.guna2HtmlLabel3.TabIndex = 5;
             this.guna2HtmlLabel3.Text = "Cooperativa:";
             // 
@@ -322,9 +313,10 @@ namespace Presentacion
             this.panel2.Controls.Add(this.BotonComprar);
             this.panel2.Controls.Add(this.botonRegistroUsuario);
             this.panel2.Controls.Add(this.BotonInicioSesion);
-            this.panel2.Location = new System.Drawing.Point(0, 115);
+            this.panel2.Location = new System.Drawing.Point(0, 75);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(326, 603);
+            this.panel2.Size = new System.Drawing.Size(217, 392);
             this.panel2.TabIndex = 30;
             // 
             // guna2HtmlLabel2
@@ -332,10 +324,9 @@ namespace Presentacion
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(15, 571);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(10, 371);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(299, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(195, 18);
             this.guna2HtmlLabel2.TabIndex = 13;
             this.guna2HtmlLabel2.Text = "Copyright © 2022 VIAJEROS S.A";
             // 
@@ -353,10 +344,11 @@ namespace Presentacion
             this.BotonComprar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BotonComprar.IconSize = 55;
             this.BotonComprar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonComprar.Location = new System.Drawing.Point(0, 370);
+            this.BotonComprar.Location = new System.Drawing.Point(0, 240);
+            this.BotonComprar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonComprar.Name = "BotonComprar";
-            this.BotonComprar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.BotonComprar.Size = new System.Drawing.Size(326, 185);
+            this.BotonComprar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BotonComprar.Size = new System.Drawing.Size(217, 120);
             this.BotonComprar.TabIndex = 0;
             this.BotonComprar.Text = "COMPRA";
             this.BotonComprar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -377,11 +369,10 @@ namespace Presentacion
             this.botonRegistroUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.botonRegistroUsuario.IconSize = 55;
             this.botonRegistroUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonRegistroUsuario.Location = new System.Drawing.Point(0, 185);
-            this.botonRegistroUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.botonRegistroUsuario.Location = new System.Drawing.Point(0, 120);
             this.botonRegistroUsuario.Name = "botonRegistroUsuario";
-            this.botonRegistroUsuario.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.botonRegistroUsuario.Size = new System.Drawing.Size(326, 185);
+            this.botonRegistroUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.botonRegistroUsuario.Size = new System.Drawing.Size(217, 120);
             this.botonRegistroUsuario.TabIndex = 11;
             this.botonRegistroUsuario.Text = "REGISTRATE";
             this.botonRegistroUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,10 +394,9 @@ namespace Presentacion
             this.BotonInicioSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BotonInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonInicioSesion.Location = new System.Drawing.Point(0, 0);
-            this.BotonInicioSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BotonInicioSesion.Name = "BotonInicioSesion";
-            this.BotonInicioSesion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.BotonInicioSesion.Size = new System.Drawing.Size(326, 185);
+            this.BotonInicioSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BotonInicioSesion.Size = new System.Drawing.Size(217, 120);
             this.BotonInicioSesion.TabIndex = 12;
             this.BotonInicioSesion.Text = "INICIAR SESIÓN";
             this.BotonInicioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -422,9 +412,8 @@ namespace Presentacion
             this.PanelSuperior.Controls.Add(this.BotonCierreDeAplicacion);
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
-            this.PanelSuperior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(1390, 54);
+            this.PanelSuperior.Size = new System.Drawing.Size(927, 35);
             this.PanelSuperior.TabIndex = 31;
             this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
@@ -434,10 +423,9 @@ namespace Presentacion
             this.Fecha_Sistema.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.Fecha_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Fecha_Sistema.Location = new System.Drawing.Point(558, 17);
-            this.Fecha_Sistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Fecha_Sistema.Location = new System.Drawing.Point(372, 11);
             this.Fecha_Sistema.Name = "Fecha_Sistema";
-            this.Fecha_Sistema.Size = new System.Drawing.Size(86, 29);
+            this.Fecha_Sistema.Size = new System.Drawing.Size(60, 20);
             this.Fecha_Sistema.TabIndex = 2;
             this.Fecha_Sistema.Text = "LABEL";
             this.Fecha_Sistema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -450,11 +438,10 @@ namespace Presentacion
             this.BotonParaMinimizarVentana.IconChar = FontAwesome.Sharp.IconChar.MinusSquare;
             this.BotonParaMinimizarVentana.IconColor = System.Drawing.Color.Yellow;
             this.BotonParaMinimizarVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonParaMinimizarVentana.IconSize = 52;
-            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(1260, 11);
-            this.BotonParaMinimizarVentana.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BotonParaMinimizarVentana.IconSize = 34;
+            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(840, 7);
             this.BotonParaMinimizarVentana.Name = "BotonParaMinimizarVentana";
-            this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(58, 52);
+            this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(39, 34);
             this.BotonParaMinimizarVentana.TabIndex = 1;
             this.BotonParaMinimizarVentana.TabStop = false;
             this.BotonParaMinimizarVentana.Click += new System.EventHandler(this.BotonParaMinimizarVentana_Click_1);
@@ -467,12 +454,11 @@ namespace Presentacion
             this.BotonCierreDeAplicacion.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.BotonCierreDeAplicacion.IconColor = System.Drawing.Color.Yellow;
             this.BotonCierreDeAplicacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonCierreDeAplicacion.IconSize = 57;
-            this.BotonCierreDeAplicacion.Location = new System.Drawing.Point(1282, 6);
-            this.BotonCierreDeAplicacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BotonCierreDeAplicacion.IconSize = 37;
+            this.BotonCierreDeAplicacion.Location = new System.Drawing.Point(855, 4);
             this.BotonCierreDeAplicacion.Name = "BotonCierreDeAplicacion";
-            this.BotonCierreDeAplicacion.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BotonCierreDeAplicacion.Size = new System.Drawing.Size(96, 57);
+            this.BotonCierreDeAplicacion.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.BotonCierreDeAplicacion.Size = new System.Drawing.Size(64, 37);
             this.BotonCierreDeAplicacion.TabIndex = 0;
             this.BotonCierreDeAplicacion.TabStop = false;
             this.BotonCierreDeAplicacion.Click += new System.EventHandler(this.BotonCierreDeAplicacion_Click_1);
@@ -483,10 +469,9 @@ namespace Presentacion
             this.panel1.Controls.Add(this.guna2HtmlLabel9);
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Controls.Add(this.Hora_Sistema);
-            this.panel1.Location = new System.Drawing.Point(0, 52);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1386, 65);
+            this.panel1.Size = new System.Drawing.Size(924, 42);
             this.panel1.TabIndex = 32;
             // 
             // guna2HtmlLabel9
@@ -494,10 +479,9 @@ namespace Presentacion
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(119, 18);
-            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(79, 12);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(445, 28);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(304, 20);
             this.guna2HtmlLabel9.TabIndex = 6;
             this.guna2HtmlLabel9.Text = "Sistema de Gestion de Boletos de AutoBuses";
             // 
@@ -505,11 +489,10 @@ namespace Presentacion
             // 
             this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(26, 8);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(17, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(99, 48);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 31);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
@@ -519,10 +502,9 @@ namespace Presentacion
             this.Hora_Sistema.AutoSize = true;
             this.Hora_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hora_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Hora_Sistema.Location = new System.Drawing.Point(1248, 14);
-            this.Hora_Sistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Hora_Sistema.Location = new System.Drawing.Point(832, 9);
             this.Hora_Sistema.Name = "Hora_Sistema";
-            this.Hora_Sistema.Size = new System.Drawing.Size(127, 32);
+            this.Hora_Sistema.Size = new System.Drawing.Size(80, 24);
             this.Hora_Sistema.TabIndex = 1;
             this.Hora_Sistema.Text = "17:51:10";
             // 
@@ -539,15 +521,14 @@ namespace Presentacion
             // 
             // Principal_Usuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 718);
+            this.ClientSize = new System.Drawing.Size(923, 467);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Principal_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";

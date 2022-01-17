@@ -57,9 +57,9 @@ namespace Presentacion
             }  
         }
         /*Metodo para consultar en la bd y de respuesta*/
-        private void ConsultarLoginBD(string usuario, string password, int rol)
+        private void ConsultarLoginBD(string correo, string password, int rol)
         {
-            if(consulta.Login(usuario, password, rol))
+            if(consulta.Login(correo, password, rol))
             {
                 
                 switch (rol)

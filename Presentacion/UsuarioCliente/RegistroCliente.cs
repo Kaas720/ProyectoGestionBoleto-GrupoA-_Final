@@ -43,52 +43,64 @@ namespace Presentacion
                 telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(),
                 contraseña = txtContraseña.Text.Trim();
             BorrarAlerta();
-            if (validar())
+            try
             {
-                CredencialUsuario credencial = new CredencialUsuario(cedula, nombre, sexo, telefono, correo, contraseña);
-                registroClienteProcedimiento.RegistrarCliente(credencial);
-                MessageBox.Show("Registro realizado con exito");
-             
-                Limpiar();
-                this.Hide();
-                Cliente cliente = new Cliente();
-                cliente.Show();
+                if (validar())
+                {
+                    CredencialUsuario credencial = new CredencialUsuario(cedula, nombre, sexo, telefono, correo, contraseña);
+                    registroClienteProcedimiento.RegistrarCliente(credencial);
+                    MessageBox.Show("Registro realizado con exito");
+                    Limpiar();
+                    this.Hide();
+                    Cliente cliente = new Cliente();
+                    cliente.Show();
+                }
             }
-           
+            catch(ControlExcepcion ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
         }
         private bool validar() {
             Validacion valida = new Validacion();
             bool campo = true;
-            if (valida.ValidarCedula(txtCedula.Text) != true)
-            {
-                campo = false;
-                errorProvider1.SetError(txtCedula, "Se esperaba 10 numeros.");
-            }
-            if (txtNombre.Text == "")
-            {
-                campo = false;
-                errorProvider1.SetError(txtNombre, "Ingrese su nombre completo.");
-            }
-            if (valida.ValidarTelefono(txtTelefono.Text) != true)
-            {
-                campo = false;
-                errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
-            }
-            if (cmbSexo.SelectedIndex < 0)
-            {
-                campo = false;
-                errorProvider1.SetError(cmbSexo, "Selecione un tipo de genero.");
-            }
-            if (valida.validarEmail(txtCorreo.Text) != true )
-            {
-                campo = false;
-                errorProvider1.SetError(txtCorreo, "Ingrese su correo electronico.");
-            }
-            if (txtContraseña.Text == "")
-            {
-                campo = false;
-                errorProvider1.SetError(txtContraseña, "Ingrese una contraseña.");
-            }
+                if (valida.ValidarCedula(txtCedula.Text) != true)
+                {
+                    campo = false;
+                    errorProvider1.SetError(txtCedula, "Se esperaba 10 numeros.");
+                }
+                if (txtNombre.Text == "")
+                {
+                    campo = false;
+                    errorProvider1.SetError(txtNombre, "Ingrese su nombre completo.");
+                }
+                if (valida.ValidarTelefono(txtTelefono.Text) != true)
+                {
+                    campo = false;
+                    errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
+                }
+                if (cmbSexo.SelectedIndex < 0)
+                {
+                    campo = false;
+                    errorProvider1.SetError(cmbSexo, "Selecione un tipo de genero.");
+                }
+                if (valida.validarEmail(txtCorreo.Text) != true)
+                {
+                    campo = false;
+                    errorProvider1.SetError(txtCorreo, "Ingrese su correo electronico.");
+                }
+                if (txtContraseña.Text == "")
+                {
+                    campo = false;
+                    errorProvider1.SetError(txtContraseña, "Ingrese una contraseña.");
+                }
+                if (!campo)
+                {
+                     throw new ControlExcepcion("Datos no validos!");
+                }
+
             return campo;
         }
         private void BorrarAlerta()
@@ -100,17 +112,6 @@ namespace Presentacion
             errorProvider1.SetError(txtCorreo, "");
             errorProvider1.SetError(txtContraseña, "");
         }
-        //public bool EsVacio()
-        //{
-        //    Validacion valida = new Validacion();
-        //    bool campo = false;
-        //   if (valida.ValidarCedula(txtCedula.Text) != true || string.IsNullOrEmpty(txtNombre.Text) || (string.IsNullOrEmpty(cmbSexo.Text) ||
-        //        string.IsNullOrEmpty(txtTelefono.Text) || string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtContraseña.Text)))
-        //    {
-        //        campo = true;
-        //    }
-        //    return campo;
-        //}
         public void Limpiar()
         {
             txtCedula.Clear();

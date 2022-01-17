@@ -12,14 +12,14 @@ namespace Datos
     public class Procedimientos
     {
         Conexion con = new Conexion();
-        public bool IniciasSeccion(string usuario, string password,int rol)
+        public bool IniciasSeccion(string correo, string password,int rol)
         {
             bool bandera = false;
             string nom=null;
             try
             {
                 MySqlCommand mySqlCommand = ConectarProcedimiento("ProcesoInicioSeccion");
-                mySqlCommand.Parameters.AddWithValue("@usuarioFx",usuario);
+                mySqlCommand.Parameters.AddWithValue("@CorreoFx", correo);
                 mySqlCommand.Parameters.AddWithValue("@contrasenaFx", password);
                 mySqlCommand.Parameters.AddWithValue("@rolUsuario", rol);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
@@ -31,7 +31,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error intentolo mas tarde" + ex);
 
             }
             if (!String.IsNullOrEmpty(nom))
@@ -57,7 +57,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error intentolo mas tarde" + ex);
 
             }
             return asientos;
@@ -87,7 +87,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString()+"ERRRORRR");
+                MessageBox.Show("Error intentolo mas tarde" + ex);
 
             }
             return newlist;
@@ -110,7 +110,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error intentolo mas tarde" + ex);
 
             }
             return cooperativa;
@@ -138,7 +138,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error intentolo mas tarde" + ex);
             }
         }
         public List<string> CargarCiudad()
@@ -156,7 +156,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Error intentolo mas tarde"+ex);
 
             }
             return ciudad;

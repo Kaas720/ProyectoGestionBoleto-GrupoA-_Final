@@ -46,6 +46,7 @@ namespace Presentacion
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
             this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Hora_Sistema = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -63,7 +64,6 @@ namespace Presentacion
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.CarritoBtn = new FontAwesome.Sharp.IconButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
@@ -83,10 +83,9 @@ namespace Presentacion
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(612, 417);
-            this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(408, 271);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(225, 34);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(142, 24);
             this.guna2HtmlLabel10.TabIndex = 11;
             this.guna2HtmlLabel10.Text = "Asientos disponibles:";
             // 
@@ -95,10 +94,9 @@ namespace Presentacion
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(612, 340);
-            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(408, 221);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(189, 34);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(122, 24);
             this.guna2HtmlLabel9.TabIndex = 10;
             this.guna2HtmlLabel9.Text = "Número de disco:";
             // 
@@ -107,10 +105,9 @@ namespace Presentacion
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(132, 340);
-            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(88, 221);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(137, 34);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(89, 24);
             this.guna2HtmlLabel8.TabIndex = 9;
             this.guna2HtmlLabel8.Text = "Cooperativa:";
             // 
@@ -119,10 +116,9 @@ namespace Presentacion
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(610, 217);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(407, 141);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(186, 34);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(121, 24);
             this.guna2HtmlLabel7.TabIndex = 8;
             this.guna2HtmlLabel7.Text = "Lugar de destino:";
             // 
@@ -131,10 +127,9 @@ namespace Presentacion
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(132, 280);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(88, 182);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(161, 34);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(105, 24);
             this.guna2HtmlLabel6.TabIndex = 7;
             this.guna2HtmlLabel6.Text = "Hora de salida:";
             // 
@@ -143,46 +138,42 @@ namespace Presentacion
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(612, 280);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(408, 182);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(169, 34);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(110, 24);
             this.guna2HtmlLabel5.TabIndex = 6;
             this.guna2HtmlLabel5.Text = "Fecha de salida:";
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(132, 217);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(88, 141);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(175, 34);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(116, 24);
             this.guna2HtmlLabel4.TabIndex = 5;
             this.guna2HtmlLabel4.Text = "Lugar de origen:";
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(132, 151);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(88, 98);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(84, 34);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(55, 24);
             this.guna2HtmlLabel3.TabIndex = 4;
             this.guna2HtmlLabel3.Text = "Cedula:";
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(612, 148);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(408, 96);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(96, 34);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel1.TabIndex = 3;
             this.guna2HtmlLabel1.Text = "Nombre:";
             // 
@@ -195,9 +186,8 @@ namespace Presentacion
             this.PanelSuperior.Controls.Add(this.BotonCierreDeAplicacion);
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
-            this.PanelSuperior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(1390, 54);
+            this.PanelSuperior.Size = new System.Drawing.Size(927, 35);
             this.PanelSuperior.TabIndex = 32;
             this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
@@ -213,10 +203,9 @@ namespace Presentacion
             this.BotonRetroceder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BotonRetroceder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BotonRetroceder.IconSize = 37;
-            this.BotonRetroceder.Location = new System.Drawing.Point(4, 6);
-            this.BotonRetroceder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BotonRetroceder.Location = new System.Drawing.Point(3, 4);
             this.BotonRetroceder.Name = "BotonRetroceder";
-            this.BotonRetroceder.Size = new System.Drawing.Size(88, 48);
+            this.BotonRetroceder.Size = new System.Drawing.Size(59, 31);
             this.BotonRetroceder.TabIndex = 39;
             this.BotonRetroceder.UseVisualStyleBackColor = false;
             this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
@@ -227,10 +216,9 @@ namespace Presentacion
             this.Fecha_Sistema.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.Fecha_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Fecha_Sistema.Location = new System.Drawing.Point(558, 17);
-            this.Fecha_Sistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Fecha_Sistema.Location = new System.Drawing.Point(372, 11);
             this.Fecha_Sistema.Name = "Fecha_Sistema";
-            this.Fecha_Sistema.Size = new System.Drawing.Size(86, 29);
+            this.Fecha_Sistema.Size = new System.Drawing.Size(60, 20);
             this.Fecha_Sistema.TabIndex = 2;
             this.Fecha_Sistema.Text = "LABEL";
             this.Fecha_Sistema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -243,11 +231,10 @@ namespace Presentacion
             this.BotonParaMinimizarVentana.IconChar = FontAwesome.Sharp.IconChar.MinusSquare;
             this.BotonParaMinimizarVentana.IconColor = System.Drawing.Color.Yellow;
             this.BotonParaMinimizarVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonParaMinimizarVentana.IconSize = 52;
-            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(1260, 11);
-            this.BotonParaMinimizarVentana.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BotonParaMinimizarVentana.IconSize = 34;
+            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(840, 7);
             this.BotonParaMinimizarVentana.Name = "BotonParaMinimizarVentana";
-            this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(58, 52);
+            this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(39, 34);
             this.BotonParaMinimizarVentana.TabIndex = 1;
             this.BotonParaMinimizarVentana.TabStop = false;
             this.BotonParaMinimizarVentana.Click += new System.EventHandler(this.BotonParaMinimizarVentana_Click);
@@ -260,12 +247,11 @@ namespace Presentacion
             this.BotonCierreDeAplicacion.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.BotonCierreDeAplicacion.IconColor = System.Drawing.Color.Yellow;
             this.BotonCierreDeAplicacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonCierreDeAplicacion.IconSize = 57;
-            this.BotonCierreDeAplicacion.Location = new System.Drawing.Point(1282, 6);
-            this.BotonCierreDeAplicacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BotonCierreDeAplicacion.IconSize = 37;
+            this.BotonCierreDeAplicacion.Location = new System.Drawing.Point(855, 4);
             this.BotonCierreDeAplicacion.Name = "BotonCierreDeAplicacion";
-            this.BotonCierreDeAplicacion.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BotonCierreDeAplicacion.Size = new System.Drawing.Size(96, 57);
+            this.BotonCierreDeAplicacion.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.BotonCierreDeAplicacion.Size = new System.Drawing.Size(64, 37);
             this.BotonCierreDeAplicacion.TabIndex = 0;
             this.BotonCierreDeAplicacion.TabStop = false;
             this.BotonCierreDeAplicacion.Click += new System.EventHandler(this.BotonCierreDeAplicacion_Click);
@@ -276,21 +262,30 @@ namespace Presentacion
             this.panel1.Controls.Add(this.guna2HtmlLabel11);
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Controls.Add(this.Hora_Sistema);
-            this.panel1.Location = new System.Drawing.Point(0, 52);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1390, 65);
+            this.panel1.Size = new System.Drawing.Size(927, 42);
             this.panel1.TabIndex = 33;
+            // 
+            // guna2HtmlLabel11
+            // 
+            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(89, 11);
+            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(328, 22);
+            this.guna2HtmlLabel11.TabIndex = 6;
+            this.guna2HtmlLabel11.Text = "Sistema de Gestion de Boletos de AutoBuses";
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(26, 8);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(17, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(99, 57);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 37);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
@@ -300,10 +295,9 @@ namespace Presentacion
             this.Hora_Sistema.AutoSize = true;
             this.Hora_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hora_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Hora_Sistema.Location = new System.Drawing.Point(1248, 14);
-            this.Hora_Sistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Hora_Sistema.Location = new System.Drawing.Point(832, 9);
             this.Hora_Sistema.Name = "Hora_Sistema";
-            this.Hora_Sistema.Size = new System.Drawing.Size(127, 32);
+            this.Hora_Sistema.Size = new System.Drawing.Size(80, 24);
             this.Hora_Sistema.TabIndex = 1;
             this.Hora_Sistema.Text = "17:51:10";
             // 
@@ -336,11 +330,10 @@ namespace Presentacion
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Ivory;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(72, 148);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(48, 96);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(1215, 602);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(810, 391);
             this.guna2GroupBox1.TabIndex = 36;
             this.guna2GroupBox1.Text = "Información boleto";
             // 
@@ -349,17 +342,16 @@ namespace Presentacion
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(132, 417);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(88, 271);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(75, 34);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(49, 24);
             this.guna2HtmlLabel2.TabIndex = 50;
             this.guna2HtmlLabel2.Text = "Precio:";
             // 
             // TxtFechaSalida
             // 
             this.TxtFechaSalida.AutoRoundedCorners = true;
-            this.TxtFechaSalida.BorderRadius = 17;
+            this.TxtFechaSalida.BorderRadius = 11;
             this.TxtFechaSalida.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.TxtFechaSalida.DefaultText = "";
             this.TxtFechaSalida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -373,14 +365,13 @@ namespace Presentacion
             this.TxtFechaSalida.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtFechaSalida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtFechaSalida.HoverState.Parent = this.TxtFechaSalida;
-            this.TxtFechaSalida.Location = new System.Drawing.Point(822, 280);
-            this.TxtFechaSalida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtFechaSalida.Location = new System.Drawing.Point(548, 182);
             this.TxtFechaSalida.Name = "TxtFechaSalida";
             this.TxtFechaSalida.PasswordChar = '\0';
             this.TxtFechaSalida.PlaceholderText = "";
             this.TxtFechaSalida.SelectedText = "";
             this.TxtFechaSalida.ShadowDecoration.Parent = this.TxtFechaSalida;
-            this.TxtFechaSalida.Size = new System.Drawing.Size(264, 37);
+            this.TxtFechaSalida.Size = new System.Drawing.Size(176, 24);
             this.TxtFechaSalida.TabIndex = 49;
             // 
             // CbNumeroAsientos
@@ -399,16 +390,17 @@ namespace Presentacion
             this.CbNumeroAsientos.IntegralHeight = false;
             this.CbNumeroAsientos.ItemHeight = 30;
             this.CbNumeroAsientos.ItemsAppearance.Parent = this.CbNumeroAsientos;
-            this.CbNumeroAsientos.Location = new System.Drawing.Point(832, 409);
+            this.CbNumeroAsientos.Location = new System.Drawing.Point(555, 266);
+            this.CbNumeroAsientos.Margin = new System.Windows.Forms.Padding(2);
             this.CbNumeroAsientos.Name = "CbNumeroAsientos";
             this.CbNumeroAsientos.ShadowDecoration.Parent = this.CbNumeroAsientos;
-            this.CbNumeroAsientos.Size = new System.Drawing.Size(252, 36);
+            this.CbNumeroAsientos.Size = new System.Drawing.Size(169, 36);
             this.CbNumeroAsientos.TabIndex = 48;
             // 
             // TxtNumeroDisco
             // 
             this.TxtNumeroDisco.AutoRoundedCorners = true;
-            this.TxtNumeroDisco.BorderRadius = 17;
+            this.TxtNumeroDisco.BorderRadius = 11;
             this.TxtNumeroDisco.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.TxtNumeroDisco.DefaultText = "";
             this.TxtNumeroDisco.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -422,21 +414,20 @@ namespace Presentacion
             this.TxtNumeroDisco.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtNumeroDisco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtNumeroDisco.HoverState.Parent = this.TxtNumeroDisco;
-            this.TxtNumeroDisco.Location = new System.Drawing.Point(822, 340);
-            this.TxtNumeroDisco.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtNumeroDisco.Location = new System.Drawing.Point(548, 221);
             this.TxtNumeroDisco.Name = "TxtNumeroDisco";
             this.TxtNumeroDisco.PasswordChar = '\0';
             this.TxtNumeroDisco.PlaceholderText = "";
             this.TxtNumeroDisco.SelectedText = "";
             this.TxtNumeroDisco.ShadowDecoration.Parent = this.TxtNumeroDisco;
-            this.TxtNumeroDisco.Size = new System.Drawing.Size(264, 37);
+            this.TxtNumeroDisco.Size = new System.Drawing.Size(176, 24);
             this.TxtNumeroDisco.TabIndex = 46;
             // 
             // TxtCooperativa
             // 
             this.TxtCooperativa.AutoRoundedCorners = true;
             this.TxtCooperativa.BackColor = System.Drawing.Color.Transparent;
-            this.TxtCooperativa.BorderRadius = 17;
+            this.TxtCooperativa.BorderRadius = 11;
             this.TxtCooperativa.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.TxtCooperativa.DefaultText = "Troncaleña";
             this.TxtCooperativa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -450,21 +441,20 @@ namespace Presentacion
             this.TxtCooperativa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtCooperativa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtCooperativa.HoverState.Parent = this.TxtCooperativa;
-            this.TxtCooperativa.Location = new System.Drawing.Point(306, 351);
-            this.TxtCooperativa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtCooperativa.Location = new System.Drawing.Point(204, 228);
             this.TxtCooperativa.Name = "TxtCooperativa";
             this.TxtCooperativa.PasswordChar = '\0';
             this.TxtCooperativa.PlaceholderForeColor = System.Drawing.Color.LightGray;
             this.TxtCooperativa.PlaceholderText = "";
             this.TxtCooperativa.SelectedText = "";
             this.TxtCooperativa.ShadowDecoration.Parent = this.TxtCooperativa;
-            this.TxtCooperativa.Size = new System.Drawing.Size(274, 37);
+            this.TxtCooperativa.Size = new System.Drawing.Size(183, 24);
             this.TxtCooperativa.TabIndex = 45;
             // 
             // TxtDestino
             // 
             this.TxtDestino.AutoRoundedCorners = true;
-            this.TxtDestino.BorderRadius = 17;
+            this.TxtDestino.BorderRadius = 11;
             this.TxtDestino.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.TxtDestino.DefaultText = "";
             this.TxtDestino.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -478,20 +468,19 @@ namespace Presentacion
             this.TxtDestino.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtDestino.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtDestino.HoverState.Parent = this.TxtDestino;
-            this.TxtDestino.Location = new System.Drawing.Point(822, 214);
-            this.TxtDestino.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtDestino.Location = new System.Drawing.Point(548, 139);
             this.TxtDestino.Name = "TxtDestino";
             this.TxtDestino.PasswordChar = '\0';
             this.TxtDestino.PlaceholderText = "";
             this.TxtDestino.SelectedText = "";
             this.TxtDestino.ShadowDecoration.Parent = this.TxtDestino;
-            this.TxtDestino.Size = new System.Drawing.Size(264, 37);
+            this.TxtDestino.Size = new System.Drawing.Size(176, 24);
             this.TxtDestino.TabIndex = 44;
             // 
             // TxtHoraSalida
             // 
             this.TxtHoraSalida.AutoRoundedCorners = true;
-            this.TxtHoraSalida.BorderRadius = 17;
+            this.TxtHoraSalida.BorderRadius = 11;
             this.TxtHoraSalida.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.TxtHoraSalida.DefaultText = "";
             this.TxtHoraSalida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -505,20 +494,19 @@ namespace Presentacion
             this.TxtHoraSalida.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtHoraSalida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtHoraSalida.HoverState.Parent = this.TxtHoraSalida;
-            this.TxtHoraSalida.Location = new System.Drawing.Point(306, 280);
-            this.TxtHoraSalida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtHoraSalida.Location = new System.Drawing.Point(204, 182);
             this.TxtHoraSalida.Name = "TxtHoraSalida";
             this.TxtHoraSalida.PasswordChar = '\0';
             this.TxtHoraSalida.PlaceholderText = "";
             this.TxtHoraSalida.SelectedText = "";
             this.TxtHoraSalida.ShadowDecoration.Parent = this.TxtHoraSalida;
-            this.TxtHoraSalida.Size = new System.Drawing.Size(274, 37);
+            this.TxtHoraSalida.Size = new System.Drawing.Size(183, 24);
             this.TxtHoraSalida.TabIndex = 43;
             // 
             // TxtLugarSalida
             // 
             this.TxtLugarSalida.AutoRoundedCorners = true;
-            this.TxtLugarSalida.BorderRadius = 17;
+            this.TxtLugarSalida.BorderRadius = 11;
             this.TxtLugarSalida.Cursor = System.Windows.Forms.Cursors.No;
             this.TxtLugarSalida.DefaultText = "";
             this.TxtLugarSalida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -532,20 +520,19 @@ namespace Presentacion
             this.TxtLugarSalida.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtLugarSalida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtLugarSalida.HoverState.Parent = this.TxtLugarSalida;
-            this.TxtLugarSalida.Location = new System.Drawing.Point(306, 217);
-            this.TxtLugarSalida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtLugarSalida.Location = new System.Drawing.Point(204, 141);
             this.TxtLugarSalida.Name = "TxtLugarSalida";
             this.TxtLugarSalida.PasswordChar = '\0';
             this.TxtLugarSalida.PlaceholderText = "";
             this.TxtLugarSalida.SelectedText = "";
             this.TxtLugarSalida.ShadowDecoration.Parent = this.TxtLugarSalida;
-            this.TxtLugarSalida.Size = new System.Drawing.Size(274, 37);
+            this.TxtLugarSalida.Size = new System.Drawing.Size(183, 24);
             this.TxtLugarSalida.TabIndex = 42;
             // 
             // TxtPrecio
             // 
             this.TxtPrecio.AutoRoundedCorners = true;
-            this.TxtPrecio.BorderRadius = 17;
+            this.TxtPrecio.BorderRadius = 11;
             this.TxtPrecio.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.TxtPrecio.DefaultText = "";
             this.TxtPrecio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -559,20 +546,19 @@ namespace Presentacion
             this.TxtPrecio.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtPrecio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtPrecio.HoverState.Parent = this.TxtPrecio;
-            this.TxtPrecio.Location = new System.Drawing.Point(306, 417);
-            this.TxtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtPrecio.Location = new System.Drawing.Point(204, 271);
             this.TxtPrecio.Name = "TxtPrecio";
             this.TxtPrecio.PasswordChar = '\0';
             this.TxtPrecio.PlaceholderText = "";
             this.TxtPrecio.SelectedText = "";
             this.TxtPrecio.ShadowDecoration.Parent = this.TxtPrecio;
-            this.TxtPrecio.Size = new System.Drawing.Size(274, 37);
+            this.TxtPrecio.Size = new System.Drawing.Size(183, 24);
             this.TxtPrecio.TabIndex = 41;
             // 
             // TxtNombre
             // 
             this.TxtNombre.AutoRoundedCorners = true;
-            this.TxtNombre.BorderRadius = 17;
+            this.TxtNombre.BorderRadius = 11;
             this.TxtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TxtNombre.DefaultText = "";
             this.TxtNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -585,21 +571,20 @@ namespace Presentacion
             this.TxtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtNombre.HoverState.Parent = this.TxtNombre;
-            this.TxtNombre.Location = new System.Drawing.Point(717, 148);
-            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtNombre.Location = new System.Drawing.Point(478, 96);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.PasswordChar = '\0';
             this.TxtNombre.PlaceholderText = "";
             this.TxtNombre.SelectedText = "";
             this.TxtNombre.ShadowDecoration.Parent = this.TxtNombre;
-            this.TxtNombre.Size = new System.Drawing.Size(369, 37);
+            this.TxtNombre.Size = new System.Drawing.Size(246, 24);
             this.TxtNombre.TabIndex = 40;
             this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
             // 
             // txtCedula
             // 
             this.txtCedula.AutoRoundedCorners = true;
-            this.txtCedula.BorderRadius = 17;
+            this.txtCedula.BorderRadius = 11;
             this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCedula.DefaultText = "";
             this.txtCedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -612,21 +597,21 @@ namespace Presentacion
             this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCedula.HoverState.Parent = this.txtCedula;
-            this.txtCedula.Location = new System.Drawing.Point(234, 151);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCedula.Location = new System.Drawing.Point(156, 98);
+            this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.PlaceholderText = "";
             this.txtCedula.SelectedText = "";
             this.txtCedula.ShadowDecoration.Parent = this.txtCedula;
-            this.txtCedula.Size = new System.Drawing.Size(346, 37);
+            this.txtCedula.Size = new System.Drawing.Size(231, 24);
             this.txtCedula.TabIndex = 39;
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 33;
+            this.guna2Button1.BorderRadius = 21;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -637,11 +622,10 @@ namespace Presentacion
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(468, 512);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2Button1.Location = new System.Drawing.Point(312, 333);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(270, 69);
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 12;
             this.guna2Button1.Text = "AGREGAR AL CARRITO";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -659,10 +643,9 @@ namespace Presentacion
             this.CarritoBtn.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             this.CarritoBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.CarritoBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CarritoBtn.Location = new System.Drawing.Point(1059, 68);
-            this.CarritoBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CarritoBtn.Location = new System.Drawing.Point(706, 44);
             this.CarritoBtn.Name = "CarritoBtn";
-            this.CarritoBtn.Size = new System.Drawing.Size(134, 88);
+            this.CarritoBtn.Size = new System.Drawing.Size(89, 57);
             this.CarritoBtn.TabIndex = 38;
             this.CarritoBtn.Text = "0";
             this.CarritoBtn.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -675,31 +658,18 @@ namespace Presentacion
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // guna2HtmlLabel11
-            // 
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.guna2HtmlLabel11.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(123, 18);
-            this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(445, 28);
-            this.guna2HtmlLabel11.TabIndex = 6;
-            this.guna2HtmlLabel11.Text = "Sistema de Gestion de Boletos de AutoBuses";
-            // 
             // Comprar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Presentacion.Properties.Resources.salvapantallas_textura_elegante_blanco_23_2148421855;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1386, 783);
+            this.ClientSize = new System.Drawing.Size(924, 509);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Comprar";
             this.Text = "Comprar";
             this.PanelSuperior.ResumeLayout(false);

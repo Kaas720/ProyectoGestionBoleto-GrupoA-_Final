@@ -30,9 +30,9 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -79,10 +79,9 @@ namespace Presentacion
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(134, 20);
-            this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(89, 13);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(445, 28);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(304, 20);
             this.guna2HtmlLabel9.TabIndex = 5;
             this.guna2HtmlLabel9.Text = "Sistema de Gestion de Boletos de AutoBuses";
             // 
@@ -90,10 +89,9 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(111, 155);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(74, 101);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(84, 34);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(55, 24);
             this.guna2HtmlLabel1.TabIndex = 18;
             this.guna2HtmlLabel1.Text = "Cedula:";
             // 
@@ -101,10 +99,9 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(111, 240);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(74, 156);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(96, 34);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel2.TabIndex = 19;
             this.guna2HtmlLabel2.Text = "Nombre:";
             // 
@@ -112,10 +109,9 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(111, 315);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(74, 205);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(59, 34);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(39, 24);
             this.guna2HtmlLabel3.TabIndex = 20;
             this.guna2HtmlLabel3.Text = "Sexo:";
             // 
@@ -123,10 +119,9 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(752, 315);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(501, 205);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(101, 34);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel4.TabIndex = 21;
             this.guna2HtmlLabel4.Text = "Telefono:";
             // 
@@ -134,10 +129,9 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(752, 155);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(501, 101);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(82, 34);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(53, 24);
             this.guna2HtmlLabel5.TabIndex = 22;
             this.guna2HtmlLabel5.Text = "Correo:";
             // 
@@ -145,10 +139,9 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(752, 249);
-            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(501, 162);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(130, 34);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(84, 24);
             this.guna2HtmlLabel8.TabIndex = 25;
             this.guna2HtmlLabel8.Text = "Contraseña:";
             // 
@@ -156,7 +149,7 @@ namespace Presentacion
             // 
             this.txtCedula.AutoRoundedCorners = true;
             this.txtCedula.BackColor = System.Drawing.Color.Transparent;
-            this.txtCedula.BorderRadius = 20;
+            this.txtCedula.BorderRadius = 12;
             this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCedula.DefaultText = "";
             this.txtCedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -169,15 +162,14 @@ namespace Presentacion
             this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCedula.HoverState.Parent = this.txtCedula;
-            this.txtCedula.Location = new System.Drawing.Point(240, 155);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCedula.Location = new System.Drawing.Point(160, 101);
             this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.PlaceholderText = "";
             this.txtCedula.SelectedText = "";
             this.txtCedula.ShadowDecoration.Parent = this.txtCedula;
-            this.txtCedula.Size = new System.Drawing.Size(340, 42);
+            this.txtCedula.Size = new System.Drawing.Size(227, 27);
             this.txtCedula.TabIndex = 26;
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             this.txtCedula.Validating += new System.ComponentModel.CancelEventHandler(this.txtCedula_Validating);
@@ -186,7 +178,7 @@ namespace Presentacion
             // 
             this.txtNombre.AutoRoundedCorners = true;
             this.txtNombre.BackColor = System.Drawing.Color.Transparent;
-            this.txtNombre.BorderRadius = 20;
+            this.txtNombre.BorderRadius = 12;
             this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.DefaultText = "";
             this.txtNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -199,14 +191,13 @@ namespace Presentacion
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombre.HoverState.Parent = this.txtNombre;
-            this.txtNombre.Location = new System.Drawing.Point(240, 240);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Location = new System.Drawing.Point(160, 156);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.PlaceholderText = "";
             this.txtNombre.SelectedText = "";
             this.txtNombre.ShadowDecoration.Parent = this.txtNombre;
-            this.txtNombre.Size = new System.Drawing.Size(340, 42);
+            this.txtNombre.Size = new System.Drawing.Size(227, 27);
             this.txtNombre.TabIndex = 27;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
@@ -215,7 +206,7 @@ namespace Presentacion
             // 
             this.txtTelefono.AutoRoundedCorners = true;
             this.txtTelefono.BackColor = System.Drawing.Color.Transparent;
-            this.txtTelefono.BorderRadius = 20;
+            this.txtTelefono.BorderRadius = 12;
             this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefono.DefaultText = "";
             this.txtTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -228,15 +219,14 @@ namespace Presentacion
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTelefono.HoverState.Parent = this.txtTelefono;
-            this.txtTelefono.Location = new System.Drawing.Point(898, 315);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTelefono.Location = new System.Drawing.Point(599, 205);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderText = "";
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.ShadowDecoration.Parent = this.txtTelefono;
-            this.txtTelefono.Size = new System.Drawing.Size(340, 42);
+            this.txtTelefono.Size = new System.Drawing.Size(227, 27);
             this.txtTelefono.TabIndex = 28;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
@@ -258,18 +248,17 @@ namespace Presentacion
             "Masculino",
             "Femenino"});
             this.cmbSexo.ItemsAppearance.Parent = this.cmbSexo;
-            this.cmbSexo.Location = new System.Drawing.Point(240, 308);
-            this.cmbSexo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbSexo.Location = new System.Drawing.Point(160, 200);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.ShadowDecoration.Parent = this.cmbSexo;
-            this.cmbSexo.Size = new System.Drawing.Size(338, 36);
+            this.cmbSexo.Size = new System.Drawing.Size(227, 36);
             this.cmbSexo.TabIndex = 29;
             // 
             // txtCorreo
             // 
             this.txtCorreo.AutoRoundedCorners = true;
             this.txtCorreo.BackColor = System.Drawing.Color.Transparent;
-            this.txtCorreo.BorderRadius = 20;
+            this.txtCorreo.BorderRadius = 12;
             this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreo.DefaultText = "";
             this.txtCorreo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -282,21 +271,20 @@ namespace Presentacion
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCorreo.HoverState.Parent = this.txtCorreo;
-            this.txtCorreo.Location = new System.Drawing.Point(898, 155);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCorreo.Location = new System.Drawing.Point(599, 101);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderText = "";
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.ShadowDecoration.Parent = this.txtCorreo;
-            this.txtCorreo.Size = new System.Drawing.Size(340, 42);
+            this.txtCorreo.Size = new System.Drawing.Size(227, 27);
             this.txtCorreo.TabIndex = 30;
             // 
             // txtContraseña
             // 
             this.txtContraseña.AutoRoundedCorners = true;
             this.txtContraseña.BackColor = System.Drawing.Color.Transparent;
-            this.txtContraseña.BorderRadius = 20;
+            this.txtContraseña.BorderRadius = 12;
             this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraseña.DefaultText = "";
             this.txtContraseña.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -309,36 +297,35 @@ namespace Presentacion
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtContraseña.HoverState.Parent = this.txtContraseña;
-            this.txtContraseña.Location = new System.Drawing.Point(898, 245);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtContraseña.Location = new System.Drawing.Point(599, 159);
             this.txtContraseña.MaxLength = 9;
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '\0';
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.PlaceholderText = "";
             this.txtContraseña.SelectedText = "";
             this.txtContraseña.ShadowDecoration.Parent = this.txtContraseña;
-            this.txtContraseña.Size = new System.Drawing.Size(340, 42);
+            this.txtContraseña.Size = new System.Drawing.Size(227, 27);
             this.txtContraseña.TabIndex = 33;
             // 
             // dgvCliente
             // 
             this.dgvCliente.AllowUserToAddRows = false;
             this.dgvCliente.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCliente.BackgroundColor = System.Drawing.Color.White;
             this.dgvCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCliente.ColumnHeadersHeight = 21;
             this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cedula,
@@ -349,24 +336,23 @@ namespace Presentacion
             this.Ciudad,
             this.Usuario,
             this.Contraseña});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCliente.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCliente.EnableHeadersVisualStyles = false;
             this.dgvCliente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvCliente.Location = new System.Drawing.Point(18, 598);
-            this.dgvCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvCliente.Location = new System.Drawing.Point(12, 389);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.RowHeadersVisible = false;
             this.dgvCliente.RowHeadersWidth = 62;
             this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(1318, 71);
+            this.dgvCliente.Size = new System.Drawing.Size(879, 46);
             this.dgvCliente.TabIndex = 34;
             this.dgvCliente.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCliente.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -457,7 +443,7 @@ namespace Presentacion
             // btnGuardar
             // 
             this.btnGuardar.AutoRoundedCorners = true;
-            this.btnGuardar.BorderRadius = 33;
+            this.btnGuardar.BorderRadius = 21;
             this.btnGuardar.CheckedState.Parent = this.btnGuardar;
             this.btnGuardar.CustomImages.Parent = this.btnGuardar;
             this.btnGuardar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -468,11 +454,10 @@ namespace Presentacion
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.HoverState.Parent = this.btnGuardar;
-            this.btnGuardar.Location = new System.Drawing.Point(596, 420);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Location = new System.Drawing.Point(397, 273);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
-            this.btnGuardar.Size = new System.Drawing.Size(216, 69);
+            this.btnGuardar.Size = new System.Drawing.Size(144, 45);
             this.btnGuardar.TabIndex = 35;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -489,10 +474,9 @@ namespace Presentacion
             this.PanelSuperior.Controls.Add(this.Fecha_Sistema);
             this.PanelSuperior.Controls.Add(this.BotonParaMinimizarVentana);
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.PanelSuperior.Location = new System.Drawing.Point(-2, 0);
-            this.PanelSuperior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanelSuperior.Location = new System.Drawing.Point(-1, 0);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(1402, 54);
+            this.PanelSuperior.Size = new System.Drawing.Size(935, 35);
             this.PanelSuperior.TabIndex = 37;
             this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
@@ -508,10 +492,9 @@ namespace Presentacion
             this.BotonRetroceder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BotonRetroceder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BotonRetroceder.IconSize = 37;
-            this.BotonRetroceder.Location = new System.Drawing.Point(4, 6);
-            this.BotonRetroceder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BotonRetroceder.Location = new System.Drawing.Point(3, 4);
             this.BotonRetroceder.Name = "BotonRetroceder";
-            this.BotonRetroceder.Size = new System.Drawing.Size(88, 48);
+            this.BotonRetroceder.Size = new System.Drawing.Size(59, 31);
             this.BotonRetroceder.TabIndex = 39;
             this.BotonRetroceder.UseVisualStyleBackColor = false;
             this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
@@ -522,10 +505,9 @@ namespace Presentacion
             this.Fecha_Sistema.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.Fecha_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fecha_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Fecha_Sistema.Location = new System.Drawing.Point(558, 17);
-            this.Fecha_Sistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Fecha_Sistema.Location = new System.Drawing.Point(372, 11);
             this.Fecha_Sistema.Name = "Fecha_Sistema";
-            this.Fecha_Sistema.Size = new System.Drawing.Size(86, 29);
+            this.Fecha_Sistema.Size = new System.Drawing.Size(60, 20);
             this.Fecha_Sistema.TabIndex = 2;
             this.Fecha_Sistema.Text = "LABEL";
             this.Fecha_Sistema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -538,11 +520,10 @@ namespace Presentacion
             this.BotonParaMinimizarVentana.IconChar = FontAwesome.Sharp.IconChar.MinusSquare;
             this.BotonParaMinimizarVentana.IconColor = System.Drawing.Color.Yellow;
             this.BotonParaMinimizarVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonParaMinimizarVentana.IconSize = 52;
-            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(1311, 9);
-            this.BotonParaMinimizarVentana.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BotonParaMinimizarVentana.IconSize = 34;
+            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(874, 6);
             this.BotonParaMinimizarVentana.Name = "BotonParaMinimizarVentana";
-            this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(58, 52);
+            this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(39, 34);
             this.BotonParaMinimizarVentana.TabIndex = 1;
             this.BotonParaMinimizarVentana.TabStop = false;
             this.BotonParaMinimizarVentana.Click += new System.EventHandler(this.BotonParaMinimizarVentana_Click);
@@ -553,21 +534,19 @@ namespace Presentacion
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Controls.Add(this.Hora_Sistema);
             this.panel1.Controls.Add(this.guna2HtmlLabel9);
-            this.panel1.Location = new System.Drawing.Point(0, 52);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1390, 65);
+            this.panel1.Size = new System.Drawing.Size(927, 42);
             this.panel1.TabIndex = 38;
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(26, 8);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(17, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(99, 57);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 37);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
@@ -577,10 +556,9 @@ namespace Presentacion
             this.Hora_Sistema.AutoSize = true;
             this.Hora_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hora_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Hora_Sistema.Location = new System.Drawing.Point(1248, 14);
-            this.Hora_Sistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Hora_Sistema.Location = new System.Drawing.Point(832, 9);
             this.Hora_Sistema.Name = "Hora_Sistema";
-            this.Hora_Sistema.Size = new System.Drawing.Size(127, 32);
+            this.Hora_Sistema.Size = new System.Drawing.Size(80, 24);
             this.Hora_Sistema.TabIndex = 1;
             this.Hora_Sistema.Text = "17:51:10";
             // 
@@ -595,12 +573,12 @@ namespace Presentacion
             // 
             // RegistroCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Presentacion.Properties.Resources.salvapantallas_textura_elegante_blanco_23_2148421855;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1386, 529);
+            this.ClientSize = new System.Drawing.Size(924, 344);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.btnGuardar);
@@ -618,7 +596,6 @@ namespace Presentacion
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RegistroCliente";
             this.Text = "RegistroCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();

@@ -38,6 +38,7 @@ namespace LogicaDeNegocios
                     cbDestino.Items.Add(ciudadfx);
                 }
             }
+
         }
 
         public void LlenarComboCooperativa(ComboBox cbCooperativa, string origen, string destino)
@@ -56,6 +57,21 @@ namespace LogicaDeNegocios
         {
             procedimientos.LllenarDataGrid(origen, destino, cooperativa, dataGridInf);
         }
-    
+
+
+        /*Validaciones Para el dataGrid*/
+
+        public bool ValidarDataGridVacio(DataGridView dataGridInf)
+        {
+            if (dataGridInf.SelectedRows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                throw new ControlExcepcion(" Por favor seleccionar un horario!");
+            }
+            return false;
+        }
     }
 }

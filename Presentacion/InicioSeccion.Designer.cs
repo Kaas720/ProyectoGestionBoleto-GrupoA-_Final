@@ -39,6 +39,7 @@ namespace Presentacion
             this.RadioButtonChofer = new Guna.UI2.WinForms.Guna2RadioButton();
             this.RadioButtonCliente = new Guna.UI2.WinForms.Guna2RadioButton();
             this.PanelSuperior = new System.Windows.Forms.Panel();
+            this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace Presentacion
             this.TextoInicioSesion = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -78,7 +78,7 @@ namespace Presentacion
             this.NombreUsuario.Location = new System.Drawing.Point(270, 238);
             this.NombreUsuario.Name = "NombreUsuario";
             this.NombreUsuario.PasswordChar = '\0';
-            this.NombreUsuario.PlaceholderText = "Usuario";
+            this.NombreUsuario.PlaceholderText = "Correo electronico";
             this.NombreUsuario.SelectedText = "";
             this.NombreUsuario.ShadowDecoration.Parent = this.NombreUsuario;
             this.NombreUsuario.Size = new System.Drawing.Size(200, 36);
@@ -212,6 +212,25 @@ namespace Presentacion
             this.PanelSuperior.Size = new System.Drawing.Size(707, 37);
             this.PanelSuperior.TabIndex = 8;
             this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
+            // 
+            // BotonRetroceder
+            // 
+            this.BotonRetroceder.BackColor = System.Drawing.Color.Transparent;
+            this.BotonRetroceder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonRetroceder.FlatAppearance.BorderSize = 0;
+            this.BotonRetroceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BotonRetroceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BotonRetroceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonRetroceder.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
+            this.BotonRetroceder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BotonRetroceder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BotonRetroceder.IconSize = 37;
+            this.BotonRetroceder.Location = new System.Drawing.Point(0, 3);
+            this.BotonRetroceder.Name = "BotonRetroceder";
+            this.BotonRetroceder.Size = new System.Drawing.Size(59, 32);
+            this.BotonRetroceder.TabIndex = 40;
+            this.BotonRetroceder.UseVisualStyleBackColor = false;
+            this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
             // 
             // iconPictureBox1
             // 
@@ -352,25 +371,6 @@ namespace Presentacion
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // BotonRetroceder
-            // 
-            this.BotonRetroceder.BackColor = System.Drawing.Color.Transparent;
-            this.BotonRetroceder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonRetroceder.FlatAppearance.BorderSize = 0;
-            this.BotonRetroceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BotonRetroceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BotonRetroceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonRetroceder.IconChar = FontAwesome.Sharp.IconChar.ArrowCircleLeft;
-            this.BotonRetroceder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.BotonRetroceder.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonRetroceder.IconSize = 37;
-            this.BotonRetroceder.Location = new System.Drawing.Point(0, 3);
-            this.BotonRetroceder.Name = "BotonRetroceder";
-            this.BotonRetroceder.Size = new System.Drawing.Size(59, 32);
-            this.BotonRetroceder.TabIndex = 40;
-            this.BotonRetroceder.UseVisualStyleBackColor = false;
-            this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
             // 
             // InicioSeccion
             // 

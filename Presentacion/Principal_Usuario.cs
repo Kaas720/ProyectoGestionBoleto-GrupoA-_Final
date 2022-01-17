@@ -53,18 +53,6 @@ namespace Presentacion
         {
             WindowState = FormWindowState.Minimized;
         }
-
-        
-
-        private bool ValidarDataGridVacio()
-        {
-            if (DataGridInf.SelectedRows.Count > 0)
-            {
-                return true;
-            }
-            return false;
-        }
-
         private void btnComprar_Click(object sender, EventArgs e)
         {
             RegistroCliente registroCliente = new RegistroCliente();
@@ -158,20 +146,25 @@ namespace Presentacion
 
         private void BotonComprar_Click(object sender, EventArgs e)
         {
-                if (!ValidarDataGridVacio())
+            try
+            {
+                if (procedimientos.ValidarDataGridVacio(DataGridInf))
                 {
-                    MessageBox.Show("Por favor seleccionar un horario!");
+                    int x = DataGridInf.CurrentCell.RowIndex;
+                    string cooperativa = DataGridInf.Rows[x].Cells[0].Value.ToString();
+                    string fecha_salida = DataGridInf.Rows[x].Cells[1].Value.ToString();
+                    string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
+                    Comprar comprar = new Comprar(cooperativa, fecha_salida, horario_salida);
+                    Program.principal.Hide();
+                    comprar.Show();
                 }
-                else
-                {
-                int x = DataGridInf.CurrentCell.RowIndex;
-                string cooperativa = DataGridInf.Rows[x].Cells[0].Value.ToString();
-                string fecha_salida = DataGridInf.Rows[x].Cells[1].Value.ToString();
-                string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
-                Comprar comprar = new Comprar(cooperativa, fecha_salida, horario_salida);
-                Program.principal.Hide();
-                comprar.Show();
             }
+            catch (ControlExcepcion ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
         }
 
     }

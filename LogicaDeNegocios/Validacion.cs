@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,5 +30,21 @@ namespace LogicaDeNegocios
             return campo;
         }
 
+        public bool validarEmail(string email)
+        {
+            if (email == null)
+            {
+                return false;
+            }
+            if (new EmailAddressAttribute().IsValid(email) )
+            {
+                return true;
+            }
+            else
+            {
+
+                return false;
+            }
+        }
     }
 }

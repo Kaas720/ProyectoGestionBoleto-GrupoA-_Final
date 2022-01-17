@@ -79,7 +79,7 @@ namespace Presentacion
                 campo = false;
                 errorProvider1.SetError(cmbSexo, "Selecione un tipo de genero.");
             }
-            if (txtCorreo.Text == "")
+            if (valida.validarEmail(txtCorreo.Text) != true )
             {
                 campo = false;
                 errorProvider1.SetError(txtCorreo, "Ingrese su correo electronico.");

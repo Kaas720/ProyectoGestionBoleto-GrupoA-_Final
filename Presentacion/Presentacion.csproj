@@ -146,10 +146,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EntidadesDelProyecto\EntidadesDelProyecto.csproj">
-      <Project>{19033910-1266-4B0F-B951-0C98AD3690E5}</Project>
-      <Name>EntidadesDelProyecto</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LogicaDeNegocios\LogicaDeNegocios.csproj">
       <Project>{83c47f94-b08d-41f2-b4d2-7031057e76f0}</Project>
       <Name>LogicaDeNegocios</Name>

@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogicaDeNegocios.Modulo_Boleto
+namespace LogicaDeNegocios
 {
-    public class LlenarinformacionDataGrid
+    public class InformacionDerutaCooperativa
     {
         string cooperativa;
         DateTime hora_salida;
         double precio;
 
-        public LlenarinformacionDataGrid(string cooperativa, DateTime hora_salida, double precio)
+        public InformacionDerutaCooperativa(string cooperativa, DateTime hora_salida, double precio)
         {
             this.cooperativa = cooperativa;
             this.hora_salida = hora_salida;

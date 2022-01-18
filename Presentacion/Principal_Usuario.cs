@@ -1,6 +1,5 @@
 ﻿
 using LogicaDeNegocios;
-using LogicaDeNegocios.Modulo_de_cliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

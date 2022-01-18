@@ -1,5 +1,4 @@
 ﻿using Datos;
-using EntidadesDelProyecto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,7 @@ namespace LogicaDeNegocios
     public class ConsultaProcedimientosGenerarBoleto
     {
         
-        Procedimientos procedimientos = new Procedimientos();
+        ProcedimientosPaginaprincipal procedimientos = new ProcedimientosPaginaprincipal();
         public List<GenerarInformacionBoleto> generarInformacionBoleto(string cooperativa, string fechasalida, string horasalida)
         {
             List<GenerarInformacionBoleto> ListaBoletosGenerados = new List<GenerarInformacionBoleto>();

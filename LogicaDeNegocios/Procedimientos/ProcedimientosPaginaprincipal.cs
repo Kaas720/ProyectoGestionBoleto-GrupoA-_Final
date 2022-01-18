@@ -1,4 +1,4 @@
-﻿using EntidadesDelProyecto;
+﻿using Datos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Datos
+namespace LogicaDeNegocios
 {
-    public class Procedimientos
+    public class ProcedimientosPaginaprincipal
     {
         Conexion con = new Conexion();
         public bool IniciasSeccion(string correo, string password,int rol)

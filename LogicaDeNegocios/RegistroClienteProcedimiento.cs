@@ -1,5 +1,4 @@
-﻿using Datos.Procedimientos_Registrar;
-using EntidadesDelProyecto;
+﻿using LogicaDeNegocios.Procedimientos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

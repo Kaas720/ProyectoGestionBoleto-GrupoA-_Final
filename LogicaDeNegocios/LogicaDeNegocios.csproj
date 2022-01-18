@@ -31,9 +31,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.2.1.2\lib\net471\MySqlConnector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,16 +65,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CredencialUsuario.cs" />
+    <Compile Include="GenerarInformacionBoleto.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="ConsultaProcedimientosGenerarBoleto.cs" />
     <Compile Include="ConsultasProcedimientos.cs" />
     <Compile Include="GeneralExcepcion.cs" />
-    <Compile Include="Modula Venta\Ruta.cs" />
-    <Compile Include="Modulo Boleto\LlenarinformacionDataGrid.cs" />
-    <Compile Include="Modulo de administrador\Administrador.cs" />
+    <Compile Include="Procedimientos\ProcedimientosPaginaprincipal.cs" />
+    <Compile Include="Procedimientos\RegistrarClienteProcesosBaseDatos.cs" />
+    <Compile Include="Ruta.cs" />
+    <Compile Include="InformacionDerutaCooperativa.cs" />
     <Compile Include="Validacion.cs" />
-    <Compile Include="Modulo de vendedor\Vendedor.cs" />
-    <Compile Include="Modulo Procedimiento Registro\RegistroClienteProcedimiento.cs" />
-    <Compile Include="Persona.cs" />
+    <Compile Include="RegistroClienteProcedimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,16 +84,11 @@
       <Project>{07b8dc40-4481-4e9f-83a7-2a033f9a8d6c}</Project>
       <Name>Datos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EntidadesDelProyecto\EntidadesDelProyecto.csproj">
-      <Project>{19033910-1266-4B0F-B951-0C98AD3690E5}</Project>
-      <Name>EntidadesDelProyecto</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modulo de cliente\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

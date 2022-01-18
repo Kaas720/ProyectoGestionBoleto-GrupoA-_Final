@@ -1,4 +1,4 @@
-﻿using EntidadesDelProyecto;
+﻿using Datos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Datos.Procedimientos_Registrar
+namespace LogicaDeNegocios.Procedimientos
 {
     
     public class RegistrarClienteProcesosBaseDatos

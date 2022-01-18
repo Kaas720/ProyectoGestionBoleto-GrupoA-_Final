@@ -1,6 +1,4 @@
-﻿using EntidadesDelProyecto;
-using LogicaDeNegocios;
-using LogicaDeNegocios.Modulo_de_cliente;
+﻿using LogicaDeNegocios;
 using Presentacion.UsuarioCliente;
 using System;
 using System.Collections.Generic;

@@ -172,7 +172,6 @@ namespace Presentacion
             this.txtCedula.Size = new System.Drawing.Size(227, 27);
             this.txtCedula.TabIndex = 26;
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
-            this.txtCedula.Validating += new System.ComponentModel.CancelEventHandler(this.txtCedula_Validating);
             // 
             // txtNombre
             // 
@@ -200,7 +199,6 @@ namespace Presentacion
             this.txtNombre.Size = new System.Drawing.Size(227, 27);
             this.txtNombre.TabIndex = 27;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // txtTelefono
             // 
@@ -536,7 +534,7 @@ namespace Presentacion
             this.panel1.Controls.Add(this.guna2HtmlLabel9);
             this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 42);
+            this.panel1.Size = new System.Drawing.Size(931, 42);
             this.panel1.TabIndex = 38;
             // 
             // guna2PictureBox1

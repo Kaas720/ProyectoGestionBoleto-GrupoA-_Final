@@ -1,5 +1,4 @@
 ﻿using Datos;
-using LogicaDeNegocios.Modulo_Boleto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +10,7 @@ namespace LogicaDeNegocios
 {
     public class ConsultasProcedimientos
     {
-        Procedimientos procedimientos = new Procedimientos();
+        ProcedimientosPaginaprincipal procedimientos = new ProcedimientosPaginaprincipal();
         public bool Login(string usuario, string password, int rol)
         {
             bool bandera = false;

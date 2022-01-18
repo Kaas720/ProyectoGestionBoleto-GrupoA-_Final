@@ -5,15 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogicaDeNegocios.Modulo_Procedimiento_Registro
+namespace LogicaDeNegocios
 {
     public class RegistroClienteProcedimiento
     {
 
-        RegistrarClienteProcesosBaseDatos registrarClienteBD = new RegistrarClienteProcesosBaseDatos();
-        public void RegistrarCliente(CredencialUsuario credencial)
+       
+        public void RegistrarCliente(Cliente cliente)
         {
-            registrarClienteBD.RegistroClientesEnProcedimientos(credencial);
+            Cliente clienteregistrar = cliente;
+            clienteregistrar.InsertarCliente(clienteregistrar);
         }
     }
 }

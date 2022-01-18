@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Cliente : Form
+    public partial class InterfazCliente : Form
     {
         ConsultasProcedimientos procedimientos = new ConsultasProcedimientos();
-        public Cliente()
+        public InterfazCliente()
         {
             InitializeComponent();
             procedimientos.LlenarCombos(cbOrigen, cbDestino);

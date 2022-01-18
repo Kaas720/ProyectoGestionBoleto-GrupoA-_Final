@@ -65,14 +65,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
     <Compile Include="CredencialUsuario.cs" />
     <Compile Include="GenerarInformacionBoleto.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="ConsultaProcedimientosGenerarBoleto.cs" />
     <Compile Include="ConsultasProcedimientos.cs" />
     <Compile Include="GeneralExcepcion.cs" />
+    <Compile Include="Procedimientos\ConectorDeProcedimientos.cs" />
     <Compile Include="Procedimientos\ProcedimientosPaginaprincipal.cs" />
-    <Compile Include="Procedimientos\RegistrarClienteProcesosBaseDatos.cs" />
     <Compile Include="Ruta.cs" />
     <Compile Include="InformacionDerutaCooperativa.cs" />
     <Compile Include="Validacion.cs" />

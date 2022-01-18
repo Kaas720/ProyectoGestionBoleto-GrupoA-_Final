@@ -76,11 +76,11 @@
     <Compile Include="SGA_Administrador\VentanaAdministrador.designer.cs">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioCliente\Cliente.cs">
+    <Compile Include="UsuarioCliente\InterfazCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioCliente\Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="UsuarioCliente\InterfazCliente.Designer.cs">
+      <DependentUpon>InterfazCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioCliente\Comprar.cs">
       <SubType>Form</SubType>
@@ -119,8 +119,8 @@
     <EmbeddedResource Include="SGA_Administrador\VentanaAdministrador.resx">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioCliente\Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="UsuarioCliente\InterfazCliente.resx">
+      <DependentUpon>InterfazCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\Comprar.resx">
       <DependentUpon>Comprar.cs</DependentUpon>

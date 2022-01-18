@@ -12,7 +12,7 @@ namespace LogicaDeNegocios
         private string contrasena;
 
 
-        public CredencialUsuario(string cedula, string nombre, string sexo, string telefono,string correo, string contrasena) : base(cedula, nombre, sexo, telefono)
+        public CredencialUsuario(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena) : base(cedula, nombre, sexo, telefono)
         {
             this.correo = correo;
             this.contrasena = contrasena;

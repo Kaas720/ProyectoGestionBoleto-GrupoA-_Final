@@ -1,9 +1,9 @@
 ﻿
-using LogicaDeNegocios.Modulo_Procedimiento_Registro;
+using LogicaDeNegocios;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using LogicaDeNegocios;
+
 
 namespace Presentacion
 {
@@ -30,9 +30,6 @@ namespace Presentacion
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
-            // Cliente obj = new Cliente(cedula);
-            // obj.Show();
             this.Hide();
         }
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -45,13 +42,13 @@ namespace Presentacion
             {
                 if (validar())
                 {
-                    CredencialUsuario credencial = new CredencialUsuario(cedula, nombre, sexo, telefono, correo, contraseña);
-                    registroClienteProcedimiento.RegistrarCliente(credencial);
+                    Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
+                    registroClienteProcedimiento.RegistrarCliente(cliente);
                     MessageBox.Show("Registro realizado con exito");
                     Limpiar();
                     this.Hide();
-                    Cliente cliente = new Cliente();
-                    cliente.Show();
+                    InterfazCliente interfazCliente= new InterfazCliente();
+                    interfazCliente.Show();
                 }
             }
             catch(ControlExcepcion ex)

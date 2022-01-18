@@ -1,4 +1,5 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
 using System.Windows;
 
 namespace LogicaDeNegocios.Modulo_de_cliente
@@ -11,12 +12,35 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             if (cedula.Length != 10)
             {
                 cadena = false;
-                MessageBox.Show("La cedula debe tener 10 digitos");
             }
             return cadena;
         }
+        public bool ValidarTelefono(string telefono)
+        {
+            bool campo = true;
+            if (telefono.Length != 10)
+            {
+                campo = false;
+            }
+            return campo;
+        }
+        public bool validarEmail(string email)
+        {
+            if (email == null)
+            {
+                return false;
+            }
+            if (new EmailAddressAttribute().IsValid(email))
+            {
+                return true;
+            }
+            else
+            {
 
-        public bool EsVacioAc(string telefono, string ciudad, string usuario, string contrasena)
+                return false;
+            }
+        }
+        public bool EsVacioAc(string telefono, string ciudad, string contrasena)
         {
             bool cadena = false;
             if (string.IsNullOrEmpty(telefono)||string.IsNullOrEmpty(ciudad))

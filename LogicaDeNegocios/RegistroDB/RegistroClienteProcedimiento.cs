@@ -5,10 +5,10 @@ using MySqlConnector;
 
 namespace LogicaDeNegocios.RegistroDB
 {
-    public class RegistroCliente
+    public class RegistroClienteProcedimiento
     {
         Conexion conexion;
-         public  RegistroCliente(){
+         public  RegistroClienteProcedimiento(){
          conexion = new Conexion(); }
         public void InsertarCliente(Cliente cliente)
         {
@@ -16,16 +16,14 @@ namespace LogicaDeNegocios.RegistroDB
             Conexion conexion = new Conexion();
                    
                 mySqlCommand = new MySqlCommand();
-                mySqlCommand.CommandText = "spl_insertar_cliente";
+                mySqlCommand.CommandText = "Procedimiento_insertar_cliente";
                 mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
                 mySqlCommand.Parameters.AddWithValue("@Cedula", cliente.Cedula);
                 mySqlCommand.Parameters.AddWithValue("@Nombre", cliente.Nombre);
                 mySqlCommand.Parameters.AddWithValue("@Sexo", cliente.Sexo);
                 mySqlCommand.Parameters.AddWithValue("@Telefono", cliente.Telefono);
                 mySqlCommand.Parameters.AddWithValue("@Correo", cliente.Correo);
-                mySqlCommand.Parameters.AddWithValue("@Ciudad", cliente.Ciudad);
-                mySqlCommand.Parameters.AddWithValue("@Usuario", cliente.Usuario);
-                mySqlCommand.Parameters.AddWithValue("@Contraseña", cliente.Contraseña);
+                mySqlCommand.Parameters.AddWithValue("@Contraseña", cliente.Contrasena);
             try
             {
                 conexion.conectar();

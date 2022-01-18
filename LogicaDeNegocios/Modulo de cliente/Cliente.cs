@@ -1,17 +1,90 @@
 ﻿
+using Datos;
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
 namespace LogicaDeNegocios.Modulo_de_cliente
 {
-    public class Cliente :Usuarios
+    public class Cliente :Persona
     {
-        private string usuario;
-        private string contraseña;
-
+        Conexion con = new Conexion();
+        private string correo;
+        private string contrasena;
         public Cliente() { }
-        
-        public string Usuario { get => usuario; set => usuario = value; }
-        public string Contraseña { get => contraseña; set => contraseña = value; }
-        public override string ToString() {
-         return base.ToString() + "Usuario: " + usuario + "Contraseña: " + contraseña;
+        public Cliente(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena) : base(cedula, nombre, sexo, telefono)
+        {
+            this.correo = correo;
+            this.contrasena = contrasena;
+        }
+
+        public string Correo { get => correo; set => correo = value; }
+        public string Contrasena { get => contrasena; set => contrasena = value; }
+    
+    public override string ToString() {
+         return base.ToString() + "Correo: " + correo + "Contraseña: " + contrasena;
      }
+
+        public List<string> BuscarCliente(string cedula)
+        {
+            List<string> Cliente = new List<string>();
+            try
+            {
+                MySqlCommand mySqlCommand = ConectarProcedimiento("BuscarCliente");
+                mySqlCommand.Parameters.AddWithValue("@cedulaCliente", cedula);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    Cliente.Add(lector["Nombre"].ToString());
+                    Cliente.Add(lector["Sexo"].ToString());
+                    Cliente.Add(lector["Telefono"].ToString());
+                    Cliente.Add(lector["Correo"].ToString());
+                    Cliente.Add(lector["Usuario"].ToString());
+                }
+                con.Cerrar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            }
+
+
+            return Cliente;
+        }
+
+
+        public string ActualizarCliente(string cedula, string telefono, string correo, string contrasena)
+        {
+            string mensaje = "";
+            try
+            {
+                MySqlCommand comando = ConectarProcedimiento("ModificarCliente");
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Cedula1", cedula);
+                comando.Parameters.AddWithValue("@Telefono1", telefono);
+                comando.Parameters.AddWithValue("@Correo1", correo);
+                comando.Parameters.AddWithValue("@Contraseña1", contrasena);
+                comando.ExecuteNonQuery();
+                con.Cerrar();
+                mensaje = "Se actualizaron los campos correctamente";
+            }
+            catch (MySqlException ex)
+            {
+
+                mensaje = "Se ha producido un error al actualizar los datos" + ex;
+            }
+            return mensaje;
+        }
+        private MySqlCommand ConectarProcedimiento(string Procedimientos)
+        {
+            MySqlCommand mySqlCommand;
+            mySqlCommand = new MySqlCommand(Procedimientos);
+            con.conectar();
+            mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            return mySqlCommand;
+        }
+
     }
 }

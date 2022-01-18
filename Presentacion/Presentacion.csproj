@@ -131,11 +131,11 @@
     <Compile Include="UsuarioCliente\ActualizarCliente.Designer.cs">
       <DependentUpon>ActualizarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioCliente\FrmCliente.cs">
+    <Compile Include="UsuarioCliente\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioCliente\FrmCliente.designer.cs">
-      <DependentUpon>FrmCliente.cs</DependentUpon>
+    <Compile Include="UsuarioCliente\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioCliente\Comprar.cs">
       <SubType>Form</SubType>
@@ -146,7 +146,7 @@
     <Compile Include="UsuarioCliente\RegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioCliente\RegistroCliente.designer.cs">
+    <Compile Include="UsuarioCliente\RegistroCliente.Designer.cs">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Principal_Usuario.resx">
@@ -167,8 +167,8 @@
     <EmbeddedResource Include="UsuarioCliente\ActualizarCliente.resx">
       <DependentUpon>ActualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioCliente\FrmCliente.resx">
-      <DependentUpon>FrmCliente.cs</DependentUpon>
+    <EmbeddedResource Include="UsuarioCliente\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\Comprar.resx">
       <DependentUpon>Comprar.cs</DependentUpon>

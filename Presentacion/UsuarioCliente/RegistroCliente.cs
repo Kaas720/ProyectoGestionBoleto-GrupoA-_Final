@@ -1,16 +1,20 @@
 ﻿
-using LogicaDeNegocios.Modulo_de_cliente;
 using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+//using EntidadesDelProyecto;
+using LogicaDeNegocios;
+using LogicaDeNegocios.Modulo_de_cliente;
+using LogicaDeNegocios.RegistroDB;
+
 namespace Presentacion
 {
     public partial class RegistroCliente : Form
     {
-        AdmCliente adm = AdmCliente.GetAdm();
-        Validacion valida = new Validacion();
-        private string cedula;
-        Cliente cliente = new Cliente();
 
+
+        private string cedula;
+        RegistroClienteProcedimiento registroClienteProcedimiento = new RegistroClienteProcedimiento();
         public RegistroCliente(string cedula)
         {
             this.cedula = cedula;
@@ -29,57 +33,74 @@ namespace Presentacion
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-            FrmCliente obj = new FrmCliente(cedula);
-            obj.Show();
+            // Cliente obj = new Cliente(cedula);
+            // obj.Show();
             this.Hide();
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text.Trim(), sexo = cmbSexo.Text.Trim(),
-                telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(), ciudad = txtCiudad.Text.Trim(),
-                usuario = txtUsuario.Text.Trim(), contraseña = txtContraseña.Text.Trim();
-            string contenido = "";
-            if (!EsVacio())
+                telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(),
+                contraseña = txtContraseña.Text.Trim();
+            BorrarAlerta();
+            if (validar())
             {
-                cliente.Cedula = txtCedula.Text;
-                cliente.Nombre = txtNombre.Text;
-                cliente.Sexo = cmbSexo.Text;
-                cliente.Telefono = txtTelefono.Text;
-                cliente.Correo = txtCorreo.Text;
-                cliente.Ciudad = txtCiudad.Text;
-                cliente.Usuario = txtUsuario.Text;
-                cliente.Contraseña = txtContraseña.Text;
-                contenido = adm.Guardar(cliente);
-                int n = dgvCliente.Rows.Add();
-                dgvCliente.Rows[n].Cells[0].Value = txtCedula.Text;
-                dgvCliente.Rows[n].Cells[1].Value = txtNombre.Text;
-                dgvCliente.Rows[n].Cells[2].Value = cmbSexo.Text;
-                dgvCliente.Rows[n].Cells[3].Value = txtTelefono.Text;
-                dgvCliente.Rows[n].Cells[4].Value = txtCorreo.Text;
-                dgvCliente.Rows[n].Cells[5].Value = txtCiudad.Text;
-                dgvCliente.Rows[n].Cells[6].Value = txtUsuario.Text;
-                dgvCliente.Rows[n].Cells[7].Value = txtContraseña.Text;
+                LogicaDeNegocios.Modulo_de_cliente.Cliente credencial = new LogicaDeNegocios.Modulo_de_cliente.Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
+                registroClienteProcedimiento.InsertarCliente(credencial);
+                MessageBox.Show("Registro realizado con exito");
+             
                 Limpiar();
                 this.Hide();
-                FrmCliente ob = new FrmCliente(cedula);
-                ob.Show();
+                Cliente cliente = new Cliente(cedula);
+                cliente.Show();
             }
-            else
-            {
-                MessageBox.Show("Existen campos vacios");
-            }
+           
         }
-        public bool EsVacio()
-        {
-            bool campo = false;
-            if (valida.ValidarCedula(txtCedula.Text) != true || string.IsNullOrEmpty(txtNombre.Text) || (string.IsNullOrEmpty(cmbSexo.Text) ||
-                string.IsNullOrEmpty(txtTelefono.Text) || string.IsNullOrEmpty(txtCorreo.Text) || string.IsNullOrEmpty(txtCiudad.Text) ||
-                string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContraseña.Text)))
+        private bool validar() {
+            Validacion valida = new Validacion();
+            bool campo = true;
+            if (valida.ValidarCedula(txtCedula.Text) != true)
             {
-                campo = true;
+                campo = false;
+                errorProvider1.SetError(txtCedula, "Se esperaba 10 numeros.");
+            }
+            if (txtNombre.Text == "")
+            {
+                campo = false;
+                errorProvider1.SetError(txtNombre, "Ingrese su nombre completo.");
+            }
+            if (valida.ValidarTelefono(txtTelefono.Text) != true)
+            {
+                campo = false;
+                errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
+            }
+            if (cmbSexo.SelectedIndex < 0)
+            {
+                campo = false;
+                errorProvider1.SetError(cmbSexo, "Selecione un tipo de genero.");
+            }
+            if (valida.validarEmail(txtCorreo.Text) != true)
+            {
+                campo = false;
+                errorProvider1.SetError(txtCorreo, "Ingrese su correo electronico.");
+            }
+            if (txtContraseña.Text == "")
+            {
+                campo = false;
+                errorProvider1.SetError(txtContraseña, "Ingrese una contraseña.");
             }
             return campo;
         }
+        private void BorrarAlerta()
+        {
+            errorProvider1.SetError(txtCedula, "");
+            errorProvider1.SetError(txtNombre, "");
+            errorProvider1.SetError(txtTelefono, "");
+            errorProvider1.SetError(cmbSexo, "");
+            errorProvider1.SetError(txtCorreo, "");
+            errorProvider1.SetError(txtContraseña, "");
+        }
+       
         public void Limpiar()
         {
             txtCedula.Clear();
@@ -87,8 +108,6 @@ namespace Presentacion
             cmbSexo.Text = null;
             txtTelefono.Clear();
             txtCorreo.Clear();
-            txtCiudad.Clear();
-            txtUsuario.Clear();
             txtContraseña.Clear();
         }
 
@@ -116,6 +135,69 @@ namespace Presentacion
             Principal_Usuario principal = new Principal_Usuario();
             principal.Show();
             this.Dispose();
+        }
+
+        private void BotonRetroceder_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Principal_Usuario principal = new Principal_Usuario();
+            principal.Show();
+        }
+
+        private void FechaHora_Tick(object sender, EventArgs e)
+        {
+            Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
+            Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void BotonParaMinimizarVentana_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private void PanelSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void txtCedula_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            int digito;
+            if (!int.TryParse(txtCedula.Text, out digito))
+            {
+                errorProvider1.SetError(txtCedula, "Se esperaba 10 numeros.");
+            }
+            else
+            {
+                errorProvider1.SetError(txtCedula, "");
+            }
+        }
+
+        private void txtNombre_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            int nombre;
+            if (!int.TryParse(txtCedula.Text, out nombre))
+            {
+                errorProvider1.SetError(txtCedula, "Se esperaba su nombre.");
+            }
+            else
+            {
+                errorProvider1.SetError(txtCedula, "");
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) &&
+                 (e.KeyChar != Convert.ToChar(Keys.Space)))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

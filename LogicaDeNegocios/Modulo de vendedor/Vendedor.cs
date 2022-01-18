@@ -1,27 +1,27 @@
 ﻿
 namespace LogicaDeNegocios.Modulo_de_vendedor
 {
-    public class Vendedor: Usuarios
+    public class Vendedor: Persona
     {
-        private string usuario;
-        private string contraseña;
+        private string correo;
+        private string contrasena;
         private double sueldo;
 
         public Vendedor() { }
-        public Vendedor(string usuario, string contraseña, double sueldo)
-            //:base(cedula, nombre, sexo, telefono, correo, ciudad, usuario, contraseña)
+        public Vendedor(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena, double sueldo)
+          :base(cedula, nombre, sexo, telefono)
         {
+            this.correo = correo;
+            this.contrasena = contrasena;
             this.sueldo = sueldo;
-            this.usuario = usuario;
-            this.contraseña = contraseña;
         }
-        public string Usuario { get => usuario; set => usuario = value; }
-        public string Contraseña { get => contraseña; set => contraseña = value; }
+        public string Correo { get => correo; set => correo = value; }
+        public string Contrasena { get => contrasena; set => contrasena = value; }
         public double Sueldo { get => sueldo; set => sueldo = value; }
 
         public override string ToString()
         {
-            return base.ToString() + "Sueldo: " + sueldo + usuario + contraseña;
+            return base.ToString() + "Sueldo: "  + correo + contrasena + sueldo;
         }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogicaDeNegocios.Modulo_de_cliente
+namespace LogicaDeNegocios.Modulo_Boleto
 {
-    public class Boleto
+  public class Boleto
     {
         private string lugarOrigen;
         private string lugarDestino;
@@ -40,24 +40,15 @@ namespace LogicaDeNegocios.Modulo_de_cliente
         public double Precio { get => precio; set => precio = value; }
         public double Impuesto { get => impuesto; set => impuesto = value; }
 
-        public override string ToString() {
+        public override string ToString()
+        {
             return "lugarSalida: " + lugarOrigen + "lugarDestino: " + lugarDestino + "fechaSalida: " + fechaSalida + "horaSalida" + horaSalida + "fechaEmision: " + fechaEmision +
             "cantidadBoleto: " + cantidadBoleto + "precio: " + precio + "impuesto: " + impuesto;
         }
-        public double valorTotal(double total)
-        {
-          
-            string ventaCaja = "caja", compra = "";
-            if (compra == ventaCaja)
-            {
-                total = cantidadBoleto * (precio + impuesto);
-            }
-            else
-            {
-                total= precio * cantidadBoleto;
-            }
-            return total;
-        }
+
+        //public string Guardar()
+        //{
+
+        //}
     }
 }
-  

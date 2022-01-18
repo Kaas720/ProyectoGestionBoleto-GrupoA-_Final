@@ -7,8 +7,8 @@ namespace LogicaDeNegocios.Modulo_de_cliente
 {
     public class AdmCliente
     {
-        Procedimientos procedimientos = new Procedimientos();
-        RegistroCliente datos = new RegistroCliente();
+        Cliente procedimientos = new Cliente();
+        RegistroClienteProcedimiento datos = new RegistroClienteProcedimiento();
         Conexion conexion = new Conexion();
         List<Cliente> lista = null;
         private static AdmCliente adm = null;
@@ -22,7 +22,7 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             lista = new List<Cliente>();
         }
 
-        public void Inicializar(Guna2TextBox txtCedula, Guna2TextBox txtNombre, Guna2TextBox cmbSexo, Guna2TextBox txtTelefono, Guna2TextBox txtCorreo, Guna2TextBox txtCiudad, Guna2TextBox txtUsuario, Guna2TextBox txtContraseña, string cedula)
+        public void Inicializar(Guna2TextBox txtCedula, Guna2TextBox txtNombre, Guna2TextBox cmbSexo, Guna2TextBox txtTelefono, Guna2TextBox txtCorreo, Guna2TextBox txtContraseña, string cedula)
         {
             List<string> TraerInformacion = new List<string>();
             TraerInformacion = procedimientos.BuscarCliente(cedula);
@@ -30,8 +30,6 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             cmbSexo.Text = TraerInformacion[1].ToString();
             txtTelefono.Text = TraerInformacion[2].ToString();
             txtCorreo.Text = TraerInformacion[3].ToString();
-            txtCiudad.Text = TraerInformacion[4].ToString();
-            txtUsuario.Text = TraerInformacion[5].ToString();
             txtContraseña.Text = TraerInformacion[6].ToString();
         }
 
@@ -42,10 +40,10 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             return adm;
         }
 
-        public string Modificar(string cedula, string telefono, string correo, string usuario, 
+        public string Modificar(string cedula, string telefono, string correo, 
             string contrasena)
         {
-            return procedimientos.ActualizarCliente(cedula, telefono, correo, usuario, contrasena);
+            return procedimientos.ActualizarCliente(cedula, telefono, correo, contrasena);
         }
 
         public int GetLista()

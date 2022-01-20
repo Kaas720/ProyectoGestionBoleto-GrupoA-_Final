@@ -26,39 +26,24 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         /*--------------------------------------------------------------------*/
+        // Se llama a la clase  ConsultasProcedimientos, para hacer uso de los metodos que contiene creamos una instacia llamada procedimientos
         ConsultasProcedimientos procedimientos = new ConsultasProcedimientos();
         public Principal_Usuario()
         {
             InitializeComponent();
+            // Se llama al metodo LlenarCombos que obtine los datos almacenados en la base de datos
             procedimientos.LlenarCombos(cbOrigen, cbDestino);
         }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            RegistroCliente cliente = new RegistroCliente();
-            cliente.ShowDialog();
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void BotonParaMinimizarVentana_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
+       
         private void btnComprar_Click(object sender, EventArgs e)
         {
+            // Se llama al formulario para registrar nuevos clientes y la pantalla principal se la deja inviible
             RegistroCliente registroCliente = new RegistroCliente();
             registroCliente.Show();
             Program.principal.Hide();
         }
-        /*Metodos para la venta en general*/
+       
+        // Se llama al metodo Exit para cerrar la aplicacion y se muestra un mensaje de alerta para confirmar el cierre de la aplicacion
         private void BotonCierreDeAplicacion_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -109,14 +94,14 @@ namespace Presentacion
                 cbCooperativa.Items.Clear();
                 DataGridInf.Rows.Clear();
         }
-
+        // Se llama al formulario para realizar el inicio de sesion 
         private void BotonInicioSesion_Click(object sender, EventArgs e)
         {
             InicioSeccion iniciosesion = new InicioSeccion();
             iniciosesion.Show();
             Program.principal.Hide();
         }
-
+        // Se crea el metodo para llenar la datagrid cuando los combobox no se encuentran vacios
         private void cbCooperativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Validacion_Cooperativa() && Comprobar_combo_vacio())
@@ -128,7 +113,7 @@ namespace Presentacion
                 DataGridInf.ClearSelection();
             }
         }
-
+        // Se crea el metodo para validar el combobox cooperativa que no se encuentre vacio 
         private bool Validacion_Cooperativa()
         {   
             if (!cbCooperativa.SelectedIndex.Equals(-1))
@@ -137,12 +122,13 @@ namespace Presentacion
             }
             return false;
         }
-
+        // Se realiza el metodo para minimizar la aplicacion 
         private void BotonParaMinimizarVentana_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-
+        // Se llama al formulario Comprar en donde se realiza la validacion de que se seleccione datos del datagrid para que sean cargados 
+        // en los textbox del formulario compra.
         private void BotonComprar_Click(object sender, EventArgs e)
         {
             try

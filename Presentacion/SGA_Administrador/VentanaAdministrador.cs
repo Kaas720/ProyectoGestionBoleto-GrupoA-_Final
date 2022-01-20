@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentacion.SGA_Administrador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,10 @@ namespace Presentacion
         public VentanaAdministrador()
         {
             InitializeComponent();
+            FormularioContenedor Frm = new FormularioContenedor();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
         }
 
         private void Fecha_Hora_Sistema_Tick(object sender, EventArgs e)

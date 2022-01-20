@@ -133,6 +133,7 @@ namespace LogicaDeNegocios
                     dataGridInf.Rows[numerofila].Cells[1].Value = lector["HoraSalida"].ToString();
                     dataGridInf.Rows[numerofila].Cells[2].Value = lector["FechaSalida"].ToString();
                     dataGridInf.Rows[numerofila].Cells[3].Value = lector["Precio"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[4].Value = "Seleccionar...";
                 }
                 con.cerrar();
             }

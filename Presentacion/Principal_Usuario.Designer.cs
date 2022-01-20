@@ -30,10 +30,10 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DataGridInf = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -41,6 +41,7 @@ namespace Presentacion
             this.Hora_Salida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Costo_pasaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Boton_DatGrid = new System.Windows.Forms.DataGridViewButtonColumn();
             this.cbDestino = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbOrigen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,7 +50,6 @@ namespace Presentacion
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BotonComprar = new FontAwesome.Sharp.IconButton();
             this.botonRegistroUsuario = new FontAwesome.Sharp.IconButton();
             this.BotonInicioSesion = new FontAwesome.Sharp.IconButton();
             this.PanelSuperior = new System.Windows.Forms.Panel();
@@ -107,54 +107,55 @@ namespace Presentacion
             this.DataGridInf.AllowUserToAddRows = false;
             this.DataGridInf.AllowUserToDeleteRows = false;
             this.DataGridInf.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DataGridInf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridInf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.DataGridInf.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridInf.BackgroundColor = System.Drawing.Color.White;
             this.DataGridInf.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridInf.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridInf.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridInf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridInf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.DataGridInf.ColumnHeadersHeight = 21;
             this.DataGridInf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cooperativa_nombre,
             this.Hora_Salida,
             this.FechaSalida,
-            this.Costo_pasaje});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridInf.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Costo_pasaje,
+            this.Boton_DatGrid});
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridInf.DefaultCellStyle = dataGridViewCellStyle11;
             this.DataGridInf.EnableHeadersVisualStyles = false;
             this.DataGridInf.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridInf.Location = new System.Drawing.Point(9, 53);
+            this.DataGridInf.Location = new System.Drawing.Point(15, 50);
             this.DataGridInf.MultiSelect = false;
             this.DataGridInf.Name = "DataGridInf";
             this.DataGridInf.ReadOnly = true;
             this.DataGridInf.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridInf.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridInf.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.DataGridInf.RowHeadersVisible = false;
             this.DataGridInf.RowHeadersWidth = 62;
             this.DataGridInf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -181,6 +182,7 @@ namespace Presentacion
             this.DataGridInf.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridInf.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridInf.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridInf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridInf_CellContentClick);
             // 
             // Cooperativa_nombre
             // 
@@ -209,6 +211,13 @@ namespace Presentacion
             this.Costo_pasaje.MinimumWidth = 8;
             this.Costo_pasaje.Name = "Costo_pasaje";
             this.Costo_pasaje.ReadOnly = true;
+            // 
+            // Boton_DatGrid
+            // 
+            this.Boton_DatGrid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Boton_DatGrid.HeaderText = "Seleccionar";
+            this.Boton_DatGrid.Name = "Boton_DatGrid";
+            this.Boton_DatGrid.ReadOnly = true;
             // 
             // cbDestino
             // 
@@ -310,11 +319,10 @@ namespace Presentacion
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
             this.panel2.Controls.Add(this.guna2HtmlLabel2);
-            this.panel2.Controls.Add(this.BotonComprar);
             this.panel2.Controls.Add(this.botonRegistroUsuario);
             this.panel2.Controls.Add(this.BotonInicioSesion);
             this.panel2.Location = new System.Drawing.Point(0, 75);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(217, 392);
             this.panel2.TabIndex = 30;
@@ -329,32 +337,6 @@ namespace Presentacion
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(195, 18);
             this.guna2HtmlLabel2.TabIndex = 13;
             this.guna2HtmlLabel2.Text = "Copyright © 2022 VIAJEROS S.A";
-            // 
-            // BotonComprar
-            // 
-            this.BotonComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.BotonComprar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonComprar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonComprar.FlatAppearance.BorderSize = 0;
-            this.BotonComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonComprar.ForeColor = System.Drawing.SystemColors.Info;
-            this.BotonComprar.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.BotonComprar.IconColor = System.Drawing.Color.White;
-            this.BotonComprar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonComprar.IconSize = 55;
-            this.BotonComprar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonComprar.Location = new System.Drawing.Point(0, 240);
-            this.BotonComprar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BotonComprar.Name = "BotonComprar";
-            this.BotonComprar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BotonComprar.Size = new System.Drawing.Size(217, 120);
-            this.BotonComprar.TabIndex = 0;
-            this.BotonComprar.Text = "COMPRA";
-            this.BotonComprar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonComprar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonComprar.UseVisualStyleBackColor = false;
-            this.BotonComprar.Click += new System.EventHandler(this.BotonComprar_Click);
             // 
             // botonRegistroUsuario
             // 
@@ -553,7 +535,6 @@ namespace Presentacion
 
         #endregion
         private FontAwesome.Sharp.IconButton botonRegistroUsuario;
-        private FontAwesome.Sharp.IconButton BotonComprar;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2ComboBox cbDestino;
         private Guna.UI2.WinForms.Guna2ComboBox cbOrigen;
@@ -575,11 +556,12 @@ namespace Presentacion
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridInf;
         private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cooperativa_nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora_Salida;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaSalida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo_pasaje;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private System.Windows.Forms.DataGridViewButtonColumn Boton_DatGrid;
     }
 }
 

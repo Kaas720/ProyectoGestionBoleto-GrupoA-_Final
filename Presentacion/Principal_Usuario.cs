@@ -137,31 +137,31 @@ namespace Presentacion
         {
             WindowState = FormWindowState.Minimized;
         }
-
         // Se llama al formulario Comprar y se pasa los datos desde el fomulario principal que se selecciono desde la datagrid para que sean cargados 
         // en los textbox del formulario compra.
-        private void BotonComprar_Click(object sender, EventArgs e)
+        private void DataGridInf_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if (e.ColumnIndex == 4)
             {
-                if (procedimientos.ValidarDataGridVacio(DataGridInf))
+                try
                 {
-                    int x = DataGridInf.CurrentCell.RowIndex;
-                    string cooperativa = DataGridInf.Rows[x].Cells[0].Value.ToString();
-                    string fecha_salida = DataGridInf.Rows[x].Cells[1].Value.ToString();
-                    string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
-                    Comprar comprar = new Comprar(cooperativa, fecha_salida, horario_salida);
-                    Program.principal.Hide();
-                    comprar.Show();
+                    if (procedimientos.ValidarDataGridVacio(DataGridInf))
+                    {
+                        int x = DataGridInf.CurrentCell.RowIndex;
+                        string cooperativa = DataGridInf.Rows[x].Cells[0].Value.ToString();
+                        string fecha_salida = DataGridInf.Rows[x].Cells[1].Value.ToString();
+                        string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
+                        Comprar comprar = new Comprar(cooperativa, fecha_salida, horario_salida);
+                        Program.principal.Hide();
+                        comprar.Show();
+                    }
+                }
+                catch (ControlExcepcion ex)
+                {
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
             }
-            catch (ControlExcepcion ex)
-            {
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-
         }
-
     }
 }

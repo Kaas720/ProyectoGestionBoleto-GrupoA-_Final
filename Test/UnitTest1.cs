@@ -5,14 +5,14 @@ using System;
 namespace Test
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest1 { 
 
          /// <summary>
          /// CP-01
          /// </summary>
          /// 
 
-    [TestMethod]
+        [TestMethod]
         public void PruebaInicioSeccion()
         {
             ConsultasProcedimientos consultasProcedimientos = new ConsultasProcedimientos();

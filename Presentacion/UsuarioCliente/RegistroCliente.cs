@@ -3,35 +3,28 @@ using LogicaDeNegocios;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-
-
 namespace Presentacion
 {
     public partial class RegistroCliente : Form
     {
-
-
         private string cedula;
+        // Se llama al clase  RegistroClienteProcedimiento y se crea el objeto registroClienteProcedimiento para llamar a los metodos que contiene
         RegistroClienteProcedimiento registroClienteProcedimiento = new RegistroClienteProcedimiento();
         public RegistroCliente(string cedula)
         {
             this.cedula = cedula;
         }
-
         public RegistroCliente()
         {
             InitializeComponent();
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
+
+        // Metodo para guardar la informacion del registro de un cliente 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text.Trim(), sexo = cmbSexo.Text.Trim(),
@@ -40,6 +33,7 @@ namespace Presentacion
             BorrarAlerta();
             try
             {
+            // Al validar que los campos se llenaron correctamente se guarda el regitro y se envia al formulario cliente
                 if (validar())
                 {
                     Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
@@ -55,9 +49,9 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
         }
+
+        // El metodo validar realiza la validacion de cada uno de los textBox y se muestra la alerta del campo que falta completar
         private bool validar() {
             Validacion valida = new Validacion();
             bool campo = true;
@@ -98,6 +92,7 @@ namespace Presentacion
 
             return campo;
         }
+        // El metodo Borrar alerta elimina las alertas una vez que se lleno bien la informacion en el textbox
         private void BorrarAlerta()
         {
             errorProvider1.SetError(txtCedula, "");
@@ -107,6 +102,8 @@ namespace Presentacion
             errorProvider1.SetError(txtCorreo, "");
             errorProvider1.SetError(txtContraseña, "");
         }
+
+        // Metodo limpiar elimina los datos de los texbox una vez que se ingreso el registro
         public void Limpiar()
         {
             txtCedula.Clear();
@@ -117,6 +114,7 @@ namespace Presentacion
             txtContraseña.Clear();
         }
 
+        // El evento valida que el textBox solo reciba numeros 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)))
@@ -126,6 +124,7 @@ namespace Presentacion
             }
         }
 
+        // El evento valida que el textBox solo reciba numeros 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)))
@@ -135,26 +134,21 @@ namespace Presentacion
             }
         }
 
-        private void btnSalir_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            Principal_Usuario principal = new Principal_Usuario();
-            principal.Show();
-            this.Dispose();
-        }
-
+        // Se llama al metodo Close() para cerrar el formulario login y mostrar el formulario principal
         private void BotonRetroceder_Click(object sender, EventArgs e)
         {
             this.Close();
             Program.principal.Show();
         }
 
+        /*Metodo para la obtencion de la hora y fecha actual*/
         private void FechaHora_Tick(object sender, EventArgs e)
         {
             Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
             Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
         }
 
+        // Se realiza el metodo para minimizar la aplicacion 
         private void BotonParaMinimizarVentana_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -168,6 +162,8 @@ namespace Presentacion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        // El evento valida que el textBox solo reciba letras
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) &&

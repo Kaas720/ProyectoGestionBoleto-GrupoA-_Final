@@ -1,14 +1,7 @@
 ﻿
 using LogicaDeNegocios;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -25,8 +18,9 @@ namespace Presentacion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
         /*--------------------------------------------------------------------*/
-        // Se llama a la clase  ConsultasProcedimientos, para hacer uso de los metodos que contiene creamos una instacia llamada procedimientos
+        // Se llama a la clase  ConsultasProcedimientos, para hacer uso de los metodos que contiene creamos un objeto llamado procedimientos
         ConsultasProcedimientos procedimientos = new ConsultasProcedimientos();
         public Principal_Usuario()
         {
@@ -53,12 +47,16 @@ namespace Presentacion
 
         }
 
+        // Se realiza el evento tick para mostrar la fecha y hora actual en el sistema
         private void timer1_Tick(object sender, EventArgs e)
         {
             Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
             Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
         }
 
+        /* Se crea el evento cbOrigen_SelectedIndexChanged para validar el combobox de lugar de origen no se encuentre vacio
+         si esta vacio se llama al metodo LlenarComboCooperativa que permite obtener informacion desde la base de datos para
+        seleccionar un dato especifico dentro de cada combobox tambien se llama al metodo  EliminarComboElementos() los datos */
         private void cbOrigen_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Comprobar_combo_vacio())
@@ -69,6 +67,10 @@ namespace Presentacion
                 procedimientos.LlenarComboCooperativa(cbCooperativa,origen,Destino);
             }
         }
+
+        /* Se crea el evento cbDestino_SelectedIndexChanged para validar el combobox de lugar de destino no se encuentre vacio
+           si esta vacio se llama al metodo LlenarComboCooperativa que permite obtener informacion desde la base de datos para
+           seleccionar un dato especifico dentro de cada combobox tambien se llama al metodo  EliminarComboElementos() los datos seleccionados*/
         private void cbDestino_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Comprobar_combo_vacio())
@@ -80,6 +82,8 @@ namespace Presentacion
 
             }
         }
+
+        // Se crea el metodo comprobar_combo_vacio si el combobox tiene seleccionado un iten se queda cargado dentro del combo
         private bool Comprobar_combo_vacio()
         {
             bool bandera = false;
@@ -89,11 +93,14 @@ namespace Presentacion
             }
             return bandera;
         }
+
+        // Se crea el metodo EliminarComboElemento para limpiar los datos cargados en la datagrid y el combobox de cooperativa
         private void EliminarComboElementos()
         {
                 cbCooperativa.Items.Clear();
                 DataGridInf.Rows.Clear();
         }
+
         // Se llama al formulario para realizar el inicio de sesion 
         private void BotonInicioSesion_Click(object sender, EventArgs e)
         {
@@ -101,7 +108,8 @@ namespace Presentacion
             iniciosesion.Show();
             Program.principal.Hide();
         }
-        // Se crea el metodo para llenar la datagrid cuando los combobox no se encuentran vacios
+
+        // Se crea un evnto llamado cbCooperativa_SelectedIndexChanged para llenar la datagrid cuando los combobox no se encuentran vacios
         private void cbCooperativa_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Validacion_Cooperativa() && Comprobar_combo_vacio())
@@ -113,6 +121,7 @@ namespace Presentacion
                 DataGridInf.ClearSelection();
             }
         }
+
         // Se crea el metodo para validar el combobox cooperativa que no se encuentre vacio 
         private bool Validacion_Cooperativa()
         {   
@@ -122,12 +131,14 @@ namespace Presentacion
             }
             return false;
         }
+
         // Se realiza el metodo para minimizar la aplicacion 
         private void BotonParaMinimizarVentana_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
-        // Se llama al formulario Comprar en donde se realiza la validacion de que se seleccione datos del datagrid para que sean cargados 
+
+        // Se llama al formulario Comprar y se pasa los datos desde el fomulario principal que se selecciono desde la datagrid para que sean cargados 
         // en los textbox del formulario compra.
         private void BotonComprar_Click(object sender, EventArgs e)
         {

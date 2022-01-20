@@ -1,19 +1,10 @@
-﻿
-using LogicaDeNegocios;
+﻿using LogicaDeNegocios;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion
-{
-    
+{  
     public partial class InicioSeccion : Form
     {
         /*Codigo para arrastrar la ventana a cualquier parte de la pantalla*/
@@ -27,12 +18,14 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         /*--------------------------------------------------------------------*/
+        // Se llama al clase  ConsultasProcedimientos y se crea el objeto consulta para llamar a los metodos que contiene
         ConsultasProcedimientos consulta = new ConsultasProcedimientos();
         public InicioSeccion()
         {
             InitializeComponent();
         }
 
+        // Se realiza la validacion de las credenciales que son ingresadas por los usuarios dentro del sistema al realizar el inicio de sesion
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string Usuario = NombreUsuario.Text;
@@ -40,23 +33,28 @@ namespace Presentacion
             int rol = Rol();
             if (ValidacionCamposVacios(Usuario, password, rol))
             {
+             // Se hace uso del control de excepciones conde se llama a la clase ControlExcepcion, si el usuario no ingresa las credenciales 
                 try
                 {
                     ConsultarLoginBD(Usuario, password, rol);
                 }
                 catch (ControlExcepcion ex)
                 {
+            // Se envia un aviso indicando que sus credenciales no son las correctas
                     MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NombreUsuario.Text = null;
                     Contrasenausuario.Text = null;
                 }       
             }
             else
+            // en caso de querer ingresar sin ingresar ningun dato se mostrara el siguiente mensaje
             {
                 MessageBox.Show("Campos vacios");
             }  
         }
-        /*Metodo para consultar en la bd y de respuesta*/
+
+        /*Metodo ConsultarLoginBD recibe como parametro correo, password y rol para consultar en la base dedatos el rol de cada 
+         usuario y validar sus credenciales*/
         private void ConsultarLoginBD(string correo, string password, int rol)
         {
             if(consulta.Login(correo, password, rol))
@@ -84,6 +82,7 @@ namespace Presentacion
                 }
             }
         }
+
         /*Metodo para validar si existen campos vacios*/
         private bool ValidacionCamposVacios(string usuario, string password, int rol)
         {
@@ -125,6 +124,7 @@ namespace Presentacion
             Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
         }
 
+       // Se llama al metodo Exit para cerrar la aplicacion y se muestra un mensaje de alerta para confirmar el cierre de la aplicacion
         private void iconPictureBox2_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -133,11 +133,13 @@ namespace Presentacion
             }
         }
 
+        // Se realiza el metodo para minimizar la aplicacion 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
+       // Se llama al metodo Close() para cerrar el formulario login y mostrar el formulario principal
         private void BotonRetroceder_Click(object sender, EventArgs e)
         {
             this.Close();

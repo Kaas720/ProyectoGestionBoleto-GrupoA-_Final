@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace LogicaDeNegocios
 {
+     // se crea la clase validacion
     public class Validacion
     {
+        // Se crea el metodo ValidarCedula para que los numeros de cedula sean igual a 10 digitos
         public bool ValidarCedula(string cedula)
         {
             bool x = true;
@@ -20,6 +17,7 @@ namespace LogicaDeNegocios
             return x;
         }
 
+        // Se crea el metodo ValidarTelefono para que el numero de telefono para que permita solo ingresar 10 digitos
         public bool ValidarTelefono(string telefono)
         {
             bool campo = true;
@@ -30,6 +28,7 @@ namespace LogicaDeNegocios
             return campo;
         }
 
+        // Se crea el metodo validarEmail
         public bool validarEmail(string email)
         {
             if (email == null)

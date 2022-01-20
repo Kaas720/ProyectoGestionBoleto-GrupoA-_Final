@@ -6,8 +6,13 @@ namespace Test
 {
     [TestClass]
     public class UnitTest1
-    {
-        [TestMethod]
+
+         /// <summary>
+         /// CP-01
+         /// </summary>
+         /// 
+
+    [TestMethod]
         public void PruebaInicioSeccion()
         {
             ConsultasProcedimientos consultasProcedimientos = new ConsultasProcedimientos();

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
+    // Se crea la clase  GenerarInformacionBoleto
     public class GenerarInformacionBoleto
     {
+        // Atributos
         int busId;
         string lugarSalida;
         string fechaSalida;
@@ -17,6 +19,7 @@ namespace LogicaDeNegocios
         string numerodico;
         string precio;
 
+        // se crea el constructor parametrizado
         public GenerarInformacionBoleto(int busId, string lugarSalida, string fechaSalida, string lugardestino, string horaSalida, string cooperativa, string numerodico, string precio)
         {
             this.busId = busId;
@@ -29,6 +32,7 @@ namespace LogicaDeNegocios
             this.precio = precio;
         }
 
+        // Se crean los metodos getters y setters
         public string LugarSalida { get => lugarSalida; set => lugarSalida = value; }
         public string FechaSalida { get => fechaSalida; set => fechaSalida = value; }
         public string Lugardestino { get => lugardestino; set => lugardestino = value; }

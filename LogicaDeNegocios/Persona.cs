@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
+    // Se crea la clase persona con cuatro atributos 
    public class Persona
     {
         private string cedula;
         private string nombre;
         private string sexo;
         private string telefono;
+
+        // Se crea el costructor por defecto
         public Persona() { }
+        // Se crea el costructor de la clase persona parametrizado 
         public Persona(string cedula, string nombre, string sexo, string telefono)
         {
             this.cedula = cedula;
@@ -21,6 +25,7 @@ namespace LogicaDeNegocios
             this.telefono = telefono;
 
           }
+        // Se crea los metodos getters y setters
         public string Cedula { get => cedula; set => cedula = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Sexo { get => sexo; set => sexo = value; }

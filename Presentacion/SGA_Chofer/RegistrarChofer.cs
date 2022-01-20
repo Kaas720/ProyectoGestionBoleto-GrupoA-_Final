@@ -35,8 +35,8 @@ namespace Presentacion.SGA_Chofer
                 ch.Usuario = txtusuario.Text;
                 ch.Contraseña = txtcontraseña.Text;
                 ch.IdCooperativa =Int16.Parse(txtidcooperativa.Text);
-               
                 ch.Estado = txtestado.Text;
+
     //////////////
                 MessageBox.Show(ch.registrar());
             }

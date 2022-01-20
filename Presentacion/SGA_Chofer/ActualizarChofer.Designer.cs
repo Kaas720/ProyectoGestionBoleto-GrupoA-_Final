@@ -1,6 +1,6 @@
 ﻿namespace Presentacion.SGA_Chofer
 {
-    partial class Chofer
+    partial class ActualizarChofer
     {
         /// <summary>
         /// Required designer variable.

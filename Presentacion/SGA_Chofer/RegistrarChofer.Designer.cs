@@ -663,7 +663,7 @@ namespace Presentacion.SGA_Chofer
             this.txtestado.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtestado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtestado.HoverState.Parent = this.txtestado;
-            this.txtestado.Location = new System.Drawing.Point(901, 225);
+            this.txtestado.Location = new System.Drawing.Point(920, 225);
             this.txtestado.Name = "txtestado";
             this.txtestado.PasswordChar = '\0';
             this.txtestado.PlaceholderText = "Estado";

@@ -70,11 +70,11 @@
     <Compile Include="SGA_Administrador\VentanaAdministrador.designer.cs">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="SGA_Chofer\Chofer.cs">
+    <Compile Include="SGA_Chofer\ActualizarChofer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SGA_Chofer\Chofer.Designer.cs">
-      <DependentUpon>Chofer.cs</DependentUpon>
+    <Compile Include="SGA_Chofer\ActualizarChofer.Designer.cs">
+      <DependentUpon>ActualizarChofer.cs</DependentUpon>
     </Compile>
     <Compile Include="SGA_Chofer\RegistrarChofer.cs">
       <SubType>Form</SubType>
@@ -121,8 +121,8 @@
     <EmbeddedResource Include="SGA_Administrador\VentanaAdministrador.resx">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SGA_Chofer\Chofer.resx">
-      <DependentUpon>Chofer.cs</DependentUpon>
+    <EmbeddedResource Include="SGA_Chofer\ActualizarChofer.resx">
+      <DependentUpon>ActualizarChofer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Chofer\RegistrarChofer.resx">
       <DependentUpon>RegistrarChofer.cs</DependentUpon>

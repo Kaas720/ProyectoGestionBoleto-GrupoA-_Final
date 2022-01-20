@@ -1,4 +1,5 @@
 ﻿using Datos;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,14 @@ namespace LogicaDeNegocios.Modulo_de_chofer
     public class ClsChofer: Persona
     {
         
-
         private String licencia;
         private Int16 idCooperativa;
         private String estado;
 
 
+        ClsManejador ManejadorChofer = new ClsManejador();
 
-        ClsManejadorChofer M = new ClsManejadorChofer();
+       
 
         /* Lucio Johann*/
 
@@ -46,49 +47,67 @@ namespace LogicaDeNegocios.Modulo_de_chofer
 
 
 
-        public int actualizar_x_cedula(String cedula, String nombre, String sexo, String telefono, String correo, String ciudad, String usuario, String contraseña, String licencia, Int16 idCooperativa, String estado)
+        public int actualizar_x_cedula()
         {
-            return M.actualizar_chofer_individual(cedula, nombre, licencia, sexo, telefono, correo,ciudad, usuario, contraseña, idCooperativa, estado);
+            MySqlConnection conexion = ManejadorChofer.abrir_conexion();
+
+            MySqlCommand comannd = new MySqlCommand();
+            comannd.Connection = conexion;
+            comannd.CommandText = "ModificarChofer";
+            comannd.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+
+            comannd.Parameters.AddWithValue("param_cedula", Cedula); // a la variable de tip Mysql comand agregar un valor al parametro
+            comannd.Parameters.AddWithValue("param_nombre", Nombre); // Parametro a remplazar en la cadena de conxion o insert , con lo que venga de la capa logica
+            comannd.Parameters.AddWithValue("param_licencia", licencia);
+            comannd.Parameters.AddWithValue("param_sexo", Sexo);
+            comannd.Parameters.AddWithValue("param_telefono", Telefono);
+            comannd.Parameters.AddWithValue("param_correo", Correo);
+            comannd.Parameters.AddWithValue("param_ciudad", Ciudad);
+            comannd.Parameters.AddWithValue("param_usuario", Usuario);
+            comannd.Parameters.AddWithValue("param_contraseña", Contraseña);
+            comannd.Parameters.AddWithValue("param_idCooperativa", IdCooperativa);
+            comannd.Parameters.AddWithValue("param_estado", Estado);
+            int resultado_operacion = Convert.ToInt32(comannd.ExecuteScalar());
+            ManejadorChofer.cerrar_conexion(conexion);
+            return resultado_operacion;
+
         }
 
         /* Lucio Johann*/
-        public override string registrar()
+        public override String registrar()
         {
-            ClsParametroChofer coferp = new ClsParametroChofer();
-            List<ClsParametroChofer> lst = new List<ClsParametroChofer>();
-            string msj;
+            String msj = "";
             try
             {
+                MySqlConnection conexion = ManejadorChofer.abrir_conexion();
 
-                coferp.Nombre = this.Nombre;
-                coferp.Cedula = this.Cedula;
-                coferp.Licencia = this.Licencia;
-                coferp.Sexo = this.Sexo;
-                coferp.Telefono = this.Telefono;
-                coferp.Correo = this.Correo;
-                coferp.Ciudad = this.Ciudad;
-                coferp.Usuario = this.Usuario;
-                coferp.Contraseña = this.Contraseña;
-                coferp.IdCooperativa = this.IdCooperativa;
-                
-                coferp.Estado = this.Estado;
+                MySqlCommand comannd = new MySqlCommand();
+                comannd.Connection = conexion;
+                comannd.CommandText = "Registrar_Chofer";
+                comannd.CommandType = System.Data.CommandType.StoredProcedure;
 
+                comannd.Parameters.AddWithValue("param_cedula", Cedula);
+                comannd.Parameters.AddWithValue("param_nombre", Nombre);
+                comannd.Parameters.AddWithValue("param_licencia", Licencia);
+                comannd.Parameters.AddWithValue("param_sexo", Sexo);
+                comannd.Parameters.AddWithValue("param_telefono", Telefono);
+                comannd.Parameters.AddWithValue("param_correo", Correo);
+                comannd.Parameters.AddWithValue("param_ciudad", Ciudad);
+                comannd.Parameters.AddWithValue("param_usuario", Usuario);
+                comannd.Parameters.AddWithValue("param_contraseña", Contraseña);
+                comannd.Parameters.AddWithValue("param_idCooperativa", IdCooperativa);
+                comannd.Parameters.AddWithValue("param_estado", Estado);
 
-                //Pasar los parámetros hacia la capa de acceso a datos
-                lst.Add(coferp);
-                M.insertar_chofer(lst);
-
-
-                msj = "Insertado correctamente";
-
+                int resultado = Convert.ToInt32(comannd.ExecuteNonQuery());
+                msj = "Registrado con éxito, " ;
+                ManejadorChofer.cerrar_conexion(conexion);
             }
             catch (Exception ex)
             {
-                msj = "Error al insertar los datos";
-                return msj;
-                throw ex;
+                msj = "Error al registrar los datos\nMotivo:\n" ;
             }
-
             return msj;
         }
 

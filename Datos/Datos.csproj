@@ -93,9 +93,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsManejador.cs" />
-    <Compile Include="ClsManejadorChofer.cs" />
-    <Compile Include="ClsParametroChofer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

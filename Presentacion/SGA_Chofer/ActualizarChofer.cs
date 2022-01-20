@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Presentacion.SGA_Chofer
 {
-    public partial class Chofer : Form
+    public partial class ActualizarChofer : Form
     {
 
         /*Codigo para arrastrar la ventana a cualquier parte de la pantalla*/
@@ -23,7 +23,7 @@ namespace Presentacion.SGA_Chofer
 
         ClsChofer chofer = new ClsChofer();
       
-        public Chofer()
+        public ActualizarChofer()
         {
             InitializeComponent();
         }
@@ -34,8 +34,21 @@ namespace Presentacion.SGA_Chofer
 
             try
             {
+                chofer.Cedula = txtcedula.Text;
+                chofer.Nombre = txtnombre.Text;
+                chofer.Licencia = txtlicencia.Text;
+                chofer.Sexo = txtsexo.Text;
+                chofer.Telefono = txttelefono.Text;
+                chofer.Correo = txtcorreo.Text;
+                chofer.Ciudad = txtciudad.Text;
+                chofer.Usuario = txtusuario.Text;
+                chofer.Contraseña = txtcontraseña.Text;
+                chofer.IdCooperativa = Int16.Parse(CmbBoxCo.Text);
+                chofer.Estado = CmbBoxEs.Text;
 
-                int resultado = chofer.actualizar_x_cedula( txtcedula.Text, txtnombre.Text, txtlicencia.Text, txtsexo.Text, txttelefono.Text, txtcorreo.Text, txtciudad.Text,  txtusuario.Text, txtcontraseña.Text, Int16.Parse(CmbBoxCo.Text), CmbBoxEs.Text);
+
+
+                int resultado = chofer.actualizar_x_cedula();
                 if (resultado == 0)
                 {
                     MessageBox.Show("Los datos se actualizon correctamente");

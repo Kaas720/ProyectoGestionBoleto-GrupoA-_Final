@@ -47,6 +47,11 @@ namespace Presentacion
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
         }
+        ///<summary>
+        ///Metodo que se encarga de abrir el from para el registro cliente
+        ///</summary>
+        ///<param name= "sender"> Objeto almacenado del boton </param>
+        /// <param name= "e"> envento generado </param>
         private void BotonregistrasAdmin_Click(object sender, EventArgs e)
         {
             RestablecerColorOriginalBotones();

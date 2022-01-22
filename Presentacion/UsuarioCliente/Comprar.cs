@@ -153,12 +153,13 @@ namespace Presentacion
 
         private bool ValidarCarrito()
         {
+            bool bandera = true;
             if (Convert.ToInt32(CarritoBtn.Text) == 0)
             {
+                bandera = false;
                 throw new ControlExcepcion("No hay boletos agregados al carrito");
-                return false;
             }
-            return true;
+            return bandera;
         }
 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)

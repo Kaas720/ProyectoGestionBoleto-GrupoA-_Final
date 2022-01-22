@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conector.cs" />
     <Compile Include="ConsultaProcedimientosGenerarBoleto.cs" />
     <Compile Include="ConsultasProcedimientos.cs" />
     <Compile Include="GeneralExcepcion.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="AdmCliente.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Procedimientos.cs" />
+    <Compile Include="txtCedula.cs" />
     <Compile Include="Validacion.cs" />
     <Compile Include="Bus.cs" />
     <Compile Include="Cooperativa.cs" />

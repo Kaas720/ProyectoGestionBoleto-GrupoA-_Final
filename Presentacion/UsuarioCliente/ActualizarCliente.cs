@@ -13,7 +13,7 @@ namespace Presentacion.UsarioCliente
         public ActualizarCliente(string cedula)
         {
             InitializeComponent();
-            adm.Inicializar(txtCedula, txtNombre, Sexo, txtTelefono, txtCorreo, txtContraseña, cedula);
+            adm.Inicializar(txtCedula, txtNombre, Sexo, txtTelefono, txtCorreo, txtContraseña);
             this.cedula = cedula;
         }
 

@@ -8,15 +8,7 @@ namespace Presentacion
 {
     public partial class RegistroCliente : Form
     {
-
-
-        private string cedula;
         AdmCliente registroClienteProcedimiento = new AdmCliente();
-        //public RegistroCliente(string cedula)
-        //{
-        //    this.cedula = cedula;
-        //}
-
         public RegistroCliente()
         {
             InitializeComponent();
@@ -25,14 +17,6 @@ namespace Presentacion
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.Dispose();
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-            // Cliente obj = new Cliente(cedula);
-            // obj.Show();
-            this.Hide();
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {

@@ -10,7 +10,7 @@ namespace LogicaDeNegocios
     public class Cliente :Persona
     {
         Conexion conexion;
-        AdmCliente conector = new AdmCliente();
+        Conector conector = new Conector();
         private string correo;
         private string contrasena;
         public Cliente() { }
@@ -56,9 +56,10 @@ namespace LogicaDeNegocios
             conexion.Cerrar();
         }
 
-    public List<string> BuscarCliente(string cedula)
+    public List<Cliente> BuscarCliente(string cedula)
     {
-            List<string> Cliente = new List<string>();
+            List<Cliente> lista = new List<Cliente>();
+            Cliente client = null;
             try
             {
                 MySqlCommand mySqlCommand = conector.ConectarProcedimiento("BuscarCliente",conexion.conectar());
@@ -66,11 +67,13 @@ namespace LogicaDeNegocios
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {
-                    Cliente.Add(lector["Nombre"].ToString());
-                    Cliente.Add(lector["Sexo"].ToString());
-                    Cliente.Add(lector["Telefono"].ToString());
-                    Cliente.Add(lector["Correo"].ToString());
-                    Cliente.Add(lector["Contraseña"].ToString());
+                    client = new Cliente();
+                    client.Nombre = lector["Nombre"].ToString();
+                    client.Sexo = lector["Sexo"].ToString();
+                    client.Telefono = lector["Telefono"].ToString();
+                    client.Correo = lector["Correo"].ToString();
+                    client.Contrasena = lector["Contraseña"].ToString();
+                    lista.Add(client);
                 }
                 conexion.Cerrar();
             }
@@ -78,7 +81,7 @@ namespace LogicaDeNegocios
             {
                 MessageBox.Show(ex.ToString());
             }
-            return Cliente;
+            return lista;
     }
 
 

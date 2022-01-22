@@ -107,20 +107,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultaProcedimientosGenerarBoleto.cs" />
     <Compile Include="ConsultasProcedimientos.cs" />
     <Compile Include="GeneralExcepcion.cs" />
-    <Compile Include="Modulo Boleto\Boleto.cs" />
-    <Compile Include="Modulo Boleto\LlenarinformacionDataGrid.cs" />
-    <Compile Include="Modulo de administrador\Administrador.cs" />
-    <Compile Include="Modulo de cliente\AdmCliente.cs" />
-    <Compile Include="Modulo de cliente\Cliente.cs" />
-    <Compile Include="Modulo de cliente\Validacion.cs" />
-    <Compile Include="Modulo de cooperativa\Bus.cs" />
-    <Compile Include="Modulo de cooperativa\Cooperativa.cs" />
-    <Compile Include="Modulo de vendedor\Vendedor.cs" />
+    <Compile Include="Boleto.cs" />
+    <Compile Include="GenerarInformacionBoleto.cs" />
+    <Compile Include="LlenarinformacionDataGrid.cs" />
+    <Compile Include="Administrador.cs" />
+    <Compile Include="AdmCliente.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Procedimientos.cs" />
+    <Compile Include="Validacion.cs" />
+    <Compile Include="Bus.cs" />
+    <Compile Include="Cooperativa.cs" />
+    <Compile Include="Vendedor.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistroDB\RegistroClienteProcedimiento.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

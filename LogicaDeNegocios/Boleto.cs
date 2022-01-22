@@ -4,23 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LogicaDeNegocios.Modulo_Boleto
+namespace LogicaDeNegocios
 {
   public class Boleto
     {
-        private string lugarOrigen;
+        int busId;
+        private string lugarSalida;
         private string lugarDestino;
-        private DateTime fechaSalida;
-        private DateTime horaSalida;
-        private DateTime fechaEmision;
+        private string fechaSalida;
+        private string horaSalida;
+        private string fechaEmision;
         private int cantidadBoleto;
         private double precio;
         private double impuesto;
 
         public Boleto() { }
-        public Boleto(string lugarOrigen, string lugarDestino, DateTime fechaSalida, DateTime horaSalida, DateTime fechaEmision, int cantidadBoleto, double precio, double impuesto)
+        public Boleto(int busId, string lugarDestino, string lugarSalida, string fechaSalida, string horaSalida, string fechaEmision, int cantidadBoleto, double precio, double impuesto)
         {
-            this.lugarOrigen = lugarOrigen;
+            this.busId = busId;
+            this.lugarSalida = lugarSalida;
             this.lugarDestino = lugarDestino;
             this.fechaSalida = fechaSalida;
             this.horaSalida = horaSalida;
@@ -30,19 +32,19 @@ namespace LogicaDeNegocios.Modulo_Boleto
             this.impuesto = impuesto;
         }
 
-        public string LugarOrigen { get => lugarOrigen; set => lugarOrigen = value; }
+        public int BusId { get => busId; set => busId = value; }
+        public string LugarOrigen { get => lugarSalida; set => lugarSalida = value; }
         public string LugarDestino { get => lugarDestino; set => lugarDestino = value; }
-        public DateTime FechaSalida { get => fechaSalida; set => fechaSalida = value; }
-        public DateTime HoraSalida { get => horaSalida; set => horaSalida = value; }
-        public DateTime HoraSalida1 { get => horaSalida; set => horaSalida = value; }
-        public DateTime FechaEmision { get => fechaEmision; set => fechaEmision = value; }
+        public String FechaSalida { get => fechaSalida; set => fechaSalida = value; }
+        public String HoraSalida { get => horaSalida; set => horaSalida = value; }
+        public String FechaEmision { get => fechaEmision; set => fechaEmision = value; }
         public int CantidadBoleto { get => cantidadBoleto; set => cantidadBoleto = value; }
         public double Precio { get => precio; set => precio = value; }
         public double Impuesto { get => impuesto; set => impuesto = value; }
 
         public override string ToString()
         {
-            return "lugarSalida: " + lugarOrigen + "lugarDestino: " + lugarDestino + "fechaSalida: " + fechaSalida + "horaSalida" + horaSalida + "fechaEmision: " + fechaEmision +
+            return "lugarSalida: " + lugarSalida + "lugarDestino: " + lugarDestino + "fechaSalida: " + fechaSalida + "horaSalida" + horaSalida + "fechaEmision: " + fechaEmision +
             "cantidadBoleto: " + cantidadBoleto + "precio: " + precio + "impuesto: " + impuesto;
         }
 

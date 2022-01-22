@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Cliente : Form
+    public partial class InterfazCliente : Form
     {
         ConsultasProcedimientos procedimientos = new ConsultasProcedimientos();
         string cedula;
-        public Cliente(string cedula)
+        public InterfazCliente(string cedula)
         {
             InitializeComponent();
             this.cedula = cedula;

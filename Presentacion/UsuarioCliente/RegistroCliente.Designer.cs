@@ -179,8 +179,6 @@ namespace Presentacion
             this.txtCedula.ShadowDecoration.Parent = this.txtCedula;
             this.txtCedula.Size = new System.Drawing.Size(340, 42);
             this.txtCedula.TabIndex = 26;
-            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
-            this.txtCedula.Validating += new System.ComponentModel.CancelEventHandler(this.txtCedula_Validating);
             // 
             // txtNombre
             // 
@@ -209,7 +207,6 @@ namespace Presentacion
             this.txtNombre.Size = new System.Drawing.Size(340, 42);
             this.txtNombre.TabIndex = 27;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // txtTelefono
             // 

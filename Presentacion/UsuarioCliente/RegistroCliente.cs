@@ -2,10 +2,7 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-//using EntidadesDelProyecto;
 using LogicaDeNegocios;
-using LogicaDeNegocios.Modulo_de_cliente;
-using LogicaDeNegocios.RegistroDB;
 
 namespace Presentacion
 {
@@ -14,11 +11,11 @@ namespace Presentacion
 
 
         private string cedula;
-        RegistroClienteProcedimiento registroClienteProcedimiento = new RegistroClienteProcedimiento();
-        public RegistroCliente(string cedula)
-        {
-            this.cedula = cedula;
-        }
+        AdmCliente registroClienteProcedimiento = new AdmCliente();
+        //public RegistroCliente(string cedula)
+        //{
+        //    this.cedula = cedula;
+        //}
 
         public RegistroCliente()
         {
@@ -45,13 +42,13 @@ namespace Presentacion
             BorrarAlerta();
             if (validar())
             {
-                LogicaDeNegocios.Modulo_de_cliente.Cliente credencial = new LogicaDeNegocios.Modulo_de_cliente.Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
-                registroClienteProcedimiento.InsertarCliente(credencial);
+                Cliente client = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
+                registroClienteProcedimiento.Guardar(client);
                 MessageBox.Show("Registro realizado con exito");
              
                 Limpiar();
                 this.Hide();
-                Cliente cliente = new Cliente(cedula);
+                InterfazCliente cliente = new InterfazCliente(cedula);
                 cliente.Show();
             }
            
@@ -162,32 +159,6 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void txtCedula_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            int digito;
-            if (!int.TryParse(txtCedula.Text, out digito))
-            {
-                errorProvider1.SetError(txtCedula, "Se esperaba 10 numeros.");
-            }
-            else
-            {
-                errorProvider1.SetError(txtCedula, "");
-            }
-        }
-
-        private void txtNombre_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            int nombre;
-            if (!int.TryParse(txtCedula.Text, out nombre))
-            {
-                errorProvider1.SetError(txtCedula, "Se esperaba su nombre.");
-            }
-            else
-            {
-                errorProvider1.SetError(txtCedula, "");
-            }
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)

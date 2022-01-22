@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Windows;
 
-namespace LogicaDeNegocios.Modulo_de_cliente
+namespace LogicaDeNegocios
 {
     public class Validacion
     {

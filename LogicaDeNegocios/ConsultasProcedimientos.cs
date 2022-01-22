@@ -1,10 +1,6 @@
 ﻿using Datos;
-using LogicaDeNegocios.Modulo_Boleto;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LogicaDeNegocios
@@ -13,8 +9,8 @@ namespace LogicaDeNegocios
     {
         Procedimientos procedimientos = new Procedimientos();
         public bool Login(string usuario, string password, int rol)
-        {
-            bool bandera = false;
+       {
+           bool bandera = false;
             if (procedimientos.IniciasSeccion(usuario, password, rol))
             {
                 bandera = true;
@@ -29,7 +25,7 @@ namespace LogicaDeNegocios
         public void LlenarCombos(ComboBox cbOrigen, ComboBox cbDestino)
         {
             List<string> ciudad = new List<string>();
-            ciudad = procedimientos.CargarCiudad();
+            //ciudad = procedimientos.CargarCiudad();
             if (ciudad.Count!=0)
             {
                 foreach (string ciudadfx in ciudad)
@@ -51,6 +47,18 @@ namespace LogicaDeNegocios
                     cbCooperativa.Items.Add(coopeativafx);
                 }
             }
+        }
+        public bool ValidarDataGridVacio(DataGridView dataGridInf)
+        {
+            if (dataGridInf.SelectedRows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                throw new ControlExcepcion(" Por favor seleccionar un horario!");
+            }
+            return false;
         }
         public void LLenarGrit(string origen, string destino, string cooperativa, DataGridView dataGridInf)
         {

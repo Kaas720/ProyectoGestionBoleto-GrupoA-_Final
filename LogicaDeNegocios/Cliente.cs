@@ -1,15 +1,16 @@
 ﻿
 using Datos;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace LogicaDeNegocios.Modulo_de_cliente
+namespace LogicaDeNegocios
 {
     public class Cliente :Persona
     {
-        Conexion con = new Conexion();
+        Conexion conexion;
+        AdmCliente conector = new AdmCliente();
         private string correo;
         private string contrasena;
         public Cliente() { }
@@ -26,12 +27,41 @@ namespace LogicaDeNegocios.Modulo_de_cliente
          return base.ToString() + "Correo: " + correo + "Contraseña: " + contrasena;
      }
 
-        public List<string> BuscarCliente(string cedula)
+        public void InsertarCliente(Cliente cliente)
         {
+            MySqlCommand mySqlCommand;
+             conexion = new Conexion();
+          // ConectarProcedimiento conector = new ConectarProcedimiento();
+
+            mySqlCommand = new MySqlCommand();
+            mySqlCommand.CommandText = "Procedimiento_insertar_cliente";
+            mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            mySqlCommand.Parameters.AddWithValue("@Cedula", cliente.Cedula);
+            mySqlCommand.Parameters.AddWithValue("@Nombre", cliente.Nombre);
+            mySqlCommand.Parameters.AddWithValue("@Sexo", cliente.Sexo);
+            mySqlCommand.Parameters.AddWithValue("@Telefono", cliente.Telefono);
+            mySqlCommand.Parameters.AddWithValue("@Correo", cliente.Correo);
+            mySqlCommand.Parameters.AddWithValue("@Contraseña", cliente.Contrasena);
+            try
+            {
+                conexion.conectar();
+                mySqlCommand.Connection = conexion.Connection;
+                mySqlCommand.ExecuteNonQuery();
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("No se encontro la base de datos" + ex.ToString());
+            }
+            conexion.Cerrar();
+        }
+
+    public List<string> BuscarCliente(string cedula)
+    {
             List<string> Cliente = new List<string>();
             try
             {
-                MySqlCommand mySqlCommand = ConectarProcedimiento("BuscarCliente");
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("BuscarCliente",conexion.conectar());
                 mySqlCommand.Parameters.AddWithValue("@cedulaCliente", cedula);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
@@ -40,34 +70,32 @@ namespace LogicaDeNegocios.Modulo_de_cliente
                     Cliente.Add(lector["Sexo"].ToString());
                     Cliente.Add(lector["Telefono"].ToString());
                     Cliente.Add(lector["Correo"].ToString());
-                    Cliente.Add(lector["Usuario"].ToString());
+                    Cliente.Add(lector["Contraseña"].ToString());
                 }
-                con.Cerrar();
+                conexion.Cerrar();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-
             }
-
-
             return Cliente;
-        }
+    }
 
 
         public string ActualizarCliente(string cedula, string telefono, string correo, string contrasena)
         {
             string mensaje = "";
+
             try
             {
-                MySqlCommand comando = ConectarProcedimiento("ModificarCliente");
+                MySqlCommand comando = conector.ConectarProcedimiento("ModificarCliente", conexion.conectar());
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@Cedula1", cedula);
                 comando.Parameters.AddWithValue("@Telefono1", telefono);
                 comando.Parameters.AddWithValue("@Correo1", correo);
                 comando.Parameters.AddWithValue("@Contraseña1", contrasena);
                 comando.ExecuteNonQuery();
-                con.Cerrar();
+                conexion.Cerrar();
                 mensaje = "Se actualizaron los campos correctamente";
             }
             catch (MySqlException ex)
@@ -77,14 +105,5 @@ namespace LogicaDeNegocios.Modulo_de_cliente
             }
             return mensaje;
         }
-        private MySqlCommand ConectarProcedimiento(string Procedimientos)
-        {
-            MySqlCommand mySqlCommand;
-            mySqlCommand = new MySqlCommand(Procedimientos);
-            con.conectar();
-            mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            return mySqlCommand;
-        }
-
     }
-}
+ }

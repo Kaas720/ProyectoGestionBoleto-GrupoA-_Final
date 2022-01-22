@@ -1,4 +1,4 @@
-﻿using LogicaDeNegocios.Modulo_de_cliente;
+﻿using LogicaDeNegocios;
 using System;
 using System.Windows.Forms;
 
@@ -6,7 +6,7 @@ namespace Presentacion.UsarioCliente
 {
     public partial class ActualizarCliente : Form
     {
-        AdmCliente adm = AdmCliente.GetAdm();
+        AdmCliente adm = new AdmCliente();
         Validacion valida = new Validacion();
         string cedula;
         

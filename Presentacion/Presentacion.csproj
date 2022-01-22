@@ -117,6 +117,18 @@
     <Compile Include="Principal_Usuario.Designer.cs">
       <DependentUpon>Principal_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioCliente\Comprar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioCliente\Comprar.designer.cs">
+      <DependentUpon>Comprar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioSeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioSeccion.Designer.cs">
+      <DependentUpon>InicioSeccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SGA_Administrador\VentanaAdministrador.cs">
@@ -131,17 +143,17 @@
     <Compile Include="UsuarioCliente\ActualizarCliente.Designer.cs">
       <DependentUpon>ActualizarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioCliente\Cliente.cs">
+    <Compile Include="UsuarioCliente\InterfazCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioCliente\Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="UsuarioCliente\InterfazCliente.Designer.cs">
+      <DependentUpon>InterfazCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioCliente\Comprar.cs">
+    <Compile Include="UsuarioCliente\Pagar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioCliente\Comprar.Designer.cs">
-      <DependentUpon>Comprar.cs</DependentUpon>
+    <Compile Include="UsuarioCliente\Pagar.Designer.cs">
+      <DependentUpon>Pagar.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioCliente\RegistroCliente.cs">
       <SubType>Form</SubType>
@@ -152,6 +164,12 @@
     <EmbeddedResource Include="Principal_Usuario.resx">
       <DependentUpon>Principal_Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioCliente\Comprar.resx">
+      <DependentUpon>Comprar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioSeccion.resx">
+      <DependentUpon>InicioSeccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -160,6 +178,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SGA_Administrador\VentanaAdministrador.resx">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
@@ -167,11 +186,11 @@
     <EmbeddedResource Include="UsuarioCliente\ActualizarCliente.resx">
       <DependentUpon>ActualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioCliente\Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="UsuarioCliente\InterfazCliente.resx">
+      <DependentUpon>InterfazCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsuarioCliente\Comprar.resx">
-      <DependentUpon>Comprar.cs</DependentUpon>
+    <EmbeddedResource Include="UsuarioCliente\Pagar.resx">
+      <DependentUpon>Pagar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\RegistroCliente.resx">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
@@ -195,6 +214,15 @@
       <Project>{83c47f94-b08d-41f2-b4d2-7031057e76f0}</Project>
       <Name>LogicaDeNegocios</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-blue-big-car-illustration-cartoon-shuttle-blue-bus-gray-glass-png-image_454310.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-blue-big-car-illustration-cartoon-shuttle-blue-bus-gray-glass-png-image_454310.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvapantallas-textura-elegante-blanco_23-2148421855.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

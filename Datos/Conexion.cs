@@ -2,9 +2,6 @@
 using System;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Threading.Tasks;
 using MySqlConnector;
 
 namespace Datos

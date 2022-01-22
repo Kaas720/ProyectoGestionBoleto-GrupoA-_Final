@@ -77,7 +77,7 @@
     <Compile Include="Ruta.cs" />
     <Compile Include="InformacionDerutaCooperativa.cs" />
     <Compile Include="Validacion.cs" />
-    <Compile Include="RegistroClienteProcedimiento.cs" />
+    <Compile Include="AdmClienteProcedimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

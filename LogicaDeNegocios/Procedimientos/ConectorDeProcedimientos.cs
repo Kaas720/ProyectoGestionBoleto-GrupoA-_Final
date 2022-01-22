@@ -10,7 +10,6 @@ namespace LogicaDeNegocios.Procedimientos
 {
      class ConectorDeProcedimientos
     {
-        Conexion con = new Conexion();
         public MySqlCommand ConectarProcedimiento(string Procedimientos, MySqlConnection mySqlConnection)
         {
             MySqlCommand mySqlCommand;

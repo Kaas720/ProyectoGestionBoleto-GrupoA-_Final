@@ -1,4 +1,5 @@
-﻿using Presentacion.SGA_Administrador;
+﻿using FontAwesome.Sharp;
+using Presentacion.SGA_Administrador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,15 +24,47 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }  
+        }
         /*--------------------------------------------------------------------*/
+        IconButton iconButton;
         public VentanaAdministrador()
         {
             InitializeComponent();
+            IniciarFromdelPanelPrincipal();
+        }
+        public void IniciarFromdelPanelPrincipal()
+        {
             FormularioContenedor Frm = new FormularioContenedor();
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();
+            iconButton = BotonregistrasAdmin;
+            iconButton.ForeColor = Color.Green;
+            iconButton.IconColor = Color.Green;
+        }
+        private void BotonEliminarAdmin_Click(object sender, EventArgs e)
+        {
+            RestablecerColorOriginalBotones();
+            GenerarNuevoColorBoton(sender);
+        }
+        private void BotonregistrasAdmin_Click(object sender, EventArgs e)
+        {
+            RestablecerColorOriginalBotones();
+            GenerarNuevoColorBoton(sender);
+        }
+
+        private void GenerarNuevoColorBoton(object sender)
+        {
+            iconButton = (IconButton)sender;
+            iconButton.IconColor = Color.Green;
+            iconButton.ForeColor = Color.Green;
+        }
+
+        private void RestablecerColorOriginalBotones()
+        {
+            iconButton.IconColor = Color.White;
+            iconButton.ForeColor = Color.White;
+            
         }
 
         private void Fecha_Hora_Sistema_Tick(object sender, EventArgs e)
@@ -53,6 +86,10 @@ namespace Presentacion
             WindowState = FormWindowState.Minimized;
         }
 
-        
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.principal.Show();
+        }
     }
 }

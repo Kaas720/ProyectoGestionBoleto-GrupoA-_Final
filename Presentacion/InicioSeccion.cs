@@ -59,7 +59,7 @@ namespace Presentacion
         {
             if(consulta.Login(correo, password, rol))
             {
-                
+                this.Close();
                 switch (rol)
                 {
                     case 1: 

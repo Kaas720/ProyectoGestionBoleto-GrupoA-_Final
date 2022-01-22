@@ -14,7 +14,6 @@ namespace LogicaDeNegocios
         {
 
         }
-
         // Se crea el metodo insertar cliente 
         public void InsertarCliente(Cliente client)
         {
@@ -25,7 +24,6 @@ namespace LogicaDeNegocios
             try
             {
                 MySqlCommand mySqlCommand = conector.ConectarProcedimiento("Procedimiento_insertar_cliente",con.conectar());
-             // Se crea una lista Cliente llamada ListaNueva para almacenar el listado de los clientes ingresados en la base de datos
                 List<Cliente> ListaNueva = new List<Cliente>();
                 ListaNueva.Add(client);
                 foreach (CredencialUsuario Cliente in ListaNueva)
@@ -48,6 +46,27 @@ namespace LogicaDeNegocios
             }
 
         }
-
+        public static Cliente ConsultarCliente(String cedula)
+        {
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            Cliente client = null;
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("ConsultarCliente", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@CedulaFx", cedula);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(),"","", lector["Correo"].ToString(),""); 
+                }
+                con.cerrar();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error emitido por: "+ex);
+            }
+            return client;
+        }
     }
 }

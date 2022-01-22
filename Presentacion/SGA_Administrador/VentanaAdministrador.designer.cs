@@ -44,8 +44,8 @@ namespace Presentacion
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.BotonEliminarAdmin = new FontAwesome.Sharp.IconButton();
+            this.BotonregistrasAdmin = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -184,8 +184,8 @@ namespace Presentacion
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(0)))));
             this.panel3.Controls.Add(this.iconButton4);
             this.panel3.Controls.Add(this.iconButton3);
-            this.panel3.Controls.Add(this.iconButton2);
-            this.panel3.Controls.Add(this.iconButton1);
+            this.panel3.Controls.Add(this.BotonEliminarAdmin);
+            this.panel3.Controls.Add(this.BotonregistrasAdmin);
             this.panel3.Location = new System.Drawing.Point(0, 241);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(205, 360);
@@ -200,7 +200,7 @@ namespace Presentacion
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.ForeColor = System.Drawing.Color.Transparent;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.History;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 55;
@@ -208,9 +208,10 @@ namespace Presentacion
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(205, 87);
             this.iconButton4.TabIndex = 3;
-            this.iconButton4.Text = "HISTORIAL";
+            this.iconButton4.Text = "CERRAR SESIÓN";
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton3
             // 
@@ -233,48 +234,50 @@ namespace Presentacion
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
-            // iconButton2
+            // BotonEliminarAdmin
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.UserAltSlash;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 55;
-            this.iconButton2.Location = new System.Drawing.Point(0, 89);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(205, 90);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.Text = "ELIMINAR";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.BotonEliminarAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.BotonEliminarAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BotonEliminarAdmin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.BotonEliminarAdmin.FlatAppearance.BorderSize = 0;
+            this.BotonEliminarAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonEliminarAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonEliminarAdmin.ForeColor = System.Drawing.Color.Transparent;
+            this.BotonEliminarAdmin.IconChar = FontAwesome.Sharp.IconChar.UserAltSlash;
+            this.BotonEliminarAdmin.IconColor = System.Drawing.Color.White;
+            this.BotonEliminarAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BotonEliminarAdmin.IconSize = 55;
+            this.BotonEliminarAdmin.Location = new System.Drawing.Point(0, 89);
+            this.BotonEliminarAdmin.Name = "BotonEliminarAdmin";
+            this.BotonEliminarAdmin.Size = new System.Drawing.Size(205, 90);
+            this.BotonEliminarAdmin.TabIndex = 1;
+            this.BotonEliminarAdmin.Text = "ELIMINAR";
+            this.BotonEliminarAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonEliminarAdmin.UseVisualStyleBackColor = false;
+            this.BotonEliminarAdmin.Click += new System.EventHandler(this.BotonEliminarAdmin_Click);
             // 
-            // iconButton1
+            // BotonregistrasAdmin
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 55;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(205, 89);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "REGISTRAR";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.BotonregistrasAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.BotonregistrasAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BotonregistrasAdmin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.BotonregistrasAdmin.FlatAppearance.BorderSize = 0;
+            this.BotonregistrasAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonregistrasAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonregistrasAdmin.ForeColor = System.Drawing.Color.Transparent;
+            this.BotonregistrasAdmin.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.BotonregistrasAdmin.IconColor = System.Drawing.Color.White;
+            this.BotonregistrasAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BotonregistrasAdmin.IconSize = 55;
+            this.BotonregistrasAdmin.Location = new System.Drawing.Point(0, 0);
+            this.BotonregistrasAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.BotonregistrasAdmin.Name = "BotonregistrasAdmin";
+            this.BotonregistrasAdmin.Size = new System.Drawing.Size(205, 89);
+            this.BotonregistrasAdmin.TabIndex = 0;
+            this.BotonregistrasAdmin.Text = "REGISTRAR";
+            this.BotonregistrasAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonregistrasAdmin.UseVisualStyleBackColor = false;
+            this.BotonregistrasAdmin.Click += new System.EventHandler(this.BotonregistrasAdmin_Click);
             // 
             // panel4
             // 
@@ -402,8 +405,8 @@ namespace Presentacion
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BotonEliminarAdmin;
+        private FontAwesome.Sharp.IconButton BotonregistrasAdmin;
         private System.Windows.Forms.Label Fecha_Sistema;
         private System.Windows.Forms.Label Hora_Sistema;
         private System.Windows.Forms.Label label4;

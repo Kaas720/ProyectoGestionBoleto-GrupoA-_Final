@@ -14,7 +14,7 @@ namespace Presentacion.SGA_Administrador
     public partial class RegistrarClienteporAdmin : Form
     {
         private string cedula;
-        RegistroClienteProcedimiento registroClienteProcedimiento = new RegistroClienteProcedimiento();
+        AdmClienteProcedimiento registroClienteProcedimiento = new AdmClienteProcedimiento();
         public RegistrarClienteporAdmin()
         {
             InitializeComponent();

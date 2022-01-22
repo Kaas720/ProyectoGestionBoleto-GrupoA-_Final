@@ -9,7 +9,7 @@ namespace Presentacion
     {
         private string cedula;
         // Se llama al clase  RegistroClienteProcedimiento y se crea el objeto registroClienteProcedimiento para llamar a los metodos que contiene
-        RegistroClienteProcedimiento registroClienteProcedimiento = new RegistroClienteProcedimiento();
+        AdmClienteProcedimiento registroClienteProcedimiento = new AdmClienteProcedimiento();
         public RegistroCliente(string cedula)
         {
             this.cedula = cedula;

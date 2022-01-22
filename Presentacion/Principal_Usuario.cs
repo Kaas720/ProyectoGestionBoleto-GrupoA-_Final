@@ -136,7 +136,6 @@ namespace Presentacion
         private void BotonParaMinimizarVentana_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-           
         }
         // Se llama al formulario Comprar y se pasa los datos desde el fomulario principal que se selecciono desde la datagrid para que sean cargados 
         // en los textbox del formulario compra.

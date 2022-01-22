@@ -25,7 +25,7 @@ namespace LogicaDeNegocios
         public void LlenarCombos(ComboBox cbOrigen, ComboBox cbDestino)
         {
             List<string> ciudad = new List<string>();
-            //ciudad = procedimientos.CargarCiudad();
+            ciudad = procedimientos.CargarCiudad();
             if (ciudad.Count!=0)
             {
                 foreach (string ciudadfx in ciudad)

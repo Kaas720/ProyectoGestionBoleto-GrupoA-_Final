@@ -5,12 +5,21 @@ using System;
 namespace Test
 {
     [TestClass]
-    public class UnitTest1 { 
+    public class UnitTest1 {
 
-         /// <summary>
-         /// CP-01
-         /// </summary>
-         /// 
+        AdmClienteProcedimiento cliente = new AdmClienteProcedimiento();
+        /// <summary>
+        /// CP-004
+        /// </summary>
+        /// 
+
+        [TestMethod]
+        public void RegistroCliente()
+        {
+            var resultadoEsperado = cliente.RegistrarCliente("1234567890", "Jorge Velez", "Masculino", "0987765432", "jorge@gmail.com", "velez123");
+            var resultadoObtenido = true;
+            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+        }
 
         [TestMethod]
         public void PruebaInicioSeccion()

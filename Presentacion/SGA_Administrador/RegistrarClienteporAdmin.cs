@@ -13,7 +13,7 @@ namespace Presentacion.SGA_Administrador
 {
     public partial class RegistrarClienteporAdmin : Form
     {
-        private string cedula;
+        //private string cedula;
         AdmClienteProcedimiento registroClienteProcedimiento = new AdmClienteProcedimiento();
         public RegistrarClienteporAdmin()
         {
@@ -88,8 +88,8 @@ namespace Presentacion.SGA_Administrador
             {
                 if (validar())
                 {
-                    Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
-                    registroClienteProcedimiento.RegistrarCliente(cliente);
+                    //Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
+                    registroClienteProcedimiento.RegistrarCliente(cedula, nombre, sexo, telefono, correo, contraseña);
                     MessageBox.Show("Registro realizado con exito");
                     Limpiar();         
                 }

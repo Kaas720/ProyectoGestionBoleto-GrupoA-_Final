@@ -72,15 +72,17 @@ namespace LogicaDeNegocios
         /*Se realiza la validacion para el dataGrid*/
         public bool ValidarDataGridVacio(DataGridView dataGridInf)
         {
+            bool bandera = false;
+
             if (dataGridInf.SelectedRows.Count > 0)
             {
-                return true;
+                bandera= true;
             }
             else
             {
                 throw new ControlExcepcion(" Por favor seleccionar un horario!");
             }
-            return false;
+            return bandera;
         }
     }
 }

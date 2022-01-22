@@ -9,7 +9,8 @@ namespace LogicaDeNegocios
     // Se crea la clase cliente que hereda de la clase credencial
     public class Cliente : CredencialUsuario
     {
-    // Se crea el constructor parametrizado y se invoca a base para hacer uso de la herencia
+        public Cliente() { }
+        // Se crea el constructor parametrizado y se invoca a base para hacer uso de la herencia
         public Cliente(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena) : base(cedula, nombre, sexo, telefono, correo, contrasena)
         {
 

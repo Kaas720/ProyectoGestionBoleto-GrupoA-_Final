@@ -161,12 +161,13 @@ namespace Presentacion
         // Se crea el metodo ValidarCarrito para mostrar la informacion si no se agregado ningunboleto se lanza la excepcion
         private bool ValidarCarrito()
         {
+            bool bandera = true;
             if (Convert.ToInt32(CarritoBtn.Text) == 0)
             {
+                bandera = false;
                 throw new ControlExcepcion("No hay boletos agregados al carrito");
-                return false;
             }
-            return true;
+            return bandera;
         }
 
         // El evento valida que el textBox solo reciba numeros 

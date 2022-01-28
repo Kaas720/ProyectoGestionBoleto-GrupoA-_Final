@@ -29,14 +29,6 @@ namespace Presentacion
             procedimientos.LlenarCombos(cbOrigen, cbDestino);
         }
        
-        private void btnComprar_Click(object sender, EventArgs e)
-        {
-            // Se llama al formulario para registrar nuevos clientes y la pantalla principal se la deja inviible
-            RegistroCliente registroCliente = new RegistroCliente();
-            registroCliente.Show();
-            Program.principal.Hide();
-        }
-       
         // Se llama al metodo Exit para cerrar la aplicacion y se muestra un mensaje de alerta para confirmar el cierre de la aplicacion
         private void BotonCierreDeAplicacion_Click_1(object sender, EventArgs e)
         {
@@ -162,6 +154,16 @@ namespace Presentacion
 
                 }
             }
+        }
+
+        private void botonRegistroUsuario_Click(object sender, EventArgs e)
+        {
+            // Se llama al formulario para registrar nuevos clientes y la pantalla principal se la deja inviible
+          
+            RegistroCliente registroCliente = new RegistroCliente();
+            registroCliente.Show();
+            this.Hide();
+            //Program.principal.Hide();
         }
     }
 }

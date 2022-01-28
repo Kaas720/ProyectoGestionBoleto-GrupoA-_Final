@@ -30,10 +30,11 @@ namespace LogicaDeNegocios
         {
             return procedimientos.ActualizarCliente(cedula, telefono, correo, contrasena);
         }
-        public void Guardar(Cliente cliente)
+        public bool Guardar(string cedula, string nombre, string sexo, string telefono, string correo, string contraseña)
         {
-            Cliente registrar = cliente;
-            cliente.InsertarCliente(registrar);
+            Cliente clienteregistrar = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
+            clienteregistrar.InsertarCliente(clienteregistrar);
+            return true;
         }
       
 

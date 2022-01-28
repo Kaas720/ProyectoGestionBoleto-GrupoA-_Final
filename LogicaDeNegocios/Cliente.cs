@@ -10,7 +10,7 @@ namespace LogicaDeNegocios
     public class Cliente :Persona
     {
         Conexion conexion;
-        Conector conector = new Conector();
+       Conector conector = new Conector();
         private string correo;
         private string contrasena;
         public Cliente() { }
@@ -31,8 +31,7 @@ namespace LogicaDeNegocios
         {
             MySqlCommand mySqlCommand;
              conexion = new Conexion();
-          // ConectarProcedimiento conector = new ConectarProcedimiento();
-
+          
             mySqlCommand = new MySqlCommand();
             mySqlCommand.CommandText = "Procedimiento_insertar_cliente";
             mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;

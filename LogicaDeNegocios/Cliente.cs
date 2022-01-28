@@ -7,24 +7,18 @@ using System.Windows.Forms;
 
 namespace LogicaDeNegocios
 {
-    public class Cliente :Persona
+    public class Cliente :CredencialUsuario
     {
         Conexion conexion;
        Conector conector = new Conector();
-        private string correo;
-        private string contrasena;
         public Cliente() { }
-        public Cliente(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena) : base(cedula, nombre, sexo, telefono)
+        public Cliente(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena) : base(cedula, nombre, sexo, telefono, correo, contrasena)
         {
-            this.correo = correo;
-            this.contrasena = contrasena;
+          
         }
-
-        public string Correo { get => correo; set => correo = value; }
-        public string Contrasena { get => contrasena; set => contrasena = value; }
     
     public override string ToString() {
-         return base.ToString() + "Correo: " + correo + "Contraseña: " + contrasena;
+         return base.ToString();
      }
 
         public void InsertarCliente(Cliente cliente)

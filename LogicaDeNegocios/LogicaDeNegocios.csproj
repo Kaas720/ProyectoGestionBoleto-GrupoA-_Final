@@ -110,6 +110,7 @@
     <Compile Include="Conector.cs" />
     <Compile Include="ConsultaProcedimientosGenerarBoleto.cs" />
     <Compile Include="ConsultasProcedimientos.cs" />
+    <Compile Include="CredencialUsuario.cs" />
     <Compile Include="GeneralExcepcion.cs" />
     <Compile Include="Boleto.cs" />
     <Compile Include="GenerarInformacionBoleto.cs" />

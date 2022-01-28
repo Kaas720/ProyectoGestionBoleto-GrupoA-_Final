@@ -16,7 +16,8 @@ namespace Test
         [TestMethod]
         public void RegistroCliente()
         {
-            var resultadoEsperado = cliente.RegistrarCliente("1234567890", "Jorge Velez", "Masculino", "0987765432", "jorge@gmail.com", "velez123");
+            Cliente client = new Cliente("1234567890", "Jorge Velez", "Masculino", "0987765432", "jorge@gmail.com", "velez123");
+            var resultadoEsperado = cliente.RegistrarCliente(client);
             var resultadoObtenido = true;
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
         }

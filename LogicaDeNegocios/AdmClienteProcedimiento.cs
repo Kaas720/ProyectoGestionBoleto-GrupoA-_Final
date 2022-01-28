@@ -17,18 +17,19 @@ namespace LogicaDeNegocios
         /// <param name="contraseña">Contraseña del nuevo <see cref="Cliente"/>.</param>
         /// <returns>Si el <see cref="Cliente"/> se registró correctamente devuelve <see cref="true"/>,si no, devlueve <see cref="false"/>.</returns>
       
-        public bool RegistrarCliente(string cedula, string nombre, string sexo, string telefono, string correo, string contraseña)
+       /* public bool RegistrarCliente(string cedula, string nombre, string sexo, string telefono, string correo, string contraseña)
         {
             
             Cliente clienteregistrar = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
             clienteregistrar.InsertarCliente(clienteregistrar);
             return true;
+        }*/
+        public bool RegistrarCliente(Cliente cliente)
+        {
+          Cliente clienteregistrar = cliente;
+          clienteregistrar.InsertarCliente(clienteregistrar);
+          return true;
         }
-        //public void RegistrarCliente(Cliente cliente)
-        //{
-        //    Cliente clienteregistrar = cliente;
-        //    clienteregistrar.InsertarCliente(clienteregistrar);
-        //}
 
 
         public Cliente ConsultarCliente(string cedula )

@@ -12,20 +12,18 @@ namespace LogicaDeNegocios
     public class ProcedimientosPaginaprincipal
     {
         Conexion con = new Conexion();
-        public bool IniciasSeccion(string correo, string password,int rol)
+        public int IniciasSeccion(string correo, string password)
         {
-            bool bandera = false;
-            string nom=null;
+            int rol = 0;
             try
             {
                 MySqlCommand mySqlCommand = ConectarProcedimiento("ProcesoInicioSeccion");
                 mySqlCommand.Parameters.AddWithValue("@CorreoFx", correo);
                 mySqlCommand.Parameters.AddWithValue("@contrasenaFx", password);
-                mySqlCommand.Parameters.AddWithValue("@rolUsuario", rol);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {
-                    nom = lector.GetString(1);
+                    rol = Convert.ToInt32(lector["Foreking_RolesUsuario"]);
                 }
                 con.cerrar(); 
             }
@@ -34,11 +32,7 @@ namespace LogicaDeNegocios
                 MessageBox.Show("Error intentolo mas tarde" + ex);
 
             }
-            if (!String.IsNullOrEmpty(nom))
-            {
-                bandera= true;
-            }
-            return bandera;
+            return rol;
         }
 
         public List<string> BuscarNumerosAsientos(int busId)

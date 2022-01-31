@@ -26,8 +26,8 @@ namespace Test
         public void PruebaInicioSeccion()
         {
             ConsultasProcedimientos consultasProcedimientos = new ConsultasProcedimientos();
-            bool result = consultasProcedimientos.Login("Kaas7520@hotmail.com", "1234", 1);
-            Assert.AreEqual(true, result);
+            int result = consultasProcedimientos.Login("Kaas7520@hotmail.com", "1234");
+            Assert.AreEqual(0, result);
         }
         [TestMethod]
         public void PruebaValidacionCedula()

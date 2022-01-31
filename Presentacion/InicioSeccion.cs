@@ -31,12 +31,12 @@ namespace Presentacion
             string Usuario = NombreUsuario.Text;
             string password = Contrasenausuario.Text;
             int rol = Rol();
-            if (ValidacionCamposVacios(Usuario, password, rol))
+            if (ValidacionCamposVacios(Usuario, password))
             {
              // Se hace uso del control de excepciones conde se llama a la clase ControlExcepcion, si el usuario no ingresa las credenciales 
                 try
                 {
-                    ConsultarLoginBD(Usuario, password, rol);
+                    ConsultarLoginBD(Usuario, password);
                 }
                 catch (ControlExcepcion ex)
                 {
@@ -55,12 +55,13 @@ namespace Presentacion
 
         /*Metodo ConsultarLoginBD recibe como parametro correo, password y rol para consultar en la base dedatos el rol de cada 
          usuario y validar sus credenciales*/
-        private void ConsultarLoginBD(string correo, string password, int rol)
+        private void ConsultarLoginBD(string correo, string password)
         {
-            if(consulta.Login(correo, password, rol))
+            int result = consulta.Login(correo, password);
+            if (result != 0)
             {
                 this.Close();
-                switch (rol)
+                switch (result)
                 {
                     case 1: 
                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
@@ -84,10 +85,10 @@ namespace Presentacion
         }
 
         /*Metodo para validar si existen campos vacios*/
-        private bool ValidacionCamposVacios(string usuario, string password, int rol)
+        private bool ValidacionCamposVacios(string usuario, string password)
         {
             bool bandera = false;
-            if (!String.IsNullOrEmpty(usuario) && !String.IsNullOrEmpty(password) && rol!=0)
+            if (!String.IsNullOrEmpty(usuario) && !String.IsNullOrEmpty(password))
             {
                 bandera = true;
             }

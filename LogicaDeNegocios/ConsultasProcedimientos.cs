@@ -10,20 +10,14 @@ namespace LogicaDeNegocios
         ProcedimientosPaginaprincipal procedimientos = new ProcedimientosPaginaprincipal();
 
         // Se crea el metodo para validar que el usuario y la contraseña sean autenticos y validos
-        public bool Login(string usuario, string password, int rol)
+        public int Login(string usuario, string password)
         {
-            bool bandera = false;
-            if (procedimientos.IniciasSeccion(usuario, password, rol))
+            int resultado= procedimientos.IniciasSeccion(usuario, password);
+            if(resultado == 0)
             {
-                bandera = true;
-            }
-            else
-            {
-                // Si los campos no coinsiden con los datos almacenados en la base de datos se realiza el manejo de excepciones para
-                // mostar el mensaje en una pantalla emergente indicando la causa del error.
                 throw new ControlExcepcion("Usuario y/o contrasena incorrecta");
             }
-            return bandera;
+            return resultado;
         }
 
         // Se crea el metodo LlenarCombos que recibe como parametro la ciudad de origen y destino, se crea una lista almacenada string 

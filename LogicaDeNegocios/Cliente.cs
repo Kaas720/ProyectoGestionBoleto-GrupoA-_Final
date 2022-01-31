@@ -11,7 +11,7 @@ namespace LogicaDeNegocios
     {
         public Cliente() { }
         // Se crea el constructor parametrizado y se invoca a base para hacer uso de la herencia
-        public Cliente(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena) : base(cedula, nombre, sexo, telefono, correo, contrasena)
+        public Cliente(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena,int credencial) : base(cedula, nombre, sexo, telefono, correo, contrasena,credencial)
         {
 
         }
@@ -24,21 +24,20 @@ namespace LogicaDeNegocios
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             try
             {
-                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("Procedimiento_insertar_cliente",con.conectar());
                 List<Cliente> ListaNueva = new List<Cliente>();
                 ListaNueva.Add(client);
-                foreach (CredencialUsuario Cliente in ListaNueva)
-                {
-                    mySqlCommand.Parameters.AddWithValue("@Cedula", Cliente.Cedula);
-                    mySqlCommand.Parameters.AddWithValue("@Nombre", Cliente.Nombre);
-                    mySqlCommand.Parameters.AddWithValue("@Sexo", Cliente.Sexo);
-                    mySqlCommand.Parameters.AddWithValue("@Telefono", Cliente.Telefono);
-                    mySqlCommand.Parameters.AddWithValue("@Correo", Cliente.Correo);
-                    mySqlCommand.Parameters.AddWithValue("@Contraseña", Cliente.Contrasena);
-                }
-                mySqlCommand.ExecuteReader();
-                // se cierra la conexion con la base de datos
+                int idPersona = RegistroPersona(ListaNueva, con.conectar(), conector);
                 con.cerrar();
+                int idCredenciales = RegistroCredencial(ListaNueva, con.conectar(), conector);
+                con.cerrar();
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("RegistroClienteGeneral", con.conectar());
+                 foreach (CredencialUsuario Cliente in ListaNueva)
+                 {
+                     mySqlCommand.Parameters.AddWithValue("@peronsaId", idPersona);
+                     mySqlCommand.Parameters.AddWithValue("@CredencialId", idCredenciales);
+                 }
+                 mySqlCommand.ExecuteReader();
+                 con.cerrar();
             }
             catch (Exception ex)
             {
@@ -47,6 +46,44 @@ namespace LogicaDeNegocios
             }
 
         }
+
+        private int RegistroCredencial(List<Cliente> listaNueva, MySqlConnection mySqlConnection, ConectorDeProcedimientos conector)
+        {
+            int credencial=0;
+            MySqlCommand mySqlCommand = conector.ConectarProcedimiento("Registrocredenciales", mySqlConnection);
+            foreach (CredencialUsuario Cliente in listaNueva)
+            {
+                mySqlCommand.Parameters.AddWithValue("@CorreoFx", Cliente.Correo);
+                mySqlCommand.Parameters.AddWithValue("@ContrasenaFx", Cliente.Contrasena);
+                mySqlCommand.Parameters.AddWithValue("@Foreking_RolesUsuarioFx", Cliente.Rol);
+            }
+            MySqlDataReader lector2 = mySqlCommand.ExecuteReader();
+            while (lector2.Read())
+            {
+                credencial = Convert.ToInt32(lector2["credencial"].ToString());
+            }
+            return credencial;
+        }
+
+        private int RegistroPersona(List<Cliente> ListaNueva, MySqlConnection mySqlConnection, ConectorDeProcedimientos conector)
+        {
+            MySqlCommand mySqlCommand = conector.ConectarProcedimiento("Registrodepersona", mySqlConnection);
+            foreach (CredencialUsuario Cliente in ListaNueva)
+            {
+                mySqlCommand.Parameters.AddWithValue("@CedulaFx", Cliente.Cedula);
+                mySqlCommand.Parameters.AddWithValue("@NombreFx", Cliente.Nombre);
+                mySqlCommand.Parameters.AddWithValue("@SexoFx", Cliente.Sexo);
+                mySqlCommand.Parameters.AddWithValue("@TelefonoFx", Cliente.Telefono);
+            }
+            int idPersona = 0;
+            MySqlDataReader lector = mySqlCommand.ExecuteReader();
+            while (lector.Read())
+            {
+                idPersona = Convert.ToInt32(lector["persona"].ToString());
+            }
+            return idPersona;
+        }
+
         public static Cliente ConsultarCliente(String cedula)
         {
             Conexion con = new Conexion();
@@ -59,7 +96,7 @@ namespace LogicaDeNegocios
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {
-                    client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(),"","", lector["Correo"].ToString(),""); 
+                    //client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(),"","", lector["Correo"].ToString(),""); 
                 }
                 con.cerrar();
             }

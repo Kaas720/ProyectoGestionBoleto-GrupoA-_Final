@@ -8,17 +8,19 @@ namespace LogicaDeNegocios
     {
         private string correo;
         private string contrasena;
-
+        private int rol;
         public CredencialUsuario() { }
 
         //  Se crea el construcor parametrizando y se llama a base para ingresar los parametros de la clase persona
-        public CredencialUsuario(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena) : base(cedula, nombre, sexo, telefono)
+        public CredencialUsuario(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena,int rol) : base(cedula, nombre, sexo, telefono)
         {
             this.correo = correo;
             this.contrasena = contrasena;
+            this.rol = rol;
         }
         // Se crea los metodos getters y setters de la clase CredencialUsuario
         public string Correo { get => correo; set => correo = value; }
         public string Contrasena { get => contrasena; set => contrasena = value; }
+        public int Rol { get => rol; set => rol = value; }
     }
 }

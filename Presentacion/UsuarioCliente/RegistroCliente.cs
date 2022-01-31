@@ -36,7 +36,8 @@ namespace Presentacion
             // Al validar que los campos se llenaron correctamente se guarda el regitro y se envia al formulario cliente
                 if (validar())
                 {
-                    Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
+                    Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña,4);
+                    
                     registroClienteProcedimiento.RegistrarCliente(cliente);
                     MessageBox.Show("Registro realizado con exito");
                     Limpiar();

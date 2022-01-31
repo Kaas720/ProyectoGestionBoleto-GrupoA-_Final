@@ -88,7 +88,7 @@ namespace Presentacion.SGA_Administrador
             {
                 if (validar())
                 {
-                    Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña);
+                    Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña,4);
                     registroClienteProcedimiento.RegistrarCliente(cliente);
                     MessageBox.Show("Registro realizado con exito");
                     Limpiar();         

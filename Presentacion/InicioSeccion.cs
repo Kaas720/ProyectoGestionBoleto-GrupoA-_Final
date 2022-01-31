@@ -30,7 +30,6 @@ namespace Presentacion
         {
             string Usuario = NombreUsuario.Text;
             string password = Contrasenausuario.Text;
-            int rol = Rol();
             if (ValidacionCamposVacios(Usuario, password))
             {
              // Se hace uso del control de excepciones conde se llama a la clase ControlExcepcion, si el usuario no ingresa las credenciales 
@@ -96,27 +95,7 @@ namespace Presentacion
         }
 
         /*Metodo para seleccionar el tipo de rol en el radio button*/
-        private int Rol()
-        {
-            int rol = 0;
-            if (RadioButtonAdministrador.Checked == true)
-            {
-                rol = 1;
-            }
-            if (RadioButtonChofer.Checked == true)
-            {
-                rol = 2;
-            }
-            if (RadioButtonCooperativa.Checked == true)
-            {
-                rol = 3;
-            }
-            if (RadioButtonCliente.Checked == true)
-            {
-                rol = 4;
-            }
-            return rol;
-        }
+
 
         /*Metodo para la obtencion de la hora y fecha actual*/
         private void Fecha_Hora_Sistema_Tick(object sender, EventArgs e)

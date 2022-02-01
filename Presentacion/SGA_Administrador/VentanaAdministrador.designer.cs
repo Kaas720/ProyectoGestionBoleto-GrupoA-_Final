@@ -347,7 +347,7 @@ namespace Presentacion
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 40;
+            this.guna2Elipse1.BorderRadius = 30;
             // 
             // PanelPrincipalContenedor
             // 

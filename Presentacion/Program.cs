@@ -1,4 +1,5 @@
-﻿using Presentacion.SGA_Administrador;
+﻿using Presentacion.InicioFroms;
+using Presentacion.SGA_Administrador;
 using Presentacion.UsuarioCliente;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace Presentacion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(principal = new Principal_Usuario());
-            //Application.Run(new EliminarClienteporAdmin());
+            //Application.Run(new BuscarBus());
         }
     }
 }

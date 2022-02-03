@@ -26,16 +26,17 @@ namespace LogicaDeNegocios
             {
                 List<Cliente> ListaNueva = new List<Cliente>();
                 ListaNueva.Add(client);
-                int idPersona = RegistroPersona(ListaNueva, con.conectar(), conector);
-                con.cerrar();
-                int idCredenciales = RegistroCredencial(ListaNueva, con.conectar(), conector);
-                con.cerrar();
                 MySqlCommand mySqlCommand = conector.ConectarProcedimiento("RegistroClienteGeneral", con.conectar());
                  foreach (CredencialUsuario Cliente in ListaNueva)
                  {
-                     mySqlCommand.Parameters.AddWithValue("@peronsaId", idPersona);
-                     mySqlCommand.Parameters.AddWithValue("@CredencialId", idCredenciales);
-                 }
+                    mySqlCommand.Parameters.AddWithValue("@CedulaFx", Cliente.Cedula);
+                    mySqlCommand.Parameters.AddWithValue("@NombreFx", Cliente.Nombre);
+                    mySqlCommand.Parameters.AddWithValue("@SexoFx", Cliente.Sexo);
+                    mySqlCommand.Parameters.AddWithValue("@TelefonoFx", Cliente.Telefono);
+                    mySqlCommand.Parameters.AddWithValue("@CorreoFx", Cliente.Correo);
+                    mySqlCommand.Parameters.AddWithValue("@ContrasenaFx", Cliente.Contrasena);
+                    mySqlCommand.Parameters.AddWithValue("@Foreking_RolesUsuarioFx", Cliente.Rol);
+                }
                  mySqlCommand.ExecuteReader();
                  con.cerrar();
             }
@@ -46,44 +47,6 @@ namespace LogicaDeNegocios
             }
 
         }
-
-        private int RegistroCredencial(List<Cliente> listaNueva, MySqlConnection mySqlConnection, ConectorDeProcedimientos conector)
-        {
-            int credencial=0;
-            MySqlCommand mySqlCommand = conector.ConectarProcedimiento("Registrocredenciales", mySqlConnection);
-            foreach (CredencialUsuario Cliente in listaNueva)
-            {
-                mySqlCommand.Parameters.AddWithValue("@CorreoFx", Cliente.Correo);
-                mySqlCommand.Parameters.AddWithValue("@ContrasenaFx", Cliente.Contrasena);
-                mySqlCommand.Parameters.AddWithValue("@Foreking_RolesUsuarioFx", Cliente.Rol);
-            }
-            MySqlDataReader lector2 = mySqlCommand.ExecuteReader();
-            while (lector2.Read())
-            {
-                credencial = Convert.ToInt32(lector2["credencial"].ToString());
-            }
-            return credencial;
-        }
-
-        private int RegistroPersona(List<Cliente> ListaNueva, MySqlConnection mySqlConnection, ConectorDeProcedimientos conector)
-        {
-            MySqlCommand mySqlCommand = conector.ConectarProcedimiento("Registrodepersona", mySqlConnection);
-            foreach (CredencialUsuario Cliente in ListaNueva)
-            {
-                mySqlCommand.Parameters.AddWithValue("@CedulaFx", Cliente.Cedula);
-                mySqlCommand.Parameters.AddWithValue("@NombreFx", Cliente.Nombre);
-                mySqlCommand.Parameters.AddWithValue("@SexoFx", Cliente.Sexo);
-                mySqlCommand.Parameters.AddWithValue("@TelefonoFx", Cliente.Telefono);
-            }
-            int idPersona = 0;
-            MySqlDataReader lector = mySqlCommand.ExecuteReader();
-            while (lector.Read())
-            {
-                idPersona = Convert.ToInt32(lector["persona"].ToString());
-            }
-            return idPersona;
-        }
-
         public static Cliente ConsultarCliente(String cedula)
         {
             Conexion con = new Conexion();

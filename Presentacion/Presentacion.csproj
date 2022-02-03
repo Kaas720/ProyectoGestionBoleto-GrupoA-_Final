@@ -56,6 +56,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InicioFroms\BuscarBus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioFroms\BuscarBus.Designer.cs">
+      <DependentUpon>BuscarBus.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioSeccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <Compile Include="UsuarioCliente\RegistroCliente.Designer.cs">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="InicioFroms\BuscarBus.resx">
+      <DependentUpon>BuscarBus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InicioSeccion.resx">
       <DependentUpon>InicioSeccion.cs</DependentUpon>
     </EmbeddedResource>

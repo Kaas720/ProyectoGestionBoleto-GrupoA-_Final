@@ -134,36 +134,6 @@ namespace Presentacion
                 return;
             }
         }
-
-        // Se llama al metodo Close() para cerrar el formulario login y mostrar el formulario principal
-        private void BotonRetroceder_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Program.principal.Show();
-        }
-
-        /*Metodo para la obtencion de la hora y fecha actual*/
-        private void FechaHora_Tick(object sender, EventArgs e)
-        {
-            Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
-            Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
-        }
-
-        // Se realiza el metodo para minimizar la aplicacion 
-        private void BotonParaMinimizarVentana_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        private void PanelSuperior_MouseMove(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         // El evento valida que el textBox solo reciba letras
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {

@@ -157,7 +157,7 @@ namespace Presentacion
             this.BotonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BotonHome.UseVisualStyleBackColor = false;
-            this.BotonHome.Click += new System.EventHandler(this.BotonInicioSesion_Click);
+            this.BotonHome.Click += new System.EventHandler(this.BotonHome_Click);
             // 
             // PanelSuperior
             // 

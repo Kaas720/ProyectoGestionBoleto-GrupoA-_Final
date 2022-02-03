@@ -42,9 +42,11 @@ namespace Presentacion
        
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            // RegistroCliente registroCliente = new RegistroCliente();
-            //registroCliente.Show();
-            //Program.principal.Hide();
+            this.PanelContenedor.Controls.Clear();
+            RegistroCliente Frm = new RegistroCliente();
+            Frm.TopLevel = false;
+            PanelContenedor.Controls.Add(Frm);
+            Frm.Show();
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
         }
@@ -61,16 +63,13 @@ namespace Presentacion
             iconButton.ForeColor = Color.White;
 
         }
-        private void BotonInicioSesion_Click_1(object sender, EventArgs e)
+        private void BotonHome_Click(object sender, EventArgs e)
         {
-            RestablecerColorOriginalBotones();
-            GenerarNuevoColorBoton(sender);
-        }
-        private void BotonInicioSesion_Click(object sender, EventArgs e)
-        {
-            //InicioSeccion iniciosesion = new InicioSeccion();
-            ////iniciosesion.Show();
-            //Program.principal.Hide();
+            this.PanelContenedor.Controls.Clear();
+            BuscarBus Frm = new BuscarBus();
+            Frm.TopLevel = false;
+            PanelContenedor.Controls.Add(Frm);
+            Frm.Show();
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
         }
@@ -93,6 +92,15 @@ namespace Presentacion
             WindowState = FormWindowState.Minimized;
         }
 
-
+        private void BotonInicioSesion_Click_1(object sender, EventArgs e)
+        {
+            this.PanelContenedor.Controls.Clear();
+            InicioSeccion Frm = new InicioSeccion();
+            Frm.TopLevel = false;
+            PanelContenedor.Controls.Add(Frm);
+            Frm.Show();
+            RestablecerColorOriginalBotones();
+            GenerarNuevoColorBoton(sender);
+        }
     }
 }

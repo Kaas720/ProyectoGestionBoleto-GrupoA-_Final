@@ -7,25 +7,12 @@ namespace Presentacion
 {  
     public partial class InicioSeccion : Form
     {
-        /*Codigo para arrastrar la ventana a cualquier parte de la pantalla*/
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        private void PanelSuperior_MouseMove(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-        /*--------------------------------------------------------------------*/
-        // Se llama al clase  ConsultasProcedimientos y se crea el objeto consulta para llamar a los metodos que contiene
         ConsultasProcedimientos consulta = new ConsultasProcedimientos();
         public InicioSeccion()
         {
             InitializeComponent();
         }
 
-        // Se realiza la validacion de las credenciales que son ingresadas por los usuarios dentro del sistema al realizar el inicio de sesion
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string Usuario = NombreUsuario.Text;
@@ -51,9 +38,6 @@ namespace Presentacion
                 MessageBox.Show("Campos vacios");
             }  
         }
-
-        /*Metodo ConsultarLoginBD recibe como parametro correo, password y rol para consultar en la base dedatos el rol de cada 
-         usuario y validar sus credenciales*/
         private void ConsultarLoginBD(string correo, string password)
         {
             int result = consulta.Login(correo, password);
@@ -92,38 +76,6 @@ namespace Presentacion
                 bandera = true;
             }
             return bandera;
-        }
-
-        /*Metodo para seleccionar el tipo de rol en el radio button*/
-
-
-        /*Metodo para la obtencion de la hora y fecha actual*/
-        private void Fecha_Hora_Sistema_Tick(object sender, EventArgs e)
-        {
-            Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
-            Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
-        }
-
-       // Se llama al metodo Exit para cerrar la aplicacion y se muestra un mensaje de alerta para confirmar el cierre de la aplicacion
-        private void iconPictureBox2_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
-
-        // Se realiza el metodo para minimizar la aplicacion 
-        private void iconPictureBox1_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-       // Se llama al metodo Close() para cerrar el formulario login y mostrar el formulario principal
-        private void BotonRetroceder_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Program.principal.Show();
         }
     }
 }

@@ -25,34 +25,6 @@ namespace LogicaDeNegocios
 
         public CredencialUsuario CredencialUsuario { get => credencialUsuario; set => credencialUsuario = value; }
 
-        /*public void InsertarCliente(CredencialUsuario credencial, Cliente cliente)
-        {
-            MySqlCommand mySqlCommand;
-            Conexion conexion = new Conexion();
-
-            mySqlCommand = new MySqlCommand();
-            mySqlCommand.CommandText = "RegistroClienteGeneral";
-            mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            mySqlCommand.Parameters.AddWithValue("@CedulaFx", cliente.Cedula);
-            mySqlCommand.Parameters.AddWithValue("@NombreFx", cliente.Nombre);
-            mySqlCommand.Parameters.AddWithValue("@SexoFx", cliente.Sexo);
-            mySqlCommand.Parameters.AddWithValue("@TelefonoFx", cliente.Telefono);
-            mySqlCommand.Parameters.AddWithValue("@CorreoFx", cliente.CredencialUsuario.Correo);
-            mySqlCommand.Parameters.AddWithValue("@ContrasenaFx", cliente.CredencialUsuario.Contrasena);
-            mySqlCommand.Parameters.AddWithValue("@Foreking_RolesUsuarioFx", cliente.CredencialUsuario.Rol);
-            try
-            {
-                conexion.conectar();
-                mySqlCommand.Connection = conexion.Connection;
-                mySqlCommand.ExecuteNonQuery();
-
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("No se encontro la base de datos" + ex.ToString());
-            }
-            conexion.cerrar();
-        }*/
             // Se crea el metodo insertar cliente 
             public void InsertarCliente(Cliente client)
             {

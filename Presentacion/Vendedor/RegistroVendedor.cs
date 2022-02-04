@@ -9,7 +9,7 @@ namespace Presentacion
     {
         private string cedula;
         // Se llama al clase  RegistroClienteProcedimiento y se crea el objeto registroClienteProcedimiento para llamar a los metodos que contiene
-        AdmVendedor registroClienteProcedimiento = new AdmVendedor();
+        AdmVendedor adm = new AdmVendedor();
         public RegistroVendedor(string cedula)
         {
             this.cedula = cedula;
@@ -38,7 +38,7 @@ namespace Presentacion
                 {
                     CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,3);
                     Vendedor vendedor = new Vendedor(cedula, nombre, sexo, telefono, Convert.ToDouble(sueldo), credencial);
-                   registroClienteProcedimiento.RegistrarVendedor(vendedor);
+                   adm.RegistrarVendedor(vendedor);
                     MessageBox.Show("Registro realizado con exito");
                     Limpiar();
                     this.Hide();
@@ -76,6 +76,10 @@ namespace Presentacion
                     campo = false;
                     errorProvider1.SetError(cmbSexo, "Selecione un tipo de genero.");
                 }
+                if(valida.ValidarSueldo(txtSueldo.Text) != true)
+                {
+                errorProvider1.SetError(txtSueldo, "Ingrese el monto del sueldo.");
+                }
                 if (valida.validarEmail(txtCorreo.Text) != true)
                 {
                     campo = false;
@@ -99,6 +103,7 @@ namespace Presentacion
             errorProvider1.SetError(txtCedula, "");
             errorProvider1.SetError(txtNombre, "");
             errorProvider1.SetError(txtTelefono, "");
+            errorProvider1.SetError(txtSueldo, "");
             errorProvider1.SetError(cmbSexo, "");
             errorProvider1.SetError(txtCorreo, "");
             errorProvider1.SetError(txtContraseña, "");
@@ -111,6 +116,7 @@ namespace Presentacion
             txtNombre.Clear();
             cmbSexo.Text = null;
             txtTelefono.Clear();
+            txtSueldo.Clear();
             txtCorreo.Clear();
             txtContraseña.Clear();
         }
@@ -179,6 +185,15 @@ namespace Presentacion
         {
             if(!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back))&& (e.KeyChar
                != Convert.ToChar(Keys.Space)&&(e.KeyChar != '@' && (e.KeyChar != '.'))&& !char.IsNumber(e.KeyChar)))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtSueldo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsNumber(e.KeyChar) && (e.KeyChar !=Convert.ToChar(Keys.Back)) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
                 return;

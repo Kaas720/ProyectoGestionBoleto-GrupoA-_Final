@@ -607,6 +607,7 @@ namespace Presentacion
             this.txtSueldo.ShadowDecoration.Parent = this.txtSueldo;
             this.txtSueldo.Size = new System.Drawing.Size(227, 27);
             this.txtSueldo.TabIndex = 41;
+            this.txtSueldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldo_KeyPress);
             // 
             // RegistroVendedor
             // 

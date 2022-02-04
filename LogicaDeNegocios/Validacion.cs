@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Windows.Forms;
 
 namespace LogicaDeNegocios
 {
@@ -44,6 +45,21 @@ namespace LogicaDeNegocios
 
                 return false;
             }
+        }
+        public bool ValidarSueldo(string sueldo)
+        {
+            bool bandera = true;
+            double valor = 0.0;
+            try
+            {
+                valor = Double.Parse(sueldo);
+                
+            }catch(FormatException ex)
+            {
+                bandera = false;
+                MessageBox.Show(ex.Message); 
+            }
+            return bandera;
         }
     }
 }

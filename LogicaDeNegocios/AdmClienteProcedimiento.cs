@@ -11,11 +11,10 @@ namespace LogicaDeNegocios
         /// <param name="cliente">Datos del nuevo <see cref="Cliente"/>.</param>
         /// <param name="credencial">Datos de la nueva <see cref="CredencialUsuario"/></param>
         /// <returns>Si el <see cref="Cliente"/> se registró correctamente devuelve <see cref="true"/>,si no, devlueve <see cref="false"/>.</returns>
-        public bool RegistrarCliente(Cliente cliente, CredencialUsuario credencial)
+        public bool RegistrarCliente(Cliente cliente)
         {
             Cliente clienteregistrar = cliente;
-            CredencialUsuario registroCredencial = credencial;
-            clienteregistrar.InsertarCliente(registroCredencial, clienteregistrar);
+            clienteregistrar.InsertarCliente(clienteregistrar);
             return true;
         }
 

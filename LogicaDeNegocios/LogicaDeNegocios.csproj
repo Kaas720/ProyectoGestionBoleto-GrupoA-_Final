@@ -72,8 +72,8 @@
     <Compile Include="ConsultaProcedimientosGenerarBoleto.cs" />
     <Compile Include="ConsultasProcedimientos.cs" />
     <Compile Include="GeneralExcepcion.cs" />
-    <Compile Include="Procedimientos\ConectorDeProcedimientos.cs" />
-    <Compile Include="Procedimientos\ProcedimientosPaginaprincipal.cs" />
+    <Compile Include="ConectorDeProcedimientos.cs" />
+    <Compile Include="ProcedimientosPaginaprincipal.cs" />
     <Compile Include="Ruta.cs" />
     <Compile Include="InformacionDerutaCooperativa.cs" />
     <Compile Include="Validacion.cs" />

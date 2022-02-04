@@ -1,5 +1,4 @@
 ﻿using Datos;
-using LogicaDeNegocios.Procedimientos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;

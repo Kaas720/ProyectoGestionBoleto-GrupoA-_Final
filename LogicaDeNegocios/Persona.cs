@@ -5,18 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
-{
-    // Se crea la clase persona con cuatro atributos 
-   public class Persona
+{ 
+    /// <summary>
+    /// Se crea la clase persona con cuatro atributos
+    /// </summary>
+    public class Persona
     {
         private string cedula;
         private string nombre;
         private string sexo;
         private string telefono;
 
-        // Se crea el costructor por defecto
-        public Persona() { }
-        // Se crea el costructor de la clase persona parametrizado 
+        /// <summary>
+        /// Se crea el costructor por defecto
+        /// </summary>
+        public Persona() { } 
+        /// <summary>
+        /// Se crea el costructor de la clase persona parametrizado 
+        /// </summary>
+        /// <param name="cedula"></param>
+        /// <param name="nombre"></param>
+        /// <param name="sexo"></param>
+        /// <param name="telefono"></param>
         public Persona(string cedula, string nombre, string sexo, string telefono)
         {
             this.cedula = cedula;

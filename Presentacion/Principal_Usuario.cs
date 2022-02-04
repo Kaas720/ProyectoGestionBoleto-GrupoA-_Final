@@ -102,5 +102,6 @@ namespace Presentacion
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
         }
+
     }
 }

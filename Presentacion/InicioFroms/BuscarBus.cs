@@ -59,7 +59,7 @@ namespace Presentacion.InicioFroms
                         string fecha_salida = DataGridInf.Rows[x].Cells[1].Value.ToString();
                         string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
                         Comprar comprar = new Comprar(cooperativa, fecha_salida, horario_salida);
-                        //Program.principal.Hide();
+                        Program.principal.Hide();
                         comprar.Show();
                     }
                 }

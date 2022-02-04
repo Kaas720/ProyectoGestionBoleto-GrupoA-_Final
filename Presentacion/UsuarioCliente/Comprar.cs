@@ -53,7 +53,8 @@ namespace Presentacion
         {
             if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Dispose();
+                Program.principal.Show();
             }
         }
 

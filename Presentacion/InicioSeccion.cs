@@ -59,9 +59,10 @@ namespace Presentacion
                         c.ShowDialog();
                         break;
                     case 4:
-                        VentanaAdministrador cs = new VentanaAdministrador();
+                        InterfazCliente cs = new InterfazCliente();
+                        Program.principal.Hide();
                         cs.ShowDialog();
-                        Console.WriteLine("4");
+                        //Console.WriteLine("4");
                         break;
                 }
             }

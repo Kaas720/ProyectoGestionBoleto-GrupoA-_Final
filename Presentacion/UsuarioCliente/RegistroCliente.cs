@@ -39,7 +39,7 @@ namespace Presentacion
                     CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,4);
                     Cliente clienteregistrar = new Cliente(cedula, nombre, sexo, telefono, credencial);
                     registroClienteProcedimiento.RegistrarCliente(clienteregistrar);
-                    MessageBox.Show("Registro realizado con exito");
+                    MessageBox.Show("Registro de cliente realizado con exito");
                     Limpiar();
                      Program.principal.Hide();
                     InterfazCliente interfazCliente= new InterfazCliente();

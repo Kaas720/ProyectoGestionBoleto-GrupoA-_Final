@@ -1,4 +1,5 @@
 ﻿using LogicaDeNegocios;
+using Presentacion.UsuarioCliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -126,6 +127,14 @@ namespace Presentacion
         {
             Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
             Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            string cedula = "";
+            this.Hide();
+            ActualizarCliente objeto = new ActualizarCliente(cedula);
+            objeto.Show();
         }
     }
 }

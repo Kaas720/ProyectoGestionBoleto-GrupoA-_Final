@@ -39,7 +39,7 @@ namespace Presentacion
                     CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,3);
                     Vendedor vendedor = new Vendedor(cedula, nombre, sexo, telefono, Convert.ToDouble(sueldo), credencial);
                    adm.RegistrarVendedor(vendedor);
-                    MessageBox.Show("Registro realizado con exito");
+                    MessageBox.Show("Registro de vendedor realizado con exito");
                     Limpiar();
                     this.Hide();
                     InterfazCliente interfazCliente= new InterfazCliente();

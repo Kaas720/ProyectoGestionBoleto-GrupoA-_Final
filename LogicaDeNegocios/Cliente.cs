@@ -57,11 +57,14 @@ namespace LogicaDeNegocios
                 }
 
             }
-            public static Cliente ConsultarCliente(String cedula)
+            //public static Cliente ConsultarCliente(String cedula)
+            public List<Cliente> BuscarCliente(String cedula)
         {
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            List<Cliente> lista = new List<Cliente>();
             Cliente client = null;
+            CredencialUsuario credencial = null;
             try
             {
                 MySqlCommand mySqlCommand = conector.ConectarProcedimiento("ConsultarCliente", con.conectar());
@@ -69,6 +72,8 @@ namespace LogicaDeNegocios
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {
+                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contraseña"].ToString(), 0);
+                    client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);
                     //client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(),"","", lector["Correo"].ToString(),""); 
                 }
                 con.cerrar();
@@ -77,7 +82,35 @@ namespace LogicaDeNegocios
             {
                 Console.WriteLine("Error emitido por: "+ex);
             }
-            return client;
+             return lista;
         }
+        public string ActualizarCliente(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena)
+        {
+            string mensaje = "";
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+
+            try
+            {
+                MySqlCommand comando = conector.ConectarProcedimiento("ModificarCliente", con.conectar());
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Cedula1", cedula);
+                comando.Parameters.AddWithValue("@Nombre1", nombre);
+                comando.Parameters.AddWithValue("@Sexo1", sexo);
+                comando.Parameters.AddWithValue("@Telefono1", telefono);
+                comando.Parameters.AddWithValue("@Correo1", correo);
+                comando.Parameters.AddWithValue("@Contraseña1", contrasena);
+                comando.ExecuteNonQuery();
+                con.cerrar();
+                mensaje = "Se actualizaron los campos correctamente";
+            }
+            catch (MySqlException ex)
+            {
+
+                mensaje = "Se ha producido un error al actualizar los datos" + ex;
+            }
+            return mensaje;
+        }
+    
     }
 }

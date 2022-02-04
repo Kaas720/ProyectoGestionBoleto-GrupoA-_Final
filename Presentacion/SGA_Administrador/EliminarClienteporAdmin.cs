@@ -21,26 +21,27 @@ namespace Presentacion.SGA_Administrador
 
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
-            string cedula = TxtCedulaCliente.Text;
-            try
-            {
-                Cliente client = admClienteProcedimiento.ConsultarCliente(cedula);
-                List<Cliente> listaCliente = new List<Cliente>();
-                listaCliente.Add(client);
-                foreach (Cliente c in listaCliente)
-                {
-                    Console.WriteLine(client.Cedula+ client.Nombre+ client.CredencialUsuario.Correo+"//////////////////");
-                    DataGridCliente.Rows.Add(1);
-                    DataGridCliente.Rows[0].Cells[0].Value = client.Cedula.ToString();
-                    DataGridCliente.Rows[0].Cells[1].Value = client.Nombre.ToString();
-                    DataGridCliente.Rows[0].Cells[2].Value = client.CredencialUsuario.Correo.ToString();
-                    DataGridCliente.Rows[0].Cells[3].Value = "Eliminar";
-                }  
-            }
-            catch (ControlExcepcion ex)
-            {
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //string cedula = TxtCedulaCliente.Text;
+            //try
+            //{
+            //    //  Cliente client = admClienteProcedimiento.ConsultarCliente(cedula);
+            //    Cliente client = admClienteProcedimiento.BuscarCliente(cedula);
+            //    List<Cliente> listaCliente = new List<Cliente>();
+            //    listaCliente.Add(client);
+            //    foreach (Cliente c in listaCliente)
+            //    {
+            //        Console.WriteLine(client.Cedula+ client.Nombre+ client.CredencialUsuario.Correo+"//////////////////");
+            //        DataGridCliente.Rows.Add(1);
+            //        DataGridCliente.Rows[0].Cells[0].Value = client.Cedula.ToString();
+            //        DataGridCliente.Rows[0].Cells[1].Value = client.Nombre.ToString();
+            //        DataGridCliente.Rows[0].Cells[2].Value = client.CredencialUsuario.Correo.ToString();
+            //        DataGridCliente.Rows[0].Cells[3].Value = "Eliminar";
+            //    }  
+            //}
+            //catch (ControlExcepcion ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
     }
 }

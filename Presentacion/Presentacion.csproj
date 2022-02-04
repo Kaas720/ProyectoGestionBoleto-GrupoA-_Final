@@ -100,6 +100,12 @@
     <Compile Include="SGA_Administrador\FormularioContenedor.Designer.cs">
       <DependentUpon>FormularioContenedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioCliente\ActualizarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioCliente\ActualizarCliente.Designer.cs">
+      <DependentUpon>ActualizarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioCliente\InterfazCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Administrador\FormularioContenedor.resx">
       <DependentUpon>FormularioContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioCliente\ActualizarCliente.resx">
+      <DependentUpon>ActualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\InterfazCliente.resx">
       <DependentUpon>InterfazCliente.cs</DependentUpon>

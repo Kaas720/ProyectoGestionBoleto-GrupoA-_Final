@@ -193,7 +193,7 @@ namespace Presentacion
 
         private void txtSueldo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsNumber(e.KeyChar) && (e.KeyChar !=Convert.ToChar(Keys.Back)) && (e.KeyChar != '.'))
+            if(!char.IsNumber(e.KeyChar) && (e.KeyChar !=Convert.ToChar(Keys.Back)) && (e.KeyChar != ','))
             {
                 e.Handled = true;
                 return;

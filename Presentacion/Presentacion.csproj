@@ -100,6 +100,12 @@
     <Compile Include="SGA_Administrador\FormularioContenedor.Designer.cs">
       <DependentUpon>FormularioContenedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGA_Chofer\RegistroChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Chofer\RegistroChofer.Designer.cs">
+      <DependentUpon>RegistroChofer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioCliente\ActualizarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,10 +136,10 @@
     <Compile Include="UsuarioCliente\RegistroCliente.Designer.cs">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vendedor\RegistroVendedor.cs">
+    <Compile Include="SGA_Vendedor\RegistroVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vendedor\RegistroVendedor.designer.cs">
+    <Compile Include="SGA_Vendedor\RegistroVendedor.designer.cs">
       <DependentUpon>RegistroVendedor.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="InicioFroms\BuscarBus.resx">
@@ -167,6 +173,9 @@
     <EmbeddedResource Include="SGA_Administrador\FormularioContenedor.resx">
       <DependentUpon>FormularioContenedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Chofer\RegistroChofer.resx">
+      <DependentUpon>RegistroChofer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\ActualizarCliente.resx">
       <DependentUpon>ActualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,7 +191,7 @@
     <EmbeddedResource Include="UsuarioCliente\RegistroCliente.resx">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vendedor\RegistroVendedor.resx">
+    <EmbeddedResource Include="SGA_Vendedor\RegistroVendedor.resx">
       <DependentUpon>RegistroVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -229,5 +238,6 @@
   <ItemGroup>
     <None Include="Resources\c82646ff36e2523350d01fff093938f6.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

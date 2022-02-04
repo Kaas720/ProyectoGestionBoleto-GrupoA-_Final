@@ -56,7 +56,6 @@ namespace Presentacion
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
@@ -91,7 +90,7 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(74, 101);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(19, 104);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(55, 24);
             this.guna2HtmlLabel1.TabIndex = 18;
@@ -101,7 +100,7 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(74, 156);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(17, 162);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel2.TabIndex = 19;
@@ -111,7 +110,7 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(74, 205);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(17, 236);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(39, 24);
             this.guna2HtmlLabel3.TabIndex = 20;
@@ -121,7 +120,7 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(501, 104);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(378, 104);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel4.TabIndex = 21;
@@ -131,7 +130,7 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(501, 205);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(378, 236);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(53, 24);
             this.guna2HtmlLabel5.TabIndex = 22;
@@ -141,7 +140,7 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(501, 162);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(375, 162);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(84, 24);
             this.guna2HtmlLabel8.TabIndex = 25;
@@ -164,7 +163,7 @@ namespace Presentacion
             this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCedula.HoverState.Parent = this.txtCedula;
-            this.txtCedula.Location = new System.Drawing.Point(160, 101);
+            this.txtCedula.Location = new System.Drawing.Point(105, 104);
             this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
@@ -192,7 +191,7 @@ namespace Presentacion
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombre.HoverState.Parent = this.txtNombre;
-            this.txtNombre.Location = new System.Drawing.Point(160, 156);
+            this.txtNombre.Location = new System.Drawing.Point(105, 162);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.PlaceholderText = "";
@@ -219,7 +218,7 @@ namespace Presentacion
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTelefono.HoverState.Parent = this.txtTelefono;
-            this.txtTelefono.Location = new System.Drawing.Point(599, 104);
+            this.txtTelefono.Location = new System.Drawing.Point(473, 101);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
@@ -248,7 +247,7 @@ namespace Presentacion
             "Masculino",
             "Femenino"});
             this.cmbSexo.ItemsAppearance.Parent = this.cmbSexo;
-            this.cmbSexo.Location = new System.Drawing.Point(160, 200);
+            this.cmbSexo.Location = new System.Drawing.Point(105, 224);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.ShadowDecoration.Parent = this.cmbSexo;
             this.cmbSexo.Size = new System.Drawing.Size(227, 36);
@@ -271,7 +270,7 @@ namespace Presentacion
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCorreo.HoverState.Parent = this.txtCorreo;
-            this.txtCorreo.Location = new System.Drawing.Point(599, 205);
+            this.txtCorreo.Location = new System.Drawing.Point(473, 233);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderText = "";
@@ -298,7 +297,7 @@ namespace Presentacion
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtContraseña.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtContraseña.HoverState.Parent = this.txtContraseña;
-            this.txtContraseña.Location = new System.Drawing.Point(599, 159);
+            this.txtContraseña.Location = new System.Drawing.Point(473, 162);
             this.txtContraseña.MaxLength = 9;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
@@ -455,18 +454,13 @@ namespace Presentacion
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.HoverState.Parent = this.btnGuardar;
-            this.btnGuardar.Location = new System.Drawing.Point(397, 273);
+            this.btnGuardar.Location = new System.Drawing.Point(315, 332);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.ShadowDecoration.Parent = this.btnGuardar;
             this.btnGuardar.Size = new System.Drawing.Size(144, 45);
             this.btnGuardar.TabIndex = 35;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 50;
-            this.guna2Elipse1.TargetControl = this;
             // 
             // PanelSuperior
             // 
@@ -477,7 +471,7 @@ namespace Presentacion
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.PanelSuperior.Location = new System.Drawing.Point(-1, 0);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(935, 35);
+            this.PanelSuperior.Size = new System.Drawing.Size(720, 35);
             this.PanelSuperior.TabIndex = 37;
             this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
@@ -522,7 +516,7 @@ namespace Presentacion
             this.BotonParaMinimizarVentana.IconColor = System.Drawing.Color.Yellow;
             this.BotonParaMinimizarVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BotonParaMinimizarVentana.IconSize = 34;
-            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(874, 6);
+            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(672, 4);
             this.BotonParaMinimizarVentana.Name = "BotonParaMinimizarVentana";
             this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(39, 34);
             this.BotonParaMinimizarVentana.TabIndex = 1;
@@ -537,7 +531,7 @@ namespace Presentacion
             this.panel1.Controls.Add(this.guna2HtmlLabel9);
             this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 42);
+            this.panel1.Size = new System.Drawing.Size(719, 42);
             this.panel1.TabIndex = 38;
             // 
             // guna2PictureBox1
@@ -557,7 +551,7 @@ namespace Presentacion
             this.Hora_Sistema.AutoSize = true;
             this.Hora_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hora_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Hora_Sistema.Location = new System.Drawing.Point(832, 9);
+            this.Hora_Sistema.Location = new System.Drawing.Point(630, 13);
             this.Hora_Sistema.Name = "Hora_Sistema";
             this.Hora_Sistema.Size = new System.Drawing.Size(80, 24);
             this.Hora_Sistema.TabIndex = 1;
@@ -576,7 +570,7 @@ namespace Presentacion
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(74, 256);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(17, 299);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(53, 24);
             this.guna2HtmlLabel6.TabIndex = 40;
@@ -599,7 +593,7 @@ namespace Presentacion
             this.txtSueldo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSueldo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSueldo.HoverState.Parent = this.txtSueldo;
-            this.txtSueldo.Location = new System.Drawing.Point(160, 256);
+            this.txtSueldo.Location = new System.Drawing.Point(105, 296);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.PasswordChar = '\0';
             this.txtSueldo.PlaceholderText = "";
@@ -616,7 +610,7 @@ namespace Presentacion
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Presentacion.Properties.Resources.salvapantallas_textura_elegante_blanco_23_2148421855;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(924, 344);
+            this.ClientSize = new System.Drawing.Size(718, 389);
             this.Controls.Add(this.txtSueldo);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.panel1);
@@ -675,7 +669,6 @@ namespace Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Contraseña;
         private Guna.UI2.WinForms.Guna2Button btnGuardar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel PanelSuperior;
         private FontAwesome.Sharp.IconButton BotonRetroceder;
         private System.Windows.Forms.Label Fecha_Sistema;

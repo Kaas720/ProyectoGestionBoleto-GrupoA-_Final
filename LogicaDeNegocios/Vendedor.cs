@@ -11,7 +11,7 @@ namespace LogicaDeNegocios
         private double sueldo;
         CredencialUsuario credencialUsuario;
 
-        public Vendedor(string cedula, string nombre, string sexo, string telefono,  double sueldo, CredencialUsuario credencialUsuario)
+        public Vendedor(string cedula, string nombre, string sexo, string telefono, double sueldo, CredencialUsuario credencialUsuario)
             :base(cedula, nombre, sexo, telefono)
         {
             this.sueldo = sueldo;

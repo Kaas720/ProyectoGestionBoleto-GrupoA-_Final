@@ -29,11 +29,11 @@ namespace Presentacion.SGA_Administrador
                 listaCliente.Add(client);
                 foreach (Cliente c in listaCliente)
                 {
-                    Console.WriteLine(client.Cedula+ client.Nombre+ client.Correo+"//////////////////");
+                    Console.WriteLine(client.Cedula+ client.Nombre+ client.CredencialUsuario.Correo+"//////////////////");
                     DataGridCliente.Rows.Add(1);
                     DataGridCliente.Rows[0].Cells[0].Value = client.Cedula.ToString();
                     DataGridCliente.Rows[0].Cells[1].Value = client.Nombre.ToString();
-                    DataGridCliente.Rows[0].Cells[2].Value = client.Correo.ToString();
+                    DataGridCliente.Rows[0].Cells[2].Value = client.CredencialUsuario.Correo.ToString();
                     DataGridCliente.Rows[0].Cells[3].Value = "Eliminar";
                 }  
             }

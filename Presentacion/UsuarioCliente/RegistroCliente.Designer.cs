@@ -252,6 +252,7 @@ namespace Presentacion
             this.txtCorreo.ShadowDecoration.Parent = this.txtCorreo;
             this.txtCorreo.Size = new System.Drawing.Size(227, 27);
             this.txtCorreo.TabIndex = 30;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // txtContraseña
             // 

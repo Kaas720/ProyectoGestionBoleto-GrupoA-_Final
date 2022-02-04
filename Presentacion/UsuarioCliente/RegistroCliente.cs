@@ -36,9 +36,9 @@ namespace Presentacion
             // Al validar que los campos se llenaron correctamente se guarda el regitro y se envia al formulario cliente
                 if (validar())
                 {
-                    Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña,4);
+                   // Cliente cliente = new Cliente(cedula, nombre, sexo, telefono, correo, contraseña,4);
                     
-                    registroClienteProcedimiento.RegistrarCliente(cliente);
+                    registroClienteProcedimiento.RegistrarCliente(cedula, nombre, sexo, telefono, correo, contraseña);
                     MessageBox.Show("Registro realizado con exito");
                     Limpiar();
                     this.Hide();
@@ -139,6 +139,16 @@ namespace Presentacion
         {
             if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) &&
                  (e.KeyChar != Convert.ToChar(Keys.Space)))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) && (e.KeyChar
+               != Convert.ToChar(Keys.Space) && (e.KeyChar != '@' && (e.KeyChar != '.')) && !char.IsNumber(e.KeyChar)))
             {
                 e.Handled = true;
                 return;

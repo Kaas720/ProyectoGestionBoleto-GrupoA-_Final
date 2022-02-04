@@ -9,7 +9,7 @@ namespace Presentacion
     {
         private string cedula;
         // Se llama al clase  RegistroClienteProcedimiento y se crea el objeto registroClienteProcedimiento para llamar a los metodos que contiene
-        AdmClienteProcedimiento registroClienteProcedimiento = new AdmClienteProcedimiento();
+        AdmVendedor registroClienteProcedimiento = new AdmVendedor();
         public RegistroVendedor(string cedula)
         {
             this.cedula = cedula;
@@ -37,8 +37,8 @@ namespace Presentacion
                 if (validar())
                 {
                     CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,3);
-                    //Vendedor vendedor = new Vendedor(cedula, nombre, sexo, telefono, Convert.ToDouble(sueldo), credencial);
-                  // registroClienteProcedimiento.RegistrarVendedor(vendedor, credencial);
+                    Vendedor vendedor = new Vendedor(cedula, nombre, sexo, telefono, Convert.ToDouble(sueldo), credencial);
+                   registroClienteProcedimiento.RegistrarVendedor(vendedor);
                     MessageBox.Show("Registro realizado con exito");
                     Limpiar();
                     this.Hide();

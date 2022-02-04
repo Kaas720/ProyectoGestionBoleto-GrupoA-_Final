@@ -124,6 +124,12 @@
     <Compile Include="UsuarioCliente\RegistroCliente.Designer.cs">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vendedor\RegistroVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendedor\RegistroVendedor.designer.cs">
+      <DependentUpon>RegistroVendedor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="InicioFroms\BuscarBus.resx">
       <DependentUpon>BuscarBus.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\RegistroCliente.resx">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendedor\RegistroVendedor.resx">
+      <DependentUpon>RegistroVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

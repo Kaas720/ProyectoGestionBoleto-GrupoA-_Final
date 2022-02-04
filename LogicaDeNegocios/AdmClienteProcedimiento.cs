@@ -19,8 +19,15 @@ namespace LogicaDeNegocios
             return true;
         }
 
+        public bool RegistrarVendedor(Vendedor vendedor, CredencialUsuario credencial)
+        {
+            Vendedor registrar = vendedor;
+            CredencialUsuario registroCredencial = credencial;
+            registrar.InsertarVendedor(registroCredencial, registrar);
+            return true;
+        }
 
-            public Cliente ConsultarCliente(string cedula )
+        public Cliente ConsultarCliente(string cedula )
         {
             Cliente client = Cliente.ConsultarCliente(cedula);
             if (client==null)

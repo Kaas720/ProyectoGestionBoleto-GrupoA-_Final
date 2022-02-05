@@ -72,8 +72,11 @@
     <Compile Include="AdmChofer.cs" />
     <Compile Include="Administrador.cs" />
     <Compile Include="AdmVendedor.cs" />
+    <Compile Include="Boleto.cs" />
+    <Compile Include="Bus.cs" />
     <Compile Include="Chofer.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Cooperativa.cs" />
     <Compile Include="CredencialUsuario.cs" />
     <Compile Include="GenerarInformacionBoleto.cs" />
     <Compile Include="Persona.cs" />

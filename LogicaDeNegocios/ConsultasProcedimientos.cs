@@ -16,6 +16,9 @@ namespace LogicaDeNegocios
             if(resultado == 0)
             {
                 throw new ControlExcepcion("Usuario y/o contrasena incorrecta");
+            }else
+            {
+                MessageBox.Show("Inicio de sesión realizado con éxito.");
             }
             return resultado;
         }

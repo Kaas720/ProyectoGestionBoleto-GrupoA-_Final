@@ -5,24 +5,16 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 namespace Presentacion
 {
-    public partial class RegistroChofer : Form
+    public partial class RegistroCooperativa : Form
     {
         private string cedula;
         // Se llama al clase  RegistroClienteProcedimiento y se crea el objeto registroClienteProcedimiento para llamar a los metodos que contiene
-        AdmChofer registro = new AdmChofer();
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        private void PanelSuperior_MouseMove(object sender, MouseEventArgs e)
+        AdmCooperativa registro = new AdmCooperativa();
+        public RegistroCooperativa(string cedula)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            this.cedula = cedula;
         }
-
-
-        public RegistroChofer()
+        public RegistroCooperativa()
         {
             InitializeComponent();
         }
@@ -35,20 +27,19 @@ namespace Presentacion
         // Metodo para guardar la informacion del registro de un cliente 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text.Trim(),
-                    sexo = cmbSexo.Text.Trim(), telefono = txtTelefono.Text.Trim(),
-                    sueldo = txtSueldo.Text, licencia = txtLicencia.Text,
-                    correo = txtCorreo.Text.Trim(), contraseña = txtContraseña.Text.Trim();
+            string ruc = txtRuc.Text.Trim(), propietario = txtPropietario.Text.Trim(), cooperativa = txtCooperativa.Text.Trim(),
+                telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(),
+                contraseña = txtContraseña.Text.Trim();
             BorrarAlerta();
             try
             {
             // Al validar que los campos se llenaron correctamente se guarda el regitro y se envia al formulario cliente
                 if (validar())
                 {
-                    CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,2);
-                    Chofer registrar = new Chofer(cedula, nombre, sexo, telefono, licencia, Convert.ToDouble(sueldo), credencial);
-                    registro.RegistrarChofer(registrar);
-                    MessageBox.Show("Registro de chofer realizado con éxito");
+                    CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,4);
+                    Cooperativa registrar = new Cooperativa(ruc, propietario, cooperativa, telefono, credencial);
+                    registro.RegistrarCooperativa(registrar);
+                    MessageBox.Show("Registro de cooperativa realizado con éxito");
                     Limpiar();
                      Program.principal.Hide();
                     InterfazCliente interfazCliente= new InterfazCliente();
@@ -65,34 +56,25 @@ namespace Presentacion
         private bool validar() {
             Validacion valida = new Validacion();
             bool campo = true;
-                if (valida.ValidarCedula(txtCedula.Text) != true)
+                if (valida.ValidarCedula(txtRuc.Text) != true)
                 {
                     campo = false;
-                    errorProvider1.SetError(txtCedula, "Se esperaba 10 numeros.");
+                    errorProvider1.SetError(txtRuc, "Se esperaba 10 numeros.");
                 }
-                if (txtNombre.Text == "")
+                if (txtPropietario.Text == "")
                 {
                     campo = false;
-                    errorProvider1.SetError(txtNombre, "Ingrese su nombre completo.");
+                    errorProvider1.SetError(txtPropietario, "Ingrese su nombre completo.");
                 }
                 if (valida.ValidarTelefono(txtTelefono.Text) != true)
                 {
                     campo = false;
                     errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
                 }
-                if (valida.ValidarLicencia(txtLicencia.Text) != true)
+                if (txtCooperativa.Text == "")
                 {
                     campo = false;
-                    errorProvider1.SetError(txtLicencia, "Se esperaba 10 numeros.");
-                }
-                if (valida.ValidarSueldo(txtSueldo.Text) != true)
-                {
-                    errorProvider1.SetError(txtSueldo, "Ingrese un monto de sueldo.");
-                }
-                if (cmbSexo.SelectedIndex < 0)
-                {
-                    campo = false;
-                    errorProvider1.SetError(cmbSexo, "Selecione un tipo de genero.");
+                    errorProvider1.SetError(txtCooperativa, "Selecione un tipo de genero.");
                 }
                 if (valida.validarEmail(txtCorreo.Text) != true)
                 {
@@ -114,12 +96,10 @@ namespace Presentacion
         // El metodo Borrar alerta elimina las alertas una vez que se lleno bien la informacion en el textbox
         private void BorrarAlerta()
         {
-            errorProvider1.SetError(txtCedula, "");
-            errorProvider1.SetError(txtNombre, "");
+            errorProvider1.SetError(txtRuc, "");
+            errorProvider1.SetError(txtPropietario, "");
             errorProvider1.SetError(txtTelefono, "");
-            errorProvider1.SetError(txtLicencia, "");
-            errorProvider1.SetError(txtSueldo, "");
-            errorProvider1.SetError(cmbSexo, "");
+            errorProvider1.SetError(txtCooperativa, "");
             errorProvider1.SetError(txtCorreo, "");
             errorProvider1.SetError(txtContraseña, "");
         }
@@ -127,12 +107,10 @@ namespace Presentacion
         // Metodo limpiar elimina los datos de los texbox una vez que se ingreso el registro
         public void Limpiar()
         {
-            txtCedula.Clear();
-            txtNombre.Clear();
-            cmbSexo.Text = null;
+            txtRuc.Clear();
+            txtPropietario.Clear();
+            txtCooperativa.Text = null;
             txtTelefono.Clear();
-            txtLicencia.Clear();
-            txtSueldo.Clear();
             txtCorreo.Clear();
             txtContraseña.Clear();
         }
@@ -175,35 +153,6 @@ namespace Presentacion
                 e.Handled = true;
                 return;
             }
-        }
-
-        private void txtSueldo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) && (e.KeyChar != ','))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtLicencia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void BotonParaMinimizarVentana_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void BotonRetroceder_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Program.principal.Show();
         }
 
         private void FechaHora_Tick(object sender, EventArgs e)

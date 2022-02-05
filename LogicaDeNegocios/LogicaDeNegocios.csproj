@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="AdmAdministrador.cs" />
     <Compile Include="AdmChofer.cs" />
+    <Compile Include="AdmCooperativa.cs" />
     <Compile Include="Administrador.cs" />
     <Compile Include="AdmVendedor.cs" />
     <Compile Include="Boleto.cs" />

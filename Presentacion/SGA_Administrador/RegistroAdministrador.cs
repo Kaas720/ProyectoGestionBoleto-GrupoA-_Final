@@ -9,7 +9,7 @@ namespace Presentacion
     {
         private string cedula;
         // Se llama al clase  RegistroClienteProcedimiento y se crea el objeto registroClienteProcedimiento para llamar a los metodos que contiene
-        AdmAdministrador registroClienteProcedimiento = new AdmAdministrador();
+        AdmAdministrador registro = new AdmAdministrador();
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -47,7 +47,7 @@ namespace Presentacion
                 {
                     CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,1);
                     Administrador registrar = new Administrador(cedula, nombre, sexo, telefono, codAcceso, Convert.ToDouble(sueldo), credencial);
-                    registroClienteProcedimiento.RegistrarAdministrador(registrar);
+                    registro.RegistrarAdministrador(registrar);
                     MessageBox.Show("Registro de administrador realizado con éxito");
                     Limpiar();
                      Program.principal.Hide();

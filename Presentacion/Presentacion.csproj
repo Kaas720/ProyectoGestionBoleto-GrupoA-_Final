@@ -112,6 +112,12 @@
     <Compile Include="SGA_Chofer\RegistroChofer.Designer.cs">
       <DependentUpon>RegistroChofer.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGA_Cooperativa\RegistroCooperativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Cooperativa\RegistroCooperativa.Designer.cs">
+      <DependentUpon>RegistroCooperativa.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioCliente\ActualizarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Chofer\RegistroChofer.resx">
       <DependentUpon>RegistroChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Cooperativa\RegistroCooperativa.resx">
+      <DependentUpon>RegistroCooperativa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\ActualizarCliente.resx">
       <DependentUpon>ActualizarCliente.cs</DependentUpon>

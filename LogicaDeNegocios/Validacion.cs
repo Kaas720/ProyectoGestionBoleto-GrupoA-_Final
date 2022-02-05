@@ -29,6 +29,25 @@ namespace LogicaDeNegocios
             return campo;
         }
 
+        public bool ValidarLicencia(string licencia)
+        {
+            bool campo = true;
+            if (licencia.Length != 10)
+            {
+                campo = false;
+            }
+            return campo;
+        }
+        public bool ValidarCodAcceso(string codAcceso)
+        {
+            bool campo = true;
+            if (codAcceso.Length != 10)
+            {
+                campo = false;
+            }
+            return campo;
+        }
+
         // Se crea el metodo validarEmail
         public bool validarEmail(string email)
         {

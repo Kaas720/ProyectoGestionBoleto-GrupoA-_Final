@@ -28,8 +28,8 @@ namespace Presentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text.Trim(), sexo = cmbSexo.Text.Trim(),
-                telefono = txtTelefono.Text.Trim(),sueldo= txtSueldo.Text, correo = txtCorreo.Text.Trim(),
-                contraseña = txtContraseña.Text.Trim();
+                    telefono = txtTelefono.Text.Trim(),sueldo= txtSueldo.Text, correo = txtCorreo.Text.Trim(),
+                   contraseña = txtContraseña.Text.Trim();
             BorrarAlerta();
             try
             {
@@ -39,7 +39,7 @@ namespace Presentacion
                     CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,3);
                     Vendedor vendedor = new Vendedor(cedula, nombre, sexo, telefono, Convert.ToDouble(sueldo), credencial);
                    adm.RegistrarVendedor(vendedor);
-                    MessageBox.Show("Registro de vendedor realizado con exito");
+                    MessageBox.Show("Registro de vendedor realizado con éxito");
                     Limpiar();
                     this.Hide();
                     InterfazCliente interfazCliente= new InterfazCliente();

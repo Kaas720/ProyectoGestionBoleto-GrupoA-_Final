@@ -5,16 +5,24 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 namespace Presentacion
 {
-    public partial class RegistroCliente : Form
+    public partial class RegistroAdministrador : Form
     {
         private string cedula;
         // Se llama al clase  RegistroClienteProcedimiento y se crea el objeto registroClienteProcedimiento para llamar a los metodos que contiene
-        AdmClienteProcedimiento registroClienteProcedimiento = new AdmClienteProcedimiento();
-        public RegistroCliente(string cedula)
+        AdmAdministrador registroClienteProcedimiento = new AdmAdministrador();
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private void PanelSuperior_MouseMove(object sender, MouseEventArgs e)
         {
-            this.cedula = cedula;
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        public RegistroCliente()
+
+
+        public RegistroAdministrador()
         {
             InitializeComponent();
         }
@@ -27,19 +35,20 @@ namespace Presentacion
         // Metodo para guardar la informacion del registro de un cliente 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text.Trim(), sexo = cmbSexo.Text.Trim(),
-                telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(),
-                contraseña = txtContraseña.Text.Trim();
+            string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text.Trim(),
+                    sexo = cmbSexo.Text.Trim(), telefono = txtTelefono.Text.Trim(),
+                    sueldo = txtSueldo.Text, codAcceso = txtAcceso.Text,
+                    correo = txtCorreo.Text.Trim(), contraseña = txtContraseña.Text.Trim();
             BorrarAlerta();
             try
             {
             // Al validar que los campos se llenaron correctamente se guarda el regitro y se envia al formulario cliente
                 if (validar())
                 {
-                    CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,4);
-                    Cliente clienteregistrar = new Cliente(cedula, nombre, sexo, telefono, credencial);
-                    registroClienteProcedimiento.RegistrarCliente(clienteregistrar);
-                    MessageBox.Show("Registro de cliente realizado con éxito");
+                    CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,1);
+                    Administrador registrar = new Administrador(cedula, nombre, sexo, telefono, codAcceso, Convert.ToDouble(sueldo), credencial);
+                    registroClienteProcedimiento.RegistrarAdministrador(registrar);
+                    MessageBox.Show("Registro de administrador realizado con éxito");
                     Limpiar();
                      Program.principal.Hide();
                     InterfazCliente interfazCliente= new InterfazCliente();
@@ -71,6 +80,15 @@ namespace Presentacion
                     campo = false;
                     errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
                 }
+                if (valida.ValidarCodAcceso(txtAcceso.Text) != true)
+                {
+                    campo = false;
+                    errorProvider1.SetError(txtAcceso, "Se esperaba 10 caracteres.");
+                }
+                if (valida.ValidarSueldo(txtSueldo.Text) != true)
+                {
+                    errorProvider1.SetError(txtSueldo, "Ingrese un monto de sueldo.");
+                }
                 if (cmbSexo.SelectedIndex < 0)
                 {
                     campo = false;
@@ -99,6 +117,8 @@ namespace Presentacion
             errorProvider1.SetError(txtCedula, "");
             errorProvider1.SetError(txtNombre, "");
             errorProvider1.SetError(txtTelefono, "");
+            errorProvider1.SetError(txtAcceso, "");
+            errorProvider1.SetError(txtSueldo, "");
             errorProvider1.SetError(cmbSexo, "");
             errorProvider1.SetError(txtCorreo, "");
             errorProvider1.SetError(txtContraseña, "");
@@ -111,6 +131,8 @@ namespace Presentacion
             txtNombre.Clear();
             cmbSexo.Text = null;
             txtTelefono.Clear();
+            txtAcceso.Clear();
+            txtSueldo.Clear();
             txtCorreo.Clear();
             txtContraseña.Clear();
         }
@@ -153,6 +175,36 @@ namespace Presentacion
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void txtSueldo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtLicencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back))
+                && (e.KeyChar  != Convert.ToChar(Keys.Space) && (e.KeyChar != '@' && (e.KeyChar != '.'))))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void BotonParaMinimizarVentana_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void BotonRetroceder_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.principal.Show();
         }
 
         private void FechaHora_Tick(object sender, EventArgs e)

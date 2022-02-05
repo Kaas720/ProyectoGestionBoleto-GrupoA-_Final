@@ -68,6 +68,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdmAdministrador.cs" />
+    <Compile Include="AdmChofer.cs" />
     <Compile Include="Administrador.cs" />
     <Compile Include="AdmVendedor.cs" />
     <Compile Include="Chofer.cs" />

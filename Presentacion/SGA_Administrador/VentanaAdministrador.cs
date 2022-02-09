@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using Guna.UI2.WinForms;
 using Presentacion.SGA_Administrador;
 using System;
 using System.Collections.Generic;
@@ -42,11 +43,11 @@ namespace Presentacion
             iconButton.ForeColor = Color.Green;
             iconButton.IconColor = Color.Green;
         }
-        private void BotonEliminarAdmin_Click(object sender, EventArgs e)
+        /*private void BotonEliminarAdmin_Click(object sender, EventArgs e)
         {
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
-        }
+        }*/
         ///<summary>
         ///Metodo que se encarga de abrir el from para el registro cliente
         ///</summary>
@@ -55,7 +56,29 @@ namespace Presentacion
         private void BotonregistrasAdmin_Click(object sender, EventArgs e)
         {
             RestablecerColorOriginalBotones();
+            GenerarNuevoColorBoton(sender);          
+            OcultarPaneles(PanelRegistro);
+            PanelEliminar.Visible = false;
+
+        }
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
+            OcultarPaneles(PanelEliminar);
+            PanelRegistro.Visible = false; 
+        }
+
+        private void OcultarPaneles(Guna2Panel panel)
+        {
+            if (panel.Visible == true)
+            {
+                panel.Visible = false;
+            }
+            else
+            {
+                panel.Visible = true;
+            }
         }
 
         private void GenerarNuevoColorBoton(object sender)
@@ -91,10 +114,12 @@ namespace Presentacion
             WindowState = FormWindowState.Minimized;
         }
 
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Program.principal.Show();
-        }
+
+
+        /* private void iconButton4_Click(object sender, EventArgs e)
+         {
+             this.Close();
+             Program.principal.Show();
+         }*/
     }
 }

@@ -20,8 +20,8 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(principal = new Principal_Usuario());
-            //Application.Run(new BuscarBus());
+            //Application.Run(principal = new Principal_Usuario());
+            Application.Run(new VentanaAdministrador());
             // Application.Run(new RegistroVendedor());
             //  Application.Run(new RegistroCliente());
             //Application.Run(new RegistroAdministrador());

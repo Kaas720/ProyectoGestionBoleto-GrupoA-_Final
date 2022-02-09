@@ -35,7 +35,7 @@ namespace Presentacion
         }
         public void IniciarFromdelPanelPrincipal()
         {
-            FormularioContenedor Frm = new FormularioContenedor();
+            RegistroCliente Frm = new RegistroCliente();
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();
@@ -61,7 +61,7 @@ namespace Presentacion
             PanelEliminar.Visible = false;
 
         }
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void Eliminar_Click(object sender, EventArgs e)
         {
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);

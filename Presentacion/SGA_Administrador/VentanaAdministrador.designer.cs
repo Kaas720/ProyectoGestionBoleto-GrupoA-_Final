@@ -36,26 +36,23 @@ namespace Presentacion
             this.Fecha_Sistema = new System.Windows.Forms.Label();
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
             this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.GneralPanelOpciones = new Guna.UI2.WinForms.Guna2Panel();
-            this.Salir = new FontAwesome.Sharp.IconButton();
+            this.Exit = new FontAwesome.Sharp.IconButton();
             this.Reporte = new FontAwesome.Sharp.IconButton();
             this.PanelEliminar = new Guna.UI2.WinForms.Guna2Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.BotonEliminar = new FontAwesome.Sharp.IconButton();
+            this.Eliminar = new FontAwesome.Sharp.IconButton();
             this.PanelRegistro = new Guna.UI2.WinForms.Guna2Panel();
             this.Vendedor = new FontAwesome.Sharp.IconButton();
             this.Chofer = new FontAwesome.Sharp.IconButton();
             this.RegistrarCooperativa = new FontAwesome.Sharp.IconButton();
             this.RegistrarCliente = new FontAwesome.Sharp.IconButton();
             this.BotonregistrasAdmin = new FontAwesome.Sharp.IconButton();
+            this.Home = new FontAwesome.Sharp.IconButton();
+            this.Salir = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -68,13 +65,12 @@ namespace Presentacion
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.GneralPanelOpciones.SuspendLayout();
             this.PanelEliminar.SuspendLayout();
             this.PanelRegistro.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.PanelPrincipalContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelSuperior
@@ -135,99 +131,44 @@ namespace Presentacion
             this.BotonCierreDeAplicacion.TabStop = false;
             this.BotonCierreDeAplicacion.Click += new System.EventHandler(this.BotonCierreDeAplicacion_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.panel2.Controls.Add(this.guna2CirclePictureBox1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 75);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(205, 168);
-            this.panel2.TabIndex = 1;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = global::Presentacion.Properties.Resources.c82646ff36e2523350d01fff093938f6;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(68, 46);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(82, 73);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 4;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(83, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ADMINISTRADOR";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(40, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "KEVIN ARÉVALO S";
-            // 
             // GneralPanelOpciones
             // 
             this.GneralPanelOpciones.AutoScroll = true;
             this.GneralPanelOpciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(0)))));
-            this.GneralPanelOpciones.Controls.Add(this.Salir);
+            this.GneralPanelOpciones.Controls.Add(this.Exit);
             this.GneralPanelOpciones.Controls.Add(this.Reporte);
             this.GneralPanelOpciones.Controls.Add(this.PanelEliminar);
-            this.GneralPanelOpciones.Controls.Add(this.BotonEliminar);
+            this.GneralPanelOpciones.Controls.Add(this.Eliminar);
             this.GneralPanelOpciones.Controls.Add(this.PanelRegistro);
             this.GneralPanelOpciones.Controls.Add(this.BotonregistrasAdmin);
-            this.GneralPanelOpciones.Location = new System.Drawing.Point(0, 241);
+            this.GneralPanelOpciones.Controls.Add(this.Home);
+            this.GneralPanelOpciones.Location = new System.Drawing.Point(0, 77);
             this.GneralPanelOpciones.Name = "GneralPanelOpciones";
             this.GneralPanelOpciones.ShadowDecoration.Parent = this.GneralPanelOpciones;
-            this.GneralPanelOpciones.Size = new System.Drawing.Size(205, 356);
+            this.GneralPanelOpciones.Size = new System.Drawing.Size(205, 390);
             this.GneralPanelOpciones.TabIndex = 2;
             // 
-            // Salir
+            // Exit
             // 
-            this.Salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.Salir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Salir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
-            this.Salir.FlatAppearance.BorderSize = 0;
-            this.Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salir.ForeColor = System.Drawing.Color.Transparent;
-            this.Salir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.Salir.IconColor = System.Drawing.Color.White;
-            this.Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Salir.IconSize = 55;
-            this.Salir.Location = new System.Drawing.Point(0, 693);
-            this.Salir.Margin = new System.Windows.Forms.Padding(2);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(188, 89);
-            this.Salir.TabIndex = 5;
-            this.Salir.Text = "Salir";
-            this.Salir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Salir.UseVisualStyleBackColor = false;
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.Exit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Exit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.Exit.FlatAppearance.BorderSize = 0;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.ForeColor = System.Drawing.Color.Transparent;
+            this.Exit.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.Exit.IconColor = System.Drawing.Color.White;
+            this.Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Exit.IconSize = 55;
+            this.Exit.Location = new System.Drawing.Point(0, 736);
+            this.Exit.Margin = new System.Windows.Forms.Padding(2);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(188, 78);
+            this.Exit.TabIndex = 8;
+            this.Exit.Text = "CERRAR SESION";
+            this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Exit.UseVisualStyleBackColor = false;
             // 
             // Reporte
             // 
@@ -242,11 +183,11 @@ namespace Presentacion
             this.Reporte.IconColor = System.Drawing.Color.White;
             this.Reporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Reporte.IconSize = 55;
-            this.Reporte.Location = new System.Drawing.Point(0, 604);
+            this.Reporte.Location = new System.Drawing.Point(0, 658);
             this.Reporte.Margin = new System.Windows.Forms.Padding(2);
             this.Reporte.Name = "Reporte";
-            this.Reporte.Size = new System.Drawing.Size(188, 89);
-            this.Reporte.TabIndex = 4;
+            this.Reporte.Size = new System.Drawing.Size(188, 78);
+            this.Reporte.TabIndex = 7;
             this.Reporte.Text = "REPORTE";
             this.Reporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Reporte.UseVisualStyleBackColor = false;
@@ -259,11 +200,11 @@ namespace Presentacion
             this.PanelEliminar.Controls.Add(this.iconButton4);
             this.PanelEliminar.Controls.Add(this.iconButton5);
             this.PanelEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelEliminar.Location = new System.Drawing.Point(0, 391);
+            this.PanelEliminar.Location = new System.Drawing.Point(0, 446);
             this.PanelEliminar.Name = "PanelEliminar";
             this.PanelEliminar.ShadowDecoration.Parent = this.PanelEliminar;
-            this.PanelEliminar.Size = new System.Drawing.Size(188, 213);
-            this.PanelEliminar.TabIndex = 3;
+            this.PanelEliminar.Size = new System.Drawing.Size(188, 212);
+            this.PanelEliminar.TabIndex = 6;
             this.PanelEliminar.Visible = false;
             // 
             // iconButton2
@@ -354,28 +295,28 @@ namespace Presentacion
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = false;
             // 
-            // BotonEliminar
+            // Eliminar
             // 
-            this.BotonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.BotonEliminar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
-            this.BotonEliminar.FlatAppearance.BorderSize = 0;
-            this.BotonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonEliminar.ForeColor = System.Drawing.Color.Transparent;
-            this.BotonEliminar.IconChar = FontAwesome.Sharp.IconChar.UsersSlash;
-            this.BotonEliminar.IconColor = System.Drawing.Color.White;
-            this.BotonEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonEliminar.IconSize = 55;
-            this.BotonEliminar.Location = new System.Drawing.Point(0, 302);
-            this.BotonEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.BotonEliminar.Name = "BotonEliminar";
-            this.BotonEliminar.Size = new System.Drawing.Size(188, 89);
-            this.BotonEliminar.TabIndex = 2;
-            this.BotonEliminar.Text = "ELIMINAR";
-            this.BotonEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonEliminar.UseVisualStyleBackColor = false;
-            this.BotonEliminar.Click += new System.EventHandler(this.iconButton1_Click);
+            this.Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.Eliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.Eliminar.FlatAppearance.BorderSize = 0;
+            this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Eliminar.ForeColor = System.Drawing.Color.Transparent;
+            this.Eliminar.IconChar = FontAwesome.Sharp.IconChar.UsersSlash;
+            this.Eliminar.IconColor = System.Drawing.Color.White;
+            this.Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Eliminar.IconSize = 55;
+            this.Eliminar.Location = new System.Drawing.Point(0, 368);
+            this.Eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(188, 78);
+            this.Eliminar.TabIndex = 5;
+            this.Eliminar.Text = "ELIMINAR";
+            this.Eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Eliminar.UseVisualStyleBackColor = false;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // PanelRegistro
             // 
@@ -385,10 +326,10 @@ namespace Presentacion
             this.PanelRegistro.Controls.Add(this.RegistrarCooperativa);
             this.PanelRegistro.Controls.Add(this.RegistrarCliente);
             this.PanelRegistro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelRegistro.Location = new System.Drawing.Point(0, 89);
+            this.PanelRegistro.Location = new System.Drawing.Point(0, 156);
             this.PanelRegistro.Name = "PanelRegistro";
             this.PanelRegistro.ShadowDecoration.Parent = this.PanelRegistro;
-            this.PanelRegistro.Size = new System.Drawing.Size(188, 213);
+            this.PanelRegistro.Size = new System.Drawing.Size(188, 212);
             this.PanelRegistro.TabIndex = 1;
             this.PanelRegistro.Visible = false;
             // 
@@ -493,15 +434,58 @@ namespace Presentacion
             this.BotonregistrasAdmin.IconColor = System.Drawing.Color.White;
             this.BotonregistrasAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BotonregistrasAdmin.IconSize = 55;
-            this.BotonregistrasAdmin.Location = new System.Drawing.Point(0, 0);
+            this.BotonregistrasAdmin.Location = new System.Drawing.Point(0, 78);
             this.BotonregistrasAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.BotonregistrasAdmin.Name = "BotonregistrasAdmin";
-            this.BotonregistrasAdmin.Size = new System.Drawing.Size(188, 89);
+            this.BotonregistrasAdmin.Size = new System.Drawing.Size(188, 78);
             this.BotonregistrasAdmin.TabIndex = 0;
             this.BotonregistrasAdmin.Text = "REGISTRAR";
             this.BotonregistrasAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BotonregistrasAdmin.UseVisualStyleBackColor = false;
             this.BotonregistrasAdmin.Click += new System.EventHandler(this.BotonregistrasAdmin_Click);
+            // 
+            // Home
+            // 
+            this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.Home.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Home.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.Home.FlatAppearance.BorderSize = 0;
+            this.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home.ForeColor = System.Drawing.Color.Transparent;
+            this.Home.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.Home.IconColor = System.Drawing.Color.White;
+            this.Home.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Home.IconSize = 55;
+            this.Home.Location = new System.Drawing.Point(0, 0);
+            this.Home.Margin = new System.Windows.Forms.Padding(2);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(188, 78);
+            this.Home.TabIndex = 1;
+            this.Home.Text = "Principal";
+            this.Home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Home.UseVisualStyleBackColor = false;
+            // 
+            // Salir
+            // 
+            this.Salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.Salir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.Salir.FlatAppearance.BorderSize = 0;
+            this.Salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salir.ForeColor = System.Drawing.Color.Transparent;
+            this.Salir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.Salir.IconColor = System.Drawing.Color.White;
+            this.Salir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Salir.IconSize = 55;
+            this.Salir.Location = new System.Drawing.Point(151, 421);
+            this.Salir.Margin = new System.Windows.Forms.Padding(2);
+            this.Salir.Name = "Salir";
+            this.Salir.Size = new System.Drawing.Size(188, 89);
+            this.Salir.TabIndex = 5;
+            this.Salir.Text = "Salir";
+            this.Salir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Salir.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -575,11 +559,12 @@ namespace Presentacion
             // 
             // PanelPrincipalContenedor
             // 
-            this.PanelPrincipalContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.PanelPrincipalContenedor.BackColor = System.Drawing.Color.White;
+            this.PanelPrincipalContenedor.Controls.Add(this.Salir);
             this.PanelPrincipalContenedor.Location = new System.Drawing.Point(205, 77);
             this.PanelPrincipalContenedor.Name = "PanelPrincipalContenedor";
             this.PanelPrincipalContenedor.ShadowDecoration.Parent = this.PanelPrincipalContenedor;
-            this.PanelPrincipalContenedor.Size = new System.Drawing.Size(713, 520);
+            this.PanelPrincipalContenedor.Size = new System.Drawing.Size(713, 389);
             this.PanelPrincipalContenedor.TabIndex = 4;
             // 
             // VentanaAdministrador
@@ -587,11 +572,10 @@ namespace Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(245)))), ((int)(((byte)(222)))));
-            this.ClientSize = new System.Drawing.Size(919, 598);
+            this.ClientSize = new System.Drawing.Size(919, 467);
             this.Controls.Add(this.PanelPrincipalContenedor);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.GneralPanelOpciones);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -606,15 +590,13 @@ namespace Presentacion
             this.PanelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.GneralPanelOpciones.ResumeLayout(false);
             this.PanelEliminar.ResumeLayout(false);
             this.PanelRegistro.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.PanelPrincipalContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -622,19 +604,14 @@ namespace Presentacion
         #endregion
 
         private System.Windows.Forms.Panel PanelSuperior;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton BotonregistrasAdmin;
         private System.Windows.Forms.Label Fecha_Sistema;
         private System.Windows.Forms.Label Hora_Sistema;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer Fecha_Hora_Sistema;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
@@ -645,15 +622,17 @@ namespace Presentacion
         private FontAwesome.Sharp.IconButton Chofer;
         private FontAwesome.Sharp.IconButton RegistrarCooperativa;
         private FontAwesome.Sharp.IconButton RegistrarCliente;
-        private FontAwesome.Sharp.IconButton BotonEliminar;
-        private FontAwesome.Sharp.IconButton Reporte;
+        private FontAwesome.Sharp.IconButton Salir;
+        private Guna.UI2.WinForms.Guna2Panel GneralPanelOpciones;
+        private FontAwesome.Sharp.IconButton Home;
         private Guna.UI2.WinForms.Guna2Panel PanelEliminar;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton Salir;
-        private Guna.UI2.WinForms.Guna2Panel GneralPanelOpciones;
+        private FontAwesome.Sharp.IconButton Eliminar;
+        private FontAwesome.Sharp.IconButton Exit;
+        private FontAwesome.Sharp.IconButton Reporte;
     }
 }
 

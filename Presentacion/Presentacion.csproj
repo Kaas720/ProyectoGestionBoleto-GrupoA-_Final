@@ -100,12 +100,6 @@
     <Compile Include="SGA_Administrador\VentanaAdministrador.designer.cs">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="SGA_Administrador\FormularioContenedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SGA_Administrador\FormularioContenedor.Designer.cs">
-      <DependentUpon>FormularioContenedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="SGA_Chofer\RegistroChofer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,9 +178,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Administrador\VentanaAdministrador.resx">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SGA_Administrador\FormularioContenedor.resx">
-      <DependentUpon>FormularioContenedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Chofer\RegistroChofer.resx">
       <DependentUpon>RegistroChofer.cs</DependentUpon>

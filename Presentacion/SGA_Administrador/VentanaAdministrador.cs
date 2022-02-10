@@ -16,8 +16,10 @@ namespace Presentacion
 {
     public partial class VentanaAdministrador : Form
     {
-        /*Codigo para arrastrar la ventana a cualquier parte de la pantalla*/
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        Color colorBotoneSeleccionado = Color.FromArgb(36, 66, 86);
+        Color colorBotoneOriginal = Color.FromArgb(241, 246, 249);
+    /*Codigo para arrastrar la ventana a cualquier parte de la pantalla*/
+    [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
@@ -35,13 +37,13 @@ namespace Presentacion
         }
         public void IniciarFromdelPanelPrincipal()
         {
-            RegistroCliente Frm = new RegistroCliente();
+            PerfilAdminidtrador Frm = new PerfilAdminidtrador();
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();
-            iconButton = BotonregistrasAdmin;
-            iconButton.ForeColor = Color.Green;
-            iconButton.IconColor = Color.Green;
+            iconButton = Home;            
+            iconButton.ForeColor = colorBotoneSeleccionado;
+            iconButton.IconColor = colorBotoneSeleccionado;
         }
         /*private void BotonEliminarAdmin_Click(object sender, EventArgs e)
         {
@@ -53,18 +55,37 @@ namespace Presentacion
         ///</summary>
         ///<param name= "sender"> Objeto almacenado del boton </param>
         /// <param name= "e"> envento generado </param>
+        bool verificarBoton = true;
         private void BotonregistrasAdmin_Click(object sender, EventArgs e)
         {
             RestablecerColorOriginalBotones();
-            GenerarNuevoColorBoton(sender);          
+            iconButton = (IconButton)sender;
+            if (verificarBoton) {
+                GenerarNuevoColorBoton(sender);
+                verificarBoton = false;
+            }
+            else
+            {
+                verificarBoton = true;
+            }
             OcultarPaneles(PanelRegistro);
             PanelEliminar.Visible = false;
-
+            
         }
+        bool verificarBotonEliminar = true;
         private void Eliminar_Click(object sender, EventArgs e)
         {
             RestablecerColorOriginalBotones();
-            GenerarNuevoColorBoton(sender);
+            iconButton = (IconButton)sender;
+            if (verificarBotonEliminar)
+            {
+                GenerarNuevoColorBoton(sender);
+                verificarBotonEliminar = false;
+            }
+            else
+            {
+                verificarBotonEliminar = true;
+            }
             OcultarPaneles(PanelEliminar);
             PanelRegistro.Visible = false; 
         }
@@ -84,15 +105,15 @@ namespace Presentacion
         private void GenerarNuevoColorBoton(object sender)
         {
             iconButton = (IconButton)sender;
-            iconButton.IconColor = Color.Green;
-            iconButton.ForeColor = Color.Green;
+            iconButton.IconColor = colorBotoneSeleccionado;
+            iconButton.ForeColor = colorBotoneSeleccionado;
         }
 
         private void RestablecerColorOriginalBotones()
         {
-            iconButton.IconColor = Color.White;
-            iconButton.ForeColor = Color.White;
-            
+            iconButton.IconColor = colorBotoneOriginal;
+            iconButton.ForeColor = colorBotoneOriginal;
+
         }
 
         private void Fecha_Hora_Sistema_Tick(object sender, EventArgs e)

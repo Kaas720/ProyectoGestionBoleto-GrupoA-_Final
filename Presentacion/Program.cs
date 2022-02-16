@@ -24,7 +24,7 @@ namespace Presentacion
             //Application.Run(new PerfilAdminidtrador());
             // Application.Run(new RegistroVendedor());
             //  Application.Run(new RegistroCliente());
-            Application.Run(new VentanaAdministrador());
+            Application.Run(new InterfazCliente());
         }
     }
 }

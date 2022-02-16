@@ -1,5 +1,6 @@
 ﻿using LogicaDeNegocios;
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -40,7 +41,7 @@ namespace Presentacion
         }
         private void ConsultarLoginBD(string correo, string password)
         {
-            int result = consulta.Login(correo, password);
+            List<int> IdPeronsaAndRol = consulta.Login(correo, password);
             if (result != 0)
             {
                 this.Close();
@@ -59,7 +60,7 @@ namespace Presentacion
                         c.ShowDialog();
                         break;
                     case 4:
-                        InterfazCliente cs = new InterfazCliente();
+                        InterfazCliente cs = new InterfazCliente(2);
                         Program.principal.Hide();
                         cs.ShowDialog();
                         //Console.WriteLine("4");

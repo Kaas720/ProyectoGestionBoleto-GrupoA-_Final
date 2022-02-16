@@ -58,7 +58,6 @@ namespace Presentacion.InicioFroms
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2GroupBox1.Location = new System.Drawing.Point(27, 128);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(658, 235);
             this.guna2GroupBox1.TabIndex = 21;
             this.guna2GroupBox1.Text = "ELEGIR RUTA";
@@ -189,15 +188,11 @@ namespace Presentacion.InicioFroms
             this.cbDestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDestino.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbDestino.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbDestino.FocusedState.Parent = this.cbDestino;
             this.cbDestino.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbDestino.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbDestino.HoverState.Parent = this.cbDestino;
             this.cbDestino.ItemHeight = 30;
-            this.cbDestino.ItemsAppearance.Parent = this.cbDestino;
             this.cbDestino.Location = new System.Drawing.Point(256, 67);
             this.cbDestino.Name = "cbDestino";
-            this.cbDestino.ShadowDecoration.Parent = this.cbDestino;
             this.cbDestino.Size = new System.Drawing.Size(171, 36);
             this.cbDestino.TabIndex = 20;
             this.cbDestino.SelectedIndexChanged += new System.EventHandler(this.cbDestino_SelectedIndexChanged);
@@ -211,15 +206,11 @@ namespace Presentacion.InicioFroms
             this.cbOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOrigen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbOrigen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbOrigen.FocusedState.Parent = this.cbOrigen;
             this.cbOrigen.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbOrigen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbOrigen.HoverState.Parent = this.cbOrigen;
             this.cbOrigen.ItemHeight = 30;
-            this.cbOrigen.ItemsAppearance.Parent = this.cbOrigen;
             this.cbOrigen.Location = new System.Drawing.Point(27, 67);
             this.cbOrigen.Name = "cbOrigen";
-            this.cbOrigen.ShadowDecoration.Parent = this.cbOrigen;
             this.cbOrigen.Size = new System.Drawing.Size(157, 36);
             this.cbOrigen.TabIndex = 19;
             this.cbOrigen.SelectedIndexChanged += new System.EventHandler(this.cbOrigen_SelectedIndexChanged);
@@ -227,20 +218,22 @@ namespace Presentacion.InicioFroms
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(266, 31);
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(278, 29);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(144, 26);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(128, 22);
             this.guna2HtmlLabel6.TabIndex = 18;
             this.guna2HtmlLabel6.Text = "Lugar de destino";
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(36, 31);
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(45, 29);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(137, 26);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(120, 22);
             this.guna2HtmlLabel5.TabIndex = 17;
             this.guna2HtmlLabel5.Text = "Lugar de origen";
             // 
@@ -253,15 +246,11 @@ namespace Presentacion.InicioFroms
             this.cbCooperativa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCooperativa.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCooperativa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbCooperativa.FocusedState.Parent = this.cbCooperativa;
             this.cbCooperativa.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbCooperativa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbCooperativa.HoverState.Parent = this.cbCooperativa;
             this.cbCooperativa.ItemHeight = 30;
-            this.cbCooperativa.ItemsAppearance.Parent = this.cbCooperativa;
             this.cbCooperativa.Location = new System.Drawing.Point(468, 67);
             this.cbCooperativa.Name = "cbCooperativa";
-            this.cbCooperativa.ShadowDecoration.Parent = this.cbCooperativa;
             this.cbCooperativa.Size = new System.Drawing.Size(217, 36);
             this.cbCooperativa.TabIndex = 16;
             this.cbCooperativa.SelectedIndexChanged += new System.EventHandler(this.cbCooperativa_SelectedIndexChanged);
@@ -269,10 +258,11 @@ namespace Presentacion.InicioFroms
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(518, 31);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(528, 29);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(108, 26);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(97, 22);
             this.guna2HtmlLabel3.TabIndex = 15;
             this.guna2HtmlLabel3.Text = "Cooperativa:";
             // 

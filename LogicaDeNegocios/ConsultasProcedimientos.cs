@@ -10,17 +10,17 @@ namespace LogicaDeNegocios
         ProcedimientosPaginaprincipal procedimientos = new ProcedimientosPaginaprincipal();
 
         // Se crea el metodo para validar que el usuario y la contraseña sean autenticos y validos
-        public int Login(string usuario, string password)
+        public List<int> Login(string usuario, string password)
         {
-            int resultado= procedimientos.IniciasSeccion(usuario, password);
-            if(resultado == 0)
+            List<int> IdPeronsaAndRol = procedimientos.IniciasSeccion(usuario, password);
+            if(IdPeronsaAndRol.Count == 0)
             {
                 throw new ControlExcepcion("Usuario y/o contrasena incorrecta");
             }else
             {
                 MessageBox.Show("Inicio de sesión realizado con éxito.");
             }
-            return resultado;
+            return IdPeronsaAndRol;
         }
         public void LlenarCombos(ComboBox cbOrigen, ComboBox cbDestino)
         {

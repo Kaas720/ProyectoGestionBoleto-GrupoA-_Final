@@ -64,21 +64,21 @@ namespace Presentacion
 
         // Se crea el metodo comprobar_combo_vacio si el combobox tiene seleccionado un iten se queda cargado dentro del combo
         private bool Comprobar_combo_vacio()
+        {
+            bool bandera = false;
+            if (!cbOrigen.SelectedIndex.Equals(-1) && !cbDestino.SelectedIndex.Equals(-1))
             {
-                bool bandera = false;
-                if (!cbOrigen.SelectedIndex.Equals(-1) && !cbDestino.SelectedIndex.Equals(-1))
-                {
-                    bandera = true;
-                }
-                return bandera;
+                bandera = true;
             }
+            return bandera;
+        }
 
         // Se crea el metodo EliminarComboElemento para limpiar los datos cargados en la datagrid y el combobox de cooperativa
         private void EliminarComboElementos()
-            {
-                cbCooperativa.Items.Clear();
-                DataGridInf.Rows.Clear();
-            }
+        {
+            cbCooperativa.Items.Clear();
+            DataGridInf.Rows.Clear();
+        }
 
         // Se realiza el metodo para minimizar la aplicacion 
         private void BotonParaMinimizarVentana_Click(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace Presentacion
                 this.Hide();
                 Principal_Usuario pricipal = new Principal_Usuario();
                 pricipal.Show();
-               
+
             }
 
         }
@@ -128,8 +128,7 @@ namespace Presentacion
             Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
             Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
         }
-
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             string cedula = "";
             this.Hide();

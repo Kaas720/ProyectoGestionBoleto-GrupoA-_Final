@@ -20,11 +20,11 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(principal = new Principal_Usuario());
+            Application.Run(principal = new Principal_Usuario());
             //Application.Run(new PerfilAdminidtrador());
             // Application.Run(new RegistroVendedor());
             //  Application.Run(new RegistroCliente());
-            Application.Run(new InterfazCliente());
+            //Application.Run(new InterfazCliente(4));
         }
     }
 }

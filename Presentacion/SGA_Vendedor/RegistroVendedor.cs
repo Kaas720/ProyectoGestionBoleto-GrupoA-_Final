@@ -42,8 +42,8 @@ namespace Presentacion
                     MessageBox.Show("Registro de vendedor realizado con éxito");
                     Limpiar();
                     this.Hide();
-                    InterfazCliente interfazCliente= new InterfazCliente();
-                    interfazCliente.Show();
+                   // InterfazCliente interfazCliente= new InterfazCliente();
+                    //interfazCliente.Show();
                 }
             }
             catch(ControlExcepcion ex)

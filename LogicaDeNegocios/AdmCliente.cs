@@ -16,8 +16,8 @@ namespace LogicaDeNegocios
 
             List<Cliente> client = procedimientos.BuscarCliente(cedula);
             List<Cliente> lista = new List<Cliente>();
-           // lista.Add(client);
-          //  txtNombre.Text = TraerInformacion[0].ToString();
+            //lista.Add(client);
+            //txtNombre.Text = TraerInformacion[0].ToString();
             txtNombre.Text = lista[lista.Count -1].Nombre;
             cmbSexo.Text = lista[lista.Count - 1].Sexo;
             txtTelefono.Text = lista[lista.Count - 1].Telefono;

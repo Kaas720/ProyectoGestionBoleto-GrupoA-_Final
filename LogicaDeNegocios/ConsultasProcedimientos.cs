@@ -13,12 +13,14 @@ namespace LogicaDeNegocios
         public List<int> Login(string usuario, string password)
         {
             List<int> IdPeronsaAndRol = procedimientos.IniciasSeccion(usuario, password);
-            if(IdPeronsaAndRol.Count == 0)
-            {
-                throw new ControlExcepcion("Usuario y/o contrasena incorrecta");
-            }else
+            if(IdPeronsaAndRol.Count > 0)
             {
                 MessageBox.Show("Inicio de sesión realizado con éxito.");
+            }
+            else
+            {
+                throw new ControlExcepcion("Usuario y/o contrasena incorrecta");
+               
             }
             return IdPeronsaAndRol;
         }

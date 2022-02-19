@@ -25,10 +25,10 @@ namespace Presentacion
                 {
                     ConsultarLoginBD(Usuario, password);
                 }
-                catch (ControlExcepcion ex)
+                catch (ControlExcepcion e)
                 {
             // Se envia un aviso indicando que sus credenciales no son las correctas
-                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(e.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NombreUsuario.Text = null;
                     Contrasenausuario.Text = null;
                 }       

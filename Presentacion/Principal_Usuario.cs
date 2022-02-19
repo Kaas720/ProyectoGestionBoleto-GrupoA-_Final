@@ -102,7 +102,7 @@ namespace Presentacion
         private void BotonInicioSesion_Click_1(object sender, EventArgs e)
         {
             this.PanelContenedor.Controls.Clear();
-            InicioSeccion Frm = new InicioSeccion();
+            InicioSesion Frm = new InicioSesion();
             Frm.TopLevel = false;
             PanelContenedor.Controls.Add(Frm);
             Frm.Show();

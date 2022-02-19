@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class InicioSeccion
+    partial class InicioSesion
     {
         /// <summary>
         /// Required designer variable.

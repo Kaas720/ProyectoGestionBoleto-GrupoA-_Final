@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {  
-    public partial class InicioSeccion : Form
+    public partial class InicioSesion : Form
     {
         ConsultasProcedimientos consulta = new ConsultasProcedimientos();
-        public InicioSeccion()
+        public InicioSesion()
         {
             InitializeComponent();
         }
@@ -44,23 +44,25 @@ namespace Presentacion
         }
         private void ConsultarLoginBD(string correo, string password)
         {
-            List<int> IdPeronsaAndRol2 = consulta.Login(correo, password);
-            if (IdPeronsaAndRol2[0] != 0)
+            List<int> IdPeronsaAndRol = consulta.Login(correo, password);
+            int rol = IdPeronsaAndRol[0];
+            int Idperson = IdPeronsaAndRol[1];
+            if (rol != 0)
             {
                 this.Close();
-                switch (IdPeronsaAndRol2[0])
+                switch (rol)
                 {
                     case 1: 
-                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
+                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idperson);
                         Program.principal.Hide();
                         ventanaAdministrador.ShowDialog();
                         break;
                     case 2:
-                        VentanaAdministrador v = new VentanaAdministrador();
+                        VentanaAdministrador v = new VentanaAdministrador(Idperson);
                         v.ShowDialog();
                         break;
                     case 3:
-                        VentanaAdministrador c = new VentanaAdministrador();
+                        VentanaAdministrador c = new VentanaAdministrador(Idperson);
                         c.ShowDialog();
                         break;
                     case 4:

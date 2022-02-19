@@ -7,23 +7,40 @@ namespace LogicaDeNegocios
 {
     public class Administrador: Persona
     {
-        private string codigoAcceso;
-        private double sueldo;
         private CredencialUsuario credencialUsuario;
 
-        public Administrador(string cedula, string nombre, string sexo, string telefono, string codigoAcceso, double sueldo, CredencialUsuario credencialUsuario)
+        public Administrador(string cedula, string nombre, string sexo, string telefono, CredencialUsuario credencialUsuario)
             :base(cedula, nombre, sexo, telefono)
         {
-            this.codigoAcceso = codigoAcceso;
-            this.sueldo = sueldo;
             this.credencialUsuario = credencialUsuario;
         }
-
-        public string CodigoAcceso { get => codigoAcceso; set => codigoAcceso = value; }
-        public double Sueldo { get => sueldo; set => sueldo = value; }
         public CredencialUsuario CredencialUsuario { get => credencialUsuario; set => credencialUsuario = value; }
 
-
+        public static Administrador ConsultarAdministrador(int idPersona)
+        {
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            Administrador admin = null;
+            CredencialUsuario credencial = null;
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("BuscarAdministrador", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@IdPersona", idPersona);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contraseña"].ToString(), 0);
+                    admin = new Administrador(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);
+                }
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+            }
+            return admin;
+        }
+        /*
         public void InsertarAdministrador(Administrador admin)
         {
             // Se llama a la clase conexion para hacer la conexion con la base de dados
@@ -57,6 +74,6 @@ namespace LogicaDeNegocios
                 Console.WriteLine(ex);
             }
 
-        }
+        }*/
     }
 }

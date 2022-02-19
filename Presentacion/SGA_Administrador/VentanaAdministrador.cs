@@ -18,26 +18,28 @@ namespace Presentacion
     {
         Color colorBotoneSeleccionado = Color.FromArgb(36, 66, 86);
         Color colorBotoneOriginal = Color.FromArgb(241, 246, 249);
+        int idPersona;
     /*Codigo para arrastrar la ventana a cualquier parte de la pantalla*/
     [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void PanelSuperior_MouseMove(object sender, MouseEventArgs e)
-        {
+        {     
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         /*--------------------------------------------------------------------*/
         IconButton iconButton;
-        public VentanaAdministrador()
+        public VentanaAdministrador(int idPersona)
         {
             InitializeComponent();
+            this.idPersona = idPersona;
             IniciarFromdelPanelPrincipal();
         }
         public void IniciarFromdelPanelPrincipal()
         {
-            PerfilAdminidtrador Frm = new PerfilAdminidtrador();
+            PerfilAdminidtrador Frm = new PerfilAdminidtrador(4);
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();
@@ -89,6 +91,16 @@ namespace Presentacion
             OcultarPaneles(PanelEliminar);
             PanelRegistro.Visible = false; 
         }
+        private void Home_Click(object sender, EventArgs e)
+        {
+            GenerarNuevoColorBoton(sender);
+            RestablecerColorOriginalBotones();
+            this.PanelPrincipalContenedor.Controls.Clear();
+            PerfilAdminidtrador Frm = new PerfilAdminidtrador(idPersona);
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+        }
 
         private void OcultarPaneles(Guna2Panel panel)
         {
@@ -134,6 +146,8 @@ namespace Presentacion
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        
 
 
 

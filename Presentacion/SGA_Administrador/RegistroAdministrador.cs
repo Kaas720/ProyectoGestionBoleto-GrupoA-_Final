@@ -46,8 +46,8 @@ namespace Presentacion
                 if (validar())
                 {
                     CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,1);
-                    Administrador registrar = new Administrador(cedula, nombre, sexo, telefono, codAcceso, Convert.ToDouble(sueldo), credencial);
-                    registro.RegistrarAdministrador(registrar);
+                   // Administrador registrar = new Administrador(cedula, nombre, sexo, telefono, codAcceso, Convert.ToDouble(sueldo), credencial);
+                   // registro.RegistrarAdministrador(registrar);
                     MessageBox.Show("Registro de administrador realizado con éxito");
                     Limpiar();
                      Program.principal.Hide();

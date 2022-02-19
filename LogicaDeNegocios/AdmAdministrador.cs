@@ -11,8 +11,16 @@ namespace LogicaDeNegocios
         public bool RegistrarAdministrador(Administrador admin)
         {
             Administrador registrar = admin;
-            registrar.InsertarAdministrador(registrar);
+            //registrar.InsertarAdministrador(registrar);
             return true;
+        }
+        public List<Administrador> ConsultaAdmin(int idPersona)
+        {
+            List<Administrador> newLista = new List<Administrador>();
+            Administrador admin = null;
+            admin = Administrador.ConsultarAdministrador(idPersona);
+            newLista.Add(admin);
+            return newLista;
         }
     }
 }

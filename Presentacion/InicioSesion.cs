@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {  
-    public partial class InicioSeccion : Form
+    public partial class InicioSesion : Form
     {
         ConsultasProcedimientos consulta = new ConsultasProcedimientos();
-        public InicioSeccion()
+        public InicioSesion()
         {
             InitializeComponent();
         }
@@ -18,41 +18,38 @@ namespace Presentacion
         {
             string Usuario = NombreUsuario.Text;
             string password = Contrasenausuario.Text;
-            try
+            if (ValidacionCamposVacios(Usuario, password))
             {
-                if (ValidacionCamposVacios(Usuario, password))
+             // Se hace uso del control de excepciones conde se llama a la clase ControlExcepcion, si el usuario no ingresa las credenciales 
+                try
                 {
-                    // Se hace uso del control de excepciones conde se llama a la clase ControlExcepcion, si el usuario no ingresa las credenciales 
-                    try
-                    {
-                        ConsultarLoginBD(Usuario, password);
-                    }
-                    catch (ControlExcepcion ex)
-                    {
-                        // Se envia un aviso indicando que sus credenciales no son las correctas
-                        MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        NombreUsuario.Text = null;
-                        Contrasenausuario.Text = null;
-                    }
+                    ConsultarLoginBD(Usuario, password);
                 }
+                catch (ControlExcepcion ex)
+                {
+            // Se envia un aviso indicando que sus credenciales no son las correctas
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    NombreUsuario.Text = null;
+                    Contrasenausuario.Text = null;
+                }       
             }
-            catch (ControlExcepcion ex)
+            else
+            // en caso de querer ingresar sin ingresar ningun dato se mostrara el siguiente mensaje
             {
-                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-           
+                MessageBox.Show("Campos vacios");
+            }  
         }
         private void ConsultarLoginBD(string correo, string password)
         {
-            List<int> IdPeronsaAndRol1 = consulta.Login(correo, password);
-            if (IdPeronsaAndRol1[0] != 0)
+            List<int> IdPeronsaAndRol = consulta.Login(correo, password);
+            int rol_usuario = IdPeronsaAndRol[0];
+            if (rol_usuario != 0)
             {
                 this.Close();
-                switch (IdPeronsaAndRol1[0])
+                switch (rol_usuario)
                 {
                     case 1: 
                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
-                        Program.principal.Hide();
                         ventanaAdministrador.ShowDialog();
                         break;
                     case 2:
@@ -76,16 +73,17 @@ namespace Presentacion
         /*Metodo para validar si existen campos vacios*/
         private bool ValidacionCamposVacios(string usuario, string password)
         {
-            bool bandera;
+            bool bandera = false;
             if (!String.IsNullOrEmpty(usuario) && !String.IsNullOrEmpty(password))
             {
                 bandera = true;
             }
-            else
-            {
-                throw new ControlExcepcion("Campos vacios");
-            }
             return bandera;
+        }
+
+        private void TextoInicioSesion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

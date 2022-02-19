@@ -39,9 +39,9 @@ namespace Presentacion
                 MessageBox.Show("Campos vacios");
             }  
         }
-        private void ConsultarLoginBD(string correo, string password)
+        private void ConsultarLoginBD(string correo, string contraseña)
         {
-            List<int> Rol22= consulta.Login(correo, password);
+            List<int> Rol22= consulta.Login(correo, contraseña);
             if (Rol22[0] > 0)
             {
                 this.Close();

@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {  
-    public partial class InicioSeccion : Form
+    public partial class InicioSesion : Form
     {
         ConsultasProcedimientos consulta = new ConsultasProcedimientos();
-        public InicioSeccion()
+        public InicioSesion()
         {
             InitializeComponent();
         }
@@ -25,10 +25,10 @@ namespace Presentacion
                 {
                     ConsultarLoginBD(Usuario, password);
                 }
-                catch (ControlExcepcion e)
+                catch (ControlExcepcion ex)
                 {
             // Se envia un aviso indicando que sus credenciales no son las correctas
-                    MessageBox.Show(e.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     NombreUsuario.Text = null;
                     Contrasenausuario.Text = null;
                 }       
@@ -41,11 +41,12 @@ namespace Presentacion
         }
         private void ConsultarLoginBD(string correo, string password)
         {
-            List<int> RolUsuario = consulta.Login(correo, password);
-            if (RolUsuario[0] > 0)
+            List<int> IdPeronsaAndRol = consulta.Login(correo, password);
+            int rol_usuarios = IdPeronsaAndRol[0];
+            if (rol_usuarios != 0)
             {
                 this.Close();
-                switch (RolUsuario[0])
+                switch (rol_usuarios)
                 {
                     case 1: 
                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
@@ -78,6 +79,11 @@ namespace Presentacion
                 bandera = true;
             }
             return bandera;
+        }
+
+        private void TextoInicioSesion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

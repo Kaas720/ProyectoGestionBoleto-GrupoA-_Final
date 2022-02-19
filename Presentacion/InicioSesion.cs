@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {  
-    public partial class InicioSesion : Form
+    public partial class InicioSeccion : Form
     {
         ConsultasProcedimientos consulta = new ConsultasProcedimientos();
-        public InicioSesion()
+        public InicioSeccion()
         {
             InitializeComponent();
         }
@@ -39,14 +39,13 @@ namespace Presentacion
                 MessageBox.Show("Campos vacios");
             }  
         }
-        private void ConsultarLoginBD(string correo, string password)
+        private void ConsultarLoginBD(string usuario, string password)
         {
-            List<int> IdPeronsaAndRol = consulta.Login(correo, password);
-            int rol_usuarios = IdPeronsaAndRol[0];
-            if (rol_usuarios != 0)
+            List<int> IdPersonal = consulta.Login(usuario, password);
+            if (IdPersonal[0] != 0)
             {
                 this.Close();
-                switch (rol_usuarios)
+                switch (IdPersonal[0])
                 {
                     case 1: 
                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
@@ -79,11 +78,6 @@ namespace Presentacion
                 bandera = true;
             }
             return bandera;
-        }
-
-        private void TextoInicioSesion_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

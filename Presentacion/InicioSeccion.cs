@@ -41,11 +41,11 @@ namespace Presentacion
         }
         private void ConsultarLoginBD(string correo, string contraseña)
         {
-            List<int> RolUsuario= consulta.Login(correo, contraseña);
-            if (RolUsuario[0] > 0)
+            List<int> Rol = consulta.Login(correo, contraseña);
+            if (Rol [0] > 0)
             {
                 this.Close();
-                switch (RolUsuario[0])
+                switch (Rol[0])
                 {
                     case 1: 
                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();

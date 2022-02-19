@@ -18,26 +18,29 @@ namespace Presentacion
         {
             string Usuario = NombreUsuario.Text;
             string password = Contrasenausuario.Text;
-            if (ValidacionCamposVacios(Usuario, password))
+            try
             {
-             // Se hace uso del control de excepciones conde se llama a la clase ControlExcepcion, si el usuario no ingresa las credenciales 
-                try
+                if (ValidacionCamposVacios(Usuario, password))
                 {
-                    ConsultarLoginBD(Usuario, password);
+                    // Se hace uso del control de excepciones conde se llama a la clase ControlExcepcion, si el usuario no ingresa las credenciales 
+                    try
+                    {
+                        ConsultarLoginBD(Usuario, password);
+                    }
+                    catch (ControlExcepcion ex)
+                    {
+                        // Se envia un aviso indicando que sus credenciales no son las correctas
+                        MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        NombreUsuario.Text = null;
+                        Contrasenausuario.Text = null;
+                    }
                 }
-                catch (ControlExcepcion ex)
-                {
-            // Se envia un aviso indicando que sus credenciales no son las correctas
-                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    NombreUsuario.Text = null;
-                    Contrasenausuario.Text = null;
-                }       
             }
-            else
-            // en caso de querer ingresar sin ingresar ningun dato se mostrara el siguiente mensaje
+            catch (ControlExcepcion ex)
             {
-                MessageBox.Show("Campos vacios");
-            }  
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+           
         }
         private void ConsultarLoginBD(string correo, string password)
         {
@@ -49,6 +52,7 @@ namespace Presentacion
                 {
                     case 1: 
                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
+                        Program.principal.Hide();
                         ventanaAdministrador.ShowDialog();
                         break;
                     case 2:
@@ -72,10 +76,14 @@ namespace Presentacion
         /*Metodo para validar si existen campos vacios*/
         private bool ValidacionCamposVacios(string usuario, string password)
         {
-            bool bandera = false;
+            bool bandera;
             if (!String.IsNullOrEmpty(usuario) && !String.IsNullOrEmpty(password))
             {
                 bandera = true;
+            }
+            else
+            {
+                throw new ControlExcepcion("Campos vacios");
             }
             return bandera;
         }

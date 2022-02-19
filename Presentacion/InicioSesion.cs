@@ -39,24 +39,28 @@ namespace Presentacion
                 MessageBox.Show("Campos vacios");
             }  
         }
-        private void ConsultarLoginBD(string usuario, string password)
+        private void ConsultarLoginBD(string correo, string password)
         {
-            List<int> IdPersonal = consulta.Login(usuario, password);
-            if (IdPersonal[0] != 0)
+            List<int> IdPeronsaAndRol = consulta.Login(correo, password);
+            int roll = IdPeronsaAndRol[0];
+            if ( roll != 0)
             {
                 this.Close();
-                switch (IdPersonal[0])
+                switch (roll)
                 {
                     case 1: 
                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
+                        Program.principal.Hide();
                         ventanaAdministrador.ShowDialog();
                         break;
                     case 2:
                         VentanaAdministrador v = new VentanaAdministrador();
+                        Program.principal.Hide();
                         v.ShowDialog();
                         break;
                     case 3:
                         VentanaAdministrador c = new VentanaAdministrador();
+                        Program.principal.Hide();
                         c.ShowDialog();
                         break;
                     case 4:

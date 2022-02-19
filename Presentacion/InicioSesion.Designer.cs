@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class InicioSeccion
+    partial class InicioSesion
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSeccion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesion));
             this.NombreUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.Contrasenausuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.botonInicioSesion = new Guna.UI2.WinForms.Guna2Button();
@@ -45,19 +45,15 @@ namespace Presentacion
             this.NombreUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.NombreUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.NombreUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.NombreUsuario.DisabledState.Parent = this.NombreUsuario;
             this.NombreUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.NombreUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.NombreUsuario.FocusedState.Parent = this.NombreUsuario;
             this.NombreUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NombreUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.NombreUsuario.HoverState.Parent = this.NombreUsuario;
             this.NombreUsuario.Location = new System.Drawing.Point(264, 147);
             this.NombreUsuario.Name = "NombreUsuario";
             this.NombreUsuario.PasswordChar = '\0';
             this.NombreUsuario.PlaceholderText = "Correo electronico";
             this.NombreUsuario.SelectedText = "";
-            this.NombreUsuario.ShadowDecoration.Parent = this.NombreUsuario;
             this.NombreUsuario.Size = new System.Drawing.Size(200, 36);
             this.NombreUsuario.TabIndex = 0;
             // 
@@ -68,37 +64,28 @@ namespace Presentacion
             this.Contrasenausuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Contrasenausuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Contrasenausuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Contrasenausuario.DisabledState.Parent = this.Contrasenausuario;
             this.Contrasenausuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Contrasenausuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Contrasenausuario.FocusedState.Parent = this.Contrasenausuario;
             this.Contrasenausuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Contrasenausuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Contrasenausuario.HoverState.Parent = this.Contrasenausuario;
             this.Contrasenausuario.Location = new System.Drawing.Point(264, 215);
             this.Contrasenausuario.Name = "Contrasenausuario";
             this.Contrasenausuario.PasswordChar = '*';
             this.Contrasenausuario.PlaceholderText = "Contraseña";
             this.Contrasenausuario.SelectedText = "";
-            this.Contrasenausuario.ShadowDecoration.Parent = this.Contrasenausuario;
             this.Contrasenausuario.Size = new System.Drawing.Size(200, 36);
             this.Contrasenausuario.TabIndex = 1;
             // 
             // botonInicioSesion
             // 
-            this.botonInicioSesion.CheckedState.Parent = this.botonInicioSesion;
-            this.botonInicioSesion.CustomImages.Parent = this.botonInicioSesion;
             this.botonInicioSesion.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.botonInicioSesion.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.botonInicioSesion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.botonInicioSesion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.botonInicioSesion.DisabledState.Parent = this.botonInicioSesion;
             this.botonInicioSesion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.botonInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.botonInicioSesion.HoverState.Parent = this.botonInicioSesion;
             this.botonInicioSesion.Location = new System.Drawing.Point(264, 286);
             this.botonInicioSesion.Name = "botonInicioSesion";
-            this.botonInicioSesion.ShadowDecoration.Parent = this.botonInicioSesion;
             this.botonInicioSesion.Size = new System.Drawing.Size(200, 45);
             this.botonInicioSesion.TabIndex = 3;
             this.botonInicioSesion.Text = "LOGIN";
@@ -118,7 +105,8 @@ namespace Presentacion
             this.TextoInicioSesion.Name = "TextoInicioSesion";
             this.TextoInicioSesion.Size = new System.Drawing.Size(190, 33);
             this.TextoInicioSesion.TabIndex = 2;
-            this.TextoInicioSesion.Text = "Inicio de secion";
+            this.TextoInicioSesion.Text = "Inicio de sesión";
+            this.TextoInicioSesion.Click += new System.EventHandler(this.TextoInicioSesion_Click);
             // 
             // InicioSeccion
             // 

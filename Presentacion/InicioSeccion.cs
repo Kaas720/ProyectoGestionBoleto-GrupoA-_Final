@@ -8,7 +8,7 @@ namespace Presentacion
 {  
     public partial class InicioSeccion : Form
     {
-        ConsultasProcedimientos consulta = new ConsultasProcedimientos();
+        ConsultasProcedimientos consultar = new ConsultasProcedimientos();
         public InicioSeccion()
         {
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace Presentacion
         }
         private void ConsultarLoginBD(string correo, string password)
         {
-            List<int> IdPeronsaAndRol = consulta.Login(correo, password);
+            List<int> IdPeronsaAndRol = consultar.Login(correo, password);
             if (IdPeronsaAndRol[0] != 0)
             {
                 this.Close();

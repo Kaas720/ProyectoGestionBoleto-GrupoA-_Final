@@ -1,4 +1,17 @@
-﻿using Datos;
+﻿// ***********************************************************************
+// Assembly         : LogicaDeNegocios
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="Vendedor.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using Datos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -6,11 +19,31 @@ using System.Windows.Forms;
 
 namespace LogicaDeNegocios
 {
-   public class Vendedor: Persona
+    /// <summary>
+    /// Class Vendedor.
+    /// Implements the <see cref="LogicaDeNegocios.Persona" />
+    /// </summary>
+    /// <seealso cref="LogicaDeNegocios.Persona" />
+    public class Vendedor: Persona
     {
+        /// <summary>
+        /// The sueldo
+        /// </summary>
         private double sueldo;
+        /// <summary>
+        /// The credencial usuario
+        /// </summary>
         CredencialUsuario credencialUsuario;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Vendedor" /> class.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <param name="nombre">The nombre.</param>
+        /// <param name="sexo">The sexo.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="sueldo">The sueldo.</param>
+        /// <param name="credencialUsuario">The credencial usuario.</param>
         public Vendedor(string cedula, string nombre, string sexo, string telefono, double sueldo, CredencialUsuario credencialUsuario)
             :base(cedula, nombre, sexo, telefono)
         {
@@ -18,9 +51,21 @@ namespace LogicaDeNegocios
             this.credencialUsuario = credencialUsuario;
         }
 
+        /// <summary>
+        /// Gets or sets the sueldo.
+        /// </summary>
+        /// <value>The sueldo.</value>
         public double Sueldo { get => sueldo; set => sueldo = value; }
+        /// <summary>
+        /// Gets or sets the credencial usuario.
+        /// </summary>
+        /// <value>The credencial usuario.</value>
         public CredencialUsuario CredencialUsuario { get => credencialUsuario; set => credencialUsuario = value; }
 
+        /// <summary>
+        /// Insertars the vendedor.
+        /// </summary>
+        /// <param name="vendedor">The vendedor.</param>
         public void InsertarVendedor(Vendedor vendedor)
         {
             // Se llama a la clase conexion para hacer la conexion con la base de dados

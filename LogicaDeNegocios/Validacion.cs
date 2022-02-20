@@ -1,13 +1,34 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : LogicaDeNegocios
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="Validacion.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Windows.Forms;
 
 namespace LogicaDeNegocios
 {
-     // se crea la clase validacion
+    // se crea la clase validacion
+    /// <summary>
+    /// Class Validacion.
+    /// </summary>
     public class Validacion
     {
         // Se crea el metodo ValidarCedula para que los numeros de cedula sean igual a 10 digitos
+        /// <summary>
+        /// Validars the cedula.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool ValidarCedula(string cedula)
         {
             bool x = true;
@@ -19,6 +40,11 @@ namespace LogicaDeNegocios
         }
 
         // Se crea el metodo ValidarTelefono para que el numero de telefono para que permita solo ingresar 10 digitos
+        /// <summary>
+        /// Validars the telefono.
+        /// </summary>
+        /// <param name="telefono">The telefono.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool ValidarTelefono(string telefono)
         {
             bool campo = true;
@@ -29,6 +55,11 @@ namespace LogicaDeNegocios
             return campo;
         }
 
+        /// <summary>
+        /// Validars the licencia.
+        /// </summary>
+        /// <param name="licencia">The licencia.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool ValidarLicencia(string licencia)
         {
             bool campo = true;
@@ -38,6 +69,11 @@ namespace LogicaDeNegocios
             }
             return campo;
         }
+        /// <summary>
+        /// Validars the cod acceso.
+        /// </summary>
+        /// <param name="codAcceso">The cod acceso.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool ValidarCodAcceso(string codAcceso)
         {
             bool campo = true;
@@ -49,6 +85,11 @@ namespace LogicaDeNegocios
         }
 
         // Se crea el metodo validarEmail
+        /// <summary>
+        /// Validars the email.
+        /// </summary>
+        /// <param name="email">The email.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool validarEmail(string email)
         {
             if (email == null)
@@ -65,6 +106,11 @@ namespace LogicaDeNegocios
                 return false;
             }
         }
+        /// <summary>
+        /// Validars the sueldo.
+        /// </summary>
+        /// <param name="sueldo">The sueldo.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public bool ValidarSueldo(string sueldo)
         {
             bool bandera = true;

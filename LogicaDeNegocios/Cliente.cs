@@ -1,4 +1,17 @@
-﻿using Datos;
+﻿// ***********************************************************************
+// Assembly         : LogicaDeNegocios
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="Cliente.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using Datos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -6,27 +19,50 @@ using System.Windows.Forms;
 
 namespace LogicaDeNegocios
 {
-    /// Se crea la clase cliente que hereda de la clase credencial
-    
+    /// <summary>
+    /// <br />
+    /// </summary>
+    /// Se crea la clase cliente que hereda de la clase persona
+
     public class Cliente: Persona
     {
-        
+
+        /// <summary>
+        /// The credencial usuario
+        /// </summary>
         private CredencialUsuario credencialUsuario;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Cliente" /> class.
+        /// </summary>
         public Cliente() 
-        {
-            
-        }
+        { }
         // Se crea el constructor parametrizado y se invoca a base para hacer uso de la herencia
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:LogicaDeNegocios.Cliente" /> class.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <param name="nombre">The nombre.</param>
+        /// <param name="sexo">The sexo.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="credencialUsuario">The credencial usuario.</param>
         public Cliente(string cedula, string nombre, string sexo, string telefono, CredencialUsuario credencialUsuario) : base(cedula, nombre, sexo, telefono)
         {         
             this.credencialUsuario = credencialUsuario;
         }
 
+        /// <summary>
+        /// Gets or sets the credencial usuario.
+        /// </summary>
+        /// <value>The credencial usuario.</value>
         public CredencialUsuario CredencialUsuario { get => credencialUsuario; set => credencialUsuario = value; }
 
-            // Se crea el metodo insertar cliente 
-            public void InsertarCliente(Cliente client)
+        /// <summary>
+        /// Insertars the cliente.
+        /// </summary>
+        /// <param name="client">The client.</param>
+        public void InsertarCliente(Cliente client)
             {
                 // Se llama a la clase conexion para hacer la conexion con la base de dados
                 Conexion con = new Conexion();
@@ -57,8 +93,13 @@ namespace LogicaDeNegocios
                 }
 
             }
-            //public static Cliente ConsultarCliente(String cedula)
-            public List<Cliente> BuscarCliente(String cedula)
+        //public static Cliente ConsultarCliente(String cedula)
+        /// <summary>
+        /// Buscars the cliente.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <returns>List&lt;Cliente&gt;.</returns>
+        public List<Cliente> BuscarCliente(String cedula)
         {
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
@@ -84,6 +125,16 @@ namespace LogicaDeNegocios
             }
              return lista;
         }
+        /// <summary>
+        /// Actualizars the cliente.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <param name="nombre">The nombre.</param>
+        /// <param name="sexo">The sexo.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="correo">The correo.</param>
+        /// <param name="contrasena">The contrasena.</param>
+        /// <returns>System.String.</returns>
         public string ActualizarCliente(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena)
         {
             string mensaje = "";

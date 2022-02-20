@@ -1,21 +1,59 @@
-﻿using Datos;
+﻿// ***********************************************************************
+// Assembly         : LogicaDeNegocios
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="Administrador.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using Datos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
 
 namespace LogicaDeNegocios
 {
+    /// <summary>
+    /// Class Administrador.
+    /// Implements the <see cref="LogicaDeNegocios.Persona" />
+    /// </summary>
+    /// <seealso cref="LogicaDeNegocios.Persona" />
     public class Administrador: Persona
     {
+        /// <summary>
+        /// The credencial usuario
+        /// </summary>
         private CredencialUsuario credencialUsuario;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Administrador" /> class.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <param name="nombre">The nombre.</param>
+        /// <param name="sexo">The sexo.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="credencialUsuario">The credencial usuario.</param>
         public Administrador(string cedula, string nombre, string sexo, string telefono, CredencialUsuario credencialUsuario)
             :base(cedula, nombre, sexo, telefono)
         {
             this.credencialUsuario = credencialUsuario;
         }
+        /// <summary>
+        /// Gets or sets the credencial usuario.
+        /// </summary>
+        /// <value>The credencial usuario.</value>
         public CredencialUsuario CredencialUsuario { get => credencialUsuario; set => credencialUsuario = value; }
 
+        /// <summary>
+        /// Consultars the administrador.
+        /// </summary>
+        /// <param name="idPersona">The identifier persona.</param>
+        /// <returns>Administrador.</returns>
         public static Administrador ConsultarAdministrador(int idPersona)
         {
             Conexion con = new Conexion();

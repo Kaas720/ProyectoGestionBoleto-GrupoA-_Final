@@ -1,6 +1,24 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="EliminarClienteporAdmin.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion.SGA_Administrador
 {
+    /// <summary>
+    /// Class EliminarClienteporAdmin.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class EliminarClienteporAdmin
     {
         /// <summary>
@@ -225,14 +243,41 @@ namespace Presentacion.SGA_Administrador
 
         #endregion
 
+        /// <summary>
+        /// The data grid cliente
+        /// </summary>
         private Guna.UI2.WinForms.Guna2DataGridView DataGridCliente;
+        /// <summary>
+        /// The guna2 group box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        /// <summary>
+        /// The nombre cliente
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
+        /// <summary>
+        /// The cedula cliente
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn CedulaCliente;
+        /// <summary>
+        /// The correo cliente
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn CorreoCliente;
+        /// <summary>
+        /// The eliminar cliente
+        /// </summary>
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar_Cliente;
+        /// <summary>
+        /// The text cedula cliente
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtCedulaCliente;
+        /// <summary>
+        /// The guna2 HTML label1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        /// <summary>
+        /// The BTN consultar
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BtnConsultar;
     }
 }

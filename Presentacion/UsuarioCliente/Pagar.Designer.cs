@@ -1,6 +1,24 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="Pagar.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion.UsuarioCliente
 {
+    /// <summary>
+    /// Class Pagar.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class Pagar
     {
         /// <summary>
@@ -233,14 +251,41 @@ namespace Presentacion.UsuarioCliente
 
         #endregion
 
+        /// <summary>
+        /// The guna2 borderless form1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        /// <summary>
+        /// The guna2 group box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        /// <summary>
+        /// The BTN pagar
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Button btnPagar;
+        /// <summary>
+        /// The guna2 panel1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        /// <summary>
+        /// The boton retroceder
+        /// </summary>
         private FontAwesome.Sharp.IconButton BotonRetroceder;
+        /// <summary>
+        /// The inf boleto
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox InfBoleto;
+        /// <summary>
+        /// The guna2 picture box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        /// <summary>
+        /// The guna2 button2
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        /// <summary>
+        /// The guna2 HTML label9
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
     }
 }

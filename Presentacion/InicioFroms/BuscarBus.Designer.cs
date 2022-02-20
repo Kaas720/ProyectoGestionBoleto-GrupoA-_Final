@@ -1,6 +1,24 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="BuscarBus.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion.InicioFroms
 {
+    /// <summary>
+    /// Class BuscarBus.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class BuscarBus
     {
         /// <summary>
@@ -291,18 +309,57 @@ namespace Presentacion.InicioFroms
 
         #endregion
 
+        /// <summary>
+        /// The guna2 group box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        /// <summary>
+        /// The data grid inf
+        /// </summary>
         private Guna.UI2.WinForms.Guna2DataGridView DataGridInf;
+        /// <summary>
+        /// The cooperativa nombre
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Cooperativa_nombre;
+        /// <summary>
+        /// The hora salida
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora_Salida;
+        /// <summary>
+        /// The fecha salida
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaSalida;
+        /// <summary>
+        /// The costo pasaje
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo_pasaje;
+        /// <summary>
+        /// The boton dat grid
+        /// </summary>
         private System.Windows.Forms.DataGridViewButtonColumn Boton_DatGrid;
+        /// <summary>
+        /// The cb destino
+        /// </summary>
         private Guna.UI2.WinForms.Guna2ComboBox cbDestino;
+        /// <summary>
+        /// The cb origen
+        /// </summary>
         private Guna.UI2.WinForms.Guna2ComboBox cbOrigen;
+        /// <summary>
+        /// The guna2 HTML label6
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        /// <summary>
+        /// The guna2 HTML label5
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        /// <summary>
+        /// The cb cooperativa
+        /// </summary>
         private Guna.UI2.WinForms.Guna2ComboBox cbCooperativa;
+        /// <summary>
+        /// The guna2 HTML label3
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
     }
 }

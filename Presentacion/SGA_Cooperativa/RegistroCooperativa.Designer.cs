@@ -1,10 +1,31 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="RegistroCooperativa.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion
 {
+    /// <summary>
+    /// Class RegistroCooperativa.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class RegistroCooperativa
     {
         /// <summary>
         /// Required designer variable.
+        /// </summary>
+        /// <summary>
+        /// The components
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -12,6 +33,10 @@ namespace Presentacion
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <summary>
+        /// Se deshace de los recursos (distintos de la memoria) que usa <see cref="T:System.Windows.Forms.Form" />.
+        /// </summary>
+        /// <param name="disposing">Es <see langword="true" /> para liberar tanto recursos administrados como no administrados; es <see langword="false" /> para liberar únicamente recursos no administrados.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -26,6 +51,9 @@ namespace Presentacion
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
+        /// </summary>
+        /// <summary>
+        /// Initializes the component.
         /// </summary>
         private void InitializeComponent()
         {
@@ -604,37 +632,133 @@ namespace Presentacion
         }
 
         #endregion
+        /// <summary>
+        /// The text telefono
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtTelefono;
+        /// <summary>
+        /// The text propietario
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtPropietario;
+        /// <summary>
+        /// The text ruc
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtRuc;
+        /// <summary>
+        /// The guna2 HTML label8
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        /// <summary>
+        /// The guna2 HTML label5
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        /// <summary>
+        /// The guna2 HTML label4
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        /// <summary>
+        /// The guna2 HTML label3
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        /// <summary>
+        /// The guna2 HTML label2
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        /// <summary>
+        /// The guna2 HTML label1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        /// <summary>
+        /// The text contraseña
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtContraseña;
+        /// <summary>
+        /// The text correo
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtCorreo;
+        /// <summary>
+        /// The DGV cliente
+        /// </summary>
         private Guna.UI2.WinForms.Guna2DataGridView dgvCliente;
+        /// <summary>
+        /// The cedula
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Cedula;
+        /// <summary>
+        /// The nombre
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        /// <summary>
+        /// The sexo
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
+        /// <summary>
+        /// The telefono
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        /// <summary>
+        /// The correo
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        /// <summary>
+        /// The ciudad
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Ciudad;
+        /// <summary>
+        /// The usuario
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
+        /// <summary>
+        /// The contraseña
+        /// </summary>
         private System.Windows.Forms.DataGridViewTextBoxColumn Contraseña;
+        /// <summary>
+        /// The BTN guardar
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Button btnGuardar;
+        /// <summary>
+        /// The error provider1
+        /// </summary>
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        /// <summary>
+        /// The panel superior
+        /// </summary>
         private System.Windows.Forms.Panel PanelSuperior;
+        /// <summary>
+        /// The boton retroceder
+        /// </summary>
         private FontAwesome.Sharp.IconButton BotonRetroceder;
+        /// <summary>
+        /// The fecha sistema
+        /// </summary>
         private System.Windows.Forms.Label Fecha_Sistema;
+        /// <summary>
+        /// The boton para minimizar ventana
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
+        /// <summary>
+        /// The panel1
+        /// </summary>
         private System.Windows.Forms.Panel panel1;
+        /// <summary>
+        /// The guna2 picture box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        /// <summary>
+        /// The hora sistema
+        /// </summary>
         private System.Windows.Forms.Label Hora_Sistema;
+        /// <summary>
+        /// The guna2 HTML label9
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        /// <summary>
+        /// The fecha hora
+        /// </summary>
         private System.Windows.Forms.Timer FechaHora;
+        /// <summary>
+        /// The text cooperativa
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtCooperativa;
     }
 }

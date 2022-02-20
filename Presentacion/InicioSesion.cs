@@ -1,19 +1,47 @@
-﻿using LogicaDeNegocios;
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="InicioSesion.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using LogicaDeNegocios;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Presentacion
-{  
+{
+    /// <summary>
+    /// Class InicioSesion.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
     public partial class InicioSesion : Form
     {
+        /// <summary>
+        /// The consulta
+        /// </summary>
         ConsultasProcedimientos consulta = new ConsultasProcedimientos();
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InicioSesion" /> class.
+        /// </summary>
         public InicioSesion()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the Click event of the guna2Button1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string Usuario = NombreUsuario.Text;
@@ -42,6 +70,11 @@ namespace Presentacion
             }
            
         }
+        /// <summary>
+        /// Consultars the login bd.
+        /// </summary>
+        /// <param name="correo">The correo.</param>
+        /// <param name="password">The password.</param>
         private void ConsultarLoginBD(string correo, string password)
         {
             List<int> IdPeronsaAndRol = consulta.Login(correo, password);
@@ -76,6 +109,13 @@ namespace Presentacion
         }
 
         /*Metodo para validar si existen campos vacios*/
+        /// <summary>
+        /// Validacions the campos vacios.
+        /// </summary>
+        /// <param name="usuario">The usuario.</param>
+        /// <param name="password">The password.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        /// <exception cref="LogicaDeNegocios.ControlExcepcion">Campos vacios</exception>
         private bool ValidacionCamposVacios(string usuario, string password)
         {
             bool bandera;

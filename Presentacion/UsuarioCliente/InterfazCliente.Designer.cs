@@ -1,6 +1,24 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="InterfazCliente.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion
 {
+    /// <summary>
+    /// Class InterfazCliente.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class InterfazCliente
     {
         /// <summary>
@@ -370,25 +388,85 @@ namespace Presentacion
 
         #endregion
 
+        /// <summary>
+        /// The guna2 borderless form1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        /// <summary>
+        /// The panel2
+        /// </summary>
         private System.Windows.Forms.Panel panel2;
+        /// <summary>
+        /// The panel superior
+        /// </summary>
         private System.Windows.Forms.Panel PanelSuperior;
+        /// <summary>
+        /// The fecha sistema
+        /// </summary>
         private System.Windows.Forms.Label Fecha_Sistema;
+        /// <summary>
+        /// The boton para minimizar ventana
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
+        /// <summary>
+        /// The boton cierre de aplicacion
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
+        /// <summary>
+        /// The panel1
+        /// </summary>
         private System.Windows.Forms.Panel panel1;
+        /// <summary>
+        /// The guna2 picture box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        /// <summary>
+        /// The hora sistema
+        /// </summary>
         private System.Windows.Forms.Label Hora_Sistema;
+        /// <summary>
+        /// The timer1
+        /// </summary>
         private System.Windows.Forms.Timer timer1;
+        /// <summary>
+        /// The label4
+        /// </summary>
         private System.Windows.Forms.Label label4;
+        /// <summary>
+        /// The home
+        /// </summary>
         private FontAwesome.Sharp.IconButton Home;
+        /// <summary>
+        /// The guna2 panel1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        /// <summary>
+        /// The panel contenedor
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Panel PanelContenedor;
+        /// <summary>
+        /// The edit perfil
+        /// </summary>
         private FontAwesome.Sharp.IconButton EditPerfil;
+        /// <summary>
+        /// The close sesion
+        /// </summary>
         private FontAwesome.Sharp.IconButton CloseSesion;
+        /// <summary>
+        /// The rutas favoritas
+        /// </summary>
         private FontAwesome.Sharp.IconButton RutasFavoritas;
+        /// <summary>
+        /// The history
+        /// </summary>
         private FontAwesome.Sharp.IconButton History;
+        /// <summary>
+        /// The guna2 HTML label1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        /// <summary>
+        /// The guna2 circle picture box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
     }
 }

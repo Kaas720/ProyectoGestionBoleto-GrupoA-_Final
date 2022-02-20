@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="Pagar.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -6,28 +19,65 @@ using System.Windows.Forms;
 
 namespace Presentacion.UsuarioCliente
 {
+    /// <summary>
+    /// Class Pagar.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Pagar : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Pagar"/> class.
+        /// </summary>
+        /// <param name="texto">The texto.</param>
+        /// <param name="cooperativa">The cooperativa.</param>
+        /// <param name="fechaSalida">The fecha salida.</param>
+        /// <param name="horaSalida">The hora salida.</param>
         public Pagar(string texto,string cooperativa, string fechaSalida, string horaSalida)
         {
             InitializeComponent();
             InfBoleto.Text = texto;
         }
+        /// <summary>
+        /// Releases the capture.
+        /// </summary>
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+        /// <summary>
+        /// Sends the message.
+        /// </summary>
+        /// <param name="hwnd">The HWND.</param>
+        /// <param name="wmsg">The WMSG.</param>
+        /// <param name="wparam">The wparam.</param>
+        /// <param name="lparam">The lparam.</param>
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        /// <summary>
+        /// Handles the MouseMove event of the guna2Panel1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="MouseEventArgs"/> instance containing the event data.</param>
         private void guna2Panel1_MouseMove(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         //metodo para regresar a paginade conpra.
+        /// <summary>
+        /// Handles the Click event of the BotonRetroceder control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void BotonRetroceder_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Handles the Click event of the btnPagar control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void btnPagar_Click(object sender, EventArgs e)
         {
             

@@ -1,6 +1,24 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="PerfilAdminidtrador.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion.SGA_Administrador
 {
+    /// <summary>
+    /// Class PerfilAdminidtrador.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class PerfilAdminidtrador
     {
         /// <summary>
@@ -340,22 +358,73 @@ namespace Presentacion.SGA_Administrador
         }
 
         #endregion
+        /// <summary>
+        /// The text nombre
+        /// </summary>
         private System.Windows.Forms.Label txtNombre;
+        /// <summary>
+        /// The guna2 group box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        /// <summary>
+        /// The guna2 HTML label3
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        /// <summary>
+        /// The text password
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        /// <summary>
+        /// The text correo
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtCorreo;
+        /// <summary>
+        /// The text edad
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtEdad;
+        /// <summary>
+        /// The text telefono
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtTelefono;
+        /// <summary>
+        /// The text cedula
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtCedula;
+        /// <summary>
+        /// The text codigo
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtCodigo;
+        /// <summary>
+        /// The guna2 HTML label5
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        /// <summary>
+        /// The guna2 HTML label4
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        /// <summary>
+        /// The guna2 HTML label2
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        /// <summary>
+        /// The guna2 HTML label1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        /// <summary>
+        /// The editar buton
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Button EditarButon;
+        /// <summary>
+        /// The icon picture box2
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        /// <summary>
+        /// The guna2 circle picture box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        /// <summary>
+        /// The guna2 HTML label6
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
     }
 }

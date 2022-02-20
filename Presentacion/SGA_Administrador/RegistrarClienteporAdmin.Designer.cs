@@ -1,6 +1,24 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="RegistrarClienteporAdmin.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion.SGA_Administrador
 {
+    /// <summary>
+    /// Class RegistrarClienteporAdmin.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class RegistrarClienteporAdmin
     {
         /// <summary>
@@ -322,19 +340,61 @@ namespace Presentacion.SGA_Administrador
 
         #endregion
 
+        /// <summary>
+        /// The BTN guardar
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Button btnGuardar;
+        /// <summary>
+        /// The text contraseña
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtContraseña;
+        /// <summary>
+        /// The text correo
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtCorreo;
+        /// <summary>
+        /// The CMB sexo
+        /// </summary>
         private Guna.UI2.WinForms.Guna2ComboBox cmbSexo;
+        /// <summary>
+        /// The text telefono
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtTelefono;
+        /// <summary>
+        /// The text nombre
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtNombre;
+        /// <summary>
+        /// The text cedula
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtCedula;
+        /// <summary>
+        /// The guna2 HTML label8
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        /// <summary>
+        /// The guna2 HTML label5
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        /// <summary>
+        /// The guna2 HTML label4
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        /// <summary>
+        /// The guna2 HTML label3
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        /// <summary>
+        /// The guna2 HTML label2
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        /// <summary>
+        /// The guna2 HTML label1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        /// <summary>
+        /// The error provider1
+        /// </summary>
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

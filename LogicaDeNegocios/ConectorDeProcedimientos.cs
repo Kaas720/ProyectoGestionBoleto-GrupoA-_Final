@@ -1,4 +1,17 @@
-﻿using Datos;
+﻿// ***********************************************************************
+// Assembly         : LogicaDeNegocios
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="ConectorDeProcedimientos.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using Datos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -8,8 +21,17 @@ using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
-     class ConectorDeProcedimientos
+    /// <summary>
+    /// Class ConectorDeProcedimientos.
+    /// </summary>
+    class ConectorDeProcedimientos
     {
+        /// <summary>
+        /// Conectars the procedimiento.
+        /// </summary>
+        /// <param name="Procedimientos">The procedimientos.</param>
+        /// <param name="mySqlConnection">My SQL connection.</param>
+        /// <returns>MySqlCommand.</returns>
         public MySqlCommand ConectarProcedimiento(string Procedimientos, MySqlConnection mySqlConnection)
         {
             MySqlCommand mySqlCommand;

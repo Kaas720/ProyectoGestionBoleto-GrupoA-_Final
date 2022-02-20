@@ -1,6 +1,24 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="Comprar.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion
 {
+    /// <summary>
+    /// Class Comprar.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class Comprar
     {
         /// <summary>
@@ -687,39 +705,141 @@ namespace Presentacion
 
         #endregion
 
+        /// <summary>
+        /// The guna2 borderless form1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        /// <summary>
+        /// The guna2 HTML label9
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        /// <summary>
+        /// The guna2 HTML label8
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        /// <summary>
+        /// The guna2 HTML label7
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        /// <summary>
+        /// The guna2 HTML label6
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        /// <summary>
+        /// The guna2 HTML label5
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        /// <summary>
+        /// The guna2 HTML label4
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        /// <summary>
+        /// The guna2 HTML label3
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        /// <summary>
+        /// The guna2 HTML label1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        /// <summary>
+        /// The guna2 HTML label10
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        /// <summary>
+        /// The panel superior
+        /// </summary>
         private System.Windows.Forms.Panel PanelSuperior;
+        /// <summary>
+        /// The fecha sistema
+        /// </summary>
         private System.Windows.Forms.Label Fecha_Sistema;
+        /// <summary>
+        /// The boton para minimizar ventana
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
+        /// <summary>
+        /// The boton cierre de aplicacion
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
+        /// <summary>
+        /// The panel1
+        /// </summary>
         private System.Windows.Forms.Panel panel1;
+        /// <summary>
+        /// The guna2 picture box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        /// <summary>
+        /// The hora sistema
+        /// </summary>
         private System.Windows.Forms.Label Hora_Sistema;
+        /// <summary>
+        /// The guna2 group box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        /// <summary>
+        /// The carrito BTN
+        /// </summary>
         private FontAwesome.Sharp.IconButton CarritoBtn;
+        /// <summary>
+        /// The boton retroceder
+        /// </summary>
         private FontAwesome.Sharp.IconButton BotonRetroceder;
+        /// <summary>
+        /// The guna2 button1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        /// <summary>
+        /// The text precio
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtPrecio;
+        /// <summary>
+        /// The text nombre
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtNombre;
+        /// <summary>
+        /// The text cedula
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox txtCedula;
+        /// <summary>
+        /// The cb numero asientos
+        /// </summary>
         private Guna.UI2.WinForms.Guna2ComboBox CbNumeroAsientos;
+        /// <summary>
+        /// The text numero disco
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtNumeroDisco;
+        /// <summary>
+        /// The text cooperativa
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtCooperativa;
+        /// <summary>
+        /// The text destino
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtDestino;
+        /// <summary>
+        /// The text hora salida
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtHoraSalida;
+        /// <summary>
+        /// The text lugar salida
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtLugarSalida;
+        /// <summary>
+        /// The guna2 HTML label2
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        /// <summary>
+        /// The text fecha salida
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtFechaSalida;
+        /// <summary>
+        /// The timer1
+        /// </summary>
         private System.Windows.Forms.Timer timer1;
+        /// <summary>
+        /// The guna2 HTML label11
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
     }
 }

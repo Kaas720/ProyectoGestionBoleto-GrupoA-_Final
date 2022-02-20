@@ -1,6 +1,24 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="InicioSesion.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion
 {
+    /// <summary>
+    /// Class InicioSesion.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class InicioSesion
     {
         /// <summary>
@@ -131,10 +149,25 @@ namespace Presentacion
 
         #endregion
 
+        /// <summary>
+        /// The nombre usuario
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox NombreUsuario;
+        /// <summary>
+        /// The contrasenausuario
+        /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox Contrasenausuario;
+        /// <summary>
+        /// The boton inicio sesion
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Button botonInicioSesion;
+        /// <summary>
+        /// The fecha hora sistema
+        /// </summary>
         private System.Windows.Forms.Timer Fecha_Hora_Sistema;
+        /// <summary>
+        /// The texto inicio sesion
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel TextoInicioSesion;
     }
 }

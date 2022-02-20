@@ -1,8 +1,26 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="VentanaAdministrador.designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 using Presentacion;
 
 namespace Presentacion
 {
+    /// <summary>
+    /// Class VentanaAdministrador.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class VentanaAdministrador
     {
         /// <summary>
@@ -585,33 +603,117 @@ namespace Presentacion
 
         #endregion
 
+        /// <summary>
+        /// The panel superior
+        /// </summary>
         private System.Windows.Forms.Panel PanelSuperior;
+        /// <summary>
+        /// The panel4
+        /// </summary>
         private System.Windows.Forms.Panel panel4;
+        /// <summary>
+        /// The boton cierre de aplicacion
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
+        /// <summary>
+        /// The boton para minimizar ventana
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
+        /// <summary>
+        /// The botonregistras admin
+        /// </summary>
         private FontAwesome.Sharp.IconButton BotonregistrasAdmin;
+        /// <summary>
+        /// The fecha sistema
+        /// </summary>
         private System.Windows.Forms.Label Fecha_Sistema;
+        /// <summary>
+        /// The hora sistema
+        /// </summary>
         private System.Windows.Forms.Label Hora_Sistema;
+        /// <summary>
+        /// The label4
+        /// </summary>
         private System.Windows.Forms.Label label4;
+        /// <summary>
+        /// The fecha hora sistema
+        /// </summary>
         private System.Windows.Forms.Timer Fecha_Hora_Sistema;
+        /// <summary>
+        /// The guna2 picture box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        /// <summary>
+        /// The guna2 panel1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        /// <summary>
+        /// The panel principal contenedor
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Panel PanelPrincipalContenedor;
+        /// <summary>
+        /// The panel registro
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Panel PanelRegistro;
+        /// <summary>
+        /// The vendedor
+        /// </summary>
         private FontAwesome.Sharp.IconButton Vendedor;
+        /// <summary>
+        /// The chofer
+        /// </summary>
         private FontAwesome.Sharp.IconButton Chofer;
+        /// <summary>
+        /// The registrar cooperativa
+        /// </summary>
         private FontAwesome.Sharp.IconButton RegistrarCooperativa;
+        /// <summary>
+        /// The registrar cliente
+        /// </summary>
         private FontAwesome.Sharp.IconButton RegistrarCliente;
+        /// <summary>
+        /// The salir
+        /// </summary>
         private FontAwesome.Sharp.IconButton Salir;
+        /// <summary>
+        /// The gneral panel opciones
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Panel GneralPanelOpciones;
+        /// <summary>
+        /// The home
+        /// </summary>
         private FontAwesome.Sharp.IconButton Home;
+        /// <summary>
+        /// The panel eliminar
+        /// </summary>
         private Guna.UI2.WinForms.Guna2Panel PanelEliminar;
+        /// <summary>
+        /// The icon button2
+        /// </summary>
         private FontAwesome.Sharp.IconButton iconButton2;
+        /// <summary>
+        /// The icon button3
+        /// </summary>
         private FontAwesome.Sharp.IconButton iconButton3;
+        /// <summary>
+        /// The icon button4
+        /// </summary>
         private FontAwesome.Sharp.IconButton iconButton4;
+        /// <summary>
+        /// The icon button5
+        /// </summary>
         private FontAwesome.Sharp.IconButton iconButton5;
+        /// <summary>
+        /// The eliminar
+        /// </summary>
         private FontAwesome.Sharp.IconButton Eliminar;
+        /// <summary>
+        /// The exit
+        /// </summary>
         private FontAwesome.Sharp.IconButton Exit;
+        /// <summary>
+        /// The reporte
+        /// </summary>
         private FontAwesome.Sharp.IconButton Reporte;
     }
 }

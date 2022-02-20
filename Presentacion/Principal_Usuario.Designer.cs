@@ -1,6 +1,24 @@
-﻿
+﻿// ***********************************************************************
+// Assembly         : Presentacion
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="Principal_Usuario.Designer.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 namespace Presentacion
 {
+    /// <summary>
+    /// Class Principal_Usuario.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class Principal_Usuario
     {
         /// <summary>
@@ -302,21 +320,69 @@ namespace Presentacion
         }
 
         #endregion
+        /// <summary>
+        /// The boton registro usuario
+        /// </summary>
         private FontAwesome.Sharp.IconButton botonRegistroUsuario;
+        /// <summary>
+        /// The panel contenedor
+        /// </summary>
         private System.Windows.Forms.Panel PanelContenedor;
+        /// <summary>
+        /// The panel2
+        /// </summary>
         private System.Windows.Forms.Panel panel2;
+        /// <summary>
+        /// The panel superior
+        /// </summary>
         private System.Windows.Forms.Panel PanelSuperior;
+        /// <summary>
+        /// The fecha sistema
+        /// </summary>
         private System.Windows.Forms.Label Fecha_Sistema;
+        /// <summary>
+        /// The boton para minimizar ventana
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
+        /// <summary>
+        /// The boton cierre de aplicacion
+        /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
+        /// <summary>
+        /// The panel1
+        /// </summary>
         private System.Windows.Forms.Panel panel1;
+        /// <summary>
+        /// The hora sistema
+        /// </summary>
         private System.Windows.Forms.Label Hora_Sistema;
+        /// <summary>
+        /// The boton home
+        /// </summary>
         private FontAwesome.Sharp.IconButton BotonHome;
+        /// <summary>
+        /// The guna2 HTML label2
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        /// <summary>
+        /// The guna2 borderless form1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        /// <summary>
+        /// The guna2 picture box1
+        /// </summary>
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        /// <summary>
+        /// The timer1
+        /// </summary>
         private System.Windows.Forms.Timer timer1;
+        /// <summary>
+        /// The guna2 HTML label9
+        /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        /// <summary>
+        /// The boton inicio sesion
+        /// </summary>
         private FontAwesome.Sharp.IconButton BotonInicioSesion;
     }
 }

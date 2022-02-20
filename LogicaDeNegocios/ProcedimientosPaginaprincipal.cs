@@ -1,4 +1,17 @@
-﻿using Datos;
+﻿// ***********************************************************************
+// Assembly         : LogicaDeNegocios
+// Author           : USUARIO
+// Created          : 02-20-2022
+//
+// Last Modified By : USUARIO
+// Last Modified On : 02-20-2022
+// ***********************************************************************
+// <copyright file="ProcedimientosPaginaprincipal.cs" company="">
+//     Copyright ©  2021
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using Datos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -9,9 +22,21 @@ using System.Windows.Forms;
 
 namespace LogicaDeNegocios
 {
+    /// <summary>
+    /// Class ProcedimientosPaginaprincipal.
+    /// </summary>
     public class ProcedimientosPaginaprincipal
     {
+        /// <summary>
+        /// The con
+        /// </summary>
         Conexion con = new Conexion();
+        /// <summary>
+        /// Iniciases the seccion.
+        /// </summary>
+        /// <param name="correo">The correo.</param>
+        /// <param name="password">The password.</param>
+        /// <returns>List&lt;System.Int32&gt;.</returns>
         public List<int> IniciasSeccion(string correo, string password)
         {
             List<int> IdPeronsaAndRol = new List<int>();
@@ -36,6 +61,11 @@ namespace LogicaDeNegocios
             return IdPeronsaAndRol;
         }
 
+        /// <summary>
+        /// Buscars the numeros asientos.
+        /// </summary>
+        /// <param name="busId">The bus identifier.</param>
+        /// <returns>List&lt;System.String&gt;.</returns>
         public List<string> BuscarNumerosAsientos(int busId)
         {
             List<string> asientos = new List<string>();
@@ -58,6 +88,13 @@ namespace LogicaDeNegocios
             return asientos;
         }
 
+        /// <summary>
+        /// Buscars the boleto.
+        /// </summary>
+        /// <param name="cooperativa">The cooperativa.</param>
+        /// <param name="fechasalida">The fechasalida.</param>
+        /// <param name="horasalida">The horasalida.</param>
+        /// <returns>List&lt;GenerarInformacionBoleto&gt;.</returns>
         public List<GenerarInformacionBoleto> BuscarBoleto(string cooperativa, string fechasalida, string horasalida)
         {
             List<GenerarInformacionBoleto> newlist = new List<GenerarInformacionBoleto>();
@@ -88,6 +125,12 @@ namespace LogicaDeNegocios
             return newlist;
         }
 
+        /// <summary>
+        /// Cargars the cooperativa.
+        /// </summary>
+        /// <param name="origen">The origen.</param>
+        /// <param name="destino">The destino.</param>
+        /// <returns>List&lt;System.String&gt;.</returns>
         public List<string> CargarCooperativa(string origen, string destino)
         {
             List<string> cooperativa = new List<string>();
@@ -111,6 +154,13 @@ namespace LogicaDeNegocios
             return cooperativa;
         }
 
+        /// <summary>
+        /// Lllenars the data grid.
+        /// </summary>
+        /// <param name="origen">The origen.</param>
+        /// <param name="destino">The destino.</param>
+        /// <param name="cooperativa">The cooperativa.</param>
+        /// <param name="dataGridInf">The data grid inf.</param>
         public void LllenarDataGrid(string origen, string destino, string cooperativa, DataGridView dataGridInf)
         {
             try
@@ -137,6 +187,10 @@ namespace LogicaDeNegocios
                 MessageBox.Show("Error intentolo mas tarde" + ex);
             }
         }
+        /// <summary>
+        /// Cargars the ciudad.
+        /// </summary>
+        /// <returns>List&lt;System.String&gt;.</returns>
         public List<string> CargarCiudad()
         {
             List<string> ciudad = new List<string>();
@@ -158,6 +212,11 @@ namespace LogicaDeNegocios
             return ciudad;
         }
 
+        /// <summary>
+        /// Conectars the procedimiento.
+        /// </summary>
+        /// <param name="Procedimientos">The procedimientos.</param>
+        /// <returns>MySqlCommand.</returns>
         private MySqlCommand ConectarProcedimiento(string Procedimientos)
         {
             MySqlCommand mySqlCommand;

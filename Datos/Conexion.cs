@@ -1,7 +1,6 @@
 ﻿using MySqlConnector;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +25,7 @@ namespace Datos
                 Connection.ConnectionString = conexion_DB_externa;
                 Connection.Open();
             }
-            catch (SqlException x)
+            catch (MySqlException x)
             {
                 MessageBox.Show(x.ToString());
                
@@ -40,7 +39,7 @@ namespace Datos
             {
                 Connection.Close();
             }
-            catch (Exception x)
+            catch (MySqlException x)
             {
 
                 MessageBox.Show(x.ToString());

@@ -49,7 +49,7 @@ namespace Test
         public void RegistroCooperativa()
         {
             CredencialUsuario credencial = new CredencialUsuario("ecuatoriano@gmail.com", "ecuatori", 3);
-            Cooperativa cooperativa = new Cooperativa("0923737737", "Manuel Reyes", "Ecuatorino Pulman", "0984473847", credencial);
+            Cooperativa cooperativa = new Cooperativa("0923737737", "Manuel Reyes", "Ecuatoriano Pulman", "0938377636", credencial);
             var resultadoEsperado = coop.RegistrarCooperativa(cooperativa);
             var resultadoObtenido = true;
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);

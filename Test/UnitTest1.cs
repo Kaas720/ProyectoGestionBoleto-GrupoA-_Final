@@ -16,11 +16,11 @@ namespace Test
         [TestMethod]
         public void RegistroAdministrador()
         {
-            CredencialUsuario credencial = new CredencialUsuario("deiber@gmail.com", "Deiber1234", 1);
-            Administrador admin = new Administrador("0968387363", "Willian Encalada", "Masculino", "0987466344", "12345@88. @", 920.45, credencial);
-            var resultadoEsperado = adm.RegistrarAdministrador(admin);
-            var resultadoObtenido = true;
-            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+            //CredencialUsuario credencial = new CredencialUsuario("deiber@gmail.com", "Deiber1234", 1);
+           // Administrador admin = new Administrador("0968387363", "Willian Encalada", "Masculino", "0987466344", "12345@88. @", 920.45, credencial);
+           // var resultadoEsperado = adm.RegistrarAdministrador(admin);
+           // var resultadoObtenido = true;
+           // Assert.AreEqual(resultadoEsperado, resultadoObtenido);
         }
 
         /// <summary>
@@ -41,16 +41,16 @@ namespace Test
 
         /// <summary>
         /// CP-003
-        /// Registro de vendedor
-        /// Prueba unitaria que registra el vendedor en la cual se envia los datos a ser registrados
+        /// Registro de cooperativa
+        /// Prueba unitaria que registra la cooperativa la cual envia los datos a ser registrados
         /// </summary>
-        AdmVendedor adv = new AdmVendedor();
+        AdmCooperativa coop = new AdmCooperativa();
         [TestMethod]
-        public void RegistroVendedor()
+        public void RegistroCooperativa()
         {
-            CredencialUsuario credencial = new CredencialUsuario("maria@hotmail.com", "marial12345", 3);
-            Vendedor vendedor = new Vendedor("1938373374", "Maria Hurtado", "Femenino", "0984473847", 586.98, credencial);
-            var resultadoEsperado = adv.RegistrarVendedor(vendedor);
+            CredencialUsuario credencial = new CredencialUsuario("ecuatoriano@gmail.com", "ecuatori", 3);
+            Cooperativa cooperativa = new Cooperativa("0923737737", "Manuel Reyes", "Ecuatorino Pulman", "0984473847", credencial);
+            var resultadoEsperado = coop.RegistrarCooperativa(cooperativa);
             var resultadoObtenido = true;
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
         }
@@ -70,13 +70,29 @@ namespace Test
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
         }
 
+        /// <summary>
+        /// CP-005
+        /// Registro de vendedor
+        /// Prueba unitaria que registra el vendedor en la cual se envia los datos a ser registrados
+        /// </summary>
+        AdmVendedor adv = new AdmVendedor();
         [TestMethod]
+        public void RegistroVendedor()
+        {
+            CredencialUsuario credencial = new CredencialUsuario("maria@hotmail.com", "marial12345", 5);
+            Vendedor vendedor = new Vendedor("1938373374", "Maria Hurtado", "Femenino", "0984473847", 586.98, credencial);
+            var resultadoEsperado = adv.RegistrarVendedor(vendedor);
+            var resultadoObtenido = true;
+            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+        }
+
+       /* [TestMethod]
         public void PruebaInicioSeccion()
         {
             ConsultasProcedimientos consultasProcedimientos = new ConsultasProcedimientos();
             int result = consultasProcedimientos.Login("Kaas7520@hotmail.com", "1234");
             Assert.AreEqual(0, result);
-        }
+        }*/
         [TestMethod]
         public void PruebaValidacionCedula()
         {

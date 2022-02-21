@@ -79,28 +79,31 @@ namespace Presentacion
         {
             List<int> IdPeronsaAndRol = consulta.Login(correo, password);
             int rol = IdPeronsaAndRol[0];
-            int Idperson = IdPeronsaAndRol[1];
+            //int Idperson = IdPeronsaAndRol[1];
             if (rol != 0)
             {
-                this.Close();
+                // this.Close();
+                Program.principal.Hide();
                 switch (rol)
                 {
-                    case 1: 
-                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idperson);
+                    case 1:
+                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
+                        //VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idperson);
                         Program.principal.Hide();
                         ventanaAdministrador.ShowDialog();
                         break;
                     case 2:
-                        VentanaAdministrador v = new VentanaAdministrador(Idperson);
-                        v.ShowDialog();
+                     //   VentanaAdministrador v = new VentanaAdministrador(Idperson);
+                       // v.ShowDialog();
                         break;
                     case 3:
-                        VentanaAdministrador c = new VentanaAdministrador(Idperson);
+                        RegistroVendedor c = new RegistroVendedor();
                         c.ShowDialog();
                         break;
                     case 4:
                         InterfazCliente cs = new InterfazCliente(2);
                         Program.principal.Hide();
+                       // this.Hide();
                         cs.ShowDialog();
                         //Console.WriteLine("4");
                         break;

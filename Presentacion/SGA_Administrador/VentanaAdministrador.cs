@@ -80,18 +80,19 @@ namespace Presentacion
         /// Initializes a new instance of the <see cref="VentanaAdministrador"/> class.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-        public VentanaAdministrador(int idPersona)
+        public VentanaAdministrador()//(int idPersona)
         {
             InitializeComponent();
-            this.idPersona = idPersona;
             IniciarFromdelPanelPrincipal();
+            this.idPersona = idPersona;
         }
         /// <summary>
         /// Iniciars the fromdel panel principal.
         /// </summary>
         public void IniciarFromdelPanelPrincipal()
         {
-            PerfilAdminidtrador Frm = new PerfilAdminidtrador(4);
+            //   PerfilAdminidtrador Frm = new PerfilAdminidtrador(1);
+            VentanaAdministrador Frm = new VentanaAdministrador();
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();

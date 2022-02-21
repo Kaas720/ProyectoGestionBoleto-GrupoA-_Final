@@ -118,7 +118,13 @@ namespace Presentacion
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void CloseSesion_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("¿Está seguro de cerrar la sesión?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Hide();
+                Principal_Usuario principal = new Principal_Usuario();
+                principal.Show();
+            }        
+            
         }
 
         /// <summary>

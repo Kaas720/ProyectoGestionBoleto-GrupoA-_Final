@@ -77,7 +77,7 @@ namespace Presentacion
             // Al validar que los campos se llenaron correctamente se guarda el regitro y se envia al formulario cliente
                 if (validar())
                 {
-                    CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,3);
+                    CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,5);
                     Vendedor vendedor = new Vendedor(cedula, nombre, sexo, telefono, Convert.ToDouble(sueldo), credencial);
                    adm.RegistrarVendedor(vendedor);
                     MessageBox.Show("Registro de vendedor realizado con éxito");

@@ -76,12 +76,12 @@ namespace Presentacion
             // Al validar que los campos se llenaron correctamente se guarda el regitro y se envia al formulario cliente
                 if (validar())
                 {
-                    CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,4);
+                    CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,3);
                     Cooperativa registrar = new Cooperativa(ruc, propietario, cooperativa, telefono, credencial);
                     registro.RegistrarCooperativa(registrar);
                     MessageBox.Show("Registro de cooperativa realizado con éxito");
                     Limpiar();
-                     Program.principal.Hide();
+                     //Program.principal.Hide();
                    // InterfazCliente interfazCliente= new InterfazCliente();
                     //interfazCliente.Show();
                 }

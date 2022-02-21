@@ -11,6 +11,8 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+using Datos;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -93,8 +95,35 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="cooperativa">The cooperativa.</param>
         public void InsertarCooperativa(Cooperativa cooperativa)
-        {
+        { //spl_insertarCooperativa
 
+            // Se llama a la clase conexion para hacer la conexion con la base de dados
+            Conexion con = new Conexion();
+            // Se llama a la clase  ConectorDeProcedimientos y se crea el objeto conector que permite realizar el procedimiento de inserta un nuevo cliente
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            try
+            {
+                List<Cooperativa> lista = new List<Cooperativa>();
+                lista.Add(cooperativa);
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_insertarCooperativa", con.conectar());
+                foreach (Cooperativa Coop in lista)
+                {
+                    mySqlCommand.Parameters.AddWithValue("@Ruc", Coop.Ruc);
+                    mySqlCommand.Parameters.AddWithValue("@Propietario", Coop.Propietario);
+                    mySqlCommand.Parameters.AddWithValue("@NombreCooperativa", Coop.NombreCooperativa);
+                    mySqlCommand.Parameters.AddWithValue("@Telefono", Coop.Telefono);
+                    mySqlCommand.Parameters.AddWithValue("@Correo", Coop.CredencialUsuario.Correo);
+                    mySqlCommand.Parameters.AddWithValue("@Contrasena", Coop.CredencialUsuario.Contrasena);
+                    mySqlCommand.Parameters.AddWithValue("@Foreking_RolesUsuario", Coop.CredencialUsuario.Rol);
+                }
+                mySqlCommand.ExecuteReader();
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+
+                Console.WriteLine(ex);
+            }
         }
         }
     }

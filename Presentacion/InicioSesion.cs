@@ -79,7 +79,7 @@ namespace Presentacion
         {
             List<int> IdPeronsaAndRol = consulta.Login(correo, password);
             int rol = IdPeronsaAndRol[0];
-            //int Idperson = IdPeronsaAndRol[1];
+            int Idperson = IdPeronsaAndRol[1];
             if (rol != 0)
             {
                 // this.Close();
@@ -87,8 +87,7 @@ namespace Presentacion
                 switch (rol)
                 {
                     case 1:
-                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
-                        //VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idperson);
+                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idperson);
                         Program.principal.Hide();
                         ventanaAdministrador.ShowDialog();
                         break;

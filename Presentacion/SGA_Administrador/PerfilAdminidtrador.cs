@@ -51,18 +51,11 @@ namespace Presentacion.SGA_Administrador
         /// <param name="idPersona">The identifier persona.</param>
         private void LlenarInformacion(int idPersona)
         {
-            List<Administrador> Admin = admAdministrador.ConsultaAdmin(idPersona);
-            if (Admin.Count==0)
+            List<Administrador> Administrador = admAdministrador.ConsultaAdmin(idPersona);
+            foreach(Administrador admin in Administrador)
             {
-                MessageBox.Show("NO HAY OBJETO");
-            }
-            else
-            {
-                MessageBox.Show("si HAY OBJETO");
-            }
-            foreach(Administrador admin in Admin)
-            {
-                Console.WriteLine("HOLA" + admin.Cedula);
+                txtCedula.Text = admin.Cedula;
+                txtNombre.Text = admin.Nombre;
             }
             
         }

@@ -270,5 +270,45 @@ namespace Presentacion
             Frm.Show();
             OcultarPaneles(PanelRegistro, PanelEliminar);
         }
+
+        private void EliminarCliente_Click(object sender, EventArgs e)
+        {
+            this.PanelPrincipalContenedor.Controls.Clear();
+            EliminarClienteporAdmin Frm = new EliminarClienteporAdmin();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+            OcultarPaneles(PanelRegistro, PanelEliminar);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.PanelPrincipalContenedor.Controls.Clear();
+            EliminarCooperativa Frm = new EliminarCooperativa();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+            OcultarPaneles(PanelRegistro, PanelEliminar);
+        }
+
+        private void EliminarChofer_Click(object sender, EventArgs e)
+        {
+            this.PanelPrincipalContenedor.Controls.Clear();
+            EliminarChofer Frm = new EliminarChofer();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+            OcultarPaneles(PanelRegistro, PanelEliminar);
+        }
+
+        private void EliminarVendedor_Click(object sender, EventArgs e)
+        {
+            this.PanelPrincipalContenedor.Controls.Clear();
+            EliminarVendedor Frm = new EliminarVendedor();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+            OcultarPaneles(PanelRegistro, PanelEliminar);
+        }
     }
 }

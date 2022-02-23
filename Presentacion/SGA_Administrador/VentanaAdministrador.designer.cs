@@ -58,10 +58,10 @@ namespace Presentacion
             this.Exit = new FontAwesome.Sharp.IconButton();
             this.Reporte = new FontAwesome.Sharp.IconButton();
             this.PanelEliminar = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.EliminarVendedor = new FontAwesome.Sharp.IconButton();
+            this.EliminarChofer = new FontAwesome.Sharp.IconButton();
+            this.EliminarCooperativa = new FontAwesome.Sharp.IconButton();
+            this.EliminarCliente = new FontAwesome.Sharp.IconButton();
             this.Eliminar = new FontAwesome.Sharp.IconButton();
             this.PanelRegistro = new Guna.UI2.WinForms.Guna2Panel();
             this.Vendedor = new FontAwesome.Sharp.IconButton();
@@ -213,10 +213,10 @@ namespace Presentacion
             // PanelEliminar
             // 
             this.PanelEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.PanelEliminar.Controls.Add(this.iconButton2);
-            this.PanelEliminar.Controls.Add(this.iconButton3);
-            this.PanelEliminar.Controls.Add(this.iconButton4);
-            this.PanelEliminar.Controls.Add(this.iconButton5);
+            this.PanelEliminar.Controls.Add(this.EliminarVendedor);
+            this.PanelEliminar.Controls.Add(this.EliminarChofer);
+            this.PanelEliminar.Controls.Add(this.EliminarCooperativa);
+            this.PanelEliminar.Controls.Add(this.EliminarCliente);
             this.PanelEliminar.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelEliminar.Location = new System.Drawing.Point(0, 446);
             this.PanelEliminar.Name = "PanelEliminar";
@@ -224,97 +224,101 @@ namespace Presentacion
             this.PanelEliminar.TabIndex = 6;
             this.PanelEliminar.Visible = false;
             // 
-            // iconButton2
+            // EliminarVendedor
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 55;
-            this.iconButton2.Location = new System.Drawing.Point(0, 159);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(188, 53);
-            this.iconButton2.TabIndex = 4;
-            this.iconButton2.Text = "VENDEDOR";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.EliminarVendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.EliminarVendedor.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.EliminarVendedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EliminarVendedor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.EliminarVendedor.FlatAppearance.BorderSize = 0;
+            this.EliminarVendedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarVendedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.EliminarVendedor.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.EliminarVendedor.IconColor = System.Drawing.Color.White;
+            this.EliminarVendedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.EliminarVendedor.IconSize = 55;
+            this.EliminarVendedor.Location = new System.Drawing.Point(0, 159);
+            this.EliminarVendedor.Margin = new System.Windows.Forms.Padding(2);
+            this.EliminarVendedor.Name = "EliminarVendedor";
+            this.EliminarVendedor.Size = new System.Drawing.Size(188, 53);
+            this.EliminarVendedor.TabIndex = 4;
+            this.EliminarVendedor.Text = "VENDEDOR";
+            this.EliminarVendedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.EliminarVendedor.UseVisualStyleBackColor = false;
+            this.EliminarVendedor.Click += new System.EventHandler(this.EliminarVendedor_Click);
             // 
-            // iconButton3
+            // EliminarChofer
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 55;
-            this.iconButton3.Location = new System.Drawing.Point(0, 106);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(188, 53);
-            this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "CHOFER";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.EliminarChofer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.EliminarChofer.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.EliminarChofer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EliminarChofer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.EliminarChofer.FlatAppearance.BorderSize = 0;
+            this.EliminarChofer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarChofer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarChofer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.EliminarChofer.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.EliminarChofer.IconColor = System.Drawing.Color.White;
+            this.EliminarChofer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.EliminarChofer.IconSize = 55;
+            this.EliminarChofer.Location = new System.Drawing.Point(0, 106);
+            this.EliminarChofer.Margin = new System.Windows.Forms.Padding(2);
+            this.EliminarChofer.Name = "EliminarChofer";
+            this.EliminarChofer.Size = new System.Drawing.Size(188, 53);
+            this.EliminarChofer.TabIndex = 3;
+            this.EliminarChofer.Text = "CHOFER";
+            this.EliminarChofer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.EliminarChofer.UseVisualStyleBackColor = false;
+            this.EliminarChofer.Click += new System.EventHandler(this.EliminarChofer_Click);
             // 
-            // iconButton4
+            // EliminarCooperativa
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 55;
-            this.iconButton4.Location = new System.Drawing.Point(0, 53);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(188, 53);
-            this.iconButton4.TabIndex = 2;
-            this.iconButton4.Text = "COOPERATIVA";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.EliminarCooperativa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.EliminarCooperativa.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.EliminarCooperativa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EliminarCooperativa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.EliminarCooperativa.FlatAppearance.BorderSize = 0;
+            this.EliminarCooperativa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarCooperativa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarCooperativa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.EliminarCooperativa.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.EliminarCooperativa.IconColor = System.Drawing.Color.White;
+            this.EliminarCooperativa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.EliminarCooperativa.IconSize = 55;
+            this.EliminarCooperativa.Location = new System.Drawing.Point(0, 53);
+            this.EliminarCooperativa.Margin = new System.Windows.Forms.Padding(2);
+            this.EliminarCooperativa.Name = "EliminarCooperativa";
+            this.EliminarCooperativa.Size = new System.Drawing.Size(188, 53);
+            this.EliminarCooperativa.TabIndex = 2;
+            this.EliminarCooperativa.Text = "COOPERATIVA";
+            this.EliminarCooperativa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.EliminarCooperativa.UseVisualStyleBackColor = false;
+            this.EliminarCooperativa.Click += new System.EventHandler(this.iconButton4_Click);
             // 
-            // iconButton5
+            // EliminarCliente
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.PanNW;
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 55;
-            this.iconButton5.Location = new System.Drawing.Point(0, 0);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(188, 53);
-            this.iconButton5.TabIndex = 1;
-            this.iconButton5.Text = "CLIENTE";
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = false;
+            this.EliminarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.EliminarCliente.Cursor = System.Windows.Forms.Cursors.PanNW;
+            this.EliminarCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EliminarCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
+            this.EliminarCliente.FlatAppearance.BorderSize = 0;
+            this.EliminarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EliminarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
+            this.EliminarCliente.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.EliminarCliente.IconColor = System.Drawing.Color.White;
+            this.EliminarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.EliminarCliente.IconSize = 55;
+            this.EliminarCliente.Location = new System.Drawing.Point(0, 0);
+            this.EliminarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.EliminarCliente.Name = "EliminarCliente";
+            this.EliminarCliente.Size = new System.Drawing.Size(188, 53);
+            this.EliminarCliente.TabIndex = 1;
+            this.EliminarCliente.Text = "CLIENTE";
+            this.EliminarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.EliminarCliente.UseVisualStyleBackColor = false;
+            this.EliminarCliente.Click += new System.EventHandler(this.EliminarCliente_Click);
             // 
             // Eliminar
             // 
@@ -705,19 +709,19 @@ namespace Presentacion
         /// <summary>
         /// The icon button2
         /// </summary>
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton EliminarVendedor;
         /// <summary>
         /// The icon button3
         /// </summary>
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton EliminarChofer;
         /// <summary>
         /// The icon button4
         /// </summary>
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton EliminarCooperativa;
         /// <summary>
         /// The icon button5
         /// </summary>
-        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton EliminarCliente;
         /// <summary>
         /// The eliminar
         /// </summary>

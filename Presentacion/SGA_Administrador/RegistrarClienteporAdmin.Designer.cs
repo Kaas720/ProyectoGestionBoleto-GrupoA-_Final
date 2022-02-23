@@ -70,16 +70,16 @@ namespace Presentacion.SGA_Administrador
             // btnGuardar
             // 
             this.btnGuardar.AutoRoundedCorners = true;
-            this.btnGuardar.BorderRadius = 21;
+            this.btnGuardar.BorderRadius = 14;
             this.btnGuardar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnGuardar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnGuardar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnGuardar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(259, 303);
+            this.btnGuardar.Location = new System.Drawing.Point(270, 295);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(144, 45);
+            this.btnGuardar.Size = new System.Drawing.Size(124, 30);
             this.btnGuardar.TabIndex = 48;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -299,9 +299,9 @@ namespace Presentacion.SGA_Administrador
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(144)))), ((int)(((byte)(176)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(12, 41);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(30, 25);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(651, 367);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(651, 340);
             this.guna2GroupBox1.TabIndex = 49;
             this.guna2GroupBox1.Text = "REGISTRO CLIENTE";
             // 
@@ -311,7 +311,7 @@ namespace Presentacion.SGA_Administrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(675, 433);
+            this.ClientSize = new System.Drawing.Size(713, 389);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistrarClienteporAdmin";

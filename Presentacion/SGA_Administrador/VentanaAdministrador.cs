@@ -37,7 +37,7 @@ namespace Presentacion
         /// <summary>
         /// The color botone seleccionado
         /// </summary>
-        Color colorBotoneSeleccionado = Color.FromArgb(36, 66, 86);
+        Color colorBotoneSeleccionado = Color.FromArgb(48, 88, 115);
         /// <summary>
         /// The color botone original
         /// </summary>
@@ -99,6 +99,7 @@ namespace Presentacion
             iconButton = Home;            
             iconButton.ForeColor = colorBotoneSeleccionado;
             iconButton.IconColor = colorBotoneSeleccionado;
+            iconButton.BackColor = Color.FromArgb(58, 200, 248);
         }
         /*private void BotonEliminarAdmin_Click(object sender, EventArgs e)
         {
@@ -127,9 +128,16 @@ namespace Presentacion
             else
             {
                 verificarBoton = true;
+            }  
+            if (PanelRegistro.Visible == false)
+            {
+                PanelRegistro.Visible = true;
             }
-            OcultarPaneles(PanelRegistro);
-            PanelEliminar.Visible = false;
+            else
+            {
+                OcultarPaneles(PanelRegistro, PanelEliminar);
+            }
+            
             
         }
         /// <summary>
@@ -154,8 +162,14 @@ namespace Presentacion
             {
                 verificarBotonEliminar = true;
             }
-            OcultarPaneles(PanelEliminar);
-            PanelRegistro.Visible = false; 
+            if (PanelEliminar.Visible == false)
+            {
+                PanelEliminar.Visible = true;
+            }
+            else
+            {
+                OcultarPaneles(PanelRegistro, PanelEliminar);
+            }
         }
         /// <summary>
         /// Handles the Click event of the Home control.
@@ -164,29 +178,25 @@ namespace Presentacion
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Home_Click(object sender, EventArgs e)
         {
-            GenerarNuevoColorBoton(sender);
-            RestablecerColorOriginalBotones();
             this.PanelPrincipalContenedor.Controls.Clear();
             PerfilAdminidtrador Frm = new PerfilAdminidtrador(idPersona);
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();
+            RestablecerColorOriginalBotones();
+            GenerarNuevoColorBoton(sender);
+            OcultarPaneles(PanelRegistro, PanelEliminar);
         }
 
         /// <summary>
         /// Ocultars the paneles.
         /// </summary>
         /// <param name="panel">The panel.</param>
-        private void OcultarPaneles(Guna2Panel panel)
+        private void OcultarPaneles(Guna2Panel panel, Guna2Panel panel2)
         {
-            if (panel.Visible == true)
-            {
                 panel.Visible = false;
-            }
-            else
-            {
-                panel.Visible = true;
-            }
+                panel2.Visible = false;
+
         }
 
         /// <summary>
@@ -198,6 +208,7 @@ namespace Presentacion
             iconButton = (IconButton)sender;
             iconButton.IconColor = colorBotoneSeleccionado;
             iconButton.ForeColor = colorBotoneSeleccionado;
+            iconButton.BackColor = Color.FromArgb(58, 200, 248);
         }
 
         /// <summary>
@@ -207,7 +218,7 @@ namespace Presentacion
         {
             iconButton.IconColor = colorBotoneOriginal;
             iconButton.ForeColor = colorBotoneOriginal;
-
+            iconButton.BackColor = Color.FromArgb(66, 121, 158);
         }
 
         /// <summary>
@@ -244,14 +255,20 @@ namespace Presentacion
             WindowState = FormWindowState.Minimized;
         }
 
-        
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.principal.Show();
+        }
 
-
-
-        /* private void iconButton4_Click(object sender, EventArgs e)
-         {
-             this.Close();
-             Program.principal.Show();
-         }*/
+        private void RegistrarCliente_Click(object sender, EventArgs e)
+        {
+            this.PanelPrincipalContenedor.Controls.Clear();
+            RegistrarClienteporAdmin Frm = new RegistrarClienteporAdmin();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+            OcultarPaneles(PanelRegistro, PanelEliminar);
+        }
     }
 }

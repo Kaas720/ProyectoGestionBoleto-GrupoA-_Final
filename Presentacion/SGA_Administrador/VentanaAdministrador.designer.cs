@@ -166,6 +166,7 @@ namespace Presentacion
             // Exit
             // 
             this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.Exit.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.Exit.Dock = System.Windows.Forms.DockStyle.Top;
             this.Exit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.Exit.FlatAppearance.BorderSize = 0;
@@ -184,10 +185,12 @@ namespace Presentacion
             this.Exit.Text = "CERRAR SESION";
             this.Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Reporte
             // 
             this.Reporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.Reporte.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.Reporte.Dock = System.Windows.Forms.DockStyle.Top;
             this.Reporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.Reporte.FlatAppearance.BorderSize = 0;
@@ -223,7 +226,8 @@ namespace Presentacion
             // 
             // iconButton2
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.iconButton2.FlatAppearance.BorderSize = 0;
@@ -245,7 +249,8 @@ namespace Presentacion
             // 
             // iconButton3
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.iconButton3.FlatAppearance.BorderSize = 0;
@@ -267,7 +272,8 @@ namespace Presentacion
             // 
             // iconButton4
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.iconButton4.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.iconButton4.FlatAppearance.BorderSize = 0;
@@ -289,7 +295,8 @@ namespace Presentacion
             // 
             // iconButton5
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.iconButton5.FlatAppearance.BorderSize = 0;
@@ -312,6 +319,7 @@ namespace Presentacion
             // Eliminar
             // 
             this.Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.Eliminar.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.Eliminar.Dock = System.Windows.Forms.DockStyle.Top;
             this.Eliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.Eliminar.FlatAppearance.BorderSize = 0;
@@ -349,6 +357,7 @@ namespace Presentacion
             // Vendedor
             // 
             this.Vendedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.Vendedor.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.Vendedor.Dock = System.Windows.Forms.DockStyle.Top;
             this.Vendedor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.Vendedor.FlatAppearance.BorderSize = 0;
@@ -371,6 +380,7 @@ namespace Presentacion
             // Chofer
             // 
             this.Chofer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.Chofer.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.Chofer.Dock = System.Windows.Forms.DockStyle.Top;
             this.Chofer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.Chofer.FlatAppearance.BorderSize = 0;
@@ -393,6 +403,7 @@ namespace Presentacion
             // RegistrarCooperativa
             // 
             this.RegistrarCooperativa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.RegistrarCooperativa.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.RegistrarCooperativa.Dock = System.Windows.Forms.DockStyle.Top;
             this.RegistrarCooperativa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.RegistrarCooperativa.FlatAppearance.BorderSize = 0;
@@ -415,6 +426,7 @@ namespace Presentacion
             // RegistrarCliente
             // 
             this.RegistrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.RegistrarCliente.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.RegistrarCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.RegistrarCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.RegistrarCliente.FlatAppearance.BorderSize = 0;
@@ -433,10 +445,12 @@ namespace Presentacion
             this.RegistrarCliente.Text = "CLIENTE";
             this.RegistrarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RegistrarCliente.UseVisualStyleBackColor = false;
+            this.RegistrarCliente.Click += new System.EventHandler(this.RegistrarCliente_Click);
             // 
             // BotonregistrasAdmin
             // 
             this.BotonregistrasAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.BotonregistrasAdmin.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.BotonregistrasAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.BotonregistrasAdmin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.BotonregistrasAdmin.FlatAppearance.BorderSize = 0;
@@ -460,6 +474,7 @@ namespace Presentacion
             // Home
             // 
             this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.Home.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.Home.Dock = System.Windows.Forms.DockStyle.Top;
             this.Home.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(27)))), ((int)(((byte)(32)))));
             this.Home.FlatAppearance.BorderSize = 0;
@@ -475,7 +490,7 @@ namespace Presentacion
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(188, 78);
             this.Home.TabIndex = 1;
-            this.Home.Text = "Principal";
+            this.Home.Text = "PRINCIPAL";
             this.Home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Home.UseVisualStyleBackColor = false;
             this.Home.Click += new System.EventHandler(this.Home_Click);

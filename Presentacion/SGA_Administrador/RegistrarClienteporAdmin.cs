@@ -140,5 +140,66 @@ namespace Presentacion.SGA_Administrador
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        /// <summary>
+        /// Handles the KeyPress event of the txtCedula control.
+        ///  El evento valida que el textBox solo reciba solo numeros. 
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Handles the KeyPress event of the txtNombre control.
+        /// El evento valida que el textBox solo reciba letras.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) &&
+                 (e.KeyChar != Convert.ToChar(Keys.Space)))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Handles the KeyPress event of the txtCorreo control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) && (e.KeyChar
+               != Convert.ToChar(Keys.Space) && (e.KeyChar != '@' && (e.KeyChar != '.')) && !char.IsNumber(e.KeyChar)))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        /// <summary>
+        /// Handles the KeyPress event of the txtTelefono control.
+        /// El evento valida que el textBox solo reciba numeros.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

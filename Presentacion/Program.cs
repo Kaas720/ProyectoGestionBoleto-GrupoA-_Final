@@ -40,10 +40,10 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(principal = new Principal_Usuario());
+            Application.Run(principal = new Principal_Usuario());
             //Application.Run(new VentanaAdministrador(1));
-             Application.Run(new VentanaAdministrador(1));
-            //  Application.Run(new RegistroCliente());
+            // Application.Run(new VentanaAdministrador(1));
+           //  Application.Run(new RegistroCliente());
             //Application.Run(new InterfazCliente(4));
             //Application.Run(new RegistroCooperativa());
         }

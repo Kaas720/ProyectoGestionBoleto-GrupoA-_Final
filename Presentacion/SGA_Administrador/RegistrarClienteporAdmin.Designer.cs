@@ -128,6 +128,7 @@ namespace Presentacion.SGA_Administrador
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.Size = new System.Drawing.Size(219, 27);
             this.txtCorreo.TabIndex = 46;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // cmbSexo
             // 
@@ -171,6 +172,7 @@ namespace Presentacion.SGA_Administrador
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.Size = new System.Drawing.Size(219, 27);
             this.txtTelefono.TabIndex = 44;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtNombre
             // 
@@ -193,6 +195,7 @@ namespace Presentacion.SGA_Administrador
             this.txtNombre.SelectedText = "";
             this.txtNombre.Size = new System.Drawing.Size(196, 27);
             this.txtNombre.TabIndex = 43;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtCedula
             // 
@@ -212,10 +215,11 @@ namespace Presentacion.SGA_Administrador
             this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
-            this.txtCedula.PlaceholderText = "Ingresar la cédula del cliente";
+            this.txtCedula.PlaceholderText = "Ingresar la cedula del cliente";
             this.txtCedula.SelectedText = "";
             this.txtCedula.Size = new System.Drawing.Size(196, 27);
             this.txtCedula.TabIndex = 42;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // guna2HtmlLabel8
             // 
@@ -310,6 +314,7 @@ namespace Presentacion.SGA_Administrador
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Presentacion.Properties.Resources.salvapantallas_textura_elegante_blanco_23_2148421855;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(713, 389);
             this.Controls.Add(this.guna2GroupBox1);

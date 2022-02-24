@@ -380,6 +380,7 @@ namespace Presentacion
             this.Vendedor.Text = "VENDEDOR";
             this.Vendedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Vendedor.UseVisualStyleBackColor = false;
+            this.Vendedor.Click += new System.EventHandler(this.Vendedor_Click);
             // 
             // Chofer
             // 
@@ -403,6 +404,7 @@ namespace Presentacion
             this.Chofer.Text = "CHOFER";
             this.Chofer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Chofer.UseVisualStyleBackColor = false;
+            this.Chofer.Click += new System.EventHandler(this.Chofer_Click);
             // 
             // RegistrarCooperativa
             // 
@@ -426,6 +428,7 @@ namespace Presentacion
             this.RegistrarCooperativa.Text = "COOPERATIVA";
             this.RegistrarCooperativa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RegistrarCooperativa.UseVisualStyleBackColor = false;
+            this.RegistrarCooperativa.Click += new System.EventHandler(this.RegistrarCooperativa_Click);
             // 
             // RegistrarCliente
             // 

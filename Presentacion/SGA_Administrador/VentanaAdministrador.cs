@@ -310,5 +310,39 @@ namespace Presentacion
             Frm.Show();
             OcultarPaneles(PanelRegistro, PanelEliminar);
         }
+
+        private void Chofer_Click(object sender, EventArgs e)
+        {
+            this.PanelPrincipalContenedor.Controls.Clear();
+            RegistroChofer Frm = new RegistroChofer();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+            RestablecerColorOriginalBotones();
+            GenerarNuevoColorBoton(sender);
+        }
+
+        private void RegistrarCooperativa_Click(object sender, EventArgs e)
+        {
+            this.PanelPrincipalContenedor.Controls.Clear();
+            RegistroCooperativa Frm = new RegistroCooperativa();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+            RestablecerColorOriginalBotones();
+            GenerarNuevoColorBoton(sender);
+
+        }
+
+        private void Vendedor_Click(object sender, EventArgs e)
+        {
+            this.PanelPrincipalContenedor.Controls.Clear();
+            RegistroVendedor Frm = new RegistroVendedor();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+            RestablecerColorOriginalBotones();
+            GenerarNuevoColorBoton(sender);
+        }
     }
 }

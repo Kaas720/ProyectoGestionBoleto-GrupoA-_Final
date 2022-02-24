@@ -226,16 +226,5 @@ namespace Presentacion
                 return;
             }
         }
-
-        /// <summary>
-        /// Handles the Tick event of the FechaHora control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void FechaHora_Tick(object sender, EventArgs e)
-        {
-            Fecha_Sistema.Text = DateTime.Now.ToLongDateString();
-            Hora_Sistema.Text = DateTime.Now.ToLongTimeString();
-        }
     }
 }

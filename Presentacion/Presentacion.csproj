@@ -127,17 +127,35 @@
     <Compile Include="SGA_Administrador\VentanaAdministrador.designer.cs">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGA_Chofer\InterfazChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Chofer\InterfazChofer.Designer.cs">
+      <DependentUpon>InterfazChofer.cs</DependentUpon>
+    </Compile>
     <Compile Include="SGA_Chofer\RegistroChofer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SGA_Chofer\RegistroChofer.Designer.cs">
       <DependentUpon>RegistroChofer.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGA_Cooperativa\InterfazCooperativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Cooperativa\InterfazCooperativa.Designer.cs">
+      <DependentUpon>InterfazCooperativa.cs</DependentUpon>
+    </Compile>
     <Compile Include="SGA_Cooperativa\RegistroCooperativa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SGA_Cooperativa\RegistroCooperativa.Designer.cs">
       <DependentUpon>RegistroCooperativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SGA_Vendedor\InterfazVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Vendedor\InterfazVendedor.Designer.cs">
+      <DependentUpon>InterfazVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuarioCliente\ActualizarCliente.cs">
       <SubType>Form</SubType>
@@ -218,11 +236,20 @@
     <EmbeddedResource Include="SGA_Administrador\VentanaAdministrador.resx">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Chofer\InterfazChofer.resx">
+      <DependentUpon>InterfazChofer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SGA_Chofer\RegistroChofer.resx">
       <DependentUpon>RegistroChofer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Cooperativa\InterfazCooperativa.resx">
+      <DependentUpon>InterfazCooperativa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SGA_Cooperativa\RegistroCooperativa.resx">
       <DependentUpon>RegistroCooperativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Vendedor\InterfazVendedor.resx">
+      <DependentUpon>InterfazVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\ActualizarCliente.resx">
       <DependentUpon>ActualizarCliente.cs</DependentUpon>

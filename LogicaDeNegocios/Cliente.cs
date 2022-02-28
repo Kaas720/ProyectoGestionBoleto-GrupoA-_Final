@@ -99,7 +99,35 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="cedula">The cedula.</param>
         /// <returns>List&lt;Cliente&gt;.</returns>
-        public List<Cliente> BuscarCliente(String cedula)
+        public static Cliente BuscarCliente(int idPersona)
+        {
+           
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            Cliente client = null;
+            CredencialUsuario credencial = null;
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarCliente", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@IdPersona", idPersona);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 3);
+                    client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);
+                }
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: "+ex);
+            }
+             return client;
+        }
+
+
+        /*
+         * public List<Cliente> BuscarCliente(int cedula)
         {
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
@@ -124,7 +152,7 @@ namespace LogicaDeNegocios
                 Console.WriteLine("Error emitido por: "+ex);
             }
              return lista;
-        }
+        }*/
         /// <summary>
         /// Actualizars the cliente.
         /// </summary>

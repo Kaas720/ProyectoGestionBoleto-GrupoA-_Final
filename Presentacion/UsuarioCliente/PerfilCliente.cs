@@ -22,41 +22,44 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentacion.SGA_Administrador
+namespace Presentacion.UsuarioCliente
 {
     /// <summary>
-    /// Class PerfilAdminidtrador.
+    /// Class PerfilCliente.
     /// Implements the <see cref="System.Windows.Forms.Form" />
     /// </summary>
     /// <seealso cref="System.Windows.Forms.Form" />
-    public partial class PerfilAdminidtrador : Form
+    public partial class PerfilCliente : Form
     {
         /// <summary>
         /// The adm administrador
         /// </summary>
-        AdmAdministrador admAdministrador = new AdmAdministrador();
+        AdmClienteProcedimiento adm = new AdmClienteProcedimiento();
         /// <summary>
         /// Initializes a new instance of the <see cref="PerfilAdminidtrador"/> class.
         /// </summary>
-        /// <param name="idPersona">The identifier persona.</param>
-        public PerfilAdminidtrador(int idPersona)
+        /// <param name="(idPersona">The identifier persona.</param>
+        public PerfilCliente(int idPersona)
         {
-            InitializeComponent();
-          //  LlenarInformacion(idPersona);
+           InitializeComponent();
+            LlenarInformacion(idPersona);
         }
 
         /// <summary>
         /// Llenars the informacion.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-        private void LlenarInformacion(int idPersona)
+       private void LlenarInformacion(int idPersona)
         {
-            List<Administrador> Administrador = admAdministrador.ConsultaAdmin(idPersona);
-            foreach(Administrador admin in Administrador)
+            List<Cliente> Cliente = adm.ConsultaClient(idPersona);
+            foreach(Cliente client in Cliente)
             {
-                txtCedula.Text = admin.Cedula;
-                txtNombre.Text = admin.Nombre;
-                txtCorreo.Text = admin.CredencialUsuario.Correo;
+                txtCedula.Text = client.Cedula;
+                txtNom.Text = client.Nombre;
+                txtSexo.Text = client.Sexo;
+                txtTelefono.Text = client.Telefono;
+                txtCorreo.Text = client.CredencialUsuario.Correo;
+                txtPassword.Text = client.CredencialUsuario.Contrasena;
             }
             
         }
@@ -77,6 +80,36 @@ namespace Presentacion.SGA_Administrador
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditarButon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCedula_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEdad_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -61,7 +61,7 @@ namespace LogicaDeNegocios
         /// <param name="txtTelefono">The text telefono.</param>
         /// <param name="txtCorreo">The text correo.</param>
         /// <param name="txtContraseña">The text contraseña.</param>
-        public void Inicializar(Guna2TextBox txtCedula, Guna2TextBox txtNombre, Guna2TextBox cmbSexo, Guna2TextBox txtTelefono, Guna2TextBox txtCorreo, Guna2TextBox txtContraseña)
+      /*  public void Inicializar(Guna2TextBox txtCedula, Guna2TextBox txtNombre, Guna2TextBox cmbSexo, Guna2TextBox txtTelefono, Guna2TextBox txtCorreo, Guna2TextBox txtContraseña)
         {
             string cedula = txtCedula.Text;
 
@@ -85,14 +85,14 @@ namespace LogicaDeNegocios
             txtTelefono.Text = client[3].ToString();
             txtCorreo.Text = client[4].ToString();
             txtContraseña.Text = client[5].ToString();
-        }
+        }*/
 
         /// <summary>
         /// Consultars the cliente.
         /// </summary>
         /// <param name="cedula">The cedula.</param>
         /// <exception cref="LogicaDeNegocios.ControlExcepcion">Cliente no registrado</exception>
-        public void ConsultarCliente(string cedula )
+      /*  public void ConsultarCliente(string cedula )
         {
             //  Cliente client = Cliente.BuscarCliente(cedula);
             List<Cliente> client = procedimientos.BuscarCliente(cedula);
@@ -101,6 +101,15 @@ namespace LogicaDeNegocios
             {
                 throw new ControlExcepcion("Cliente no registrado");
             }
+        }*/
+
+        public List<Cliente> ConsultaClient(int idPersona)
+        {
+            List<Cliente> lista = new List<Cliente>();
+            Cliente client = null;
+            client = Cliente.BuscarCliente(idPersona);
+            lista.Add(client);
+            return lista;
         }
     }
 }

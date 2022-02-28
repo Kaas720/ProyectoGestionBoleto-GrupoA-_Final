@@ -80,10 +80,10 @@ namespace Presentacion
         /// Initializes a new instance of the <see cref="VentanaAdministrador"/> class.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-        public VentanaAdministrador(int idPersona)//(int idPersona)
+        public VentanaAdministrador()//(int idPersona)
         {
             InitializeComponent();
-            this.idPersona = idPersona;
+            //this.idPersona = idPersona;
             IniciarFromdelPanelPrincipal();
         }
         /// <summary>

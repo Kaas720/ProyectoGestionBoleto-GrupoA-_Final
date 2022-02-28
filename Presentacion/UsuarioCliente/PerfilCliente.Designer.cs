@@ -12,14 +12,14 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Presentacion.SGA_Administrador
+namespace Presentacion.UsuarioCliente
 {
     /// <summary>
     /// Class PerfilAdminidtrador.
     /// Implements the <see cref="System.Windows.Forms.Form" />
     /// </summary>
     /// <seealso cref="System.Windows.Forms.Form" />
-    partial class PerfilAdminidtrador
+    partial class PerfilCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -55,10 +55,10 @@ namespace Presentacion.SGA_Administrador
             this.EditarButon = new Guna.UI2.WinForms.Guna2Button();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCorreo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEdad = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSexo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTelefono = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCedula = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCodigo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNom = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -90,10 +90,10 @@ namespace Presentacion.SGA_Administrador
             this.guna2GroupBox1.Controls.Add(this.EditarButon);
             this.guna2GroupBox1.Controls.Add(this.txtPassword);
             this.guna2GroupBox1.Controls.Add(this.txtCorreo);
-            this.guna2GroupBox1.Controls.Add(this.txtEdad);
+            this.guna2GroupBox1.Controls.Add(this.txtSexo);
             this.guna2GroupBox1.Controls.Add(this.txtTelefono);
             this.guna2GroupBox1.Controls.Add(this.txtCedula);
-            this.guna2GroupBox1.Controls.Add(this.txtCodigo);
+            this.guna2GroupBox1.Controls.Add(this.txtNom);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel5);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
@@ -113,11 +113,11 @@ namespace Presentacion.SGA_Administrador
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(103)))), ((int)(((byte)(129)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(314, 266);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(342, 265);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(129, 24);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(84, 24);
             this.guna2HtmlLabel6.TabIndex = 20;
-            this.guna2HtmlLabel6.Text = "Nueva contraseña:";
+            this.guna2HtmlLabel6.Text = "Contraseña:";
             // 
             // guna2CirclePictureBox1
             // 
@@ -162,6 +162,7 @@ namespace Presentacion.SGA_Administrador
             this.EditarButon.Size = new System.Drawing.Size(113, 34);
             this.EditarButon.TabIndex = 17;
             this.EditarButon.Text = "Editar";
+            this.EditarButon.Click += new System.EventHandler(this.EditarButon_Click);
             // 
             // txtPassword
             // 
@@ -193,7 +194,7 @@ namespace Presentacion.SGA_Administrador
             this.txtCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCorreo.Location = new System.Drawing.Point(153, 265);
+            this.txtCorreo.Location = new System.Drawing.Point(448, 227);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderText = "";
@@ -201,24 +202,26 @@ namespace Presentacion.SGA_Administrador
             this.txtCorreo.Size = new System.Drawing.Size(143, 23);
             this.txtCorreo.TabIndex = 15;
             // 
-            // txtEdad
+            // txtSexo
             // 
-            this.txtEdad.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtEdad.DefaultText = "";
-            this.txtEdad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEdad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEdad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEdad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEdad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEdad.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEdad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEdad.Location = new System.Drawing.Point(449, 228);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.PasswordChar = '\0';
-            this.txtEdad.PlaceholderText = "";
-            this.txtEdad.SelectedText = "";
-            this.txtEdad.Size = new System.Drawing.Size(143, 23);
-            this.txtEdad.TabIndex = 14;
+            this.txtSexo.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtSexo.DefaultText = "";
+            this.txtSexo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSexo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSexo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSexo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSexo.Enabled = false;
+            this.txtSexo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSexo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSexo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSexo.Location = new System.Drawing.Point(153, 267);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.PasswordChar = '\0';
+            this.txtSexo.PlaceholderText = "";
+            this.txtSexo.SelectedText = "";
+            this.txtSexo.Size = new System.Drawing.Size(143, 23);
+            this.txtSexo.TabIndex = 14;
+            this.txtSexo.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             // 
             // txtTelefono
             // 
@@ -231,7 +234,7 @@ namespace Presentacion.SGA_Administrador
             this.txtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefono.Location = new System.Drawing.Point(153, 227);
+            this.txtTelefono.Location = new System.Drawing.Point(448, 189);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.PlaceholderText = "";
@@ -259,55 +262,59 @@ namespace Presentacion.SGA_Administrador
             this.txtCedula.SelectedText = "";
             this.txtCedula.Size = new System.Drawing.Size(143, 23);
             this.txtCedula.TabIndex = 12;
+            this.txtCedula.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
             // 
-            // txtCodigo
+            // txtNom
             // 
-            this.txtCodigo.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtCodigo.DefaultText = "";
-            this.txtCodigo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCodigo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCodigo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCodigo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCodigo.Location = new System.Drawing.Point(449, 189);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.PasswordChar = '\0';
-            this.txtCodigo.PlaceholderText = "";
-            this.txtCodigo.SelectedText = "";
-            this.txtCodigo.Size = new System.Drawing.Size(143, 23);
-            this.txtCodigo.TabIndex = 11;
+            this.txtNom.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtNom.DefaultText = "";
+            this.txtNom.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNom.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNom.Enabled = false;
+            this.txtNom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNom.Location = new System.Drawing.Point(153, 228);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.PasswordChar = '\0';
+            this.txtNom.PlaceholderText = "";
+            this.txtNom.SelectedText = "";
+            this.txtNom.Size = new System.Drawing.Size(143, 23);
+            this.txtNom.TabIndex = 11;
+            this.txtNom.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(103)))), ((int)(((byte)(129)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(329, 188);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(65, 227);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(56, 24);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel5.TabIndex = 9;
-            this.guna2HtmlLabel5.Text = "Código:";
+            this.guna2HtmlLabel5.Text = "Nombre:";
+            this.guna2HtmlLabel5.Click += new System.EventHandler(this.guna2HtmlLabel5_Click);
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(103)))), ((int)(((byte)(129)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(329, 227);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(65, 266);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(43, 24);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(39, 24);
             this.guna2HtmlLabel4.TabIndex = 8;
-            this.guna2HtmlLabel4.Text = "Edad:";
+            this.guna2HtmlLabel4.Text = "Sexo:";
+            this.guna2HtmlLabel4.Click += new System.EventHandler(this.guna2HtmlLabel4_Click);
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(103)))), ((int)(((byte)(129)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(68, 264);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(342, 226);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(53, 24);
             this.guna2HtmlLabel2.TabIndex = 7;
@@ -318,7 +325,7 @@ namespace Presentacion.SGA_Administrador
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Palatino Linotype", 12F);
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(103)))), ((int)(((byte)(129)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(66, 227);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(342, 188);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel1.TabIndex = 6;
@@ -335,7 +342,7 @@ namespace Presentacion.SGA_Administrador
             this.guna2HtmlLabel3.TabIndex = 5;
             this.guna2HtmlLabel3.Text = "Cedula:";
             // 
-            // PerfilAdminidtrador
+            // PerfilCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -343,7 +350,7 @@ namespace Presentacion.SGA_Administrador
             this.ClientSize = new System.Drawing.Size(713, 389);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PerfilAdminidtrador";
+            this.Name = "PerfilCliente";
             this.Text = "PerfilAdminidtrador";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
@@ -377,7 +384,7 @@ namespace Presentacion.SGA_Administrador
         /// <summary>
         /// The text edad
         /// </summary>
-        private Guna.UI2.WinForms.Guna2TextBox txtEdad;
+        private Guna.UI2.WinForms.Guna2TextBox txtSexo;
         /// <summary>
         /// The text telefono
         /// </summary>
@@ -389,7 +396,7 @@ namespace Presentacion.SGA_Administrador
         /// <summary>
         /// The text codigo
         /// </summary>
-        private Guna.UI2.WinForms.Guna2TextBox txtCodigo;
+        private Guna.UI2.WinForms.Guna2TextBox txtNom;
         /// <summary>
         /// The guna2 HTML label5
         /// </summary>

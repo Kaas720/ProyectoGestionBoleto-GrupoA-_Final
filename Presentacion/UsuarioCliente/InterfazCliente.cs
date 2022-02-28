@@ -145,8 +145,14 @@ namespace Presentacion
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void EditPerfil_Click(object sender, EventArgs e)
         {
+            this.PanelContenedor.Controls.Clear();
+            PerfilCliente Frm = new PerfilCliente(idPersona);
+            Frm.TopLevel = false;
+            PanelContenedor.Controls.Add(Frm);
+            Frm.Show();
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
+
         }
 
         /// <summary>

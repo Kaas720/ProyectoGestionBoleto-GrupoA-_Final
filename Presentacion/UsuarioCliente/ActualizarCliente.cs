@@ -46,7 +46,7 @@ namespace Presentacion.UsuarioCliente
         {
             InitializeComponent();
             this.cedula = cedula;
-            adm.Inicializar(txtCedula, txtNombre, Sexo, txtTelefono, txtCorreo, txtContraseña);
+            //adm.Inicializar(txtCedula, txtNombre, Sexo, txtTelefono, txtCorreo, txtContraseña);
         }
 
         /// <summary>

@@ -181,6 +181,12 @@
     <Compile Include="UsuarioCliente\Pagar.Designer.cs">
       <DependentUpon>Pagar.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioCliente\PerfilCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioCliente\PerfilCliente.Designer.cs">
+      <DependentUpon>PerfilCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioCliente\RegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\Pagar.resx">
       <DependentUpon>Pagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioCliente\PerfilCliente.resx">
+      <DependentUpon>PerfilCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioCliente\RegistroCliente.resx">
       <DependentUpon>RegistroCliente.cs</DependentUpon>

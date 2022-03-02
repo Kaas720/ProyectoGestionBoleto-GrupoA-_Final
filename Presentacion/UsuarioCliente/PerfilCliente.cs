@@ -52,7 +52,7 @@ namespace Presentacion.UsuarioCliente
        private void LlenarInformacion(int idPersona)
         {
             List<Cliente> Cliente = adm.ConsultaClient(idPersona);
-            foreach(Cliente client in Cliente)
+           foreach(Cliente client in Cliente)
             {
                 txtCedula.Text = client.Cedula;
                 txtNom.Text = client.Nombre;

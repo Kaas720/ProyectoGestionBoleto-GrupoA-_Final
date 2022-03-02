@@ -68,8 +68,7 @@ namespace LogicaDeNegocios
                 while (lector.Read())
                 {
                     credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 0);
-                    admin = new Administrador(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);
-                }
+                    admin = new Administrador(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);                }
                 con.cerrar();
             }
             catch (MySqlException ex)

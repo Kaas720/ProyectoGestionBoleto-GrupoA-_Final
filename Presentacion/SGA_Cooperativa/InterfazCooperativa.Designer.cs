@@ -237,7 +237,6 @@ namespace Presentacion
             // 
             // guna2CirclePictureBox1
             // 
-            this.guna2CirclePictureBox1.Image = global::Presentacion.Properties.Resources.c82646ff36e2523350d01fff093938f6;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(55, 40);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
@@ -327,7 +326,6 @@ namespace Presentacion
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(27, 8);
             this.guna2PictureBox1.Name = "guna2PictureBox1";

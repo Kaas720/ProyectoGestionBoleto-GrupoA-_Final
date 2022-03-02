@@ -87,8 +87,8 @@ namespace Presentacion
                 switch (rol)
                 {
                     case 1:
-                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
-                        //VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idperson);
+                       // VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
+                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idperson);
                         Program.principal.Hide();
                         ventanaAdministrador.ShowDialog();
                         break;

@@ -89,22 +89,23 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="cedula">The cedula.</param>
         /// <exception cref="LogicaDeNegocios.ControlExcepcion">Cliente no registrado</exception>
-      /*  public void ConsultarCliente(string cedula )
+       public Cliente ConsultarCliente(string cedula )
         {
             //  Cliente client = Cliente.BuscarCliente(cedula);
-            List<Cliente> client = procedimientos.BuscarCliente(cedula);
+            Cliente client = procedimientos.BuscarCliente(cedula);
 
             if (client == null)
             {
                 throw new ControlExcepcion("Cliente no registrado");
             }
-        }*/
+            return client;
+        }
 
         public List<Cliente> ConsultaClient(int idPersona)
         {
             List<Cliente> lista = new List<Cliente>();
             Cliente client = null;
-            client = Cliente.BuscarCliente(idPersona);
+            client = Cliente.BuscarClientePorId(idPersona);
             lista.Add(client);
             return lista;
         }

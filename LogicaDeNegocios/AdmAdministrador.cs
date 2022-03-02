@@ -43,8 +43,7 @@ namespace LogicaDeNegocios
         public List<Administrador> ConsultaAdmin(int idPersona)
         {
             List<Administrador> newLista = new List<Administrador>();
-            Administrador admin = null;
-            admin = Administrador.ConsultarAdministrador(idPersona);
+            Administrador admin = Administrador.ConsultarAdministrador(idPersona);
             newLista.Add(admin);
             return newLista;
         }

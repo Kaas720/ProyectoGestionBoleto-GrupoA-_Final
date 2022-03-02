@@ -536,7 +536,6 @@ namespace Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::Presentacion.Properties.Resources.salvapantallas_textura_elegante_blanco_23_2148421855;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(713, 389);
             this.Controls.Add(this.guna2GroupBox1);

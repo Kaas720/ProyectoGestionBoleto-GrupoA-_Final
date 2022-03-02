@@ -51,14 +51,15 @@ namespace Presentacion.SGA_Administrador
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DataGridCliente = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CedulaCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CorreoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar_Cliente = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.BtnConsultar = new FontAwesome.Sharp.IconPictureBox();
             this.TxtCedulaCliente = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CedulaCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CorreoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar_Cliente = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCliente)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnConsultar)).BeginInit();
@@ -70,7 +71,6 @@ namespace Presentacion.SGA_Administrador
             this.DataGridCliente.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.DataGridCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridCliente.BackgroundColor = System.Drawing.Color.White;
             this.DataGridCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DataGridCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -88,7 +88,8 @@ namespace Presentacion.SGA_Administrador
             this.NombreCliente,
             this.CedulaCliente,
             this.CorreoCliente,
-            this.Eliminar_Cliente});
+            this.Eliminar_Cliente,
+            this.Editar});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -104,7 +105,7 @@ namespace Presentacion.SGA_Administrador
             this.DataGridCliente.ReadOnly = true;
             this.DataGridCliente.RowHeadersVisible = false;
             this.DataGridCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridCliente.Size = new System.Drawing.Size(591, 168);
+            this.DataGridCliente.Size = new System.Drawing.Size(659, 205);
             this.DataGridCliente.TabIndex = 0;
             this.DataGridCliente.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridCliente.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -127,32 +128,7 @@ namespace Presentacion.SGA_Administrador
             this.DataGridCliente.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridCliente.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridCliente.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "Nombre";
-            this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.ReadOnly = true;
-            // 
-            // CedulaCliente
-            // 
-            this.CedulaCliente.HeaderText = "Cédula";
-            this.CedulaCliente.Name = "CedulaCliente";
-            this.CedulaCliente.ReadOnly = true;
-            // 
-            // CorreoCliente
-            // 
-            this.CorreoCliente.HeaderText = "Correo";
-            this.CorreoCliente.Name = "CorreoCliente";
-            this.CorreoCliente.ReadOnly = true;
-            // 
-            // Eliminar_Cliente
-            // 
-            this.Eliminar_Cliente.HeaderText = "Eliminar";
-            this.Eliminar_Cliente.Name = "Eliminar_Cliente";
-            this.Eliminar_Cliente.ReadOnly = true;
-            this.Eliminar_Cliente.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar_Cliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.DataGridCliente.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DataGridCliente_CellPainting);
             // 
             // guna2GroupBox1
             // 
@@ -164,11 +140,11 @@ namespace Presentacion.SGA_Administrador
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(144)))), ((int)(((byte)(176)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(48, 26);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(12, 12);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(626, 340);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(689, 365);
             this.guna2GroupBox1.TabIndex = 1;
-            this.guna2GroupBox1.Text = "Eliminar cliente";
+            this.guna2GroupBox1.Text = "Consultar cliente";
             // 
             // BtnConsultar
             // 
@@ -178,7 +154,7 @@ namespace Presentacion.SGA_Administrador
             this.BtnConsultar.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
             this.BtnConsultar.IconColor = System.Drawing.Color.Green;
             this.BtnConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnConsultar.Location = new System.Drawing.Point(456, 88);
+            this.BtnConsultar.Location = new System.Drawing.Point(493, 85);
             this.BtnConsultar.Name = "BtnConsultar";
             this.BtnConsultar.Size = new System.Drawing.Size(35, 32);
             this.BtnConsultar.TabIndex = 3;
@@ -198,24 +174,66 @@ namespace Presentacion.SGA_Administrador
             this.TxtCedulaCliente.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtCedulaCliente.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtCedulaCliente.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtCedulaCliente.Location = new System.Drawing.Point(205, 88);
+            this.TxtCedulaCliente.Location = new System.Drawing.Point(257, 85);
             this.TxtCedulaCliente.Name = "TxtCedulaCliente";
             this.TxtCedulaCliente.PasswordChar = '\0';
-            this.TxtCedulaCliente.PlaceholderText = "Ingresar la cédula del cliente a eliminar";
+            this.TxtCedulaCliente.PlaceholderText = "Ingresar la cédula o nombre del cliente";
             this.TxtCedulaCliente.SelectedText = "";
-            this.TxtCedulaCliente.Size = new System.Drawing.Size(245, 30);
+            this.TxtCedulaCliente.Size = new System.Drawing.Size(230, 30);
             this.TxtCedulaCliente.TabIndex = 2;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(12)))), ((int)(((byte)(15)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(126, 88);
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(103)))), ((int)(((byte)(129)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(198, 85);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(62, 30);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(53, 30);
             this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.Text = "Cédula:";
+            this.guna2HtmlLabel1.Text = "Datos:";
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.HeaderText = "Nombre";
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
+            this.NombreCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.NombreCliente.Width = 82;
+            // 
+            // CedulaCliente
+            // 
+            this.CedulaCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CedulaCliente.HeaderText = "Cédula";
+            this.CedulaCliente.Name = "CedulaCliente";
+            this.CedulaCliente.ReadOnly = true;
+            this.CedulaCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // CorreoCliente
+            // 
+            this.CorreoCliente.HeaderText = "Correo";
+            this.CorreoCliente.Name = "CorreoCliente";
+            this.CorreoCliente.ReadOnly = true;
+            this.CorreoCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.CorreoCliente.Width = 73;
+            // 
+            // Eliminar_Cliente
+            // 
+            this.Eliminar_Cliente.HeaderText = "Eliminar";
+            this.Eliminar_Cliente.Name = "Eliminar_Cliente";
+            this.Eliminar_Cliente.ReadOnly = true;
+            this.Eliminar_Cliente.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar_Cliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar_Cliente.Width = 82;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Editar.Width = 67;
             // 
             // EliminarClienteporAdmin
             // 
@@ -247,22 +265,6 @@ namespace Presentacion.SGA_Administrador
         /// </summary>
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         /// <summary>
-        /// The nombre cliente
-        /// </summary>
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
-        /// <summary>
-        /// The cedula cliente
-        /// </summary>
-        private System.Windows.Forms.DataGridViewTextBoxColumn CedulaCliente;
-        /// <summary>
-        /// The correo cliente
-        /// </summary>
-        private System.Windows.Forms.DataGridViewTextBoxColumn CorreoCliente;
-        /// <summary>
-        /// The eliminar cliente
-        /// </summary>
-        private System.Windows.Forms.DataGridViewButtonColumn Eliminar_Cliente;
-        /// <summary>
         /// The text cedula cliente
         /// </summary>
         private Guna.UI2.WinForms.Guna2TextBox TxtCedulaCliente;
@@ -274,5 +276,10 @@ namespace Presentacion.SGA_Administrador
         /// The BTN consultar
         /// </summary>
         private FontAwesome.Sharp.IconPictureBox BtnConsultar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CedulaCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CorreoCliente;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar_Cliente;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
     }
 }

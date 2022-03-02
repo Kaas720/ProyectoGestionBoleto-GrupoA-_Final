@@ -93,27 +93,54 @@ namespace LogicaDeNegocios
                 }
 
             }
-        //public static Cliente ConsultarCliente(String cedula)
+        //public static Cliente BuscarClientePorId(String cedula)
         /// <summary>
         /// Buscars the cliente.
         /// </summary>
         /// <param name="cedula">The cedula.</param>
         /// <returns>List&lt;Cliente&gt;.</returns>
-        public static Cliente BuscarCliente(int idPersona)
+        public static Cliente BuscarClientePorId(int idPersona)
+         {
+
+             Conexion con = new Conexion();
+             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+             Cliente client = null;
+             CredencialUsuario credencial = null;
+             try
+             {
+                 MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarCliente", con.conectar());
+                 mySqlCommand.Parameters.AddWithValue("@IdPersona", idPersona);
+                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                 while (lector.Read())
+                 {
+                     credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 3);
+                     client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);
+                 }
+                 con.cerrar();
+             }
+             catch (MySqlException ex)
+             {
+                 Console.WriteLine("Error emitido por: "+ex);
+             }
+              return client;
+         }
+
+
+
+        public Cliente BuscarCliente(string cedula)
         {
-           
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             Cliente client = null;
             CredencialUsuario credencial = null;
             try
             {
-                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarCliente", con.conectar());
-                mySqlCommand.Parameters.AddWithValue("@IdPersona", idPersona);
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("ConsultarCliente", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@CedulaFx", cedula);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {
-                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 3);
+                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 0);
                     client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);
                 }
                 con.cerrar();
@@ -124,35 +151,6 @@ namespace LogicaDeNegocios
             }
              return client;
         }
-
-
-        /*
-         * public List<Cliente> BuscarCliente(int cedula)
-        {
-            Conexion con = new Conexion();
-            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
-            List<Cliente> lista = new List<Cliente>();
-            Cliente client = null;
-            CredencialUsuario credencial = null;
-            try
-            {
-                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("ConsultarCliente", con.conectar());
-                mySqlCommand.Parameters.AddWithValue("@CedulaFx", cedula);
-                MySqlDataReader lector = mySqlCommand.ExecuteReader();
-                while (lector.Read())
-                {
-                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contraseña"].ToString(), 0);
-                    client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);
-                    //client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(),"","", lector["Correo"].ToString(),""); 
-                }
-                con.cerrar();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error emitido por: "+ex);
-            }
-             return lista;
-        }*/
         /// <summary>
         /// Actualizars the cliente.
         /// </summary>

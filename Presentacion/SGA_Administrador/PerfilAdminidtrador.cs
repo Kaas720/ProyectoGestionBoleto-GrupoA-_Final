@@ -42,7 +42,7 @@ namespace Presentacion.SGA_Administrador
         public PerfilAdminidtrador(int idPersona)
         {
             InitializeComponent();
-          //  LlenarInformacion(idPersona);
+            LlenarInformacion(idPersona);
         }
 
         /// <summary>
@@ -54,9 +54,9 @@ namespace Presentacion.SGA_Administrador
             List<Administrador> Administrador = admAdministrador.ConsultaAdmin(idPersona);
             foreach(Administrador admin in Administrador)
             {
-                txtCedula.Text = admin.Cedula;
+               // txtCedula.Text = admin.Cedula;
                 txtNombre.Text = admin.Nombre;
-                txtCorreo.Text = admin.CredencialUsuario.Correo;
+                //txtCorreo.Text = admin.CredencialUsuario.Correo;
             }
             
         }
@@ -77,6 +77,11 @@ namespace Presentacion.SGA_Administrador
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
 
         }

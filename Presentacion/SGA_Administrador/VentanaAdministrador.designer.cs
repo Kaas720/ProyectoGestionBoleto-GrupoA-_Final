@@ -330,7 +330,7 @@ namespace Presentacion
             this.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.Eliminar.IconChar = FontAwesome.Sharp.IconChar.UsersSlash;
+            this.Eliminar.IconChar = FontAwesome.Sharp.IconChar.UserCog;
             this.Eliminar.IconColor = System.Drawing.Color.White;
             this.Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Eliminar.IconSize = 40;
@@ -339,7 +339,7 @@ namespace Presentacion
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(188, 78);
             this.Eliminar.TabIndex = 5;
-            this.Eliminar.Text = "ELIMINAR";
+            this.Eliminar.Text = "CONSULTAR";
             this.Eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Eliminar.UseVisualStyleBackColor = false;
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
@@ -523,7 +523,6 @@ namespace Presentacion
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(17, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";

@@ -184,7 +184,6 @@ namespace Presentacion.UsuarioCliente
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(18, 6);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -232,7 +231,6 @@ namespace Presentacion.UsuarioCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Presentacion.Properties.Resources.salvapantallas_textura_elegante_blanco_23_2148421855;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1030, 692);
             this.Controls.Add(this.guna2Panel1);

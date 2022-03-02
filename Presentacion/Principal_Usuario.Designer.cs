@@ -48,6 +48,7 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal_Usuario));
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BotonInicioSesion = new FontAwesome.Sharp.IconButton();
@@ -260,7 +261,6 @@ namespace Presentacion
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(17, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -301,6 +301,7 @@ namespace Presentacion
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";

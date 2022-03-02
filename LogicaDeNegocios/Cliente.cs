@@ -163,7 +163,7 @@ namespace LogicaDeNegocios
         /// <param name="correo">The correo.</param>
         /// <param name="contrasena">The contrasena.</param>
         /// <returns>System.String.</returns>
-        public string ActualizarCliente(string cedula, string telefono, string correo, string contrasena)
+        public string ActualizarCliente(string telefono, string correo, string contrasena)
         {
             string mensaje = "";
             Conexion con = new Conexion();
@@ -171,9 +171,8 @@ namespace LogicaDeNegocios
 
             try
             {
-                MySqlCommand comando = conector.ConectarProcedimiento("ModificarCliente", con.conectar());
+                MySqlCommand comando = conector.ConectarProcedimiento("spl_ModificarCliente", con.conectar());
                 comando.CommandType = System.Data.CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@cedula1", cedula);
                 comando.Parameters.AddWithValue("@Telefono1", telefono);
                 comando.Parameters.AddWithValue("@Correo1", correo);
                 comando.Parameters.AddWithValue("@Contraseña1", contrasena);

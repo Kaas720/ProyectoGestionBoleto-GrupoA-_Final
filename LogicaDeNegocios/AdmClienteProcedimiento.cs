@@ -44,9 +44,9 @@ namespace LogicaDeNegocios
         /// <param name="correo">The correo.</param>
         /// <param name="contrasena">The contrasena.</param>
         /// <returns>System.String.</returns>
-        public string Modificar(string cedula, string telefono, string correo, string contrasena)
+        public string Modificar(string telefono, string correo, string contrasena)
         {
-            return procedimientos.ActualizarCliente(cedula, telefono, correo, contrasena);
+            return procedimientos.ActualizarCliente(telefono, correo, contrasena);
         }
 
         /// <summary>

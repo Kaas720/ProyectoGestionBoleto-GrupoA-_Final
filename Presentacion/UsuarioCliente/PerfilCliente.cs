@@ -93,7 +93,7 @@ namespace Presentacion.UsuarioCliente
             {
                // CredencialUsuario credencial = new CredencialUsuario(correo, contrasena, 4);
                // Cliente clienteregistrar = new Cliente(cedula, nombre, sexo, telefono, credencial);
-                adm.Modificar(cedula, telefono, correo, contrasena);
+                adm.Modificar(telefono, correo, contrasena);
                 MessageBox.Show("Datos actualizados con exito.");
                 // this.Hide();
             }

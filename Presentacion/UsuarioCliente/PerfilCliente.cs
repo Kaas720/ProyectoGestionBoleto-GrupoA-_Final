@@ -86,7 +86,67 @@ namespace Presentacion.UsuarioCliente
 
         private void EditarButon_Click(object sender, EventArgs e)
         {
+            string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text, sexo = txtSexo.Text, telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(), contrasena = txtPassword.Text.Trim();
+            BorrarAlerta();
 
+            if (validar())
+            {
+               // CredencialUsuario credencial = new CredencialUsuario(correo, contrasena, 4);
+               // Cliente clienteregistrar = new Cliente(cedula, nombre, sexo, telefono, credencial);
+                adm.Modificar(cedula, telefono, correo, contrasena);
+                MessageBox.Show("Datos actualizados con exito.");
+                // this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Existe un campo vacio");
+            }
+        }
+        /// <summary>
+        /// Validars this instance.
+        /// </summary>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        /// <exception cref="LogicaDeNegocios.ControlExcepcion">Datos no validos!</exception>
+        private bool validar()
+        {
+            Validacion valida = new Validacion();
+            bool campo = true;
+            
+            if (valida.ValidarTelefono(txtTelefono.Text) != true)
+            {
+                campo = false;
+                errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
+            }
+            
+            if (valida.validarEmail(txtCorreo.Text) != true)
+            {
+                campo = false;
+                errorProvider1.SetError(txtCorreo, "Ingrese su correo electronico.");
+            }
+            if (txtPassword.Text == "")
+            {
+                campo = false;
+                errorProvider1.SetError(txtPassword, "Ingrese una contraseña.");
+            }
+            if (!campo)
+            {
+                throw new ControlExcepcion("Datos no validos!");
+            }
+
+            if (!campo)
+            {
+                throw new ControlExcepcion("Datos no validos!");
+            }
+            return campo;
+        }
+        /// <summary>
+        /// Borrars the alerta.
+        /// </summary>
+        private void BorrarAlerta()
+        {
+            errorProvider1.SetError(txtTelefono, "");
+            errorProvider1.SetError(txtCorreo, "");
+            errorProvider1.SetError(txtPassword, "");
         }
 
         private void txtCedula_TextChanged(object sender, EventArgs e)

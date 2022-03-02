@@ -47,6 +47,7 @@ namespace Presentacion.UsuarioCliente
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtNombre = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -64,9 +65,11 @@ namespace Presentacion.UsuarioCliente
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -153,7 +156,6 @@ namespace Presentacion.UsuarioCliente
             this.EditarButon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.EditarButon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.EditarButon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.EditarButon.Enabled = false;
             this.EditarButon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(144)))), ((int)(((byte)(176)))));
             this.EditarButon.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.EditarButon.ForeColor = System.Drawing.Color.White;
@@ -161,7 +163,7 @@ namespace Presentacion.UsuarioCliente
             this.EditarButon.Name = "EditarButon";
             this.EditarButon.Size = new System.Drawing.Size(113, 34);
             this.EditarButon.TabIndex = 17;
-            this.EditarButon.Text = "Editar";
+            this.EditarButon.Text = "Actualizar";
             this.EditarButon.Click += new System.EventHandler(this.EditarButon_Click);
             // 
             // txtPassword
@@ -342,6 +344,10 @@ namespace Presentacion.UsuarioCliente
             this.guna2HtmlLabel3.TabIndex = 5;
             this.guna2HtmlLabel3.Text = "Cedula:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // PerfilCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +362,7 @@ namespace Presentacion.UsuarioCliente
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,5 +436,6 @@ namespace Presentacion.UsuarioCliente
         /// The guna2 HTML label6
         /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

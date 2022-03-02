@@ -61,7 +61,7 @@ namespace Presentacion.UsuarioCliente
 
             if (validar())
             {
-                adm.Modificar(cedula,nombre, sexo, telefono, correo, contrasena);
+                //adm.Modificar(cedula,nombre, sexo, telefono, correo, contrasena);
                 MessageBox.Show("Datos actualizados con exito.");
                 Limpiar();
                // this.Hide();

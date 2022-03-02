@@ -40,16 +40,13 @@ namespace LogicaDeNegocios
         /// <summary>
         /// Modificars the specified cedula.
         /// </summary>
-        /// <param name="cedula">The cedula.</param>
-        /// <param name="nombre">The nombre.</param>
-        /// <param name="sexo">The sexo.</param>
         /// <param name="telefono">The telefono.</param>
         /// <param name="correo">The correo.</param>
         /// <param name="contrasena">The contrasena.</param>
         /// <returns>System.String.</returns>
-        public string Modificar(string cedula, string nombre, string sexo, string telefono, string correo, string contrasena)
+        public string Modificar(string cedula, string telefono, string correo, string contrasena)
         {
-            return procedimientos.ActualizarCliente(cedula, nombre, sexo, telefono, correo, contrasena);
+            return procedimientos.ActualizarCliente(cedula, telefono, correo, contrasena);
         }
 
         /// <summary>

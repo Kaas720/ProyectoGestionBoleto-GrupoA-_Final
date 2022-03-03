@@ -50,16 +50,17 @@ namespace Presentacion.SGA_Administrador
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DataGridCliente = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.BtnConsultar = new FontAwesome.Sharp.IconPictureBox();
-            this.TxtCedulaCliente = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CedulaCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CorreoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar_Cliente = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.BtnConsultar = new FontAwesome.Sharp.IconPictureBox();
+            this.TxtCedulaCliente = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCliente)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnConsultar)).BeginInit();
@@ -71,15 +72,16 @@ namespace Presentacion.SGA_Administrador
             this.DataGridCliente.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.DataGridCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridCliente.BackgroundColor = System.Drawing.Color.White;
             this.DataGridCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DataGridCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DataGridCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataGridCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(205)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(205)))), ((int)(((byte)(221)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -103,6 +105,14 @@ namespace Presentacion.SGA_Administrador
             this.DataGridCliente.Location = new System.Drawing.Point(17, 142);
             this.DataGridCliente.Name = "DataGridCliente";
             this.DataGridCliente.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridCliente.RowHeadersVisible = false;
             this.DataGridCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridCliente.Size = new System.Drawing.Size(659, 205);
@@ -114,7 +124,7 @@ namespace Presentacion.SGA_Administrador
             this.DataGridCliente.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.DataGridCliente.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.DataGridCliente.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridCliente.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.Green;
+            this.DataGridCliente.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
             this.DataGridCliente.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGridCliente.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Informal Roman", 10F);
             this.DataGridCliente.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
@@ -127,8 +137,46 @@ namespace Presentacion.SGA_Administrador
             this.DataGridCliente.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
             this.DataGridCliente.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridCliente.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DataGridCliente.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridCliente.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.DataGridCliente.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DataGridCliente_CellPainting);
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.HeaderText = "Nombre";
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
+            this.NombreCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // CedulaCliente
+            // 
+            this.CedulaCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CedulaCliente.HeaderText = "Cédula";
+            this.CedulaCliente.Name = "CedulaCliente";
+            this.CedulaCliente.ReadOnly = true;
+            this.CedulaCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // CorreoCliente
+            // 
+            this.CorreoCliente.HeaderText = "Correo";
+            this.CorreoCliente.Name = "CorreoCliente";
+            this.CorreoCliente.ReadOnly = true;
+            this.CorreoCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Eliminar_Cliente
+            // 
+            this.Eliminar_Cliente.HeaderText = "Eliminar";
+            this.Eliminar_Cliente.Name = "Eliminar_Cliente";
+            this.Eliminar_Cliente.ReadOnly = true;
+            this.Eliminar_Cliente.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar_Cliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // guna2GroupBox1
             // 
@@ -192,48 +240,6 @@ namespace Presentacion.SGA_Administrador
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(53, 30);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Datos:";
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "Nombre";
-            this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.ReadOnly = true;
-            this.NombreCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NombreCliente.Width = 82;
-            // 
-            // CedulaCliente
-            // 
-            this.CedulaCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CedulaCliente.HeaderText = "Cédula";
-            this.CedulaCliente.Name = "CedulaCliente";
-            this.CedulaCliente.ReadOnly = true;
-            this.CedulaCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // CorreoCliente
-            // 
-            this.CorreoCliente.HeaderText = "Correo";
-            this.CorreoCliente.Name = "CorreoCliente";
-            this.CorreoCliente.ReadOnly = true;
-            this.CorreoCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.CorreoCliente.Width = 73;
-            // 
-            // Eliminar_Cliente
-            // 
-            this.Eliminar_Cliente.HeaderText = "Eliminar";
-            this.Eliminar_Cliente.Name = "Eliminar_Cliente";
-            this.Eliminar_Cliente.ReadOnly = true;
-            this.Eliminar_Cliente.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar_Cliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Eliminar_Cliente.Width = 82;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Editar.Width = 67;
             // 
             // EliminarClienteporAdmin
             // 

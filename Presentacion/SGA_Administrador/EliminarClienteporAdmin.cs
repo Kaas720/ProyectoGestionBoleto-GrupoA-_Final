@@ -80,7 +80,7 @@ namespace Presentacion.SGA_Administrador
                 DataGridViewButtonCell celBoton = this.DataGridCliente.Rows[e.RowIndex].Cells["Editar"] as DataGridViewButtonCell;
                 Icon icoAtomico = new Icon("..\\..\\Resources\\editar.ico");
                 e.Graphics.DrawIcon(icoAtomico, e.CellBounds.Left + 1, e.CellBounds.Top + 1);
-                this.DataGridCliente.Rows[e.RowIndex].Height = icoAtomico.Height;
+                this.DataGridCliente.Rows[e.RowIndex].Height = icoAtomico.Height+2;
                 this.DataGridCliente.Columns[e.ColumnIndex].Width = icoAtomico.Width;
 
                 e.Handled = true;
@@ -91,8 +91,8 @@ namespace Presentacion.SGA_Administrador
                 DataGridViewButtonCell celBoton = this.DataGridCliente.Rows[e.RowIndex].Cells["Eliminar_Cliente"] as DataGridViewButtonCell;
                 Icon icoAtomico = new Icon("..\\..\\Resources\\eliminar.ico");
                 e.Graphics.DrawIcon(icoAtomico, e.CellBounds.Left + 1, e.CellBounds.Top + 1);
-                this.DataGridCliente.Rows[e.RowIndex].Height = icoAtomico.Height+1;
-                this.DataGridCliente.Columns[e.ColumnIndex].Width = icoAtomico.Width;
+                this.DataGridCliente.Rows[e.RowIndex].Height = icoAtomico.Height+2;
+                this.DataGridCliente.Columns[e.ColumnIndex].Width = icoAtomico.Width+10;
                 e.Handled = true;
             }
         }

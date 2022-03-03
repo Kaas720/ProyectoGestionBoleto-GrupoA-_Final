@@ -39,24 +39,27 @@ namespace Presentacion.SGA_Administrador
         /// Initializes a new instance of the <see cref="PerfilAdminidtrador"/> class.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-        public PerfilAdminidtrador(int idPersona)
+        public PerfilAdminidtrador(string cedula)
         {
             InitializeComponent();
-            LlenarInformacion(idPersona);
+            LlenarInformacion(cedula);
         }
 
         /// <summary>
         /// Llenars the informacion.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-        private void LlenarInformacion(int idPersona)
+        private void LlenarInformacion(string cedula)
         {
-            List<Administrador> Administrador = admAdministrador.ConsultaAdmin(idPersona);
+            List<Administrador> Administrador = admAdministrador.ConsultaAdmin(cedula);
             foreach(Administrador admin in Administrador)
             {
-               // txtCedula.Text = admin.Cedula;
-                txtNombre.Text = admin.Nombre;
-                //txtCorreo.Text = admin.CredencialUsuario.Correo;
+                txtCedula.Text = admin.Cedula;
+                txtName.Text = admin.Nombre;
+                txtSexo.Text = admin.Sexo;
+                txtTelefono.Text = admin.Telefono;
+                txtCorreo.Text = admin.CredencialUsuario.Correo;
+                txtContraseña.Text = admin.CredencialUsuario.Contrasena;
             }
             
         }
@@ -84,6 +87,68 @@ namespace Presentacion.SGA_Administrador
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void EditarButon_Click(object sender, EventArgs e)
+        {
+            string cedula = txtCedula.Text.Trim(), nombre = txtName.Text, sexo = txtSexo.Text, telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(), contrasena = txtContraseña.Text.Trim();
+            BorrarAlerta();
+
+            if (validar())
+            {
+                admAdministrador.Modificar(cedula, telefono, correo, contrasena);
+                MessageBox.Show("Datos actualizados con exito.");
+            }
+            else
+            {
+                MessageBox.Show("Existe un campo vacio");
+            }
+        }
+        /// <summary>
+        /// Validars this instance.
+        /// </summary>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        /// <exception cref="LogicaDeNegocios.ControlExcepcion">Datos no validos!</exception>
+        private bool validar()
+        {
+            Validacion valida = new Validacion();
+            bool campo = true;
+
+            if (valida.ValidarTelefono(txtTelefono.Text) != true)
+            {
+                campo = false;
+                errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
+            }
+
+            if (valida.validarEmail(txtCorreo.Text) != true)
+            {
+                campo = false;
+                errorProvider1.SetError(txtCorreo, "Ingrese su correo electronico.");
+            }
+            if (txtContraseña.Text == "")
+            {
+                campo = false;
+                errorProvider1.SetError(txtContraseña, "Ingrese una contraseña.");
+            }
+            if (!campo)
+            {
+                throw new ControlExcepcion("Datos no validos!");
+            }
+
+            if (!campo)
+            {
+                throw new ControlExcepcion("Datos no validos!");
+            }
+            return campo;
+        }
+        /// <summary>
+        /// Borrars the alerta.
+        /// </summary>
+        private void BorrarAlerta()
+        {
+            errorProvider1.SetError(txtTelefono, "");
+            errorProvider1.SetError(txtCorreo, "");
+            errorProvider1.SetError(txtContraseña, "");
         }
     }
 }

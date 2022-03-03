@@ -13,6 +13,8 @@
 // ***********************************************************************
 using FontAwesome.Sharp;
 using Guna.UI2.WinForms;
+using LogicaDeNegocios;
+using Presentacion.InicioFroms;
 using Presentacion.SGA_Administrador;
 using System;
 using System.Collections.Generic;
@@ -91,8 +93,9 @@ namespace Presentacion
         /// </summary>
         public void IniciarFromdelPanelPrincipal()
         {
-            MessageBox.Show(idPersona + "");
-            PerfilAdminidtrador Frm = new PerfilAdminidtrador(idPersona);
+            //MessageBox.Show(idPersona + "");
+            string cedula = ProcedimientosPaginaprincipal.getCedula();
+            PerfilAdminidtrador Frm = new PerfilAdminidtrador(cedula);
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();
@@ -179,7 +182,8 @@ namespace Presentacion
         private void Home_Click(object sender, EventArgs e)
         {
             this.PanelPrincipalContenedor.Controls.Clear();
-            PerfilAdminidtrador Frm = new PerfilAdminidtrador(idPersona);
+            string cedula = ProcedimientosPaginaprincipal.getCedula();
+            PerfilAdminidtrador Frm = new PerfilAdminidtrador(cedula);
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();

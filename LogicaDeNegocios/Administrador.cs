@@ -43,6 +43,7 @@ namespace LogicaDeNegocios
         {
             this.credencialUsuario = credencialUsuario;
         }
+        public Administrador() { }
         /// <summary>
         /// Gets or sets the credencial usuario.
         /// </summary>
@@ -54,7 +55,7 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
         /// <returns>Administrador.</returns>
-        public static Administrador ConsultarAdministrador(int idPersona)
+        public static Administrador ConsultarAdministrador(string cedula)
         {
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
@@ -62,8 +63,8 @@ namespace LogicaDeNegocios
             CredencialUsuario credencial = null;
             try
             {
-                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("BuscarAdministrador", con.conectar());
-                mySqlCommand.Parameters.AddWithValue("@IdPersona", idPersona);
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarAdministrador", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@Cedula", cedula);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {
@@ -112,5 +113,41 @@ namespace LogicaDeNegocios
             }
 
         }*/
+
+        /// <summary>
+        /// Actualizars the cliente.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <param name="nombre">The nombre.</param>
+        /// <param name="sexo">The sexo.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="correo">The correo.</param>
+        /// <param name="contrasena">The contrasena.</param>
+        /// <returns>System.String.</returns>
+        public string ActualizarAdministrador(string cedula, string telefono, string correo, string contrasena)
+        {
+            string mensaje = "";
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+
+            try
+            {
+                MySqlCommand comando = conector.ConectarProcedimiento("spl_ModificarAdministrador", con.conectar());
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Cedula1", cedula);
+                comando.Parameters.AddWithValue("@Telefono1", telefono);
+                comando.Parameters.AddWithValue("@Correo1", correo);
+                comando.Parameters.AddWithValue("@Contraseña1", contrasena);
+                comando.ExecuteNonQuery();
+                con.cerrar();
+                mensaje = "Se actualizaron los campos correctamente";
+            }
+            catch (MySqlException ex)
+            {
+
+                mensaje = "Se ha producido un error al actualizar los datos" + ex;
+            }
+            return mensaje;
+        }
     }
 }

@@ -53,7 +53,7 @@ namespace Presentacion
         /// <summary>
         /// The identifier persona
         /// </summary>
-        int idPersona;
+         int idPersona;
         /// <summary>
         /// Initializes a new instance of the <see cref="InterfazCliente"/> class.
         /// </summary>
@@ -146,7 +146,8 @@ namespace Presentacion
         private void EditPerfil_Click(object sender, EventArgs e)
         {
             this.PanelContenedor.Controls.Clear();
-            PerfilCliente Frm = new PerfilCliente(idPersona);
+            string cedula = ProcedimientosPaginaprincipal.getCedula();
+            PerfilCliente Frm = new PerfilCliente(cedula);
             Frm.TopLevel = false;
             PanelContenedor.Controls.Add(Frm);
             Frm.Show();

@@ -40,49 +40,15 @@ namespace LogicaDeNegocios
         /// <summary>
         /// Modificars the specified cedula.
         /// </summary>
+        /// <param name="cedula">The cedula.</param>
         /// <param name="telefono">The telefono.</param>
         /// <param name="correo">The correo.</param>
         /// <param name="contrasena">The contrasena.</param>
         /// <returns>System.String.</returns>
-        public string Modificar(string telefono, string correo, string contrasena)
+        public string Modificar(string cedula, string telefono, string correo, string contrasena)
         {
-            return procedimientos.ActualizarCliente(telefono, correo, contrasena);
+            return procedimientos.ActualizarCliente(cedula, telefono, correo, contrasena);
         }
-
-        /// <summary>
-        /// Inicializars the specified text cedula.
-        /// </summary>
-        /// <param name="txtCedula">The text cedula.</param>
-        /// <param name="txtNombre">The text nombre.</param>
-        /// <param name="cmbSexo">The CMB sexo.</param>
-        /// <param name="txtTelefono">The text telefono.</param>
-        /// <param name="txtCorreo">The text correo.</param>
-        /// <param name="txtContraseña">The text contraseña.</param>
-      /*  public void Inicializar(Guna2TextBox txtCedula, Guna2TextBox txtNombre, Guna2TextBox cmbSexo, Guna2TextBox txtTelefono, Guna2TextBox txtCorreo, Guna2TextBox txtContraseña)
-        {
-            string cedula = txtCedula.Text;
-
-            //List<Cliente> client = procedimientos.BuscarCliente(cedula);
-            // List<Cliente> lista = new List<Cliente>();
-             List<Cliente> client = procedimientos.BuscarCliente(cedula);
-            //   lista.Add(client);
-           // client = procedimientos.ConsultarCliente(cedula);
-            //txtCedula.Text = TraerInformacion[0].ToString();
-            //txtCedula.Text = lista[lista.Count - 1].Cedula.ToString();
-            //txtNombre.Text = lista[lista.Count - 1].Nombre.ToString();
-            //cmbSexo.Text = lista[lista.Count - 1].Sexo.ToString();
-            //txtTelefono.Text = lista[lista.Count - 1].Telefono.ToString();
-            //txtCorreo.Text = lista[lista.Count - 1].CredencialUsuario.Correo.ToString();
-            //txtContraseña.Text = lista[lista.Count - 1].CredencialUsuario.Contrasena.ToString();
-            // return lista[lista.Count - 1].IdTipoUsuario;
-
-            //  txtCedula.Text = client[0].Cedula.ToString();
-            txtNombre.Text = client[1].ToString();
-            cmbSexo.Text = client[2].ToString();
-            txtTelefono.Text = client[3].ToString();
-            txtCorreo.Text = client[4].ToString();
-            txtContraseña.Text = client[5].ToString();
-        }*/
 
         /// <summary>
         /// Consultars the cliente.
@@ -101,11 +67,11 @@ namespace LogicaDeNegocios
             return client;
         }
 
-        public List<Cliente> ConsultaClient(int idPersona)
+        public List<Cliente> ConsultaClient(string cedula)
         {
             List<Cliente> lista = new List<Cliente>();
             Cliente client = null;
-            client = Cliente.BuscarClientePorId(idPersona);
+            client = Cliente.BuscarClient(cedula);
             lista.Add(client);
             return lista;
         }

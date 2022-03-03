@@ -29,6 +29,7 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="admin">The admin.</param>
         /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        Administrador admin = new Administrador();
         public bool RegistrarAdministrador(Administrador admin)
         {
             Administrador registrar = admin;
@@ -40,12 +41,26 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
         /// <returns>List&lt;Administrador&gt;.</returns>
-        public List<Administrador> ConsultaAdmin(int idPersona)
+        public List<Administrador> ConsultaAdmin(string cedula)
         {
             List<Administrador> newLista = new List<Administrador>();
-            Administrador admin = Administrador.ConsultarAdministrador(idPersona);
+            Administrador admin = null;
+                admin = Administrador.ConsultarAdministrador(cedula);
             newLista.Add(admin);
             return newLista;
+        }
+
+        /// <summary>
+        /// Modificars the specified cedula.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="correo">The correo.</param>
+        /// <param name="contrasena">The contrasena.</param>
+        /// <returns>System.String.</returns>
+        public string Modificar(string cedula, string telefono, string correo, string contrasena)
+        {
+            return admin.ActualizarAdministrador(cedula, telefono, correo, contrasena);
         }
     }
 }

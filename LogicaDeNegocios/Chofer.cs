@@ -98,7 +98,7 @@ namespace LogicaDeNegocios
                     mySqlCommand.Parameters.AddWithValue("@NombreFx", Chofer.Nombre);
                     mySqlCommand.Parameters.AddWithValue("@SexoFx", Chofer.Sexo);
                     mySqlCommand.Parameters.AddWithValue("@TelefonoFx", Chofer.Telefono);
-                    mySqlCommand.Parameters.AddWithValue("@TelefonoFx", Chofer.Licencia);
+                    mySqlCommand.Parameters.AddWithValue("@Licencia", Chofer.Licencia);
                     mySqlCommand.Parameters.AddWithValue("@SueldoFx", Chofer.Sueldo);
                     mySqlCommand.Parameters.AddWithValue("@CorreoFx", Chofer.CredencialUsuario.Correo);
                     mySqlCommand.Parameters.AddWithValue("@ContrasenaFx", Chofer.CredencialUsuario.Contrasena);

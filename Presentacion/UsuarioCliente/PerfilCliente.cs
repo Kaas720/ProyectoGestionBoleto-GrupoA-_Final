@@ -39,19 +39,19 @@ namespace Presentacion.UsuarioCliente
         /// Initializes a new instance of the <see cref="PerfilAdminidtrador"/> class.
         /// </summary>
         /// <param name="(idPersona">The identifier persona.</param>
-        public PerfilCliente(int idPersona)
+        public PerfilCliente(string cedula)
         {
            InitializeComponent();
-            LlenarInformacion(idPersona);
+            LlenarInformacion(cedula);
         }
 
         /// <summary>
         /// Llenars the informacion.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-       private void LlenarInformacion(int idPersona)
+       private void LlenarInformacion(string cedula)
         {
-            List<Cliente> Cliente = adm.ConsultaClient(idPersona);
+            List<Cliente> Cliente = adm.ConsultaClient(cedula);
            foreach(Cliente client in Cliente)
             {
                 txtCedula.Text = client.Cedula;
@@ -91,11 +91,8 @@ namespace Presentacion.UsuarioCliente
 
             if (validar())
             {
-               // CredencialUsuario credencial = new CredencialUsuario(correo, contrasena, 4);
-               // Cliente clienteregistrar = new Cliente(cedula, nombre, sexo, telefono, credencial);
-                adm.Modificar(telefono, correo, contrasena);
+                adm.Modificar(cedula, telefono, correo, contrasena);
                 MessageBox.Show("Datos actualizados con exito.");
-                // this.Hide();
             }
             else
             {

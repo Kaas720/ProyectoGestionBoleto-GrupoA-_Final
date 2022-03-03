@@ -79,7 +79,6 @@ namespace Presentacion
         {
             List<int> IdPeronsaAndRol = consulta.Login(correo, password);
             int rol = IdPeronsaAndRol[0];
-            int Idperson = IdPeronsaAndRol[1];
             if (rol != 0)
             {
                 // this.Close();
@@ -87,25 +86,29 @@ namespace Presentacion
                 switch (rol)
                 {
                     case 1:
-                       // VentanaAdministrador ventanaAdministrador = new VentanaAdministrador();
-                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idperson);
+                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(1);
                         Program.principal.Hide();
                         ventanaAdministrador.ShowDialog();
                         break;
                     case 2:
-                     //   VentanaAdministrador v = new VentanaAdministrador(Idperson);
-                       // v.ShowDialog();
+                       InterfazChofer v = new InterfazChofer(2);
+                        Program.principal.Hide();
+                        v.ShowDialog();
                         break;
                     case 3:
-                        RegistroVendedor c = new RegistroVendedor();
+                        InterfazCooperativa c = new InterfazCooperativa(3);
+                        Program.principal.Hide();
                         c.ShowDialog();
                         break;
                     case 4:
-                        InterfazCliente cs = new InterfazCliente(2);
+                        InterfazCliente cs = new InterfazCliente(4);
                         Program.principal.Hide();
-                       // this.Hide();
                         cs.ShowDialog();
-                        //Console.WriteLine("4");
+                        break;
+                    case 5:
+                        InterfazVendedor vendedor = new InterfazVendedor(5);
+                        Program.principal.Hide();
+                        vendedor.ShowDialog();
                         break;
                 }
             }

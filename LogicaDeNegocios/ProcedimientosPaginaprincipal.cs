@@ -31,6 +31,18 @@ namespace LogicaDeNegocios
         /// The con
         /// </summary>
         Conexion con = new Conexion();
+        private static string cedula = "";
+
+        public static string getCedula()
+        {
+            return cedula;
+        }
+
+        public static void setCedula(string cedulas)
+        {
+            cedula = cedulas;
+        }
+
         /// <summary>
         /// Iniciases the seccion.
         /// </summary>
@@ -40,16 +52,17 @@ namespace LogicaDeNegocios
         public List<int> IniciasSeccion(string correo, string password)
         {
             List<int> IdPeronsaAndRol = new List<int>();
+            List<string> IdCedula = new List<string>();
             try
             {
-                MySqlCommand mySqlCommand = ConectarProcedimiento("ProcesoInicioSeccion");
+                MySqlCommand mySqlCommand = ConectarProcedimiento("spl_ProcesoInicioSeccion");
                 mySqlCommand.Parameters.AddWithValue("@CorreoFx", correo);
                 mySqlCommand.Parameters.AddWithValue("@contrasenaFx", password);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {
                     IdPeronsaAndRol.Add(Convert.ToInt32(lector["Foreking_RolesUsuario"]));
-                    IdPeronsaAndRol.Add(Convert.ToInt32(lector["Foreking_RolesUsuario"]));
+                    IdCedula.Add(Convert.ToString(lector["Cedula"]));
                 }
                 con.cerrar(); 
             }
@@ -58,6 +71,7 @@ namespace LogicaDeNegocios
                 MessageBox.Show("Error intentolo mas tarde" + ex);
 
             }
+            setCedula(IdCedula[0]);
             return IdPeronsaAndRol;
         }
 

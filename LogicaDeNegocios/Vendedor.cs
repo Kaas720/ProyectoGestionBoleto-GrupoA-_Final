@@ -35,6 +35,54 @@ namespace LogicaDeNegocios
         /// </summary>
         CredencialUsuario credencialUsuario;
 
+        internal List<Vendedor> BuscarVendedor(string datoVendedor)
+        {
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            Vendedor vendedor = null;
+            CredencialUsuario credencial = null;
+            List<Vendedor> ListVendedor = new List<Vendedor>();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("ConsultarVendedor", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@DatoFx", datoVendedor);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 0);
+                    vendedor = new Vendedor(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(),420 ,credencial);
+                    ListVendedor.Add(vendedor);
+                }
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            return ListVendedor;
+        }
+
+        internal static bool EliminarVendedor(string cedulaNombre)
+        {
+
+            bool x = false;
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("EliminarVendedor", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@CedulaFx", cedulaNombre);
+                mySqlCommand.ExecuteNonQuery();
+                x = true;
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            return x;
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Vendedor" /> class.
         /// </summary>
@@ -50,6 +98,7 @@ namespace LogicaDeNegocios
             this.sueldo = sueldo;
             this.credencialUsuario = credencialUsuario;
         }
+        public Vendedor() { }
 
         /// <summary>
         /// Gets or sets the sueldo.

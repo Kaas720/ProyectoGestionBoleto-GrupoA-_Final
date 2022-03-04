@@ -147,6 +147,7 @@ namespace Presentacion
         {
             this.PanelContenedor.Controls.Clear();
             string cedula = ProcedimientosPaginaprincipal.getCedula();
+            MessageBox.Show(cedula);
             PerfilCliente Frm = new PerfilCliente(cedula);
             Frm.TopLevel = false;
             PanelContenedor.Controls.Add(Frm);

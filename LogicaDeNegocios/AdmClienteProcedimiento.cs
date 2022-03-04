@@ -82,8 +82,7 @@ namespace LogicaDeNegocios
         public List<Cliente> ConsultaClient(string cedula)
         {
             List<Cliente> lista = new List<Cliente>();
-            Cliente client = null;
-            client = Cliente.BuscarClient(cedula);
+            Cliente client = Cliente.BuscarClient(cedula);
             lista.Add(client);
             return lista;
         }

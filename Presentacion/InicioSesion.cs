@@ -78,7 +78,7 @@ namespace Presentacion
         private void ConsultarLoginBD(string correo, string password)
         {
             List<int> IdPeronsaAndRol = consulta.Login(correo, password);
-            int rol = IdPeronsaAndRol[0];
+            int rol = IdPeronsaAndRol[0];    
             if (rol != 0)
             {
                 // this.Close();
@@ -86,13 +86,14 @@ namespace Presentacion
                 switch (rol)
                 {
                     case 1:
-                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(1);
+                        int Idpersona = IdPeronsaAndRol[1];
                         Program.principal.Hide();
+                        VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idpersona);
                         ventanaAdministrador.ShowDialog();
                         break;
                     case 2:
-                       InterfazChofer v = new InterfazChofer(2);
                         Program.principal.Hide();
+                        InterfazChofer v = new InterfazChofer(2);
                         v.ShowDialog();
                         break;
                     case 3:
@@ -101,8 +102,8 @@ namespace Presentacion
                         c.ShowDialog();
                         break;
                     case 4:
-                        InterfazCliente cs = new InterfazCliente(4);
                         Program.principal.Hide();
+                        InterfazCliente cs = new InterfazCliente(4);   
                         cs.ShowDialog();
                         break;
                     case 5:

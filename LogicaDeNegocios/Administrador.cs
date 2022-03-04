@@ -55,7 +55,7 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
         /// <returns>Administrador.</returns>
-        public static Administrador ConsultarAdministrador(string cedula)
+        public static Administrador ConsultarAdministrador(int id)
         {
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
@@ -63,8 +63,8 @@ namespace LogicaDeNegocios
             CredencialUsuario credencial = null;
             try
             {
-                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarAdministrador", con.conectar());
-                mySqlCommand.Parameters.AddWithValue("@Cedula", cedula);
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("BuscarAdministrador", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@IdPersona", id);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {

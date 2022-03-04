@@ -55,15 +55,27 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="cedula">The cedula.</param>
         /// <exception cref="LogicaDeNegocios.ControlExcepcion">Cliente no registrado</exception>
-       public Cliente ConsultarCliente(string cedula )
+       public List<Cliente> ConsultarCliente(string Dato )
         {
-            //  Cliente client = Cliente.BuscarCliente(cedula);
-            Cliente client = procedimientos.BuscarCliente(cedula);
-
-            if (client == null)
+            List<Cliente> client = null;
+            if (String.IsNullOrEmpty(Dato))
             {
-                throw new ControlExcepcion("Cliente no registrado");
+                throw new ControlExcepcion("Campo vacio por favor rellenar");
             }
+            else
+            {
+                if (Dato == "Iniciar_data_grid_datos")
+                {
+                    Dato = "";
+                }
+                client = procedimientos.BuscarCliente(Dato);
+
+                if (client.Count == 0)
+                {
+                    throw new ControlExcepcion("Cliente no encontrado");
+                }
+            }
+            
             return client;
         }
 
@@ -74,6 +86,14 @@ namespace LogicaDeNegocios
             client = Cliente.BuscarClient(cedula);
             lista.Add(client);
             return lista;
+        }
+
+        public void EliminarCliente(string cedula)
+        {
+            if (!Cliente.EliminarCliente(cedula))
+            {
+                throw new ControlExcepcion("Error al eliminar intetar más tarde");
+            }
         }
     }
 }

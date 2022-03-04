@@ -39,22 +39,22 @@ namespace Presentacion.SGA_Administrador
         /// Initializes a new instance of the <see cref="PerfilAdminidtrador"/> class.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-        public PerfilAdminidtrador(string cedula)
+        public PerfilAdminidtrador(int id)
         {
             InitializeComponent();
-            LlenarInformacion(cedula);
+            LlenarInformacion(id);
         }
 
         /// <summary>
         /// Llenars the informacion.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-        private void LlenarInformacion(string cedula)
+        private void LlenarInformacion(int id)
         {
-            List<Administrador> Administrador = admAdministrador.ConsultaAdmin(cedula);
+            List<Administrador> Administrador = admAdministrador.ConsultaAdmin(id);
             foreach(Administrador admin in Administrador)
             {
-                txtCedula.Text = admin.Cedula;
+                //txtCedula.Text = admin.Cedula;
                 txtName.Text = admin.Nombre;
                 txtSexo.Text = admin.Sexo;
                 txtTelefono.Text = admin.Telefono;

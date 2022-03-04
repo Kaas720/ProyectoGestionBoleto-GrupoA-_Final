@@ -93,9 +93,8 @@ namespace Presentacion
         /// </summary>
         public void IniciarFromdelPanelPrincipal()
         {
-            //MessageBox.Show(idPersona + "");
-            string cedula = ProcedimientosPaginaprincipal.getCedula();
-            PerfilAdminidtrador Frm = new PerfilAdminidtrador(cedula);
+            MessageBox.Show(idPersona + "");
+            PerfilAdminidtrador Frm = new PerfilAdminidtrador(idPersona);
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();
@@ -182,8 +181,7 @@ namespace Presentacion
         private void Home_Click(object sender, EventArgs e)
         {
             this.PanelPrincipalContenedor.Controls.Clear();
-            string cedula = ProcedimientosPaginaprincipal.getCedula();
-            PerfilAdminidtrador Frm = new PerfilAdminidtrador(cedula);
+            PerfilAdminidtrador Frm = new PerfilAdminidtrador(idPersona);
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();

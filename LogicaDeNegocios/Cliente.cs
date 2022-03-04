@@ -93,6 +93,27 @@ namespace LogicaDeNegocios
                 }
 
             }
+
+        internal static bool EliminarCliente(string cedula)
+        {
+            bool x = false;
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("EliminarCliente", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@CedulaFx", cedula);
+                mySqlCommand.ExecuteNonQuery();
+                x = true;
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            return x;
+        }
+
         //public static Cliente BuscarClientePorId(String cedula)
         /// <summary>
         /// Buscars the cliente.
@@ -125,21 +146,23 @@ namespace LogicaDeNegocios
             return client;
         }
 
-        public Cliente BuscarCliente(string cedula)
+        public List<Cliente> BuscarCliente(string Dato)
         {
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             Cliente client = null;
             CredencialUsuario credencial = null;
+            List<Cliente> ListCliente = new List<Cliente>();
             try
             {
                 MySqlCommand mySqlCommand = conector.ConectarProcedimiento("ConsultarCliente", con.conectar());
-                mySqlCommand.Parameters.AddWithValue("@CedulaFx", cedula);
+                mySqlCommand.Parameters.AddWithValue("@DatoFx", Dato);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {
                     credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 0);
                     client = new Cliente(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);
+                    ListCliente.Add(client);
                 }
                 con.cerrar();
             }
@@ -147,7 +170,7 @@ namespace LogicaDeNegocios
             {
                 Console.WriteLine("Error emitido por: "+ex);
             }
-             return client;
+             return ListCliente;
         }
         /// <summary>
         /// Actualizars the cliente.

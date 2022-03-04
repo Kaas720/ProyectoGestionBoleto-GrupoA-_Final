@@ -59,7 +59,7 @@ namespace Presentacion.SGA_Administrador
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.BtnConsultar = new FontAwesome.Sharp.IconPictureBox();
-            this.TxtCedulaCliente = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TxtDatoCliente = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCliente)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -75,7 +75,7 @@ namespace Presentacion.SGA_Administrador
             this.DataGridCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridCliente.BackgroundColor = System.Drawing.Color.White;
             this.DataGridCliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DataGridCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DataGridCliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(205)))), ((int)(((byte)(221)))));
@@ -93,11 +93,11 @@ namespace Presentacion.SGA_Administrador
             this.Eliminar_Cliente,
             this.Editar});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(25)))), ((int)(((byte)(29)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(191)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(12)))), ((int)(((byte)(14)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridCliente.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridCliente.EnableHeadersVisualStyles = false;
@@ -138,6 +138,7 @@ namespace Presentacion.SGA_Administrador
             this.DataGridCliente.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridCliente.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridCliente.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridCliente_CellContentClick);
             this.DataGridCliente.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DataGridCliente_CellPainting);
             // 
             // NombreCliente
@@ -181,7 +182,7 @@ namespace Presentacion.SGA_Administrador
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.Controls.Add(this.BtnConsultar);
-            this.guna2GroupBox1.Controls.Add(this.TxtCedulaCliente);
+            this.guna2GroupBox1.Controls.Add(this.TxtDatoCliente);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GroupBox1.Controls.Add(this.DataGridCliente);
             this.guna2GroupBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -209,26 +210,26 @@ namespace Presentacion.SGA_Administrador
             this.BtnConsultar.TabStop = false;
             this.BtnConsultar.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
-            // TxtCedulaCliente
+            // TxtDatoCliente
             // 
-            this.TxtCedulaCliente.BackColor = System.Drawing.Color.Transparent;
-            this.TxtCedulaCliente.BorderRadius = 12;
-            this.TxtCedulaCliente.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtCedulaCliente.DefaultText = "";
-            this.TxtCedulaCliente.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtCedulaCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtCedulaCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtCedulaCliente.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtCedulaCliente.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtCedulaCliente.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtCedulaCliente.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtCedulaCliente.Location = new System.Drawing.Point(257, 85);
-            this.TxtCedulaCliente.Name = "TxtCedulaCliente";
-            this.TxtCedulaCliente.PasswordChar = '\0';
-            this.TxtCedulaCliente.PlaceholderText = "Ingresar la cédula o nombre del cliente";
-            this.TxtCedulaCliente.SelectedText = "";
-            this.TxtCedulaCliente.Size = new System.Drawing.Size(230, 30);
-            this.TxtCedulaCliente.TabIndex = 2;
+            this.TxtDatoCliente.BackColor = System.Drawing.Color.Transparent;
+            this.TxtDatoCliente.BorderRadius = 12;
+            this.TxtDatoCliente.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtDatoCliente.DefaultText = "";
+            this.TxtDatoCliente.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtDatoCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtDatoCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtDatoCliente.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtDatoCliente.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtDatoCliente.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtDatoCliente.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtDatoCliente.Location = new System.Drawing.Point(257, 85);
+            this.TxtDatoCliente.Name = "TxtDatoCliente";
+            this.TxtDatoCliente.PasswordChar = '\0';
+            this.TxtDatoCliente.PlaceholderText = "Ingresar la cédula o nombre del cliente";
+            this.TxtDatoCliente.SelectedText = "";
+            this.TxtDatoCliente.Size = new System.Drawing.Size(230, 30);
+            this.TxtDatoCliente.TabIndex = 2;
             // 
             // guna2HtmlLabel1
             // 
@@ -273,7 +274,7 @@ namespace Presentacion.SGA_Administrador
         /// <summary>
         /// The text cedula cliente
         /// </summary>
-        private Guna.UI2.WinForms.Guna2TextBox TxtCedulaCliente;
+        private Guna.UI2.WinForms.Guna2TextBox TxtDatoCliente;
         /// <summary>
         /// The guna2 HTML label1
         /// </summary>

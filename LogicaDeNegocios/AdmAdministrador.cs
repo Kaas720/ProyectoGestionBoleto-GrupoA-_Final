@@ -41,11 +41,11 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
         /// <returns>List&lt;Administrador&gt;.</returns>
-        public List<Administrador> ConsultaAdmin(string cedula)
+        public List<Administrador> ConsultaAdmin(int id)
         {
             List<Administrador> newLista = new List<Administrador>();
             Administrador admin = null;
-                admin = Administrador.ConsultarAdministrador(cedula);
+            admin = Administrador.ConsultarAdministrador(id);
             newLista.Add(admin);
             return newLista;
         }

@@ -41,6 +41,7 @@ namespace Presentacion.SGA_Administrador
         public EliminarClienteporAdmin()
         {
             InitializeComponent();
+            LllenarDataGrid("Iniciar_data_grid_datos");
         }
 
         /// <summary>
@@ -49,22 +50,34 @@ namespace Presentacion.SGA_Administrador
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void iconPictureBox1_Click(object sender, EventArgs e)
+        {         
+            try
+            {  
+                string DatoCliente = TxtDatoCliente.Text;
+                LllenarDataGrid(DatoCliente);
+                }
+            catch (ControlExcepcion ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void LllenarDataGrid(string DatoCliente)
         {
-            string cedula = TxtCedulaCliente.Text;
             try
             {
-            //    //  Cliente client = admClienteProcedimiento.ConsultarCliente(cedula);
-            Cliente client = admClienteProcedimiento.ConsultarCliente(cedula);
-            List<Cliente> listaCliente = new List<Cliente>();
-            listaCliente.Add(client);
-            foreach (Cliente c in listaCliente)
-            {
-                    Console.WriteLine(client.Cedula+ client.Nombre+ client.CredencialUsuario.Correo+"//////////////////");
+                List<Cliente> listaCliente = admClienteProcedimiento.ConsultarCliente(DatoCliente);
+                TxtDatoCliente.Text = null;
+                DataGridCliente.Rows.Clear();
+                int x = 0;
+                foreach (Cliente c in listaCliente)
+                {
+                    Console.WriteLine("////////////" + c.Cedula + c.Nombre + c.CredencialUsuario.Correo + "//////////////////");
                     DataGridCliente.Rows.Add(1);
-                    DataGridCliente.Rows[0].Cells[1].Value = client.Cedula.ToString();
-                    DataGridCliente.Rows[0].Cells[0].Value = client.Nombre.ToString();
-                    DataGridCliente.Rows[0].Cells[2].Value = client.CredencialUsuario.Correo.ToString();
-                }  
+                    DataGridCliente.Rows[x].Cells[1].Value = c.Cedula.ToString();
+                    DataGridCliente.Rows[x].Cells[0].Value = c.Nombre.ToString();
+                    DataGridCliente.Rows[x].Cells[2].Value = c.CredencialUsuario.Correo.ToString();
+                    x++;
+                }
             }
             catch (ControlExcepcion ex)
             {
@@ -90,10 +103,30 @@ namespace Presentacion.SGA_Administrador
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
                 DataGridViewButtonCell celBoton = this.DataGridCliente.Rows[e.RowIndex].Cells["Eliminar_Cliente"] as DataGridViewButtonCell;
                 Icon icoAtomico = new Icon("..\\..\\Resources\\eliminar.ico");
-                e.Graphics.DrawIcon(icoAtomico, e.CellBounds.Left + 1, e.CellBounds.Top + 1);
+                e.Graphics.DrawIcon(icoAtomico, e.CellBounds.Left + 5, e.CellBounds.Top + 1);
                 this.DataGridCliente.Rows[e.RowIndex].Height = icoAtomico.Height+2;
                 this.DataGridCliente.Columns[e.ColumnIndex].Width = icoAtomico.Width+10;
                 e.Handled = true;
+            }
+        }
+
+        private void DataGridCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                int x = DataGridCliente.CurrentCell.RowIndex;
+                string cedulaNombre = DataGridCliente.Rows[x].Cells[1].Value.ToString();
+                try
+                {
+                    admClienteProcedimiento.EliminarCliente(cedulaNombre);
+                    MessageBox.Show("Cliente eliminado con exito");
+                    DataGridCliente.Rows.Remove(DataGridCliente.CurrentRow);
+                }
+                catch (ControlExcepcion ex)
+                {
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
             }
         }
     }

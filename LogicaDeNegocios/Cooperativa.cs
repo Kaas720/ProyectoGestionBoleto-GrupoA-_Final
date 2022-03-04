@@ -63,7 +63,7 @@ namespace LogicaDeNegocios
             this.telefono = telefono;
             this.credencialUsuario = credencialUsuario;
         }
-
+        public Cooperativa() { }
         /// <summary>
         /// Gets or sets the propietario.
         /// </summary>
@@ -125,5 +125,70 @@ namespace LogicaDeNegocios
                 Console.WriteLine(ex);
             }
         }
+
+        /// <summary>
+        /// Buscars the cooperativa.
+        /// </summary>
+        /// <param name="idCooperativa">The cedula.</param>
+        /// <returns>List&lt;Chofer&gt;.</returns>
+        public static Cooperativa BuscarCooperativa(int idCooperativa)
+        {
+
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            Cooperativa cooperativa = null;
+            CredencialUsuario credencial = null;
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarCooperativa", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@idCooperativa", idCooperativa);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 3);
+                    cooperativa = new Cooperativa(lector["Ruc"].ToString(), lector["Propietario"].ToString(),  lector["NombreCooperativa"].ToString(), lector["Telefono"].ToString(), credencial);
+                }
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            return cooperativa;
+        }
+
+        /// <summary>
+        /// Actualizars the cooperativa.
+        /// </summary>
+        /// <param name="ruc">The cedula.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="correo">The correo.</param>
+        /// <param name="contrasena">The contrasena.</param>
+        /// <returns>System.String.</returns>
+        public string ActualizarCooperativa(string ruc, string telefono, string correo, string contrasena)
+        {
+            string mensaje = "";
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+
+            try
+            {
+                MySqlCommand comando = conector.ConectarProcedimiento("spl_ModificarCooperativa", con.conectar());
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Ruc", ruc);
+                comando.Parameters.AddWithValue("@Telefono", telefono);
+                comando.Parameters.AddWithValue("@Correo", correo);
+                comando.Parameters.AddWithValue("@Contraseña", contrasena);
+                comando.ExecuteNonQuery();
+                con.cerrar();
+                mensaje = "Se actualizaron los campos correctamente";
+            }
+            catch (MySqlException ex)
+            {
+
+                mensaje = "Se ha producido un error al actualizar los datos" + ex;
+            }
+            return mensaje;
         }
     }
+}

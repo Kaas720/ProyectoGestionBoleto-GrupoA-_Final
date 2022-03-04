@@ -115,5 +115,74 @@ namespace LogicaDeNegocios
             }
 
         }
+
+        //public static Chofer BuscarChofer(String cedula)
+        /// <summary>
+        /// Buscars the chofer.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <returns>List&lt;Chofer&gt;.</returns>
+        public static Chofer BuscarChofer(string cedula)
+        {
+
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            Chofer chofer = null;
+            CredencialUsuario credencial = null;
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarChofer", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@Cedula", cedula);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 3);
+                    chofer = new Chofer(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), lector["Licencia"].ToString(), Convert.ToDouble(lector["Sueldo"].ToString()), credencial);
+                }
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            return chofer;
+        }
+
+        /// <summary>
+        /// Actualizars the chofer.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <param name="nombre">The nombre.</param>
+        /// <param name="sexo">The sexo.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="correo">The correo.</param>
+        /// <param name="contrasena">The contrasena.</param>
+        /// <returns>System.String.</returns>
+        public string ActualizarChofer(string cedula, string telefono, string correo, string contrasena)
+        {
+            string mensaje = "";
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+
+            try
+            {
+                MySqlCommand comando = conector.ConectarProcedimiento("spl_ModificarChofer", con.conectar());
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Cedula1", cedula);
+                comando.Parameters.AddWithValue("@Telefono1", telefono);
+                comando.Parameters.AddWithValue("@Correo1", correo);
+                comando.Parameters.AddWithValue("@Contraseña1", contrasena);
+                comando.ExecuteNonQuery();
+                con.cerrar();
+                mensaje = "Se actualizaron los campos correctamente";
+            }
+            catch (MySqlException ex)
+            {
+
+                mensaje = "Se ha producido un error al actualizar los datos" + ex;
+            }
+            return mensaje;
+        }
+
     }
 }

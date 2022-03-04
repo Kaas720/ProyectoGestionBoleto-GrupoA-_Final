@@ -57,7 +57,32 @@ namespace LogicaDeNegocios
             registrar.InsertarVendedor(registrar);
             return true;
         }
+        /// <summary>
+        /// Consultas the Vendedor.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <returns>List&lt;Chofer&gt;.</returns>
 
+        public List<Vendedor> ConsularVendedor(string cedula)
+        {
+            List<Vendedor> lista = new List<Vendedor>();
+            Vendedor vendedor = null;
+            vendedor = Vendedor.BuscarVended(cedula);
+            lista.Add(vendedor);
+            return lista;
+        }
+
+        /// <summary>
+        /// Modificars the specified cedula.
+        /// </summary>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="correo">The correo.</param>
+        /// <param name="contrasena">The contrasena.</param>
+        /// <returns>System.String.</returns>
+        public string Modificar(string cedula, string telefono, string correo, string contrasena)
+        {
+            return procedimientos.ActualizarVendedor(cedula, telefono, correo, contrasena);
+        }
         public void EliminarVendedor(string cedulaNombre)
         {
             if (!Vendedor.EliminarVendedor(cedulaNombre))

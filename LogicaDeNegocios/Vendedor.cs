@@ -34,7 +34,100 @@ namespace LogicaDeNegocios
         /// The credencial usuario
         /// </summary>
         CredencialUsuario credencialUsuario;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Vendedor" /> class.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <param name="nombre">The nombre.</param>
+        /// <param name="sexo">The sexo.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="sueldo">The sueldo.</param>
+        /// <param name="credencialUsuario">The credencial usuario.</param>
+        public Vendedor(string cedula, string nombre, string sexo, string telefono, double sueldo, CredencialUsuario credencialUsuario)
+            : base(cedula, nombre, sexo, telefono)
+        {
+            this.sueldo = sueldo;
+            this.credencialUsuario = credencialUsuario;
+        }
+        public Vendedor() { }
 
+        /// <summary>
+        /// Gets or sets the sueldo.
+        /// </summary>
+        /// <value>The sueldo.</value>
+        public double Sueldo { get => sueldo; set => sueldo = value; }
+        /// <summary>
+        /// Gets or sets the credencial usuario.
+        /// </summary>
+        /// <value>The credencial usuario.</value>
+        public CredencialUsuario CredencialUsuario { get => credencialUsuario; set => credencialUsuario = value; }
+        
+        /// <summary>
+        /// Buscars the chofer.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <returns>List&lt;Chofer&gt;.</returns>
+        public static Vendedor BuscarVended(string cedula)
+        {
+
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            Vendedor vendedor = null;
+            CredencialUsuario credencial = null;
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarVendedor", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@Cedula", cedula);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 3);
+                    vendedor = new Vendedor(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), Convert.ToDouble(lector["Sueldo"].ToString()), credencial);
+                }
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            return vendedor;
+        }
+
+        /// <summary>
+        /// Actualizars the vendedor.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <param name="nombre">The nombre.</param>
+        /// <param name="sexo">The sexo.</param>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="correo">The correo.</param>
+        /// <param name="contrasena">The contrasena.</param>
+        /// <returns>System.String.</returns>
+        public string ActualizarVendedor(string cedula, string telefono, string correo, string contrasena)
+        {
+            string mensaje = "";
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+
+            try
+            {
+                MySqlCommand comando = conector.ConectarProcedimiento("spl_ModificarVendedor", con.conectar());
+                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Cedula1", cedula);
+                comando.Parameters.AddWithValue("@Telefono1", telefono);
+                comando.Parameters.AddWithValue("@Correo1", correo);
+                comando.Parameters.AddWithValue("@Contraseña1", contrasena);
+                comando.ExecuteNonQuery();
+                con.cerrar();
+                mensaje = "Se actualizaron los campos correctamente";
+            }
+            catch (MySqlException ex)
+            {
+
+                mensaje = "Se ha producido un error al actualizar los datos" + ex;
+            }
+            return mensaje;
+        }
         internal List<Vendedor> BuscarVendedor(string datoVendedor)
         {
             Conexion con = new Conexion();
@@ -83,33 +176,7 @@ namespace LogicaDeNegocios
             return x;
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Vendedor" /> class.
-        /// </summary>
-        /// <param name="cedula">The cedula.</param>
-        /// <param name="nombre">The nombre.</param>
-        /// <param name="sexo">The sexo.</param>
-        /// <param name="telefono">The telefono.</param>
-        /// <param name="sueldo">The sueldo.</param>
-        /// <param name="credencialUsuario">The credencial usuario.</param>
-        public Vendedor(string cedula, string nombre, string sexo, string telefono, double sueldo, CredencialUsuario credencialUsuario)
-            :base(cedula, nombre, sexo, telefono)
-        {
-            this.sueldo = sueldo;
-            this.credencialUsuario = credencialUsuario;
-        }
-        public Vendedor() { }
-
-        /// <summary>
-        /// Gets or sets the sueldo.
-        /// </summary>
-        /// <value>The sueldo.</value>
-        public double Sueldo { get => sueldo; set => sueldo = value; }
-        /// <summary>
-        /// Gets or sets the credencial usuario.
-        /// </summary>
-        /// <value>The credencial usuario.</value>
-        public CredencialUsuario CredencialUsuario { get => credencialUsuario; set => credencialUsuario = value; }
+       
 
         /// <summary>
         /// Insertars the vendedor.
@@ -148,38 +215,6 @@ namespace LogicaDeNegocios
             }
 
         }
-
-        //public void InsertarVendedor(Vendedor vendedor)
-        //{
-        //    MySqlCommand mySqlCommand;
-        //    Conexion conexion = new Conexion();
-
-        //    mySqlCommand = new MySqlCommand();
-        //    mySqlCommand.CommandText = "RegistroClienteGeneral";
-        //    mySqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-        //    mySqlCommand.Parameters.AddWithValue("@CedulaFx", vendedor.Cedula);
-        //    mySqlCommand.Parameters.AddWithValue("@NombreFx", vendedor.Nombre);
-        //    mySqlCommand.Parameters.AddWithValue("@SexoFx", vendedor.Sexo);
-        //    mySqlCommand.Parameters.AddWithValue("@TelefonoFx", vendedor.Telefono);
-        //    mySqlCommand.Parameters.AddWithValue("@TelefonoFx", vendedor.Sueldo);
-        //    mySqlCommand.Parameters.AddWithValue("@CorreoFx", vendedor.CredencialUsuario.Correo);
-        //    mySqlCommand.Parameters.AddWithValue("@ContrasenaFx", vendedor.CredencialUsuario.Contrasena);
-        //    mySqlCommand.Parameters.AddWithValue("@Foreking_RolesUsuarioFx",vendedor.CredencialUsuario.Rol);
-        //    try
-        //    {
-        //        conexion.conectar();
-        //        mySqlCommand.Connection = conexion.Connection;
-        //        mySqlCommand.ExecuteNonQuery();
-
-        //    }
-        //    catch (MySqlException ex)
-        //    {
-        //        MessageBox.Show("No se encontro la base de datos" + ex.ToString());
-        //    }
-        //    conexion.cerrar();
-        //}
-
-
 
     }
 }

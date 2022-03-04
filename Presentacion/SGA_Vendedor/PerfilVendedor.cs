@@ -6,7 +6,7 @@
 // Last Modified By : USUARIO
 // Last Modified On : 02-20-2022
 // ***********************************************************************
-// <copyright file="PerfilAdminidtrador.cs" company="">
+// <copyright file="PerfilChofer.cs" company="">
 //     Copyright ©  2021
 // </copyright>
 // <summary></summary>
@@ -14,54 +14,51 @@
 using LogicaDeNegocios;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentacion.SGA_Administrador
+namespace Presentacion.SGA_Vendedor
 {
     /// <summary>
-    /// Class PerfilAdminidtrador.
+    /// Class PerfilVendedor.
     /// Implements the <see cref="System.Windows.Forms.Form" />
     /// </summary>
     /// <seealso cref="System.Windows.Forms.Form" />
-    public partial class PerfilAdminidtrador : Form
+    public partial class PerfilVendedor : Form
     {
+        // int idPersona;
+        string cedula;
         /// <summary>
-        /// The adm administrador
+        /// The adm Vendedor
         /// </summary>
-        AdmAdministrador admAdministrador = new AdmAdministrador();
+        AdmVendedor adm = new AdmVendedor();
         /// <summary>
-        /// Initializes a new instance of the <see cref="PerfilAdminidtrador"/> class.
+        /// Initializes a new instance of the <see cref="PerfilVendedor"/> class.
         /// </summary>
-        /// <param name="idPersona">The identifier persona.</param>
-        public PerfilAdminidtrador(int id)
+        /// <param name="(cedula">The identifier persona.</param>
+        public PerfilVendedor(string cedula)
         {
-            InitializeComponent();
-            LlenarInformacion(id);
+           InitializeComponent();
+            LlenarInformacion(cedula);
+            
         }
 
         /// <summary>
         /// Llenars the informacion.
         /// </summary>
-        /// <param name="idPersona">The identifier persona.</param>
-        private void LlenarInformacion(int id)
+        /// <param name="cedula">The identifier persona.</param>
+       private void LlenarInformacion(string cedula)
         {
-            List<Administrador> Administrador = admAdministrador.ConsultaAdmin(id);
-            foreach(Administrador admin in Administrador)
+            List<Vendedor> Vendedor = adm.ConsularVendedor(cedula);
+            foreach (Vendedor vendedor in Vendedor)
             {
-                txtCedula.Text = admin.Cedula;
-                txtName.Text = admin.Nombre;
-                txtSexo.Text = admin.Sexo;
-                txtTelefono.Text = admin.Telefono;
-                txtCorreo.Text = admin.CredencialUsuario.Correo;
-                txtContraseña.Text = admin.CredencialUsuario.Contrasena;
+                txtCedula.Text = vendedor.Cedula;
+                txtNom.Text = vendedor.Nombre;
+                txtSexo.Text = vendedor.Sexo;
+                txtTelefono.Text = vendedor.Telefono;
+                txtCorreo.Text = vendedor.CredencialUsuario.Correo;
+                txtPassword.Text = vendedor.CredencialUsuario.Contrasena;
             }
-            
+
         }
 
         /// <summary>
@@ -84,20 +81,16 @@ namespace Presentacion.SGA_Administrador
 
         }
 
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void EditarButon_Click(object sender, EventArgs e)
         {
-            string cedula = txtCedula.Text.Trim(), nombre = txtName.Text, sexo = txtSexo.Text, telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(), contrasena = txtContraseña.Text.Trim();
+            string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text, sexo = txtSexo.Text, telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(), contrasena = txtPassword.Text.Trim();
             BorrarAlerta();
 
             if (validar())
             {
-                admAdministrador.Modificar(cedula, telefono, correo, contrasena);
+                adm.Modificar(cedula, telefono, correo, contrasena);
                 MessageBox.Show("Datos actualizados con exito.");
+                // this.Hide();
             }
             else
             {
@@ -113,22 +106,22 @@ namespace Presentacion.SGA_Administrador
         {
             Validacion valida = new Validacion();
             bool campo = true;
-
+            
             if (valida.ValidarTelefono(txtTelefono.Text) != true)
             {
                 campo = false;
                 errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
             }
-
+            
             if (valida.validarEmail(txtCorreo.Text) != true)
             {
                 campo = false;
                 errorProvider1.SetError(txtCorreo, "Ingrese su correo electronico.");
             }
-            if (txtContraseña.Text == "")
+            if (txtPassword.Text == "")
             {
                 campo = false;
-                errorProvider1.SetError(txtContraseña, "Ingrese una contraseña.");
+                errorProvider1.SetError(txtPassword, "Ingrese una contraseña.");
             }
             if (!campo)
             {
@@ -148,7 +141,37 @@ namespace Presentacion.SGA_Administrador
         {
             errorProvider1.SetError(txtTelefono, "");
             errorProvider1.SetError(txtCorreo, "");
-            errorProvider1.SetError(txtContraseña, "");
+            errorProvider1.SetError(txtPassword, "");
+        }
+
+        private void txtCedula_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEdad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PerfilCliente_Shown(object sender, EventArgs e)
+        {
+            //txtCedula.Text = cedula;
         }
     }
 }

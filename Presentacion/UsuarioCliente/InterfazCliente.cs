@@ -53,16 +53,14 @@ namespace Presentacion
         /// <summary>
         /// The identifier persona
         /// </summary>
-         int idPersona;
         /// <summary>
         /// Initializes a new instance of the <see cref="InterfazCliente"/> class.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-        public InterfazCliente(int idPersona)
+        public InterfazCliente()
         {
             InitializeComponent();
             InicializarPanelConFromRutas();
-            this.idPersona = idPersona;
         }
 
         /// <summary>
@@ -147,7 +145,6 @@ namespace Presentacion
         {
             this.PanelContenedor.Controls.Clear();
             string cedula = ProcedimientosPaginaprincipal.getCedula();
-            MessageBox.Show(cedula);
             PerfilCliente Frm = new PerfilCliente(cedula);
             Frm.TopLevel = false;
             PanelContenedor.Controls.Add(Frm);

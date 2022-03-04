@@ -24,6 +24,7 @@ namespace LogicaDeNegocios
     /// </summary>
     public class AdmChofer
     {
+        Chofer procedimientos = new Chofer();
         /// <summary>
         /// Registrars the chofer.
         /// </summary>
@@ -35,5 +36,32 @@ namespace LogicaDeNegocios
             registrar.InsertarChofer(registrar);
             return true;
         }
+        /// <summary>
+        /// Consultas the chofer.
+        /// </summary>
+        /// <param name="cedula">The cedula.</param>
+        /// <returns>List&lt;Chofer&gt;.</returns>
+
+        public List<Chofer> ConsularChofer(string cedula)
+        {
+            List<Chofer> lista = new List<Chofer>();
+            Chofer chofer = null;
+            chofer = Chofer.BuscarChofer(cedula);
+            lista.Add(chofer);
+            return lista;
+        }
+
+        /// <summary>
+        /// Modificars the specified cedula.
+        /// </summary>
+        /// <param name="telefono">The telefono.</param>
+        /// <param name="correo">The correo.</param>
+        /// <param name="contrasena">The contrasena.</param>
+        /// <returns>System.String.</returns>
+        public string Modificar(string cedula, string telefono, string correo, string contrasena)
+        {
+            return procedimientos.ActualizarChofer(cedula, telefono, correo, contrasena);
+        }
+
     }
 }

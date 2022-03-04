@@ -77,6 +77,7 @@ namespace Presentacion
         /// <param name="password">The password.</param>
         private void ConsultarLoginBD(string correo, string password)
         {
+            
             List<int> IdPeronsaAndRol = consulta.Login(correo, password);
             int rol = IdPeronsaAndRol[0];    
             if (rol != 0)
@@ -93,21 +94,22 @@ namespace Presentacion
                         break;
                     case 2:
                         Program.principal.Hide();
-                        InterfazChofer v = new InterfazChofer(2);
+                        InterfazChofer v = new InterfazChofer();
                         v.ShowDialog();
                         break;
                     case 3:
+                       // int idCoop = IdPeronsaAndRol[3];
                         InterfazCooperativa c = new InterfazCooperativa(3);
                         Program.principal.Hide();
                         c.ShowDialog();
                         break;
                     case 4:
                         Program.principal.Hide();
-                        InterfazCliente cs = new InterfazCliente(4);   
+                        InterfazCliente cs = new InterfazCliente();   
                         cs.ShowDialog();
                         break;
                     case 5:
-                        InterfazVendedor vendedor = new InterfazVendedor(5);
+                        InterfazVendedor vendedor = new InterfazVendedor();
                         Program.principal.Hide();
                         vendedor.ShowDialog();
                         break;

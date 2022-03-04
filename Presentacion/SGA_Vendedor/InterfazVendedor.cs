@@ -14,6 +14,7 @@
 using FontAwesome.Sharp;
 using LogicaDeNegocios;
 using Presentacion.InicioFroms;
+using Presentacion.SGA_Vendedor;
 using Presentacion.UsuarioCliente;
 using System;
 using System.Collections.Generic;
@@ -53,16 +54,14 @@ namespace Presentacion
         /// <summary>
         /// The identifier persona
         /// </summary>
-        int idPersona;
         /// <summary>
         /// Initializes a new instance of the <see cref="InterfazCliente"/> class.
         /// </summary>
         /// <param name="idPersona">The identifier persona.</param>
-        public InterfazVendedor(int idPersona)
+        public InterfazVendedor()
         {
             InitializeComponent();
             InicializarPanelConFromRutas();
-            this.idPersona = idPersona;
         }
 
         /// <summary>
@@ -145,6 +144,12 @@ namespace Presentacion
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void EditPerfil_Click(object sender, EventArgs e)
         {
+            this.PanelContenedor.Controls.Clear();
+            string cedula = ProcedimientosPaginaprincipal.getCedula();
+            PerfilVendedor Frm = new PerfilVendedor(cedula);
+            Frm.TopLevel = false;
+            PanelContenedor.Controls.Add(Frm);
+            Frm.Show();
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
         }

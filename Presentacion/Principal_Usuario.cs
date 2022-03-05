@@ -64,8 +64,6 @@ namespace Presentacion
         {
             InitializeComponent();
             IniciarFromPrinciapl();
-
-
         }
         /// <summary>
         /// Iniciars from princiapl.

@@ -98,8 +98,8 @@ namespace Presentacion
                         v.ShowDialog();
                         break;
                     case 3:
-                       // int idCoop = IdPeronsaAndRol[3];
-                        InterfazCooperativa c = new InterfazCooperativa(3);
+                        int idCoop = IdPeronsaAndRol[1];
+                        InterfazCooperativa c = new InterfazCooperativa(idCoop);
                         Program.principal.Hide();
                         c.ShowDialog();
                         break;

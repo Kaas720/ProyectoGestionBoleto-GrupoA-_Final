@@ -76,7 +76,7 @@ namespace Presentacion.SGA_Administrador
                 try
                 {
                     admVendedor.EliminarVendedor(cedulaNombre);
-                    MessageBox.Show("Cliente eliminado con exito");
+                    MessageBox.Show("Vendedor eliminado con exito");
                     DataGridVendedor.Rows.Remove(DataGridVendedor.CurrentRow);
                 }
                 catch (ControlExcepcion ex)

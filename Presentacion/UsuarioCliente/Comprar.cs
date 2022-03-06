@@ -17,6 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using Presentacion.InicioFroms;
 
 namespace Presentacion
 {
@@ -32,10 +33,37 @@ namespace Presentacion
         /// The validacion
         /// </summary>
         Validacion validacion = new Validacion();
-        /// <summary>
-        /// The boletos
-        /// </summary>
         string boletos;
+        private static List<Double> precio = new List<Double>();
+
+        //public  List<GenerarInformacionBoleto> getBoleto()
+        //{
+        //    return boleto;
+        //}
+
+        //public  void setBoleto(string lugarSalida,string precio,string cooperativa,string lugardestino, string horaSalida,string fechaSalida,string numerodis,string numAsientos )
+        //{
+        //    boleto.Add(new GenerarInformacionBoleto(1,lugarSalida,fechaSalida,lugardestino,horaSalida,cooperativa,numerodis,precio));
+        //}
+
+
+        public static List<Double> getPrecio()
+        {
+            return precio;
+        }
+
+        public static void setPrecio(double precios)
+        {
+            precio.Add(precios);
+        }
+        public static void VaciarLista()
+        {
+            precio.Clear();
+        }
+
+
+
+
         // Se llama al clase ConsultaProcedimientosGenerarBoleto y se crea el objeto consultasProcedemientos para llamar a los metodos que contiene
         /// <summary>
         /// The consultas procedemientos
@@ -45,6 +73,8 @@ namespace Presentacion
         /// The boletos nuveos
         /// </summary>
         List<string> boletosNuveos = new List<string>();
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Comprar"/> class.
         /// </summary>
@@ -72,15 +102,17 @@ namespace Presentacion
        // Se utiliza el bucle foreach para realizar la agregacion de los datos que poseee un boleto y el usuario pueda completar con sus datos para posterior a ello almacenadas dentro de la base de datos
             foreach (GenerarInformacionBoleto item in generarInformacionBoleto)
             {
+                
                 TxtCooperativa.Text = item.Cooperativa;
                 TxtDestino.Text = item.Lugardestino;
                 TxtFechaSalida.Text = item.FechaSalida;
                 TxtHoraSalida.Text = item.HoraSalida;
                 TxtLugarSalida.Text = item.LugarSalida;
-                TxtNumeroDisco.Text = item.Numerodico;
+                TxtNDisco.Text = item.Numerodico;
                 TxtPrecio.Text = item.Precio;
                 consultasProcedemientos.LlenarComboAsientos(item.BusId,CbNumeroAsientos);
             }
+            
         }
 
         // Se realiza el evento tick para mostrar la fecha y hora actual en el sistema
@@ -160,17 +192,17 @@ namespace Presentacion
             Program.principal.Show();
         }
 
-        // Se realiza el metodo LLenarInformacionBoletoCarro para agregar la compra de un boleto 
-        /// <summary>
-        /// ls the lenar informacion boleto carro.
-        /// </summary>
+       // string j ="";
+        // Se realiza el metodo LLenarInformacionBoletoCarro para agregar la compra de un boleto  
         private void LLenarInformacionBoletoCarro()
-        {
-            boletos += Environment.NewLine + "/-----------------------------------/" + Environment.NewLine + "Cedula: "+ txtCedula.Text + Environment.NewLine + "Nombre: " + TxtNombre.Text + Environment.NewLine
+        {            
+            boletos += Environment.NewLine + "-----------------------------------" + Environment.NewLine + "Cedula: " + txtCedula.Text + Environment.NewLine + "Nombre: " + TxtNombre.Text + Environment.NewLine
             + "Cooperativa: " + TxtCooperativa.Text + Environment.NewLine + "Hora Salida: " + TxtHoraSalida.Text + Environment.NewLine
-            + "Fecha Salida: " + TxtFechaSalida.Text + Environment.NewLine + "Disco del bus: " + TxtNumeroDisco.Text + Environment.NewLine
-            + "Asiento:" + CbNumeroAsientos.Text;
+            + "Fecha Salida: " + TxtFechaSalida.Text + Environment.NewLine + "Disco del bus: " + TxtNDisco.Text + Environment.NewLine
+            + "Asiento:" + CbNumeroAsientos.Text;           
             boletosNuveos.Add(CbNumeroAsientos.Text);
+            setPrecio(Convert.ToDouble(TxtPrecio.Text));
+            Pago.setBoleto(new Pago(TxtCooperativa.Text, TxtDestino.Text, TxtFechaSalida.Text, TxtHoraSalida.Text,TxtLugarSalida.Text, TxtNDisco.Text,Convert.ToDouble(TxtPrecio.Text)));
         }
 
         // Se crea el metodo VaciarCampos para limpiar los campos que seran ingresados por el cliente
@@ -222,6 +254,7 @@ namespace Presentacion
         {
             try
             {
+
                 if (!verificarCamposVacios())
                 {
                     CambiarTextoCarrito();
@@ -250,7 +283,9 @@ namespace Presentacion
                 if (ValidarCarrito())
                 {
                     Pagar pagar = new Pagar(boletos, TxtCooperativa.Text, TxtFechaSalida.Text, TxtHoraSalida.Text);
+                    BuscarBus.Ventana_ventaBoletos.Hide();
                     pagar.ShowDialog();
+                   
                 }
             }
             catch (ControlExcepcion ex)
@@ -307,5 +342,6 @@ namespace Presentacion
                 return;
             }
         }
+
     }
 }

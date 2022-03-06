@@ -34,6 +34,7 @@ namespace Presentacion.InicioFroms
         /// <summary>
         /// The procedimientos
         /// </summary>
+         public static Comprar Ventana_ventaBoletos = null;
         ConsultasProcedimientos procedimientos = new ConsultasProcedimientos();
         /// <summary>
         /// Initializes a new instance of the <see cref="BuscarBus"/> class.
@@ -99,9 +100,9 @@ namespace Presentacion.InicioFroms
                         string cooperativa = DataGridInf.Rows[x].Cells[0].Value.ToString();
                         string fecha_salida = DataGridInf.Rows[x].Cells[1].Value.ToString();
                         string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
-                        Comprar comprar = new Comprar(cooperativa, fecha_salida, horario_salida);
+                        Ventana_ventaBoletos = new Comprar(cooperativa, fecha_salida, horario_salida);
                         Program.principal.Hide();
-                        comprar.Show();
+                        Ventana_ventaBoletos.Show();
                     }
                 }
                 catch (ControlExcepcion ex)

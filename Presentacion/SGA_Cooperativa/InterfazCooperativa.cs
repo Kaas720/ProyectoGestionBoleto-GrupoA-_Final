@@ -121,9 +121,8 @@ namespace Presentacion
         {
             if (MessageBox.Show("¿Está seguro de cerrar la sesión?", "Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                this.Hide();
-                Principal_Usuario principal = new Principal_Usuario();
-                principal.Show();
+                this.Close();
+                Program.principal.Show();
             }        
             
         }

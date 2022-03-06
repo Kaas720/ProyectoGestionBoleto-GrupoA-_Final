@@ -90,7 +90,6 @@ namespace Presentacion.SGA_Vendedor
             {
                 adm.Modificar(cedula, telefono, correo, contrasena);
                 MessageBox.Show("Datos actualizados con exito.");
-                // this.Hide();
             }
             else
             {

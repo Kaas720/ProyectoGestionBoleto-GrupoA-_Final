@@ -54,7 +54,6 @@ namespace Presentacion.UsuarioCliente
         /// <param name="idPersona">The identifier persona.</param>
        private void LlenarInformacion(string cedula)
         {
-            MessageBox.Show(cedula);
             List<Cliente> Cliente = adm.ConsultaClient(cedula);
            foreach(Cliente client in Cliente)
             {

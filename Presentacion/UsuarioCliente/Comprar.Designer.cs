@@ -82,6 +82,7 @@ namespace Presentacion
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.CarritoBtn = new FontAwesome.Sharp.IconButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.TxtNDisco = new Guna.UI2.WinForms.Guna2TextBox();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
@@ -203,9 +204,10 @@ namespace Presentacion
             this.PanelSuperior.Controls.Add(this.BotonParaMinimizarVentana);
             this.PanelSuperior.Controls.Add(this.BotonCierreDeAplicacion);
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(927, 35);
+            this.PanelSuperior.Size = new System.Drawing.Size(924, 35);
             this.PanelSuperior.TabIndex = 32;
             this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
@@ -280,9 +282,10 @@ namespace Presentacion
             this.panel1.Controls.Add(this.guna2HtmlLabel11);
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Controls.Add(this.Hora_Sistema);
-            this.panel1.Location = new System.Drawing.Point(0, 34);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 42);
+            this.panel1.Size = new System.Drawing.Size(924, 42);
             this.panel1.TabIndex = 33;
             // 
             // guna2HtmlLabel11
@@ -290,7 +293,7 @@ namespace Presentacion
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel11.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(89, 11);
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(104, 9);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(328, 22);
             this.guna2HtmlLabel11.TabIndex = 6;
@@ -298,10 +301,10 @@ namespace Presentacion
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(17, 5);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(66, 37);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 2;
@@ -322,6 +325,7 @@ namespace Presentacion
             // 
             this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox1.BorderRadius = 20;
+            this.guna2GroupBox1.Controls.Add(this.TxtNDisco);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2GroupBox1.Controls.Add(this.TxtFechaSalida);
             this.guna2GroupBox1.Controls.Add(this.CbNumeroAsientos);
@@ -349,7 +353,6 @@ namespace Presentacion
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Ivory;
             this.guna2GroupBox1.Location = new System.Drawing.Point(48, 96);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(810, 391);
             this.guna2GroupBox1.TabIndex = 36;
             this.guna2GroupBox1.Text = "Información boleto";
@@ -374,20 +377,16 @@ namespace Presentacion
             this.TxtFechaSalida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtFechaSalida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtFechaSalida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtFechaSalida.DisabledState.Parent = this.TxtFechaSalida;
             this.TxtFechaSalida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TxtFechaSalida.Enabled = false;
             this.TxtFechaSalida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtFechaSalida.FocusedState.Parent = this.TxtFechaSalida;
             this.TxtFechaSalida.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtFechaSalida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtFechaSalida.HoverState.Parent = this.TxtFechaSalida;
             this.TxtFechaSalida.Location = new System.Drawing.Point(548, 182);
             this.TxtFechaSalida.Name = "TxtFechaSalida";
             this.TxtFechaSalida.PasswordChar = '\0';
             this.TxtFechaSalida.PlaceholderText = "";
             this.TxtFechaSalida.SelectedText = "";
-            this.TxtFechaSalida.ShadowDecoration.Parent = this.TxtFechaSalida;
             this.TxtFechaSalida.Size = new System.Drawing.Size(176, 24);
             this.TxtFechaSalida.TabIndex = 49;
             // 
@@ -400,17 +399,13 @@ namespace Presentacion
             this.CbNumeroAsientos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbNumeroAsientos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CbNumeroAsientos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CbNumeroAsientos.FocusedState.Parent = this.CbNumeroAsientos;
             this.CbNumeroAsientos.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CbNumeroAsientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.CbNumeroAsientos.HoverState.Parent = this.CbNumeroAsientos;
             this.CbNumeroAsientos.IntegralHeight = false;
             this.CbNumeroAsientos.ItemHeight = 30;
-            this.CbNumeroAsientos.ItemsAppearance.Parent = this.CbNumeroAsientos;
             this.CbNumeroAsientos.Location = new System.Drawing.Point(555, 266);
             this.CbNumeroAsientos.Margin = new System.Windows.Forms.Padding(2);
             this.CbNumeroAsientos.Name = "CbNumeroAsientos";
-            this.CbNumeroAsientos.ShadowDecoration.Parent = this.CbNumeroAsientos;
             this.CbNumeroAsientos.Size = new System.Drawing.Size(169, 36);
             this.CbNumeroAsientos.TabIndex = 48;
             // 
@@ -423,20 +418,16 @@ namespace Presentacion
             this.TxtNumeroDisco.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtNumeroDisco.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtNumeroDisco.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtNumeroDisco.DisabledState.Parent = this.TxtNumeroDisco;
             this.TxtNumeroDisco.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TxtNumeroDisco.Enabled = false;
             this.TxtNumeroDisco.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtNumeroDisco.FocusedState.Parent = this.TxtNumeroDisco;
             this.TxtNumeroDisco.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtNumeroDisco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtNumeroDisco.HoverState.Parent = this.TxtNumeroDisco;
-            this.TxtNumeroDisco.Location = new System.Drawing.Point(548, 221);
+            this.TxtNumeroDisco.Location = new System.Drawing.Point(548, 182);
             this.TxtNumeroDisco.Name = "TxtNumeroDisco";
             this.TxtNumeroDisco.PasswordChar = '\0';
             this.TxtNumeroDisco.PlaceholderText = "";
             this.TxtNumeroDisco.SelectedText = "";
-            this.TxtNumeroDisco.ShadowDecoration.Parent = this.TxtNumeroDisco;
             this.TxtNumeroDisco.Size = new System.Drawing.Size(176, 24);
             this.TxtNumeroDisco.TabIndex = 46;
             // 
@@ -450,21 +441,17 @@ namespace Presentacion
             this.TxtCooperativa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtCooperativa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtCooperativa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtCooperativa.DisabledState.Parent = this.TxtCooperativa;
             this.TxtCooperativa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TxtCooperativa.Enabled = false;
             this.TxtCooperativa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtCooperativa.FocusedState.Parent = this.TxtCooperativa;
             this.TxtCooperativa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtCooperativa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtCooperativa.HoverState.Parent = this.TxtCooperativa;
             this.TxtCooperativa.Location = new System.Drawing.Point(204, 228);
             this.TxtCooperativa.Name = "TxtCooperativa";
             this.TxtCooperativa.PasswordChar = '\0';
             this.TxtCooperativa.PlaceholderForeColor = System.Drawing.Color.LightGray;
             this.TxtCooperativa.PlaceholderText = "";
             this.TxtCooperativa.SelectedText = "";
-            this.TxtCooperativa.ShadowDecoration.Parent = this.TxtCooperativa;
             this.TxtCooperativa.Size = new System.Drawing.Size(183, 24);
             this.TxtCooperativa.TabIndex = 45;
             // 
@@ -477,20 +464,16 @@ namespace Presentacion
             this.TxtDestino.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtDestino.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtDestino.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtDestino.DisabledState.Parent = this.TxtDestino;
             this.TxtDestino.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TxtDestino.Enabled = false;
             this.TxtDestino.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtDestino.FocusedState.Parent = this.TxtDestino;
             this.TxtDestino.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtDestino.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtDestino.HoverState.Parent = this.TxtDestino;
             this.TxtDestino.Location = new System.Drawing.Point(548, 139);
             this.TxtDestino.Name = "TxtDestino";
             this.TxtDestino.PasswordChar = '\0';
             this.TxtDestino.PlaceholderText = "";
             this.TxtDestino.SelectedText = "";
-            this.TxtDestino.ShadowDecoration.Parent = this.TxtDestino;
             this.TxtDestino.Size = new System.Drawing.Size(176, 24);
             this.TxtDestino.TabIndex = 44;
             // 
@@ -503,20 +486,16 @@ namespace Presentacion
             this.TxtHoraSalida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtHoraSalida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtHoraSalida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtHoraSalida.DisabledState.Parent = this.TxtHoraSalida;
             this.TxtHoraSalida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TxtHoraSalida.Enabled = false;
             this.TxtHoraSalida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtHoraSalida.FocusedState.Parent = this.TxtHoraSalida;
             this.TxtHoraSalida.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtHoraSalida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtHoraSalida.HoverState.Parent = this.TxtHoraSalida;
             this.TxtHoraSalida.Location = new System.Drawing.Point(204, 182);
             this.TxtHoraSalida.Name = "TxtHoraSalida";
             this.TxtHoraSalida.PasswordChar = '\0';
             this.TxtHoraSalida.PlaceholderText = "";
             this.TxtHoraSalida.SelectedText = "";
-            this.TxtHoraSalida.ShadowDecoration.Parent = this.TxtHoraSalida;
             this.TxtHoraSalida.Size = new System.Drawing.Size(183, 24);
             this.TxtHoraSalida.TabIndex = 43;
             // 
@@ -529,20 +508,16 @@ namespace Presentacion
             this.TxtLugarSalida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtLugarSalida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtLugarSalida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtLugarSalida.DisabledState.Parent = this.TxtLugarSalida;
             this.TxtLugarSalida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TxtLugarSalida.Enabled = false;
             this.TxtLugarSalida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtLugarSalida.FocusedState.Parent = this.TxtLugarSalida;
             this.TxtLugarSalida.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtLugarSalida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtLugarSalida.HoverState.Parent = this.TxtLugarSalida;
             this.TxtLugarSalida.Location = new System.Drawing.Point(204, 141);
             this.TxtLugarSalida.Name = "TxtLugarSalida";
             this.TxtLugarSalida.PasswordChar = '\0';
             this.TxtLugarSalida.PlaceholderText = "";
             this.TxtLugarSalida.SelectedText = "";
-            this.TxtLugarSalida.ShadowDecoration.Parent = this.TxtLugarSalida;
             this.TxtLugarSalida.Size = new System.Drawing.Size(183, 24);
             this.TxtLugarSalida.TabIndex = 42;
             // 
@@ -555,20 +530,16 @@ namespace Presentacion
             this.TxtPrecio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtPrecio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtPrecio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtPrecio.DisabledState.Parent = this.TxtPrecio;
             this.TxtPrecio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TxtPrecio.Enabled = false;
             this.TxtPrecio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtPrecio.FocusedState.Parent = this.TxtPrecio;
             this.TxtPrecio.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtPrecio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtPrecio.HoverState.Parent = this.TxtPrecio;
             this.TxtPrecio.Location = new System.Drawing.Point(204, 271);
             this.TxtPrecio.Name = "TxtPrecio";
             this.TxtPrecio.PasswordChar = '\0';
             this.TxtPrecio.PlaceholderText = "";
             this.TxtPrecio.SelectedText = "";
-            this.TxtPrecio.ShadowDecoration.Parent = this.TxtPrecio;
             this.TxtPrecio.Size = new System.Drawing.Size(183, 24);
             this.TxtPrecio.TabIndex = 41;
             // 
@@ -581,19 +552,15 @@ namespace Presentacion
             this.TxtNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TxtNombre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TxtNombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtNombre.DisabledState.Parent = this.TxtNombre;
             this.TxtNombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TxtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtNombre.FocusedState.Parent = this.TxtNombre;
             this.TxtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TxtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtNombre.HoverState.Parent = this.TxtNombre;
             this.TxtNombre.Location = new System.Drawing.Point(478, 96);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.PasswordChar = '\0';
             this.TxtNombre.PlaceholderText = "";
             this.TxtNombre.SelectedText = "";
-            this.TxtNombre.ShadowDecoration.Parent = this.TxtNombre;
             this.TxtNombre.Size = new System.Drawing.Size(246, 24);
             this.TxtNombre.TabIndex = 40;
             this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
@@ -607,20 +574,16 @@ namespace Presentacion
             this.txtCedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCedula.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCedula.DisabledState.Parent = this.txtCedula;
             this.txtCedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCedula.FocusedState.Parent = this.txtCedula;
             this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCedula.HoverState.Parent = this.txtCedula;
             this.txtCedula.Location = new System.Drawing.Point(156, 98);
             this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.PlaceholderText = "";
             this.txtCedula.SelectedText = "";
-            this.txtCedula.ShadowDecoration.Parent = this.txtCedula;
             this.txtCedula.Size = new System.Drawing.Size(231, 24);
             this.txtCedula.TabIndex = 39;
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
@@ -629,19 +592,14 @@ namespace Presentacion
             // 
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Location = new System.Drawing.Point(312, 333);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 12;
             this.guna2Button1.Text = "AGREGAR AL CARRITO";
@@ -674,6 +632,28 @@ namespace Presentacion
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // TxtNDisco
+            // 
+            this.TxtNDisco.AutoRoundedCorners = true;
+            this.TxtNDisco.BorderRadius = 11;
+            this.TxtNDisco.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            this.TxtNDisco.DefaultText = "";
+            this.TxtNDisco.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtNDisco.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtNDisco.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtNDisco.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtNDisco.Enabled = false;
+            this.TxtNDisco.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtNDisco.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtNDisco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtNDisco.Location = new System.Drawing.Point(548, 221);
+            this.TxtNDisco.Name = "TxtNDisco";
+            this.TxtNDisco.PasswordChar = '\0';
+            this.TxtNDisco.PlaceholderText = "";
+            this.TxtNDisco.SelectedText = "";
+            this.TxtNDisco.Size = new System.Drawing.Size(176, 24);
+            this.TxtNDisco.TabIndex = 51;
             // 
             // Comprar
             // 
@@ -839,5 +819,6 @@ namespace Presentacion
         /// The guna2 HTML label11
         /// </summary>
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2TextBox TxtNDisco;
     }
 }

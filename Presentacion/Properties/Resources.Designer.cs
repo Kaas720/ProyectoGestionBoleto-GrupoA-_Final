@@ -73,6 +73,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chrono_Transparente {
+            get {
+                object obj = ResourceManager.GetObject("Chrono_Transparente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d4wzusy_073e2814_3c19_4379_8264_dbb7c3e97d6d {
             get {
                 object obj = ResourceManager.GetObject("d4wzusy-073e2814-3c19-4379-8264-dbb7c3e97d6d", resourceCulture);
@@ -118,6 +128,17 @@ namespace Presentacion.Properties {
             get {
                 object obj = ResourceManager.GetObject("pngtree-blue-big-car-illustration-cartoon-shuttle-blue-bus-gray-glass-png-image_4" +
                         "543101", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543102 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-blue-big-car-illustration-cartoon-shuttle-blue-bus-gray-glass-png-image_4" +
+                        "543102", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

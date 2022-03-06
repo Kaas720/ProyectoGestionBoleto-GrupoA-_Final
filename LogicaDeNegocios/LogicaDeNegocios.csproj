@@ -75,6 +75,7 @@
     <Compile Include="AdmChofer.cs" />
     <Compile Include="AdmCooperativa.cs" />
     <Compile Include="Administrador.cs" />
+    <Compile Include="AdmPago.cs" />
     <Compile Include="AdmVendedor.cs" />
     <Compile Include="Boleto.cs" />
     <Compile Include="Bus.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Cooperativa.cs" />
     <Compile Include="CredencialUsuario.cs" />
     <Compile Include="GenerarInformacionBoleto.cs" />
+    <Compile Include="Pago.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="ConsultaProcedimientosGenerarBoleto.cs" />
     <Compile Include="ConsultasProcedimientos.cs" />

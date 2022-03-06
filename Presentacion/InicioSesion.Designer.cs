@@ -48,7 +48,6 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicioSesion));
             this.NombreUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.Contrasenausuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.botonInicioSesion = new Guna.UI2.WinForms.Guna2Button();
@@ -87,6 +86,7 @@ namespace Presentacion
             this.Contrasenausuario.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Contrasenausuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Contrasenausuario.Location = new System.Drawing.Point(264, 215);
+            this.Contrasenausuario.MaxLength = 9;
             this.Contrasenausuario.Name = "Contrasenausuario";
             this.Contrasenausuario.PasswordChar = '*';
             this.Contrasenausuario.PlaceholderText = "Contraseña";
@@ -124,9 +124,8 @@ namespace Presentacion
             this.TextoInicioSesion.Size = new System.Drawing.Size(190, 33);
             this.TextoInicioSesion.TabIndex = 2;
             this.TextoInicioSesion.Text = "Inicio de sesión";
-            //this.TextoInicioSesion.Click += new System.EventHandler(this.TextoInicioSesion_Click);
             // 
-            // InicioSeccion
+            // InicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,8 +137,7 @@ namespace Presentacion
             this.Controls.Add(this.Contrasenausuario);
             this.Controls.Add(this.NombreUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "InicioSeccion";
+            this.Name = "InicioSesion";
             this.Text = "InicioSeccion";
             this.ResumeLayout(false);
             this.PerformLayout();

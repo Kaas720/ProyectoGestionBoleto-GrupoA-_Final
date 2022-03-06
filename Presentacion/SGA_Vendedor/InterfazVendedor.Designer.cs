@@ -63,11 +63,11 @@ namespace Presentacion
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
             this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Hora_Sistema = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PanelContenedor = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -253,9 +253,10 @@ namespace Presentacion
             this.PanelSuperior.Controls.Add(this.BotonParaMinimizarVentana);
             this.PanelSuperior.Controls.Add(this.BotonCierreDeAplicacion);
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.NoMove2D;
-            this.PanelSuperior.Location = new System.Drawing.Point(-1, 1);
+            this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(941, 35);
+            this.PanelSuperior.Size = new System.Drawing.Size(924, 35);
             this.PanelSuperior.TabIndex = 32;
             // 
             // Fecha_Sistema
@@ -305,27 +306,18 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.guna2HtmlLabel9);
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Controls.Add(this.Hora_Sistema);
-            this.panel1.Location = new System.Drawing.Point(-1, 34);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(941, 45);
+            this.panel1.Size = new System.Drawing.Size(924, 45);
             this.panel1.TabIndex = 33;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.label4.Location = new System.Drawing.Point(99, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 18);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "BIENVENIDO A VIAJEROS S.A";
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(27, 8);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -356,6 +348,17 @@ namespace Presentacion
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(722, 391);
             this.PanelContenedor.TabIndex = 34;
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(113, 13);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(304, 20);
+            this.guna2HtmlLabel9.TabIndex = 7;
+            this.guna2HtmlLabel9.Text = "Sistema de Gestion de Boletos de AutoBuses";
             // 
             // InterfazVendedor
             // 
@@ -427,10 +430,6 @@ namespace Presentacion
         /// </summary>
         private System.Windows.Forms.Timer timer1;
         /// <summary>
-        /// The label4
-        /// </summary>
-        private System.Windows.Forms.Label label4;
-        /// <summary>
         /// The home
         /// </summary>
         private FontAwesome.Sharp.IconButton Home;
@@ -466,5 +465,6 @@ namespace Presentacion
         /// The guna2 circle picture box1
         /// </summary>
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
     }
 }

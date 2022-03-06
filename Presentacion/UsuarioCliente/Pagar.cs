@@ -11,6 +11,8 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+using LogicaDeNegocios;
+using Presentacion.InicioFroms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +28,8 @@ namespace Presentacion.UsuarioCliente
     /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Pagar : Form
     {
+        AdmPago admpago = new AdmPago();
+        Pago p = new Pago();
         /// <summary>
         /// Initializes a new instance of the <see cref="Pagar"/> class.
         /// </summary>
@@ -36,7 +40,10 @@ namespace Presentacion.UsuarioCliente
         public Pagar(string texto,string cooperativa, string fechaSalida, string horaSalida)
         {
             InitializeComponent();
-            InfBoleto.Text = texto;
+            AdmPago ap = new AdmPago();
+            txtTotal.Text += ap.calcularTotalPagar(Comprar.getPrecio());
+            InfBoleto.Text += texto;
+
         }
         /// <summary>
         /// Releases the capture.
@@ -80,7 +87,32 @@ namespace Presentacion.UsuarioCliente
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            
+            if (Pago.pagarBoleto())
+            {
+                btnPagar.Visible = false;
+                InfBoleto.Text = null;
+                btnImprimir.Visible = true;
+                txtTotal.Text = null;
+            }
+           else{
+                MessageBox.Show("Error al comprar");
+            }           
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (btnPagar.Visible == true)
+            {
+                this.Close();
+                BuscarBus.Ventana_ventaBoletos.Show();
+            }
+            else
+            {
+                this.Close();
+                BuscarBus.Ventana_ventaBoletos.Close();
+                Program.principal.Show();
+                Comprar.VaciarLista();
+            }
         }
     }
 }

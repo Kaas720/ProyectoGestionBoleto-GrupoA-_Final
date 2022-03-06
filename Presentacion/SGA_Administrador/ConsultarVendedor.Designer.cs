@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion.SGA_Administrador
 {
-    partial class EliminarVendedor
+    partial class ConsultarVendedor
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@ namespace Presentacion.SGA_Administrador
             this.CedulaCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CorreoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar_Cliente = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnConsultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridVendedor)).BeginInit();
@@ -219,8 +219,10 @@ namespace Presentacion.SGA_Administrador
             this.Editar.HeaderText = "Editar";
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // EliminarVendedor
+            // ConsultarVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +230,7 @@ namespace Presentacion.SGA_Administrador
             this.ClientSize = new System.Drawing.Size(713, 389);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EliminarVendedor";
+            this.Name = "ConsultarVendedor";
             this.Text = "EliminarVendedor";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
@@ -249,6 +251,6 @@ namespace Presentacion.SGA_Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn CedulaCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn CorreoCliente;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar_Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
     }
 }

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Presentacion.SGA_Administrador
 {
-    public partial class EliminarChofer : Form
+    public partial class ConsultarChofer : Form
     {
         AdmChofer admChofer = new AdmChofer();
-        public EliminarChofer()
+        public ConsultarChofer()
         {
             InitializeComponent();
             LllenarDataGrid("Iniciar_data_grid_datos");
@@ -89,6 +89,16 @@ namespace Presentacion.SGA_Administrador
                     MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
+            }
+            if (e.ColumnIndex == 4)
+            {
+                int x = DataGridChofer.CurrentCell.RowIndex;
+                string cedula = DataGridChofer.Rows[x].Cells[1].Value.ToString();
+                FormEditarPrincipal formEditarPrincipal = new FormEditarPrincipal(3, cedula);
+                Form form = VentanaAdministrador.ActiveForm;
+                VentanaAdministrador.ActiveForm.Hide();
+                formEditarPrincipal.ShowDialog();
+                form.Show();
             }
         }
     }

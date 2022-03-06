@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion.SGA_Administrador
 {
-    partial class EliminarChofer
+    partial class ConsultarChofer
     {
         /// <summary>
         /// Required designer variable.

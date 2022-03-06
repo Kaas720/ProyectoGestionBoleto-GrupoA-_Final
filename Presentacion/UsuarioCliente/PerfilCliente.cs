@@ -12,6 +12,7 @@
 // <summary></summary>
 // ***********************************************************************
 using LogicaDeNegocios;
+using Presentacion.SGA_Administrador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,13 +36,15 @@ namespace Presentacion.UsuarioCliente
         /// The adm administrador
         /// </summary>
         AdmClienteProcedimiento adm = new AdmClienteProcedimiento();
+        bool x;
         /// <summary>
         /// Initializes a new instance of the <see cref="PerfilAdminidtrador"/> class.
         /// </summary>
         /// <param name="(idPersona">The identifier persona.</param>
-        public PerfilCliente(string cedula)
+        public PerfilCliente(string cedula, bool x)
         {
            InitializeComponent();
+            this.x = x;
             LlenarInformacion(cedula);
         }
 
@@ -94,6 +97,12 @@ namespace Presentacion.UsuarioCliente
             {
                 adm.Modificar(cedula, telefono, correo, contrasena);
                 MessageBox.Show("Datos actualizados con exito.");
+                if (x)
+                {
+                    FormEditarPrincipal.ActiveForm.Close();
+                    this.Close();
+                }
+
             }
             else
             {
@@ -145,31 +154,6 @@ namespace Presentacion.UsuarioCliente
             errorProvider1.SetError(txtTelefono, "");
             errorProvider1.SetError(txtCorreo, "");
             errorProvider1.SetError(txtPassword, "");
-        }
-
-        private void txtCedula_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodigo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEdad_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

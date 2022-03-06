@@ -19,7 +19,7 @@ namespace Presentacion.SGA_Administrador
     /// Implements the <see cref="System.Windows.Forms.Form" />
     /// </summary>
     /// <seealso cref="System.Windows.Forms.Form" />
-    partial class EliminarClienteporAdmin
+    partial class ConsultarClienteporAdmin
     {
         /// <summary>
         /// Required designer variable.

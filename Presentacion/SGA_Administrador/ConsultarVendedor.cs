@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Presentacion.SGA_Administrador
 {
-    public partial class EliminarVendedor : Form
+    public partial class ConsultarVendedor : Form
     {
         AdmVendedor admVendedor = new AdmVendedor();
-        public EliminarVendedor()
+        public ConsultarVendedor()
         {
             InitializeComponent();
             LllenarDataGrid("Iniciar_data_grid_datos");
@@ -84,6 +84,16 @@ namespace Presentacion.SGA_Administrador
                     MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
+            }
+            if (e.ColumnIndex == 4)
+            {
+                int x = DataGridVendedor.CurrentCell.RowIndex;
+                string cedula = DataGridVendedor.Rows[x].Cells[1].Value.ToString();
+                FormEditarPrincipal formEditarPrincipal = new FormEditarPrincipal(2, cedula);
+                Form form = VentanaAdministrador.ActiveForm;
+                VentanaAdministrador.ActiveForm.Hide();
+                formEditarPrincipal.ShowDialog();
+                form.Show();
             }
         }
 

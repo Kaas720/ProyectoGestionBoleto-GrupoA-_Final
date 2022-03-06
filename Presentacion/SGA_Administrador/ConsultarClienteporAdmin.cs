@@ -29,16 +29,16 @@ namespace Presentacion.SGA_Administrador
     /// Implements the <see cref="System.Windows.Forms.Form" />
     /// </summary>
     /// <seealso cref="System.Windows.Forms.Form" />
-    public partial class EliminarClienteporAdmin : Form
+    public partial class ConsultarClienteporAdmin : Form
     {
         /// <summary>
         /// The adm cliente procedimiento
         /// </summary>
         AdmClienteProcedimiento admClienteProcedimiento = new AdmClienteProcedimiento();
         /// <summary>
-        /// Initializes a new instance of the <see cref="EliminarClienteporAdmin"/> class.
+        /// Initializes a new instance of the <see cref="ConsultarClienteporAdmin"/> class.
         /// </summary>
-        public EliminarClienteporAdmin()
+        public ConsultarClienteporAdmin()
         {
             InitializeComponent();
             LllenarDataGrid("Iniciar_data_grid_datos");
@@ -127,6 +127,16 @@ namespace Presentacion.SGA_Administrador
                     MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 
+            }
+            if (e.ColumnIndex == 4)
+            {
+                int x = DataGridCliente.CurrentCell.RowIndex;
+                string cedula = DataGridCliente.Rows[x].Cells[1].Value.ToString();
+                FormEditarPrincipal formEditarPrincipal = new FormEditarPrincipal(1,cedula);
+                Form form = VentanaAdministrador.ActiveForm;
+                VentanaAdministrador.ActiveForm.Hide();
+                formEditarPrincipal.ShowDialog();
+                form.Show();
             }
         }
     }

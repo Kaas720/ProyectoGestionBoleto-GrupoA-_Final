@@ -79,17 +79,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SGA_Administrador\EliminarChofer.cs">
+    <Compile Include="SGA_Administrador\ConsultarChofer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SGA_Administrador\EliminarChofer.Designer.cs">
-      <DependentUpon>EliminarChofer.cs</DependentUpon>
+    <Compile Include="SGA_Administrador\ConsultarChofer.Designer.cs">
+      <DependentUpon>ConsultarChofer.cs</DependentUpon>
     </Compile>
-    <Compile Include="SGA_Administrador\EliminarClienteporAdmin.cs">
+    <Compile Include="SGA_Administrador\ConsultarClienteporAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SGA_Administrador\EliminarClienteporAdmin.Designer.cs">
-      <DependentUpon>EliminarClienteporAdmin.cs</DependentUpon>
+    <Compile Include="SGA_Administrador\ConsultarClienteporAdmin.Designer.cs">
+      <DependentUpon>ConsultarClienteporAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="SGA_Administrador\EliminarCooperativa.cs">
       <SubType>Form</SubType>
@@ -97,11 +97,17 @@
     <Compile Include="SGA_Administrador\EliminarCooperativa.Designer.cs">
       <DependentUpon>EliminarCooperativa.cs</DependentUpon>
     </Compile>
-    <Compile Include="SGA_Administrador\EliminarVendedor.cs">
+    <Compile Include="SGA_Administrador\ConsultarVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SGA_Administrador\EliminarVendedor.Designer.cs">
-      <DependentUpon>EliminarVendedor.cs</DependentUpon>
+    <Compile Include="SGA_Administrador\ConsultarVendedor.Designer.cs">
+      <DependentUpon>ConsultarVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SGA_Administrador\FormEditarPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Administrador\FormEditarPrincipal.Designer.cs">
+      <DependentUpon>FormEditarPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="SGA_Administrador\PerfilAdminidtrador.cs">
       <SubType>Form</SubType>
@@ -230,17 +236,20 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="SGA_Administrador\EliminarChofer.resx">
-      <DependentUpon>EliminarChofer.cs</DependentUpon>
+    <EmbeddedResource Include="SGA_Administrador\ConsultarChofer.resx">
+      <DependentUpon>ConsultarChofer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SGA_Administrador\EliminarClienteporAdmin.resx">
-      <DependentUpon>EliminarClienteporAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="SGA_Administrador\ConsultarClienteporAdmin.resx">
+      <DependentUpon>ConsultarClienteporAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Administrador\EliminarCooperativa.resx">
       <DependentUpon>EliminarCooperativa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SGA_Administrador\EliminarVendedor.resx">
-      <DependentUpon>EliminarVendedor.cs</DependentUpon>
+    <EmbeddedResource Include="SGA_Administrador\ConsultarVendedor.resx">
+      <DependentUpon>ConsultarVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Administrador\FormEditarPrincipal.resx">
+      <DependentUpon>FormEditarPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Administrador\PerfilAdminidtrador.resx">
       <DependentUpon>PerfilAdminidtrador.cs</DependentUpon>

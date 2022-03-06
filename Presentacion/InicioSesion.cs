@@ -59,7 +59,6 @@ namespace Presentacion
                     {
                         // Se envia un aviso indicando que sus credenciales no son las correctas
                         MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        NombreUsuario.Text = null;
                         Contrasenausuario.Text = null;
                     }
                 }
@@ -83,34 +82,31 @@ namespace Presentacion
             if (rol != 0)
             {
                 // this.Close();
+                NombreUsuario.Text = null;
+                Contrasenausuario.Text = null;
                 Program.principal.Hide();
                 switch (rol)
                 {
                     case 1:
                         int Idpersona = IdPeronsaAndRol[1];
-                        Program.principal.Hide();
                         VentanaAdministrador ventanaAdministrador = new VentanaAdministrador(Idpersona);
                         ventanaAdministrador.ShowDialog();
                         break;
                     case 2:
-                        Program.principal.Hide();
                         InterfazChofer v = new InterfazChofer();
                         v.ShowDialog();
                         break;
                     case 3:
                         int idCoop = IdPeronsaAndRol[1];
                         InterfazCooperativa c = new InterfazCooperativa(idCoop);
-                        Program.principal.Hide();
                         c.ShowDialog();
                         break;
                     case 4:
-                        Program.principal.Hide();
                         InterfazCliente cs = new InterfazCliente();   
                         cs.ShowDialog();
                         break;
                     case 5:
                         InterfazVendedor vendedor = new InterfazVendedor();
-                        Program.principal.Hide();
                         vendedor.ShowDialog();
                         break;
                 }

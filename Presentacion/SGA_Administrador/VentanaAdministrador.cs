@@ -276,7 +276,7 @@ namespace Presentacion
         private void EliminarCliente_Click(object sender, EventArgs e)
         {
             this.PanelPrincipalContenedor.Controls.Clear();
-            EliminarClienteporAdmin Frm = new EliminarClienteporAdmin();
+            ConsultarClienteporAdmin Frm = new ConsultarClienteporAdmin();
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();
@@ -296,7 +296,7 @@ namespace Presentacion
         private void EliminarChofer_Click(object sender, EventArgs e)
         {
             this.PanelPrincipalContenedor.Controls.Clear();
-            EliminarChofer Frm = new EliminarChofer();
+            ConsultarChofer Frm = new ConsultarChofer();
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();
@@ -306,7 +306,7 @@ namespace Presentacion
         private void EliminarVendedor_Click(object sender, EventArgs e)
         {
             this.PanelPrincipalContenedor.Controls.Clear();
-            EliminarVendedor Frm = new EliminarVendedor();
+            ConsultarVendedor Frm = new ConsultarVendedor();
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();

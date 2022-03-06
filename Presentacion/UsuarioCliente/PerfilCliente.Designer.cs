@@ -222,7 +222,6 @@ namespace Presentacion.UsuarioCliente
             this.txtSexo.SelectedText = "";
             this.txtSexo.Size = new System.Drawing.Size(143, 23);
             this.txtSexo.TabIndex = 14;
-            this.txtSexo.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             // 
             // txtTelefono
             // 
@@ -263,7 +262,6 @@ namespace Presentacion.UsuarioCliente
             this.txtCedula.SelectedText = "";
             this.txtCedula.Size = new System.Drawing.Size(143, 23);
             this.txtCedula.TabIndex = 12;
-            this.txtCedula.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
             // 
             // txtNom
             // 
@@ -284,7 +282,6 @@ namespace Presentacion.UsuarioCliente
             this.txtNom.SelectedText = "";
             this.txtNom.Size = new System.Drawing.Size(143, 23);
             this.txtNom.TabIndex = 11;
-            this.txtNom.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // guna2HtmlLabel5
             // 
@@ -296,7 +293,6 @@ namespace Presentacion.UsuarioCliente
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(64, 24);
             this.guna2HtmlLabel5.TabIndex = 9;
             this.guna2HtmlLabel5.Text = "Nombre:";
-            this.guna2HtmlLabel5.Click += new System.EventHandler(this.guna2HtmlLabel5_Click);
             // 
             // guna2HtmlLabel4
             // 
@@ -308,7 +304,6 @@ namespace Presentacion.UsuarioCliente
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(39, 24);
             this.guna2HtmlLabel4.TabIndex = 8;
             this.guna2HtmlLabel4.Text = "Sexo:";
-            this.guna2HtmlLabel4.Click += new System.EventHandler(this.guna2HtmlLabel4_Click);
             // 
             // guna2HtmlLabel2
             // 

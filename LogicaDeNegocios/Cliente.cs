@@ -129,7 +129,7 @@ namespace LogicaDeNegocios
             CredencialUsuario credencial = null;
             try
             {
-                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("Spl_BuscarCliente", con.conectar());
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarCliente", con.conectar());
                 mySqlCommand.Parameters.AddWithValue("@Cedula", cedula);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())

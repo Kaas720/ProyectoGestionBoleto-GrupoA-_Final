@@ -28,8 +28,9 @@ namespace LogicaDeNegocios
         /// <summary>
         /// The credencial usuario
         /// </summary>
+        private string codigoAcceso;
+        private double sueldo;
         private CredencialUsuario credencialUsuario;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Administrador" /> class.
         /// </summary>
@@ -49,6 +50,8 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <value>The credencial usuario.</value>
         public CredencialUsuario CredencialUsuario { get => credencialUsuario; set => credencialUsuario = value; }
+        public string CodigoAcceso { get => codigoAcceso; set => codigoAcceso = value; }
+        public double Sueldo { get => sueldo; set => sueldo = value; }
 
         /// <summary>
         /// Consultars the administrador.
@@ -78,7 +81,7 @@ namespace LogicaDeNegocios
             }
             return admin;
         }
-        /*
+        
         public void InsertarAdministrador(Administrador admin)
         {
             // Se llama a la clase conexion para hacer la conexion con la base de dados
@@ -112,7 +115,7 @@ namespace LogicaDeNegocios
                 Console.WriteLine(ex);
             }
 
-        }*/
+        }
 
         /// <summary>
         /// Actualizars the cliente.

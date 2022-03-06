@@ -25,7 +25,7 @@ namespace Datos
         /// <summary>
         /// The conexion database externa
         /// </summary>
-        private static string conexion_DB_externa = "Server=MYSQL5045.site4now.net;Database=db_a7eb45_sga;Uid=a7eb45_sga;Pwd=1234emelec";
+        private static string conexion_DB_externa = "Server=MYSQL5040.site4now.net;Database=db_a83d0f_a7eb45;Uid=a83d0f_a7eb45;Pwd=1234emelec";
 
         /// <summary>
         /// The sqlconnection

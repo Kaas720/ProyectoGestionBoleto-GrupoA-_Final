@@ -80,11 +80,11 @@ namespace Presentacion
                     CredencialUsuario credencial = new CredencialUsuario(correo, contraseña,4);
                     Cliente clienteregistrar = new Cliente(cedula, nombre, sexo, telefono, credencial);
                     registroClienteProcedimiento.RegistrarCliente(clienteregistrar);
-                    MessageBox.Show("Registro de cliente realizado con éxito");
+                    ProcedimientosPaginaprincipal.setCedula(txtCedula.Text);
                     Limpiar();
                      Program.principal.Hide();
-                    //InterfazCliente interfazCliente= new InterfazCliente();
-                    //interfazCliente.Show();
+                    InterfazCliente interfazCliente= new InterfazCliente();
+                    interfazCliente.Show();
                 }
             }
             catch(ControlExcepcion ex)

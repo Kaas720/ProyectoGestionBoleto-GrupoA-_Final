@@ -51,40 +51,40 @@ namespace Presentacion
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal_Usuario));
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BotonInicioSesion = new FontAwesome.Sharp.IconButton();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.botonRegistroUsuario = new FontAwesome.Sharp.IconButton();
+            this.BotonHome = new FontAwesome.Sharp.IconButton();
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
+            this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
+            this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Hora_Sistema = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
-            this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
-            this.BotonInicioSesion = new FontAwesome.Sharp.IconButton();
-            this.botonRegistroUsuario = new FontAwesome.Sharp.IconButton();
-            this.BotonHome = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.PanelSuperior.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelContenedor
             // 
             this.PanelContenedor.AutoSize = true;
             this.PanelContenedor.BackColor = System.Drawing.Color.White;
-            this.PanelContenedor.Location = new System.Drawing.Point(215, 75);
+            this.PanelContenedor.Location = new System.Drawing.Point(217, 75);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(718, 392);
+            this.PanelContenedor.Size = new System.Drawing.Size(706, 392);
             this.PanelContenedor.TabIndex = 29;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
             this.panel2.Controls.Add(this.BotonInicioSesion);
             this.panel2.Controls.Add(this.guna2HtmlLabel2);
             this.panel2.Controls.Add(this.botonRegistroUsuario);
@@ -94,6 +94,30 @@ namespace Presentacion
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(217, 392);
             this.panel2.TabIndex = 30;
+            // 
+            // BotonInicioSesion
+            // 
+            this.BotonInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.BotonInicioSesion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BotonInicioSesion.FlatAppearance.BorderSize = 0;
+            this.BotonInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonInicioSesion.ForeColor = System.Drawing.SystemColors.Info;
+            this.BotonInicioSesion.IconChar = FontAwesome.Sharp.IconChar.UserShield;
+            this.BotonInicioSesion.IconColor = System.Drawing.Color.White;
+            this.BotonInicioSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BotonInicioSesion.IconSize = 55;
+            this.BotonInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonInicioSesion.Location = new System.Drawing.Point(0, 240);
+            this.BotonInicioSesion.Name = "BotonInicioSesion";
+            this.BotonInicioSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BotonInicioSesion.Size = new System.Drawing.Size(217, 120);
+            this.BotonInicioSesion.TabIndex = 14;
+            this.BotonInicioSesion.Text = "INICIAR SESION";
+            this.BotonInicioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonInicioSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonInicioSesion.UseVisualStyleBackColor = false;
+            this.BotonInicioSesion.Click += new System.EventHandler(this.BotonInicioSesion_Click_1);
             // 
             // guna2HtmlLabel2
             // 
@@ -105,6 +129,54 @@ namespace Presentacion
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(195, 18);
             this.guna2HtmlLabel2.TabIndex = 13;
             this.guna2HtmlLabel2.Text = "Copyright © 2022 VIAJEROS S.A";
+            // 
+            // botonRegistroUsuario
+            // 
+            this.botonRegistroUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.botonRegistroUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.botonRegistroUsuario.FlatAppearance.BorderSize = 0;
+            this.botonRegistroUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRegistroUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRegistroUsuario.ForeColor = System.Drawing.SystemColors.Info;
+            this.botonRegistroUsuario.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.botonRegistroUsuario.IconColor = System.Drawing.Color.White;
+            this.botonRegistroUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.botonRegistroUsuario.IconSize = 55;
+            this.botonRegistroUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonRegistroUsuario.Location = new System.Drawing.Point(0, 120);
+            this.botonRegistroUsuario.Name = "botonRegistroUsuario";
+            this.botonRegistroUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.botonRegistroUsuario.Size = new System.Drawing.Size(217, 120);
+            this.botonRegistroUsuario.TabIndex = 11;
+            this.botonRegistroUsuario.Text = "REGISTRATE";
+            this.botonRegistroUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonRegistroUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.botonRegistroUsuario.UseVisualStyleBackColor = false;
+            this.botonRegistroUsuario.Click += new System.EventHandler(this.btnComprar_Click);
+            // 
+            // BotonHome
+            // 
+            this.BotonHome.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BotonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.BotonHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BotonHome.FlatAppearance.BorderSize = 0;
+            this.BotonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonHome.ForeColor = System.Drawing.SystemColors.Info;
+            this.BotonHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.BotonHome.IconColor = System.Drawing.Color.White;
+            this.BotonHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BotonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonHome.Location = new System.Drawing.Point(0, 0);
+            this.BotonHome.Name = "BotonHome";
+            this.BotonHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BotonHome.Size = new System.Drawing.Size(217, 120);
+            this.BotonHome.TabIndex = 12;
+            this.BotonHome.Text = " PRINCIPAL";
+            this.BotonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonHome.UseVisualStyleBackColor = false;
+            this.BotonHome.Click += new System.EventHandler(this.BotonHome_Click);
             // 
             // PanelSuperior
             // 
@@ -132,62 +204,6 @@ namespace Presentacion
             this.Fecha_Sistema.TabIndex = 2;
             this.Fecha_Sistema.Text = "LABEL";
             this.Fecha_Sistema.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
-            this.panel1.Controls.Add(this.guna2HtmlLabel9);
-            this.panel1.Controls.Add(this.guna2PictureBox1);
-            this.panel1.Controls.Add(this.Hora_Sistema);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 35);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(923, 42);
-            this.panel1.TabIndex = 32;
-            // 
-            // guna2HtmlLabel9
-            // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(99, 9);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(304, 20);
-            this.guna2HtmlLabel9.TabIndex = 6;
-            this.guna2HtmlLabel9.Text = "Sistema de Gestion de Boletos de AutoBuses";
-            // 
-            // Hora_Sistema
-            // 
-            this.Hora_Sistema.AutoSize = true;
-            this.Hora_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hora_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Hora_Sistema.Location = new System.Drawing.Point(832, 9);
-            this.Hora_Sistema.Name = "Hora_Sistema";
-            this.Hora_Sistema.Size = new System.Drawing.Size(80, 24);
-            this.Hora_Sistema.TabIndex = 1;
-            this.Hora_Sistema.Text = "17:51:10";
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543102;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(17, 5);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 31);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // BotonParaMinimizarVentana
             // 
@@ -222,77 +238,61 @@ namespace Presentacion
             this.BotonCierreDeAplicacion.TabStop = false;
             this.BotonCierreDeAplicacion.Click += new System.EventHandler(this.BotonCierreDeAplicacion_Click_1);
             // 
-            // BotonInicioSesion
+            // panel1
             // 
-            this.BotonInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.BotonInicioSesion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonInicioSesion.FlatAppearance.BorderSize = 0;
-            this.BotonInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonInicioSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonInicioSesion.ForeColor = System.Drawing.SystemColors.Info;
-            this.BotonInicioSesion.IconChar = FontAwesome.Sharp.IconChar.UserShield;
-            this.BotonInicioSesion.IconColor = System.Drawing.Color.White;
-            this.BotonInicioSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonInicioSesion.IconSize = 55;
-            this.BotonInicioSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonInicioSesion.Location = new System.Drawing.Point(0, 240);
-            this.BotonInicioSesion.Name = "BotonInicioSesion";
-            this.BotonInicioSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BotonInicioSesion.Size = new System.Drawing.Size(217, 120);
-            this.BotonInicioSesion.TabIndex = 14;
-            this.BotonInicioSesion.Text = "INICIAR SESION";
-            this.BotonInicioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonInicioSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonInicioSesion.UseVisualStyleBackColor = false;
-            this.BotonInicioSesion.Click += new System.EventHandler(this.BotonInicioSesion_Click_1);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
+            this.panel1.Controls.Add(this.guna2HtmlLabel9);
+            this.panel1.Controls.Add(this.guna2PictureBox1);
+            this.panel1.Controls.Add(this.Hora_Sistema);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(923, 42);
+            this.panel1.TabIndex = 32;
             // 
-            // botonRegistroUsuario
+            // guna2HtmlLabel9
             // 
-            this.botonRegistroUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.botonRegistroUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.botonRegistroUsuario.FlatAppearance.BorderSize = 0;
-            this.botonRegistroUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRegistroUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRegistroUsuario.ForeColor = System.Drawing.SystemColors.Info;
-            this.botonRegistroUsuario.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.botonRegistroUsuario.IconColor = System.Drawing.Color.White;
-            this.botonRegistroUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.botonRegistroUsuario.IconSize = 55;
-            this.botonRegistroUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonRegistroUsuario.Location = new System.Drawing.Point(0, 120);
-            this.botonRegistroUsuario.Name = "botonRegistroUsuario";
-            this.botonRegistroUsuario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.botonRegistroUsuario.Size = new System.Drawing.Size(217, 120);
-            this.botonRegistroUsuario.TabIndex = 11;
-            this.botonRegistroUsuario.Text = "REGISTRATE";
-            this.botonRegistroUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonRegistroUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.botonRegistroUsuario.UseVisualStyleBackColor = false;
-            this.botonRegistroUsuario.Click += new System.EventHandler(this.btnComprar_Click);
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(99, 9);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(304, 20);
+            this.guna2HtmlLabel9.TabIndex = 6;
+            this.guna2HtmlLabel9.Text = "Sistema de Gestion de Boletos de AutoBuses";
             // 
-            // BotonHome
+            // guna2PictureBox1
             // 
-            this.BotonHome.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BotonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.BotonHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonHome.FlatAppearance.BorderSize = 0;
-            this.BotonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonHome.ForeColor = System.Drawing.SystemColors.Info;
-            this.BotonHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.BotonHome.IconColor = System.Drawing.Color.White;
-            this.BotonHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonHome.Location = new System.Drawing.Point(0, 0);
-            this.BotonHome.Name = "BotonHome";
-            this.BotonHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BotonHome.Size = new System.Drawing.Size(217, 120);
-            this.BotonHome.TabIndex = 12;
-            this.BotonHome.Text = " PRINCIPAL";
-            this.BotonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonHome.UseVisualStyleBackColor = false;
-            this.BotonHome.Click += new System.EventHandler(this.BotonHome_Click);
+            this.guna2PictureBox1.Image = global::Presentacion.Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543102;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(17, 5);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(66, 31);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // Hora_Sistema
+            // 
+            this.Hora_Sistema.AutoSize = true;
+            this.Hora_Sistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hora_Sistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Hora_Sistema.Location = new System.Drawing.Point(832, 9);
+            this.Hora_Sistema.Name = "Hora_Sistema";
+            this.Hora_Sistema.Size = new System.Drawing.Size(80, 24);
+            this.Hora_Sistema.TabIndex = 1;
+            this.Hora_Sistema.Text = "17:51:10";
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Principal_Usuario
             // 
@@ -313,11 +313,11 @@ namespace Presentacion
             this.panel2.PerformLayout();
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

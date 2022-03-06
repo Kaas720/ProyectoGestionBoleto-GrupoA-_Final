@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion.SGA_Administrador
 {
-    public partial class EliminarCooperativa : Form
+    public partial class ConsultarCooperativa : Form
     {
-        public EliminarCooperativa()
+        public ConsultarCooperativa()
         {
             InitializeComponent();
         }

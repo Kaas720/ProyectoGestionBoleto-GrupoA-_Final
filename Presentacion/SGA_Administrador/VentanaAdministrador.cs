@@ -286,7 +286,7 @@ namespace Presentacion
         private void iconButton4_Click(object sender, EventArgs e)
         {
             this.PanelPrincipalContenedor.Controls.Clear();
-            EliminarCooperativa Frm = new EliminarCooperativa();
+            SGA_Administrador.ConsultarCooperativa Frm = new SGA_Administrador.ConsultarCooperativa();
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);
             Frm.Show();

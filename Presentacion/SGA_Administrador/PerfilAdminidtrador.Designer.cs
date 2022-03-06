@@ -124,6 +124,7 @@ namespace Presentacion.SGA_Administrador
             // 
             // guna2CirclePictureBox1
             // 
+            this.guna2CirclePictureBox1.Image = global::Presentacion.Properties.Resources.c82646ff36e2523350d01fff093938f6;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(273, 50);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";

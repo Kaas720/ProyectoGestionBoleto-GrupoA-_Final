@@ -96,11 +96,11 @@
     <Compile Include="SGA_Administrador\ConsultarClienteporAdmin.Designer.cs">
       <DependentUpon>ConsultarClienteporAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="SGA_Administrador\EliminarCooperativa.cs">
+    <Compile Include="SGA_Administrador\ConsultarCooperativa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SGA_Administrador\EliminarCooperativa.Designer.cs">
-      <DependentUpon>EliminarCooperativa.cs</DependentUpon>
+    <Compile Include="SGA_Administrador\ConsultarCooperativa.Designer.cs">
+      <DependentUpon>ConsultarCooperativa.cs</DependentUpon>
     </Compile>
     <Compile Include="SGA_Administrador\ConsultarVendedor.cs">
       <SubType>Form</SubType>
@@ -248,8 +248,8 @@
     <EmbeddedResource Include="SGA_Administrador\ConsultarClienteporAdmin.resx">
       <DependentUpon>ConsultarClienteporAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SGA_Administrador\EliminarCooperativa.resx">
-      <DependentUpon>EliminarCooperativa.cs</DependentUpon>
+    <EmbeddedResource Include="SGA_Administrador\ConsultarCooperativa.resx">
+      <DependentUpon>ConsultarCooperativa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Administrador\ConsultarVendedor.resx">
       <DependentUpon>ConsultarVendedor.cs</DependentUpon>

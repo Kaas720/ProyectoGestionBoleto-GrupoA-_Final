@@ -29,6 +29,8 @@ namespace Presentacion
     /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Principal_Usuario : Form
     {
+        Color colorBotoneSeleccionado = Color.FromArgb(48, 88, 115);
+        Color colorBotoneOriginal = Color.FromArgb(241, 246, 249);
         /// <summary>
         /// Codigo para arrastrar la ventana a cualquier parte de la pantalla
         /// </summary>
@@ -75,8 +77,9 @@ namespace Presentacion
             PanelContenedor.Controls.Add(Frm);
             Frm.Show();
             iconButton = BotonHome;
-            iconButton.ForeColor = Color.Green;
-            iconButton.IconColor = Color.Green;
+            iconButton.ForeColor = colorBotoneSeleccionado;
+            iconButton.IconColor = colorBotoneSeleccionado;
+            iconButton.BackColor = Color.FromArgb(58, 200, 248);
         }
 
         /// <summary>
@@ -101,8 +104,9 @@ namespace Presentacion
         private void GenerarNuevoColorBoton(object sender)
         {
             iconButton = (IconButton)sender;
-            iconButton.IconColor = Color.Green;
-            iconButton.ForeColor = Color.Green;
+            iconButton.IconColor = colorBotoneSeleccionado;
+            iconButton.ForeColor = colorBotoneSeleccionado;
+            iconButton.BackColor = Color.FromArgb(58, 200, 248);
         }
 
         /// <summary>
@@ -110,9 +114,9 @@ namespace Presentacion
         /// </summary>
         private void RestablecerColorOriginalBotones()
         {
-            iconButton.IconColor = Color.White;
-            iconButton.ForeColor = Color.White;
-
+            iconButton.IconColor = colorBotoneOriginal;
+            iconButton.ForeColor = colorBotoneOriginal;
+            iconButton.BackColor = Color.FromArgb(66, 121, 158);
         }
         /// <summary>
         /// Handles the Click event of the BotonHome control.

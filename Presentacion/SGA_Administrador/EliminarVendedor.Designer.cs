@@ -78,6 +78,7 @@ namespace Presentacion.SGA_Administrador
             this.BtnConsultar.Size = new System.Drawing.Size(35, 32);
             this.BtnConsultar.TabIndex = 3;
             this.BtnConsultar.TabStop = false;
+            this.BtnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
             // 
             // TxtCedulaVendedor
             // 
@@ -95,7 +96,7 @@ namespace Presentacion.SGA_Administrador
             this.TxtCedulaVendedor.Location = new System.Drawing.Point(227, 68);
             this.TxtCedulaVendedor.Name = "TxtCedulaVendedor";
             this.TxtCedulaVendedor.PasswordChar = '\0';
-            this.TxtCedulaVendedor.PlaceholderText = "Ingresar la cédula del vendedor a eliminar";
+            this.TxtCedulaVendedor.PlaceholderText = "Ingresar la cédula o nombre del vendedor";
             this.TxtCedulaVendedor.SelectedText = "";
             this.TxtCedulaVendedor.Size = new System.Drawing.Size(244, 30);
             this.TxtCedulaVendedor.TabIndex = 2;

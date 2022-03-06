@@ -70,6 +70,54 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <value>The sueldo.</value>
         public double Sueldo { get => sueldo; set => sueldo = value; }
+
+        internal List<Chofer> ConsultarChofer(string datoVendedor)
+        {
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            Chofer chofer = null;
+            CredencialUsuario credencial = null;
+            List<Chofer> ListChofer = new List<Chofer>();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("ConsultarChofer", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@DatoFx", datoVendedor);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 0);
+                    chofer = new Chofer(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(),"A", 420, credencial);
+                    ListChofer.Add(chofer);
+                }
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            return ListChofer;
+        }
+
+        internal static bool EliminarChofer(string cedula)
+        {
+            bool x = false;
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("EliminarChofer", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@CedulaFx", cedula);
+                mySqlCommand.ExecuteNonQuery();
+                x = true;
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            return x;
+        }
+
         /// <summary>
         /// Gets or sets the credencial usuario.
         /// </summary>

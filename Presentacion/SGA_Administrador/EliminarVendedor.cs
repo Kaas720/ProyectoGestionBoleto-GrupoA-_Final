@@ -86,5 +86,11 @@ namespace Presentacion.SGA_Administrador
 
             }
         }
+
+        private void BtnConsultar_Click(object sender, EventArgs e)
+        {
+            string dato = TxtCedulaVendedor.Text;        
+            LllenarDataGrid(dato);
+        }
     }
 }

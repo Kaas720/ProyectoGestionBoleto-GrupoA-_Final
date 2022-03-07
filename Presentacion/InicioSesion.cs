@@ -81,7 +81,6 @@ namespace Presentacion
             int rol = IdPeronsaAndRol[0];    
             if (rol != 0)
             {
-                // this.Close();
                 NombreUsuario.Text = null;
                 Contrasenausuario.Text = null;
                 Program.principal.Hide();

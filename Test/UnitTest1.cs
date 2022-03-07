@@ -16,11 +16,11 @@ namespace Test
         [TestMethod]
         public void RegistroAdministrador()
         {
-            //CredencialUsuario credencial = new CredencialUsuario("deiber@gmail.com", "Deiber1234", 1);
-           // Administrador admin = new Administrador("0968387363", "Willian Encalada", "Masculino", "0987466344", "12345@88. @", 920.45, credencial);
-           // var resultadoEsperado = adm.RegistrarAdministrador(admin);
-           // var resultadoObtenido = true;
-           // Assert.AreEqual(resultadoEsperado, resultadoObtenido);
+            CredencialUsuario credencial = new CredencialUsuario("deiber@gmail.com", "Deiber1234", 1);
+            Administrador admin = new Administrador("0968387363", "Willian Encalada", "Masculino", "0987466344", "12345@88. @", 920.45, credencial);
+            var resultadoEsperado = adm.RegistrarAdministrador(admin);
+            var resultadoObtenido = true;
+            Assert.AreEqual(resultadoEsperado, resultadoObtenido);
         }
 
         /// <summary>

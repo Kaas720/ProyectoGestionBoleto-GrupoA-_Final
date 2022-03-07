@@ -63,11 +63,11 @@ namespace Presentacion
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
             this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Hora_Sistema = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PanelContenedor = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -256,7 +256,7 @@ namespace Presentacion
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(924, 35);
+            this.PanelSuperior.Size = new System.Drawing.Size(923, 35);
             this.PanelSuperior.TabIndex = 32;
             // 
             // Fecha_Sistema
@@ -312,8 +312,19 @@ namespace Presentacion
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(924, 45);
+            this.panel1.Size = new System.Drawing.Size(923, 45);
             this.panel1.TabIndex = 33;
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(109, 13);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(304, 20);
+            this.guna2HtmlLabel9.TabIndex = 7;
+            this.guna2HtmlLabel9.Text = "Sistema de Gestion de Boletos de AutoBuses";
             // 
             // guna2PictureBox1
             // 
@@ -349,28 +360,18 @@ namespace Presentacion
             this.PanelContenedor.Size = new System.Drawing.Size(722, 391);
             this.PanelContenedor.TabIndex = 34;
             // 
-            // guna2HtmlLabel9
-            // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(109, 13);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(304, 20);
-            this.guna2HtmlLabel9.TabIndex = 7;
-            this.guna2HtmlLabel9.Text = "Sistema de Gestion de Boletos de AutoBuses";
-            // 
             // InterfazCooperativa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 467);
+            this.ClientSize = new System.Drawing.Size(923, 467);
             this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InterfazCooperativa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cliente";
             this.panel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);

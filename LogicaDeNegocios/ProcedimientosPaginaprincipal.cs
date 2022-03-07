@@ -62,7 +62,6 @@ namespace LogicaDeNegocios
                 while (lector.Read())
                 {
                     int x = Convert.ToInt32(lector["Foreking_RolesUsuario"]);
-                    MessageBox.Show(""+x);
                     IdPeronsaAndRol.Add(Convert.ToInt32(lector["Foreking_RolesUsuario"]));
                     if (x == 1 || x==3)
                     {

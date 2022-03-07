@@ -93,7 +93,6 @@ namespace Presentacion
         /// </summary>
         public void IniciarFromdelPanelPrincipal()
         {
-            MessageBox.Show(idPersona + "");
             PerfilAdminidtrador Frm = new PerfilAdminidtrador(idPersona);
             Frm.TopLevel = false;
             PanelPrincipalContenedor.Controls.Add(Frm);

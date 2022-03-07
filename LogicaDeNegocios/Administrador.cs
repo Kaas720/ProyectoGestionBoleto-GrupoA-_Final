@@ -39,7 +39,7 @@ namespace LogicaDeNegocios
         /// <param name="sexo">The sexo.</param>
         /// <param name="telefono">The telefono.</param>
         /// <param name="credencialUsuario">The credencial usuario.</param>
-        public Administrador(string cedula, string nombre, string sexo, string telefono, CredencialUsuario credencialUsuario)
+        public Administrador(string cedula, string nombre, string sexo, string telefono, string codigoAcceso, double sueldo, CredencialUsuario credencialUsuario)
             :base(cedula, nombre, sexo, telefono)
         {
             this.credencialUsuario = credencialUsuario;
@@ -72,7 +72,7 @@ namespace LogicaDeNegocios
                 while (lector.Read())
                 {
                     credencial = new CredencialUsuario(lector["Correo"].ToString(), lector["Contrasena"].ToString(), 0);
-                    admin = new Administrador(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), credencial);                }
+                    admin = new Administrador(lector["Cedula"].ToString(), lector["Nombre"].ToString(), lector["Sexo"].ToString(), lector["Telefono"].ToString(), lector["CodAcceso"].ToString(), Convert.ToDouble(lector["Sueldo"].ToString()), credencial);                }
                 con.cerrar();
             }
             catch (MySqlException ex)

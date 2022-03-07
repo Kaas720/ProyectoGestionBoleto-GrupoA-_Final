@@ -32,7 +32,7 @@ namespace LogicaDeNegocios
         /// <summary>
         /// The horario disponible
         /// </summary>
-        private DateTime horarioDisponible;
+        private DateTime horaSalida;
 
         //Construtor parametrizado
         /// <summary>
@@ -40,12 +40,12 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="lugarOrigen">The lugar origen.</param>
         /// <param name="lugarDestino">The lugar destino.</param>
-        /// <param name="horarioDisponible">The horario disponible.</param>
-        public Ruta(string lugarOrigen, string lugarDestino, DateTime horarioDisponible)
+        /// <param name="horaSalida">The horario disponible.</param>
+        public Ruta(string lugarOrigen, string lugarDestino, DateTime horaSalida)
         {
             this.lugarOrigen = lugarOrigen;
             this.lugarDestino = lugarDestino;
-            this.horarioDisponible = horarioDisponible;
+            this.horaSalida = horaSalida;
         }
 
         // Metodos getters y setters
@@ -63,7 +63,7 @@ namespace LogicaDeNegocios
         /// Gets or sets the horario disponible.
         /// </summary>
         /// <value>The horario disponible.</value>
-        public DateTime HorarioDisponible { get => horarioDisponible; set => horarioDisponible = value; }
+        public DateTime HoraSalida { get => horaSalida; set => horaSalida = value; }
        
     }
 }

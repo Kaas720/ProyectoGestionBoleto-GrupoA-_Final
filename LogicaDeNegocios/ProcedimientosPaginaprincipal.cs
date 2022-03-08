@@ -126,7 +126,7 @@ namespace LogicaDeNegocios
                 MySqlCommand mySqlCommand = ConectarProcedimiento("LlenarVentanaCompra");
                 mySqlCommand.Parameters.AddWithValue("@cooperativaFX", cooperativa);
                 mySqlCommand.Parameters.AddWithValue("@horaSalidaFX", fechasalida);
-                mySqlCommand.Parameters.AddWithValue("@fechaSalidaFX", Convert.ToDateTime(horasalida));
+                mySqlCommand.Parameters.AddWithValue("@fechaSalidaFX", horasalida);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {               

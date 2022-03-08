@@ -28,13 +28,10 @@ namespace Presentacion
         /// <summary>
         /// The cedula
         /// </summary>
-        private string cedula;
         /// <summary>
         /// The registro
         /// </summary>
         AdmRuta registro = new AdmRuta();
-        private object timePortionDateTimePicker;
-        private object datePortionDateTimePicker;
 
         /// <summary>
         /// Releases the capture.
@@ -97,23 +94,21 @@ namespace Presentacion
             //DateTime myDate = datePortionDateTimePicker.Value.Date +
             // timePortionDateTimePicker.Value.TimeOfDay;
            // timePortionDateTimePicker.ToString();
-            string hora = DateTimePickerFormat.Time.ToString("HH:mm:ss");
+            string hora = dtHSalida.Value.Hour.ToString("HH:mm:ss");
+            DateTimePickerFormat.Time.ToString("HH:mm:ss");
             // ToString("hh:mm:ss");
-            dtHSalida.Value.Hour.ToString("HH:mm:ss");
-            // DateTime hora = dtHSalida.Value.Date;              
+                     
             BorrarAlerta();
             try
             {
             // Al validar que los campos se llenaron correctamente se guarda el regitro y se envia al formulario cliente
                 if (validar())
                 {
-                    Ruta registrar = new Ruta(id, origen, destino, cooperativa, asiento, disco, precio, fecha,  hora);
+                    Ruta registrar = new Ruta(id, origen, destino, cooperativa, disco,asiento, precio, fecha,  hora);
                     registro.RegistrarRuta(registrar);
                     MessageBox.Show("Registro de chofer realizado con éxito");
                     Limpiar();
                      Program.principal.Hide();
-                   // InterfazCliente interfazCliente= new InterfazCliente();
-                    //interfazCliente.Show();
                 }
             }
             catch(ControlExcepcion ex)
@@ -193,94 +188,6 @@ namespace Presentacion
             cmbDisco.Text = null;
             cbAsiento = null;
             txtPrecio.Clear();
-        }
-
-        // El evento valida que el textBox solo reciba numeros 
-        /// <summary>
-        /// Handles the KeyPress event of the txtCedula control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
-        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        // El evento valida que el textBox solo reciba numeros 
-        /// <summary>
-        /// Handles the KeyPress event of the txtTelefono control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
-        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-        // El evento valida que el textBox solo reciba letras
-        /// <summary>
-        /// Handles the KeyPress event of the txtNombre control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) &&
-                 (e.KeyChar != Convert.ToChar(Keys.Space)))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        /// <summary>
-        /// Handles the KeyPress event of the txtCorreo control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
-        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) && (e.KeyChar
-               != Convert.ToChar(Keys.Space) && (e.KeyChar != '@' && (e.KeyChar != '.')) && !char.IsNumber(e.KeyChar)))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        /// <summary>
-        /// Handles the KeyPress event of the txtSueldo control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
-        private void txtSueldo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)) && (e.KeyChar != ','))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        /// <summary>
-        /// Handles the KeyPress event of the txtLicencia control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="KeyPressEventArgs"/> instance containing the event data.</param>
-        private void txtLicencia_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != Convert.ToChar(Keys.Back)))
-            {
-                e.Handled = true;
-                return;
-            }
         }
 
         /// <summary>

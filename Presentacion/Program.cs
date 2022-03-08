@@ -15,9 +15,6 @@ using Presentacion.InicioFroms;
 using Presentacion.SGA_Administrador;
 using Presentacion.UsuarioCliente;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion

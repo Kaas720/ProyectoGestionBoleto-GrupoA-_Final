@@ -222,7 +222,6 @@ namespace Presentacion.SGA_Cooperativa
             this.txtPropietario.SelectedText = "";
             this.txtPropietario.Size = new System.Drawing.Size(143, 23);
             this.txtPropietario.TabIndex = 14;
-            this.txtPropietario.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             // 
             // txtTelefono
             // 
@@ -242,7 +241,6 @@ namespace Presentacion.SGA_Cooperativa
             this.txtTelefono.SelectedText = "";
             this.txtTelefono.Size = new System.Drawing.Size(143, 23);
             this.txtTelefono.TabIndex = 13;
-            this.txtTelefono.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
             // txtRuc
             // 
@@ -263,7 +261,6 @@ namespace Presentacion.SGA_Cooperativa
             this.txtRuc.SelectedText = "";
             this.txtRuc.Size = new System.Drawing.Size(143, 23);
             this.txtRuc.TabIndex = 12;
-            this.txtRuc.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
             // 
             // txtCoop
             // 
@@ -284,7 +281,6 @@ namespace Presentacion.SGA_Cooperativa
             this.txtCoop.SelectedText = "";
             this.txtCoop.Size = new System.Drawing.Size(143, 23);
             this.txtCoop.TabIndex = 11;
-            this.txtCoop.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // guna2HtmlLabel5
             // 
@@ -296,7 +292,6 @@ namespace Presentacion.SGA_Cooperativa
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(89, 24);
             this.guna2HtmlLabel5.TabIndex = 9;
             this.guna2HtmlLabel5.Text = "Cooperativa:";
-            this.guna2HtmlLabel5.Click += new System.EventHandler(this.guna2HtmlLabel5_Click);
             // 
             // guna2HtmlLabel4
             // 
@@ -308,7 +303,6 @@ namespace Presentacion.SGA_Cooperativa
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(82, 24);
             this.guna2HtmlLabel4.TabIndex = 8;
             this.guna2HtmlLabel4.Text = "Propietario:";
-            this.guna2HtmlLabel4.Click += new System.EventHandler(this.guna2HtmlLabel4_Click);
             // 
             // guna2HtmlLabel2
             // 

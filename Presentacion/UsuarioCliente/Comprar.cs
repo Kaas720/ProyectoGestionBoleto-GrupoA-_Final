@@ -84,7 +84,7 @@ namespace Presentacion
         public Comprar(string cooperativa, string fechaSalida, string horaSalida)
         {
             InitializeComponent();
-          // Se llama al metodo en el constructor para que los datos se caguen de manera automatica al ingresar al formulario compra
+           /// Se llama al metodo en el constructor para que los datos se caguen de manera automatica al ingresar al formulario compra
             LlenarInformacionAutomaticamente(cooperativa, fechaSalida, horaSalida);        
         }
 
@@ -98,11 +98,10 @@ namespace Presentacion
         /// <param name="horaSalida">The hora salida.</param>
         private void LlenarInformacionAutomaticamente(string cooperativa, string fechaSalida, string horaSalida)
         {
-            List<Ruta> generarInformacionBoleto = consultasProcedemientos.generarInformacionBoleto(cooperativa, fechaSalida, horaSalida);
-       // Se utiliza el bucle foreach para realizar la agregacion de los datos que poseee un boleto y el usuario pueda completar con sus datos para posterior a ello almacenadas dentro de la base de datos
+           List<Ruta> generarInformacionBoleto = consultasProcedemientos.generarInformacionBoleto(cooperativa, fechaSalida, horaSalida);
+            /// Se utiliza el bucle foreach para realizar la agregacion de los datos que poseee un boleto y el usuario pueda completar con sus datos para posterior a ello almacenadas dentro de la base de datos
             foreach (Ruta item in generarInformacionBoleto)
             {
-                
                 TxtCooperativa.Text = item.Cooperativa;
                 TxtDestino.Text = item.Lugardestino;
                 TxtFechaSalida.Text = item.FechaSalida;

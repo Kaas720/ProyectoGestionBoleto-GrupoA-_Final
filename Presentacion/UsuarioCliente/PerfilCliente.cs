@@ -15,12 +15,6 @@ using LogicaDeNegocios;
 using Presentacion.SGA_Administrador;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.UsuarioCliente
@@ -66,17 +60,6 @@ namespace Presentacion.UsuarioCliente
             }
             
         }
-
-        /// <summary>
-        /// Handles the Click event of the guna2HtmlLabel6 control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// Handles the TextChanged event of the guna2TextBox3 control.
         /// </summary>

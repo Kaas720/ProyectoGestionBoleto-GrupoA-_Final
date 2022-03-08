@@ -15,9 +15,6 @@ using Datos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
@@ -31,39 +28,39 @@ namespace LogicaDeNegocios
         /// <summary>
         /// The bus identifier
         /// </summary>
-      private  int busId;
+        int busId;
         /// <summary>
         /// The lugar salida
         /// </summary>
-       private string lugarSalida;
+        string lugarSalida;
         /// <summary>
         /// The fecha salida
         /// </summary>
-       private string fechaSalida;
+        string fechaSalida;
         /// <summary>
         /// The lugardestino
         /// </summary>
-       private string lugardestino;
+        string lugardestino;
         /// <summary>
         /// The hora salida
         /// </summary>
-      private string horaSalida;
+       string horaSalida;
         /// <summary>
         /// The cooperativa
         /// </summary>
-      private string cooperativa;
+       string cooperativa;
         /// <summary>
         /// The numerodico
         /// </summary>
-        private string asiento;
+         string asiento;
         /// <summary>
         /// The numerodico
         /// </summary>
-        private string numerodico;
+         string numerodico;
         /// <summary>
         /// The precio
         /// </summary>
-      private string precio;
+       string precio;
 
         // se crea el constructor parametrizado
         /// <summary>
@@ -78,8 +75,8 @@ namespace LogicaDeNegocios
         /// <param name="asiento">The numerodico.</param>
         /// <param name="numerodico">The numerodico.</param>
         /// <param name="precio">The precio.</param>
-        public Ruta() { }
-        public Ruta(int busId, string lugarSalida, string lugardestino, string cooperativa, string asiento, string numerodico, string precio, string horaSalida, string fechaSalida)
+        
+        public Ruta(int busId, string lugarSalida, string fechaSalida, string lugardestino, string horaSalida, string cooperativa, string numerodico, string asiento, string precio)
         {
             this.busId= busId;
             this.lugarSalida = lugarSalida;
@@ -91,7 +88,7 @@ namespace LogicaDeNegocios
             this.numerodico = numerodico;
             this.precio = precio;
         }
-
+        public Ruta() { }
         // Se crean los metodos getters y setters
         /// <summary>
         /// Gets or sets the lugar salida.
@@ -147,7 +144,7 @@ namespace LogicaDeNegocios
             {
                 List<Ruta> Lista = new List<Ruta>();
                 Lista.Add(ruta);
-                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_insertarChofer", con.conectar());
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_insertarRuta", con.conectar());
                 foreach (Ruta Ruta in Lista)
                 {
                     mySqlCommand.Parameters.AddWithValue("@Cooperativa", Ruta.Cooperativa);
@@ -155,7 +152,7 @@ namespace LogicaDeNegocios
                     mySqlCommand.Parameters.AddWithValue("@lugarOrigen", Ruta.LugarSalida);
                     mySqlCommand.Parameters.AddWithValue("@lugarDestino", Ruta.Lugardestino);
                     mySqlCommand.Parameters.AddWithValue("@horaSalida", Ruta.HoraSalida);
-                    mySqlCommand.Parameters.AddWithValue("@NumAsiento", Ruta.bus.Asiento);
+                    mySqlCommand.Parameters.AddWithValue("@NumAsiento", Ruta.Asiento);
                     mySqlCommand.Parameters.AddWithValue("@Precio", Ruta.Precio);
 
                 }

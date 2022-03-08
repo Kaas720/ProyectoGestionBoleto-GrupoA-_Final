@@ -68,6 +68,7 @@ namespace Presentacion
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Hora_Sistema = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.TxtNDisco = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.TxtFechaSalida = new Guna.UI2.WinForms.Guna2TextBox();
             this.CbNumeroAsientos = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -82,7 +83,6 @@ namespace Presentacion
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.CarritoBtn = new FontAwesome.Sharp.IconButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.TxtNDisco = new Guna.UI2.WinForms.Guna2TextBox();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
@@ -356,6 +356,28 @@ namespace Presentacion
             this.guna2GroupBox1.Size = new System.Drawing.Size(810, 391);
             this.guna2GroupBox1.TabIndex = 36;
             this.guna2GroupBox1.Text = "Información boleto";
+            // 
+            // TxtNDisco
+            // 
+            this.TxtNDisco.AutoRoundedCorners = true;
+            this.TxtNDisco.BorderRadius = 11;
+            this.TxtNDisco.Cursor = System.Windows.Forms.Cursors.NoMove2D;
+            this.TxtNDisco.DefaultText = "";
+            this.TxtNDisco.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtNDisco.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtNDisco.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtNDisco.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtNDisco.Enabled = false;
+            this.TxtNDisco.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtNDisco.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TxtNDisco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtNDisco.Location = new System.Drawing.Point(548, 221);
+            this.TxtNDisco.Name = "TxtNDisco";
+            this.TxtNDisco.PasswordChar = '\0';
+            this.TxtNDisco.PlaceholderText = "";
+            this.TxtNDisco.SelectedText = "";
+            this.TxtNDisco.Size = new System.Drawing.Size(176, 24);
+            this.TxtNDisco.TabIndex = 51;
             // 
             // guna2HtmlLabel2
             // 
@@ -633,28 +655,6 @@ namespace Presentacion
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // TxtNDisco
-            // 
-            this.TxtNDisco.AutoRoundedCorners = true;
-            this.TxtNDisco.BorderRadius = 11;
-            this.TxtNDisco.Cursor = System.Windows.Forms.Cursors.NoMove2D;
-            this.TxtNDisco.DefaultText = "";
-            this.TxtNDisco.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtNDisco.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtNDisco.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtNDisco.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtNDisco.Enabled = false;
-            this.TxtNDisco.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtNDisco.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TxtNDisco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtNDisco.Location = new System.Drawing.Point(548, 221);
-            this.TxtNDisco.Name = "TxtNDisco";
-            this.TxtNDisco.PasswordChar = '\0';
-            this.TxtNDisco.PlaceholderText = "";
-            this.TxtNDisco.SelectedText = "";
-            this.TxtNDisco.Size = new System.Drawing.Size(176, 24);
-            this.TxtNDisco.TabIndex = 51;
-            // 
             // Comprar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -667,6 +667,7 @@ namespace Presentacion
             this.Controls.Add(this.PanelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Comprar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Comprar";
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();

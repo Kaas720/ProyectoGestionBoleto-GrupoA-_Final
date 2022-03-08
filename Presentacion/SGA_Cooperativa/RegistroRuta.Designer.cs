@@ -165,7 +165,6 @@ namespace Presentacion
             this.txtOrigen.SelectedText = "";
             this.txtOrigen.Size = new System.Drawing.Size(196, 27);
             this.txtOrigen.TabIndex = 27;
-            this.txtOrigen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // cmbDisco
             // 
@@ -380,7 +379,6 @@ namespace Presentacion
             this.txtDestino.SelectedText = "";
             this.txtDestino.Size = new System.Drawing.Size(196, 27);
             this.txtDestino.TabIndex = 38;
-            this.txtDestino.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldo_KeyPress);
             // 
             // txtPrecio
             // 
@@ -404,7 +402,6 @@ namespace Presentacion
             this.txtPrecio.SelectedText = "";
             this.txtPrecio.Size = new System.Drawing.Size(196, 27);
             this.txtPrecio.TabIndex = 39;
-            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLicencia_KeyPress);
             // 
             // guna2GroupBox1
             // 

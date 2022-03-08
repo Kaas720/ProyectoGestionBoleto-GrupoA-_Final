@@ -25,8 +25,6 @@ namespace Presentacion.SGA_Vendedor
     /// <seealso cref="System.Windows.Forms.Form" />
     public partial class PerfilVendedor : Form
     {
-        // int idPersona;
-        string cedula;
         /// <summary>
         /// The adm Vendedor
         /// </summary>
@@ -37,16 +35,16 @@ namespace Presentacion.SGA_Vendedor
         /// <param name="(cedula">The identifier persona.</param>
         public PerfilVendedor(string cedula)
         {
-           InitializeComponent();
+            InitializeComponent();
             LlenarInformacion(cedula);
-            
+
         }
 
         /// <summary>
         /// Llenars the informacion.
         /// </summary>
         /// <param name="cedula">The identifier persona.</param>
-       private void LlenarInformacion(string cedula)
+        private void LlenarInformacion(string cedula)
         {
             List<Vendedor> Vendedor = adm.ConsularVendedor(cedula);
             foreach (Vendedor vendedor in Vendedor)
@@ -58,26 +56,6 @@ namespace Presentacion.SGA_Vendedor
                 txtCorreo.Text = vendedor.CredencialUsuario.Correo;
                 txtPassword.Text = vendedor.CredencialUsuario.Contrasena;
             }
-
-        }
-
-        /// <summary>
-        /// Handles the Click event of the guna2HtmlLabel6 control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        /// <summary>
-        /// Handles the TextChanged event of the guna2TextBox3 control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -105,13 +83,13 @@ namespace Presentacion.SGA_Vendedor
         {
             Validacion valida = new Validacion();
             bool campo = true;
-            
+
             if (valida.ValidarTelefono(txtTelefono.Text) != true)
             {
                 campo = false;
                 errorProvider1.SetError(txtTelefono, "Se esperaba 10 numeros.");
             }
-            
+
             if (valida.validarEmail(txtCorreo.Text) != true)
             {
                 campo = false;
@@ -141,36 +119,6 @@ namespace Presentacion.SGA_Vendedor
             errorProvider1.SetError(txtTelefono, "");
             errorProvider1.SetError(txtCorreo, "");
             errorProvider1.SetError(txtPassword, "");
-        }
-
-        private void txtCedula_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodigo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEdad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PerfilCliente_Shown(object sender, EventArgs e)
-        {
-            //txtCedula.Text = cedula;
         }
     }
 }

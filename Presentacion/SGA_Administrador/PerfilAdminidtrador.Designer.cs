@@ -133,7 +133,6 @@ namespace Presentacion.SGA_Administrador
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
             // 
             // iconPictureBox2
             // 
@@ -244,7 +243,6 @@ namespace Presentacion.SGA_Administrador
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(176, 23);
             this.txtName.TabIndex = 13;
-            this.txtName.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
             // txtCedula
             // 

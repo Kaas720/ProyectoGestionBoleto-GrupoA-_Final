@@ -15,9 +15,6 @@ using Datos;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LogicaDeNegocios
@@ -116,25 +113,27 @@ namespace LogicaDeNegocios
         /// <param name="cooperativa">The cooperativa.</param>
         /// <param name="fechasalida">The fechasalida.</param>
         /// <param name="horasalida">The horasalida.</param>
-        /// <returns>List&lt;GenerarInformacionBoleto&gt;.</returns>
-        public List<Ruta> BuscarBoleto(string cooperativa, string fechasalida, string horasalida)
+        /// <returns>List&lt;Ruta&gt;.</returns>
+         public List<Ruta> BuscarBoleto(string cooperativa, string fechasalida, string horasalida)
         {
             List<Ruta> newlist = new List<Ruta>();
             Ruta generarInformacionBoleto = null;
             try
             {
-                MySqlCommand mySqlCommand = ConectarProcedimiento("LlenarVentanaCompra");
+                MySqlCommand mySqlCommand = ConectarProcedimiento("spl_LlenarVentanaCompra");
                 mySqlCommand.Parameters.AddWithValue("@cooperativaFX", cooperativa);
                 mySqlCommand.Parameters.AddWithValue("@horaSalidaFX", fechasalida);
-                mySqlCommand.Parameters.AddWithValue("@fechaSalidaFX", horasalida);
+                mySqlCommand.Parameters.AddWithValue("@fechaSalidaFX", Convert.ToDateTime(horasalida));
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
-                {               
+                {
                     generarInformacionBoleto = new Ruta(
-                    Convert.ToInt32(lector["Idbus"].ToString()),lector["salida"].ToString(), lector["destino"].ToString(),
-                    lector["nombreCooperativa"].ToString(), lector["Asiento"].ToString(), lector["Disco"].ToString(), lector["Precio"].ToString(), lector["HoraSalida"].ToString(), lector["FechaSalida"].ToString()
+                    Convert.ToInt32(lector["Idbus"].ToString()), lector["salida"].ToString(), lector["FechaSalida"].ToString(), lector["destino"].ToString(),
+                    lector["HoraSalida"].ToString(), lector["nombreCooperativa"].ToString(), lector["Disco"].ToString(), lector["CantidadAsiento"].ToString(), lector["Precio"].ToString()
                     );
+                    
                     newlist.Add(generarInformacionBoleto);
+                    
                 }
                 con.cerrar();
             }

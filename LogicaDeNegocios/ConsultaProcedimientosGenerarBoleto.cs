@@ -22,14 +22,14 @@ namespace LogicaDeNegocios
     /// </summary>
     public class ConsultaProcedimientosGenerarBoleto
     {
-        // Se llama al clase  ProcedimientosPaginaprincipal y se crea el objeto procedimientos para llamar a los metodos que contiene
         /// <summary>
+        /// Se llama al clase  ProcedimientosPaginaprincipal y se crea el objeto procedimientos para llamar a los metodos que contiene
         /// The procedimientos
         /// </summary>
         ProcedimientosPaginaprincipal procedimientos = new ProcedimientosPaginaprincipal();
 
-        // Se crea una lista GenerarInformacionBoleto llamada  generarInformacionBoleto llamando al metodo BuscarBoleto
         /// <summary>
+        /// Se crea una lista GenerarInformacionBoleto llamada  generarInformacionBoleto llamando al metodo BuscarBoleto
         /// Generars the informacion boleto.
         /// </summary>
         /// <param name="cooperativa">The cooperativa.</param>
@@ -39,8 +39,9 @@ namespace LogicaDeNegocios
         public List<Ruta> generarInformacionBoleto(string cooperativa, string fechasalida, string horasalida)
         {
             List<Ruta> ListaBoletosGenerados = new List<Ruta>();
-            ListaBoletosGenerados = procedimientos.BuscarBoleto(cooperativa, fechasalida, horasalida);   
+            ListaBoletosGenerados = procedimientos.BuscarBoleto(cooperativa, fechasalida, horasalida);
             return ListaBoletosGenerados;
+            
         }
 
         // Se crea el metodo llamado LlenarComboAsientos para obtener el numero de asientos de un bus en particular

@@ -14,12 +14,6 @@
 using LogicaDeNegocios;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.SGA_Chofer
@@ -31,8 +25,6 @@ namespace Presentacion.SGA_Chofer
     /// <seealso cref="System.Windows.Forms.Form" />
     public partial class PerfilChofer : Form
     {
-        // int idPersona;
-        string cedula;
         /// <summary>
         /// The adm administrador
         /// </summary>
@@ -67,27 +59,11 @@ namespace Presentacion.SGA_Chofer
             }
 
         }
-
         /// <summary>
-        /// Handles the Click event of the guna2HtmlLabel6 control.
+        /// Se realizar la validacion para la actualización de datos.
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        /// <summary>
-        /// Handles the TextChanged event of the guna2TextBox3 control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditarButon_Click(object sender, EventArgs e)
         {
             string cedula = txtCedula.Text.Trim(), nombre = txtNombre.Text, sexo = txtSexo.Text, telefono = txtTelefono.Text.Trim(), correo = txtCorreo.Text.Trim(), contrasena = txtPassword.Text.Trim();
@@ -97,7 +73,6 @@ namespace Presentacion.SGA_Chofer
             {
                 adm.Modificar(cedula, telefono, correo, contrasena);
                 MessageBox.Show("Datos actualizados con exito.");
-                // this.Hide();
             }
             else
             {
@@ -149,36 +124,6 @@ namespace Presentacion.SGA_Chofer
             errorProvider1.SetError(txtTelefono, "");
             errorProvider1.SetError(txtCorreo, "");
             errorProvider1.SetError(txtPassword, "");
-        }
-
-        private void txtCedula_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodigo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEdad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PerfilCliente_Shown(object sender, EventArgs e)
-        {
-            //txtCedula.Text = cedula;
         }
     }
 }

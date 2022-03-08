@@ -76,6 +76,7 @@
     <Compile Include="AdmCooperativa.cs" />
     <Compile Include="Administrador.cs" />
     <Compile Include="AdmPago.cs" />
+    <Compile Include="AdmRuta.cs" />
     <Compile Include="AdmVendedor.cs" />
     <Compile Include="Boleto.cs" />
     <Compile Include="Bus.cs" />
@@ -83,7 +84,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Cooperativa.cs" />
     <Compile Include="CredencialUsuario.cs" />
-    <Compile Include="GenerarInformacionBoleto.cs" />
+    <Compile Include="Ruta.cs" />
     <Compile Include="Pago.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="ConsultaProcedimientosGenerarBoleto.cs" />
@@ -91,7 +92,6 @@
     <Compile Include="GeneralExcepcion.cs" />
     <Compile Include="ConectorDeProcedimientos.cs" />
     <Compile Include="ProcedimientosPaginaprincipal.cs" />
-    <Compile Include="Ruta.cs" />
     <Compile Include="InformacionDerutaCooperativa.cs" />
     <Compile Include="Validacion.cs" />
     <Compile Include="AdmClienteProcedimiento.cs" />

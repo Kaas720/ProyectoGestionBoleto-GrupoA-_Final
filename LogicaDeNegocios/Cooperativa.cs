@@ -58,7 +58,7 @@ namespace LogicaDeNegocios
         public Cooperativa(string ruc, string propietario, string nombreCooperativa, string telefono, CredencialUsuario credencialUsuario)
         {
             this.propietario = propietario;
-            this.nombreCooperativa = nombreCooperativa;
+           this.nombreCooperativa = nombreCooperativa;
             this.ruc = ruc;
             this.telefono = telefono;
             this.credencialUsuario = credencialUsuario;

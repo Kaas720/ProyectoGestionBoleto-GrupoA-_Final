@@ -117,10 +117,10 @@ namespace LogicaDeNegocios
         /// <param name="fechasalida">The fechasalida.</param>
         /// <param name="horasalida">The horasalida.</param>
         /// <returns>List&lt;GenerarInformacionBoleto&gt;.</returns>
-        public List<GenerarInformacionBoleto> BuscarBoleto(string cooperativa, string fechasalida, string horasalida)
+        public List<Ruta> BuscarBoleto(string cooperativa, string fechasalida, string horasalida)
         {
-            List<GenerarInformacionBoleto> newlist = new List<GenerarInformacionBoleto>();
-            GenerarInformacionBoleto generarInformacionBoleto = null;
+            List<Ruta> newlist = new List<Ruta>();
+            Ruta generarInformacionBoleto = null;
             try
             {
                 MySqlCommand mySqlCommand = ConectarProcedimiento("LlenarVentanaCompra");
@@ -130,10 +130,9 @@ namespace LogicaDeNegocios
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {               
-                    generarInformacionBoleto = new GenerarInformacionBoleto(
-                    Convert.ToInt32(lector["Idbus"].ToString()),lector["salida"].ToString(), lector["FechaSalida"].ToString(),
-                    lector["destino"].ToString(), lector["HoraSalida"].ToString(),
-                    lector["nombreCooperativa"].ToString(), lector["Disco"].ToString(), lector["Precio"].ToString()
+                    generarInformacionBoleto = new Ruta(
+                    Convert.ToInt32(lector["Idbus"].ToString()),lector["salida"].ToString(), lector["destino"].ToString(),
+                    lector["nombreCooperativa"].ToString(), lector["Asiento"].ToString(), lector["Disco"].ToString(), lector["Precio"].ToString(), lector["HoraSalida"].ToString(), lector["FechaSalida"].ToString()
                     );
                     newlist.Add(generarInformacionBoleto);
                 }

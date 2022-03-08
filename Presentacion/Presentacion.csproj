@@ -168,6 +168,12 @@
     <Compile Include="SGA_Cooperativa\PerfilCooperativa.Designer.cs">
       <DependentUpon>PerfilCooperativa.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGA_Cooperativa\RegistroRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Cooperativa\RegistroRuta.Designer.cs">
+      <DependentUpon>RegistroRuta.cs</DependentUpon>
+    </Compile>
     <Compile Include="SGA_Cooperativa\RegistroCooperativa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Cooperativa\PerfilCooperativa.resx">
       <DependentUpon>PerfilCooperativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Cooperativa\RegistroRuta.resx">
+      <DependentUpon>RegistroRuta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Cooperativa\RegistroCooperativa.resx">
       <DependentUpon>RegistroCooperativa.cs</DependentUpon>

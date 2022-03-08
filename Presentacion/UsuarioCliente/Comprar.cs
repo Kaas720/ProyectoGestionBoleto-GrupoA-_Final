@@ -98,9 +98,9 @@ namespace Presentacion
         /// <param name="horaSalida">The hora salida.</param>
         private void LlenarInformacionAutomaticamente(string cooperativa, string fechaSalida, string horaSalida)
         {
-            List<GenerarInformacionBoleto> generarInformacionBoleto = consultasProcedemientos.generarInformacionBoleto(cooperativa, fechaSalida, horaSalida);
+            List<Ruta> generarInformacionBoleto = consultasProcedemientos.generarInformacionBoleto(cooperativa, fechaSalida, horaSalida);
        // Se utiliza el bucle foreach para realizar la agregacion de los datos que poseee un boleto y el usuario pueda completar con sus datos para posterior a ello almacenadas dentro de la base de datos
-            foreach (GenerarInformacionBoleto item in generarInformacionBoleto)
+            foreach (Ruta item in generarInformacionBoleto)
             {
                 
                 TxtCooperativa.Text = item.Cooperativa;

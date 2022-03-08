@@ -36,9 +36,9 @@ namespace LogicaDeNegocios
         /// <param name="fechasalida">The fechasalida.</param>
         /// <param name="horasalida">The horasalida.</param>
         /// <returns>List&lt;GenerarInformacionBoleto&gt;.</returns>
-        public List<GenerarInformacionBoleto> generarInformacionBoleto(string cooperativa, string fechasalida, string horasalida)
+        public List<Ruta> generarInformacionBoleto(string cooperativa, string fechasalida, string horasalida)
         {
-            List<GenerarInformacionBoleto> ListaBoletosGenerados = new List<GenerarInformacionBoleto>();
+            List<Ruta> ListaBoletosGenerados = new List<Ruta>();
             ListaBoletosGenerados = procedimientos.BuscarBoleto(cooperativa, fechasalida, horasalida);   
             return ListaBoletosGenerados;
         }

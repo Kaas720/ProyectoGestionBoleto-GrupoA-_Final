@@ -43,6 +43,7 @@ namespace LogicaDeNegocios
         /// <param name="placa">The placa.</param>
         /// <param name="numDisco">The number disco.</param>
         /// <param name="asiento">The asiento.</param>
+        public Bus() { }
         public Bus(string placa, int numDisco, int asiento)
         {
             this.placa = placa;

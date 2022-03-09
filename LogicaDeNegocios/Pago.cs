@@ -18,8 +18,9 @@ namespace LogicaDeNegocios
         //{
 
         //}
+        public  static int MNumeroboleto;
         public Pago() { }
-        private static List<Pago> boleto = new List<Pago>();
+        private static List<string> boleto = new List<string>();
 
         private string cooperativa, destino, fechaSalida, horaSalida, LugarSalida, numeroDisco;
         private double precios;
@@ -45,7 +46,7 @@ namespace LogicaDeNegocios
 
 
 
-        public Pago(string cooperativa, string destino, string fechaSalida, string horaSalida, string lugarSalida, string numeroDisco, double precios)
+        /*public Pago(string cooperativa, string destino, string fechaSalida, string horaSalida, string lugarSalida, string numeroDisco, double precios)
         {
             this.cooperativa = cooperativa;
             this.destino = destino;
@@ -56,18 +57,12 @@ namespace LogicaDeNegocios
             this.precios = precios;
 
         }
-
-        public static List<Pago> getBoleto()
+        */
+        public static List<string> getBoleto()
         {
             return boleto;
         }
-
-        public static void setBoleto(Pago boletos)
-        {
-            boleto.Add(boletos);
-        }
-
-        public static bool pagarBoleto()
+        public static bool pagarBoleto(int Id_bus, string Cedula_cliente)
         {
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
@@ -78,20 +73,17 @@ namespace LogicaDeNegocios
                 DialogResult obj = MessageBox.Show("Desea confirmar el pago","Titulo",ob, MessageBoxIcon.Question);
                 if (obj == DialogResult.Yes)
                 {
-
-                    foreach (var b in Pago.getBoleto())
+                    MessageBox.Show(""+ MNumeroboleto);
+                    while (MNumeroboleto>0)
                     {
                         MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_pago", con.conectar());
-                        mySqlCommand.Parameters.AddWithValue("@Cooperativax", b.getCooperativa());
-                        mySqlCommand.Parameters.AddWithValue("@Destino", b.Destino);
-                        mySqlCommand.Parameters.AddWithValue("@FechaSalida", b.FechaSalida);
-                        mySqlCommand.Parameters.AddWithValue("@HoraSalida", b.HoraSalida);
-                        mySqlCommand.Parameters.AddWithValue("@LugarSalida", b.LugarSalida);
-                        mySqlCommand.Parameters.AddWithValue("@NumeroDisco", b.NumeroDisco);
+                        mySqlCommand.Parameters.AddWithValue("@id_bus", Id_bus);
+                        mySqlCommand.Parameters.AddWithValue("@cedula_cliente", Cedula_cliente);
+                        mySqlCommand.Parameters.AddWithValue("@FechaActual", DateTime.Now);
                         mySqlCommand.ExecuteNonQuery();
+                        MNumeroboleto--;
                     }
-                    boleto.Clear();
-                    con.cerrar();
+                        boleto.Clear();
                     MessageBox.Show("Se realizó el pago con éxito ");
                     validacion = true;
                 }

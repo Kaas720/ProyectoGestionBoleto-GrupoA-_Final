@@ -28,6 +28,8 @@ namespace Presentacion.UsuarioCliente
     /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Pagar : Form
     {
+        int idBusNuevo;
+        string cedula;
         AdmPago admpago = new AdmPago();
         Pago p = new Pago();
         /// <summary>
@@ -37,13 +39,15 @@ namespace Presentacion.UsuarioCliente
         /// <param name="cooperativa">The cooperativa.</param>
         /// <param name="fechaSalida">The fecha salida.</param>
         /// <param name="horaSalida">The hora salida.</param>
-        public Pagar(string texto,string cooperativa, string fechaSalida, string horaSalida)
+        public Pagar(string texto, int idBusNuevo, string cedula)
         {
             InitializeComponent();
             AdmPago ap = new AdmPago();
             txtTotal.Text += ap.calcularTotalPagar(Comprar.getPrecio());
-            InfBoleto.Text += texto;
 
+            InfBoleto.Text += texto;
+            this.idBusNuevo = idBusNuevo;
+            this.cedula = cedula;
         }
         /// <summary>
         /// Releases the capture.
@@ -87,12 +91,13 @@ namespace Presentacion.UsuarioCliente
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            if (Pago.pagarBoleto())
+            if (Pago.pagarBoleto(idBusNuevo, cedula))
             {
                 btnPagar.Visible = false;
                 InfBoleto.Text = null;
                 btnImprimir.Visible = true;
                 txtTotal.Text = null;
+
             }
            else{
                 MessageBox.Show("Error al comprar");

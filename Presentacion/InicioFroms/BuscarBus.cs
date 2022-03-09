@@ -93,7 +93,7 @@ namespace Presentacion.InicioFroms
                         string cooperativa = DataGridInf.Rows[x].Cells[0].Value.ToString();
                         string fecha_salida = DataGridInf.Rows[x].Cells[1].Value.ToString();
                         string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
-                        Ventana_ventaBoletos = new Comprar(cooperativa, fecha_salida, horario_salida);
+                        Ventana_ventaBoletos = new Comprar(cooperativa, fecha_salida, horario_salida,"");
                         Program.principal.Hide();
                         Ventana_ventaBoletos.Show();
                     }

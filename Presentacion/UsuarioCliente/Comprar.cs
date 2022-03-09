@@ -21,6 +21,7 @@ using Presentacion.InicioFroms;
 
 namespace Presentacion
 {
+    
     /// <summary>
     /// Class Comprar.
     /// Implements the <see cref="System.Windows.Forms.Form" />
@@ -28,6 +29,7 @@ namespace Presentacion
     /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Comprar : Form
     {
+        int idBusNuevo = 0;
         // Se llama al clase Validacion  y se crea el objeto validacion  para llamar a los metodos que contiene
         /// <summary>
         /// The validacion
@@ -45,7 +47,7 @@ namespace Presentacion
         //{
         //    boleto.Add(new GenerarInformacionBoleto(1,lugarSalida,fechaSalida,lugardestino,horaSalida,cooperativa,numerodis,precio));
         //}
-
+        string cedula;
 
         public static List<Double> getPrecio()
         {
@@ -81,10 +83,11 @@ namespace Presentacion
         /// <param name="cooperativa">The cooperativa.</param>
         /// <param name="fechaSalida">The fecha salida.</param>
         /// <param name="horaSalida">The hora salida.</param>
-        public Comprar(string cooperativa, string fechaSalida, string horaSalida)
+        public Comprar(string cooperativa, string fechaSalida, string horaSalida, string cedula)
         {
             InitializeComponent();
-           /// Se llama al metodo en el constructor para que los datos se caguen de manera automatica al ingresar al formulario compra
+            /// Se llama al metodo en el constructor para que los datos se caguen de manera automatica al ingresar al formulario compra
+            this.cedula = cedula;
             LlenarInformacionAutomaticamente(cooperativa, fechaSalida, horaSalida);        
         }
 
@@ -102,6 +105,7 @@ namespace Presentacion
             /// Se utiliza el bucle foreach para realizar la agregacion de los datos que poseee un boleto y el usuario pueda completar con sus datos para posterior a ello almacenadas dentro de la base de datos
             foreach (Ruta item in generarInformacionBoleto)
             {
+                idBusNuevo = item.BusId;
                 TxtCooperativa.Text = item.Cooperativa;
                 TxtDestino.Text = item.Lugardestino;
                 TxtFechaSalida.Text = item.FechaSalida;
@@ -201,7 +205,7 @@ namespace Presentacion
             + "Asiento:" + CbNumeroAsientos.Text;           
             boletosNuveos.Add(CbNumeroAsientos.Text);
             setPrecio(Convert.ToDouble(TxtPrecio.Text));
-            Pago.setBoleto(new Pago(TxtCooperativa.Text, TxtDestino.Text, TxtFechaSalida.Text, TxtHoraSalida.Text,TxtLugarSalida.Text, TxtNDisco.Text,Convert.ToDouble(TxtPrecio.Text)));
+            // Pago.setBoleto(new Pago(TxtCooperativa.Text, TxtDestino.Text, TxtFechaSalida.Text, TxtHoraSalida.Text,TxtLugarSalida.Text, TxtNDisco.Text,Convert.ToDouble(TxtPrecio.Text)));           
         }
 
         // Se crea el metodo VaciarCampos para limpiar los campos que seran ingresados por el cliente
@@ -281,10 +285,10 @@ namespace Presentacion
             {
                 if (ValidarCarrito())
                 {
-                    Pagar pagar = new Pagar(boletos, TxtCooperativa.Text, TxtFechaSalida.Text, TxtHoraSalida.Text);
+                    Pago.MNumeroboleto = Convert.ToInt32(CarritoBtn.Text);
+                    Pagar pagar = new Pagar(boletos, idBusNuevo, cedula);
                     BuscarBus.Ventana_ventaBoletos.Hide();
-                    pagar.ShowDialog();
-                   
+                    pagar.ShowDialog();  
                 }
             }
             catch (ControlExcepcion ex)

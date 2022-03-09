@@ -17,6 +17,7 @@ namespace Presentacion.SGA_Administrador
         public Reorte()
         {
             InitializeComponent();
+            admReporte.LlenarDatagridReporte(DataGridReporte,0, "");
         }
 
         private void boxCooperativa_CheckedChanged(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace Presentacion.SGA_Administrador
         {
             try
             {
-                admReporte.LlenarDatagridReporte(DataGridReporte, DarValorCombo());
+                admReporte.LlenarDatagridReporte(DataGridReporte, DarValorCombo(),txtDato.Text);
             }
             catch
             {

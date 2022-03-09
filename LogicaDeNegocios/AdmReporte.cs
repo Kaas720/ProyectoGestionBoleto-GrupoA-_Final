@@ -32,16 +32,20 @@ namespace LogicaDeNegocios
                     {
                         int numerofila = dataGridReporte.Rows.Count;
                         dataGridReporte.Rows.Add(1);
-                        dataGridReporte.Rows[numerofila].Cells[0].Value = lector["nombreCooperativa"].ToString();
-                        dataGridReporte.Rows[numerofila].Cells[1].Value = lector["HoraSalida"].ToString();
-                        dataGridReporte.Rows[numerofila].Cells[2].Value = lector["FechaSalida"].ToString();
-                        dataGridReporte.Rows[numerofila].Cells[3].Value = lector["Precio"].ToString();
+                        dataGridReporte.Rows[numerofila].Cells[0].Value = lector["Id_compra"].ToString();
+                        dataGridReporte.Rows[numerofila].Cells[1].Value = lector["Fecha_Compra"].ToString();
+                        dataGridReporte.Rows[numerofila].Cells[2].Value = lector["Fecha_Salida"].ToString();
+                        dataGridReporte.Rows[numerofila].Cells[3].Value = lector["Cedula_Comprador"].ToString();
+                        dataGridReporte.Rows[numerofila].Cells[4].Value = lector["Cedula_cliente"].ToString();
+                        dataGridReporte.Rows[numerofila].Cells[5].Value = lector["cooperativa"].ToString();
+                        dataGridReporte.Rows[numerofila].Cells[6].Value = lector["HoraSalida"].ToString();
+                        dataGridReporte.Rows[numerofila].Cells[7].Value = lector["Placa"].ToString();
                 }
                 con.cerrar();
             }
-            catch (MySqlException ex)
+            catch
             {
-                Console.WriteLine(ex);
+                throw new ControlExcepcion("Hubo error en la consulta intentar mas tarde");
             }
         }
     }

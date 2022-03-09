@@ -184,7 +184,9 @@ namespace Presentacion.SGA_Administrador
             // 
             // DataGridReporte
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DataGridReporte.AllowUserToAddRows = false;
+            this.DataGridReporte.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
             this.DataGridReporte.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridReporte.BackgroundColor = System.Drawing.Color.White;
@@ -212,7 +214,7 @@ namespace Presentacion.SGA_Administrador
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -221,6 +223,7 @@ namespace Presentacion.SGA_Administrador
             this.DataGridReporte.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridReporte.Location = new System.Drawing.Point(16, 165);
             this.DataGridReporte.Name = "DataGridReporte";
+            this.DataGridReporte.ReadOnly = true;
             this.DataGridReporte.RowHeadersVisible = false;
             this.DataGridReporte.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridReporte.Size = new System.Drawing.Size(658, 187);
@@ -238,7 +241,7 @@ namespace Presentacion.SGA_Administrador
             this.DataGridReporte.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DataGridReporte.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DataGridReporte.ThemeStyle.HeaderStyle.Height = 40;
-            this.DataGridReporte.ThemeStyle.ReadOnly = false;
+            this.DataGridReporte.ThemeStyle.ReadOnly = true;
             this.DataGridReporte.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DataGridReporte.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridReporte.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -251,41 +254,49 @@ namespace Presentacion.SGA_Administrador
             // 
             this.ID.HeaderText = "Id_Compra";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // FechaCompra
             // 
             this.FechaCompra.HeaderText = "Fecha Compra";
             this.FechaCompra.Name = "FechaCompra";
+            this.FechaCompra.ReadOnly = true;
             // 
             // Fecha_Salida
             // 
             this.Fecha_Salida.HeaderText = "Fecha Salida";
             this.Fecha_Salida.Name = "Fecha_Salida";
+            this.Fecha_Salida.ReadOnly = true;
             // 
             // Cedula_Comprador
             // 
             this.Cedula_Comprador.HeaderText = "Cedula comprador";
             this.Cedula_Comprador.Name = "Cedula_Comprador";
+            this.Cedula_Comprador.ReadOnly = true;
             // 
             // Cedula_Cliente
             // 
             this.Cedula_Cliente.HeaderText = "Cedula Cliente";
             this.Cedula_Cliente.Name = "Cedula_Cliente";
+            this.Cedula_Cliente.ReadOnly = true;
             // 
             // Cooperativa
             // 
             this.Cooperativa.HeaderText = "Nombre Cooperativa";
             this.Cooperativa.Name = "Cooperativa";
+            this.Cooperativa.ReadOnly = true;
             // 
             // HoraSaldida
             // 
             this.HoraSaldida.HeaderText = "Hora Salida";
             this.HoraSaldida.Name = "HoraSaldida";
+            this.HoraSaldida.ReadOnly = true;
             // 
             // Bus
             // 
             this.Bus.HeaderText = "Placa Bus";
             this.Bus.Name = "Bus";
+            this.Bus.ReadOnly = true;
             // 
             // Reorte
             // 

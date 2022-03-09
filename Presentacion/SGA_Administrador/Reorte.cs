@@ -22,29 +22,50 @@ namespace Presentacion.SGA_Administrador
 
         private void boxCooperativa_CheckedChanged(object sender, EventArgs e)
         {
+            txtDato.Text = null;
             txtDato.PlaceholderText = "Ingresar la cooperativa";
+            fecha.Visible = false;
+            txtDato.Visible = true;
         }
 
         private void boxFecha_CheckedChanged(object sender, EventArgs e)
         {
             txtDato.PlaceholderText = "Ingresar la fecha de compra";
+            fecha.Visible = true;
+            txtDato.Visible = false;
         }
 
         private void bocCedula_CheckedChanged(object sender, EventArgs e)
         {
+            txtDato.Text = null;
             txtDato.PlaceholderText = "Ingresar la cédula";
+            fecha.Visible = false;
+            txtDato.Visible = true;
         }
 
         private void BtnConsultar_Click(object sender, EventArgs e)
         {
             try
             {
-                admReporte.LlenarDatagridReporte(DataGridReporte, DarValorCombo(),txtDato.Text);
+                if (fecha.Visible == true)
+                {
+                    if (!admReporte.LlenarDatagridReporte(DataGridReporte, DarValorCombo(), fecha.Value.ToString()))
+                    {
+                        MessageBox.Show("Consulta exitosa");
+                    }
+                }
+                else
+                {
+                    if (!admReporte.LlenarDatagridReporte(DataGridReporte, DarValorCombo(), txtDato.Text))
+                    {
+                        MessageBox.Show("Consulta exitosa");
+                    }
+                }
             }
-            catch
+            catch (ControlExcepcion ex)
             {
-
-            }           
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private int DarValorCombo()

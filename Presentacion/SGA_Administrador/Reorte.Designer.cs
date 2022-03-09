@@ -48,6 +48,7 @@ namespace Presentacion.SGA_Administrador
             this.Cooperativa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraSaldida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.BtnConsultar)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridReporte)).BeginInit();
@@ -154,6 +155,7 @@ namespace Presentacion.SGA_Administrador
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.fecha);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GroupBox1.Controls.Add(this.DataGridReporte);
             this.guna2GroupBox1.Controls.Add(this.boxFecha);
@@ -186,7 +188,8 @@ namespace Presentacion.SGA_Administrador
             // 
             this.DataGridReporte.AllowUserToAddRows = false;
             this.DataGridReporte.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.DataGridReporte.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DataGridReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridReporte.BackgroundColor = System.Drawing.Color.White;
@@ -298,6 +301,21 @@ namespace Presentacion.SGA_Administrador
             this.Bus.Name = "Bus";
             this.Bus.ReadOnly = true;
             // 
+            // fecha
+            // 
+            this.fecha.Checked = true;
+            this.fecha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.fecha.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.fecha.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.fecha.Location = new System.Drawing.Point(226, 127);
+            this.fecha.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.fecha.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(219, 32);
+            this.fecha.TabIndex = 9;
+            this.fecha.Value = new System.DateTime(2022, 3, 9, 15, 34, 35, 26);
+            this.fecha.Visible = false;
+            // 
             // Reorte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,5 +351,6 @@ namespace Presentacion.SGA_Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn Cooperativa;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraSaldida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bus;
+        private Guna.UI2.WinForms.Guna2DateTimePicker fecha;
     }
 }

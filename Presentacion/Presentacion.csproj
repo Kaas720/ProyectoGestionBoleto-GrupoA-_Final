@@ -132,6 +132,12 @@
     <Compile Include="SGA_Administrador\RegistroAdministrador.Designer.cs">
       <DependentUpon>RegistroAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGA_Administrador\Reorte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Administrador\Reorte.Designer.cs">
+      <DependentUpon>Reorte.cs</DependentUpon>
+    </Compile>
     <Compile Include="SGA_Administrador\VentanaAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Administrador\RegistroAdministrador.resx">
       <DependentUpon>RegistroAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Administrador\Reorte.resx">
+      <DependentUpon>Reorte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Administrador\VentanaAdministrador.resx">
       <DependentUpon>VentanaAdministrador.cs</DependentUpon>

@@ -345,5 +345,16 @@ namespace Presentacion
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
         }
+
+        private void Reporte_Click(object sender, EventArgs e)
+        {
+            this.PanelPrincipalContenedor.Controls.Clear();
+            Reorte Frm = new Reorte();
+            Frm.TopLevel = false;
+            PanelPrincipalContenedor.Controls.Add(Frm);
+            Frm.Show();
+            RestablecerColorOriginalBotones();
+            GenerarNuevoColorBoton(sender);
+        }
     }
 }

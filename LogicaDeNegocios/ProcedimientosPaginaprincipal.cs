@@ -194,17 +194,21 @@ namespace LogicaDeNegocios
                 {
                     int numerofila = dataGridInf.Rows.Count;
                     dataGridInf.Rows.Add(1);
-                    dataGridInf.Rows[numerofila].Cells[0].Value = lector["nombreCooperativa"].ToString();
-                    dataGridInf.Rows[numerofila].Cells[1].Value = lector["HoraSalida"].ToString();
-                    dataGridInf.Rows[numerofila].Cells[2].Value = lector["FechaSalida"].ToString();
-                    dataGridInf.Rows[numerofila].Cells[3].Value = lector["Precio"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[0].Value = lector["Id_compra"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[1].Value = lector["Fecha_Compra"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[2].Value = lector["Fecha_Salida"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[3].Value = lector["Cedula_Comprador"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[3].Value = lector["Cedula_cliente"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[3].Value = lector["cooperativa"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[3].Value = lector["HoraSalida"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[3].Value = lector["Bus"].ToString();
                     dataGridInf.Rows[numerofila].Cells[4].Value = "Seleccionar...";
                 }
                 con.cerrar();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error intentolo mas tarde" + ex);
+                
             }
         }
         /// <summary>

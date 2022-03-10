@@ -129,7 +129,7 @@ namespace Presentacion.UsuarioCliente
             SaveFileDialog guardar = new SaveFileDialog();
             guardar.FileName = "BoletoGenerado" + DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
             guardar.Filter = "Pdf Files|*.pdf";
-            string paginaHtml = Properties.Resources.Presentar.ToString();
+            string paginaHtml_text = Properties.Resources.Presentar.ToString();
             if(guardar.ShowDialog() == DialogResult.OK)
             {
                 using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
@@ -138,7 +138,7 @@ namespace Presentacion.UsuarioCliente
                     PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDocument, stream);
                     pdfDocument.Open();
                     pdfDocument.Add(new Phrase());
-                    using (StreamReader sr = new StreamReader(paginaHtml))
+                    using (StringReader sr = new StringReader(paginaHtml_text))
                     {
                         XMLWorkerHelper.GetInstance().ParseXHtml(pdfWriter, pdfDocument,sr);
                     }

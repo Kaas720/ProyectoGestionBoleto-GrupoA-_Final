@@ -144,6 +144,26 @@ namespace Presentacion.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;
+        ///        integrity=&quot;sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU&quot; crossorigin=&quot;anonymous&quot; /&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///    &lt;header&gt;
+        ///        &lt;div class=&quot;container&quot;&gt;
+        ///            &lt;div class=&quot;row&quot;&gt;
+        ///                &lt;div class=&quot;col-3 col-sm-3 col-md-3 col-lg-3&quot;&gt;
+        ///                    &lt;img src=&quot;pngtree-blue-big-car-illustration-cartoon-shuttle-blu [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Presentar {
+            get {
+                return ResourceManager.GetString("Presentar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap salvapantallas_textura_elegante_blanco_23_2148421855 {

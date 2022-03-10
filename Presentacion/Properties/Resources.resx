@@ -145,4 +145,7 @@
   <data name="pngtree-blue-big-car-illustration-cartoon-shuttle-blue-bus-gray-glass-png-image_4543102" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-blue-big-car-illustration-cartoon-shuttle-blue-bus-gray-glass-png-image_4543101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Presentar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Presentar.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

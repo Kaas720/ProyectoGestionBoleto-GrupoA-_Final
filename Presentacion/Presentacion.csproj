@@ -390,7 +390,8 @@
     <Content Include="Resources\editar.ico" />
     <Content Include="Resources\eliminar.ico" />
     <Content Include="Resources\mundo.ico" />
-    <Content Include="Resources\Presentar.html" />
+    <None Include="Resources\Presentar.html" />
+    <None Include="Resources\Presentar.bmp" />
     <None Include="Resources\pngtree-blue-big-car-illustration-cartoon-shuttle-blue-bus-gray-glass-png-image_4543101.png" />
   </ItemGroup>
   <ItemGroup>

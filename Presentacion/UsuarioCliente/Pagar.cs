@@ -18,6 +18,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
 
 namespace Presentacion.UsuarioCliente
 {
@@ -117,6 +121,27 @@ namespace Presentacion.UsuarioCliente
                 BuscarBus.Ventana_ventaBoletos.Close();
                 Program.principal.Show();
                 Comprar.VaciarLista();
+            }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.FileName = "BoletoGenerado" + DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
+            guardar.Filter = "Pdf Files|*.pdf";
+           // string paginaHtml = Properties.Resources.
+            if(guardar.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
+                {
+                    Document pdfDocument = new Document(PageSize.A4, 20, 20, 20, 20);
+                    PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDocument, stream);
+                    pdfDocument.Open();
+                    pdfDocument.Add(new Phrase("HOLAAAAAAAAS"));
+                    pdfDocument.Close();
+                    stream.Close();
+                }
+                
             }
         }
     }

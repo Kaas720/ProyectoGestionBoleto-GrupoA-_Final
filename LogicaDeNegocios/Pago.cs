@@ -93,6 +93,7 @@ namespace LogicaDeNegocios
                 MessageBox.Show(ex.Message);
             }
             return validacion;
-        } 
+        }
+
     }
 }

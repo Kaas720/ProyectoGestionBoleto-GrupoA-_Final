@@ -106,6 +106,7 @@ namespace Presentacion.UsuarioCliente
             this.btnImprimir.TabIndex = 18;
             this.btnImprimir.Text = "IMPRIMIR";
             this.btnImprimir.Visible = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // guna2HtmlLabel1
             // 

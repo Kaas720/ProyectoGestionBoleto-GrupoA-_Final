@@ -18,6 +18,5 @@ namespace LogicaDeNegocios
             }
             return totalPagar;
         }
-     
     }
 }

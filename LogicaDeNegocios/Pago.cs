@@ -19,11 +19,16 @@ namespace LogicaDeNegocios
 
         //}
         public  static int MNumeroboleto;
-        public static string NombreConsumidor;
-        public static string CedulaConsumidor;
+        private string nombreConsumidor;
+        private string cedulaConsumidor;
         public Pago() { }
         private static List<string> boleto = new List<string>();
-
+        public static List<Pago> InfoBoleto = new List<Pago>();
+        public Pago(string NombreConsumidor, string CedulaConsumidor)
+        {
+            this.CedulaConsumidor = CedulaConsumidor;
+            this.NombreConsumidor = NombreConsumidor;
+        }
         private string cooperativa, destino, fechaSalida, horaSalida, LugarSalida, numeroDisco;
         private double precios;
 
@@ -33,7 +38,8 @@ namespace LogicaDeNegocios
         public string LugarSalida1 { get => LugarSalida; set => LugarSalida = value; }
         public string NumeroDisco { get => numeroDisco; set => numeroDisco = value; }
         public double Precios { get => precios; set => precios = value; }
-
+        public string NombreConsumidor { get => nombreConsumidor; set => nombreConsumidor = value; }
+        public string CedulaConsumidor { get => cedulaConsumidor; set => cedulaConsumidor = value; }
 
         public string getCooperativa()
         {
@@ -68,8 +74,7 @@ namespace LogicaDeNegocios
         {
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
-            bool validacion = false;
-            MessageBox
+            bool validacion = false;        
             try
             {
                 MessageBoxButtons ob = MessageBoxButtons.YesNoCancel;
@@ -77,12 +82,24 @@ namespace LogicaDeNegocios
                 if (obj == DialogResult.Yes)
                 {
                     int num = MNumeroboleto;
+                    
                     while (num > 0)
                     {
+                        int x = 1;
                         MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_pago", con.conectar());
                         mySqlCommand.Parameters.AddWithValue("@id_bus", Id_bus);
                         mySqlCommand.Parameters.AddWithValue("@cedula_cliente", Cedula_cliente);
                         mySqlCommand.Parameters.AddWithValue("@FechaActual", DateTime.Now);
+                        foreach (Pago p in InfoBoleto)
+                        {         
+                            if (x == num)
+                            {
+                                MessageBox.Show(p.nombreConsumidor);
+                                mySqlCommand.Parameters.AddWithValue("@Nombre_comprador", p.nombreConsumidor);
+                                mySqlCommand.Parameters.AddWithValue("@cedula_Comprador", p.cedulaConsumidor);
+                            }
+                            x++;
+                        }
                         mySqlCommand.ExecuteNonQuery();
                         num--;
                     }
@@ -122,7 +139,7 @@ namespace LogicaDeNegocios
                     tablas += "<td>" + lector["Cedula_Comprador"].ToString() + "</td>";
                     tablas += "<td>" + lector["Fecha_Salida"].ToString() + "</td>";
                     tablas += "<td>" + lector["HoraSalida"].ToString() + "</td>";
-                    tablas += "<td>" + lector["HoraSalida"].ToString() + "</td>";
+                    tablas += "<td>" + lector["Precio"].ToString() + "</td>";
                     tablas += "</tr>";
                     precio = precio + Convert.ToDouble(lector["Precio"]);
                     MNumeroboleto--;

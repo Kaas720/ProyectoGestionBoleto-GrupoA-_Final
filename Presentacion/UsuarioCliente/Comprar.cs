@@ -205,6 +205,7 @@ namespace Presentacion
             + "Asiento:" + CbNumeroAsientos.Text;           
             boletosNuveos.Add(CbNumeroAsientos.Text);
             setPrecio(Convert.ToDouble(TxtPrecio.Text));
+            Pago.InfoBoleto.Add(new Pago(TxtNombre.Text, txtCedula.Text));
             // Pago.setBoleto(new Pago(TxtCooperativa.Text, TxtDestino.Text, TxtFechaSalida.Text, TxtHoraSalida.Text,TxtLugarSalida.Text, TxtNDisco.Text,Convert.ToDouble(TxtPrecio.Text)));           
         }
 
@@ -285,7 +286,7 @@ namespace Presentacion
             {
                 if (ValidarCarrito())
                 {
-                    Pago.MNumeroboleto = Convert.ToInt32(CarritoBtn.Text);
+                    Pago.MNumeroboleto = Convert.ToInt32(CarritoBtn.Text);  
                     Pagar pagar = new Pagar(boletos, idBusNuevo, cedula);
                     BuscarBus.Ventana_ventaBoletos.Hide();
                     pagar.ShowDialog();  

@@ -27,14 +27,16 @@ namespace Presentacion.InicioFroms
         /// <summary>
         /// The procedimientos
         /// </summary>
+        public string cedula;
          public static Comprar Ventana_ventaBoletos = null;
         ConsultasProcedimientos procedimientos = new ConsultasProcedimientos();
         /// <summary>
         /// Initializes a new instance of the <see cref="BuscarBus"/> class.
         /// </summary>
-        public BuscarBus()
+        public BuscarBus(string cedula)
         {
             InitializeComponent();
+            this.cedula = cedula;
             procedimientos.LlenarCombos(cbOrigen, cbDestino);
         }
         /// <summary>
@@ -93,7 +95,7 @@ namespace Presentacion.InicioFroms
                         string cooperativa = DataGridInf.Rows[x].Cells[0].Value.ToString();
                         string fecha_salida = DataGridInf.Rows[x].Cells[1].Value.ToString();
                         string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
-                        Ventana_ventaBoletos = new Comprar(cooperativa, fecha_salida, horario_salida,"");
+                        Ventana_ventaBoletos = new Comprar(cooperativa, fecha_salida, horario_salida,cedula);
                         Program.principal.Hide();
                         Ventana_ventaBoletos.Show();
                     }

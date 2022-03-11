@@ -61,7 +61,7 @@ namespace LogicaDeNegocios
         /// The precio
         /// </summary>
        string precio;
-
+        int boletoID;
         // se crea el constructor parametrizado
         /// <summary>
         /// Initializes a new instance of the <see cref="Ruta" /> class.
@@ -76,8 +76,9 @@ namespace LogicaDeNegocios
         /// <param name="numerodico">The numerodico.</param>
         /// <param name="precio">The precio.</param>
         
-        public Ruta(int busId, string lugarSalida, string fechaSalida, string lugardestino, string horaSalida, string cooperativa, string numerodico, string asiento, string precio)
+        public Ruta(int boletoID, int busId, string lugarSalida, string fechaSalida, string lugardestino, string horaSalida, string cooperativa, string numerodico, string asiento, string precio)
         {
+            this.boletoID = boletoID;
             this.busId= busId;
             this.lugarSalida = lugarSalida;
             this.fechaSalida = fechaSalida;
@@ -131,6 +132,7 @@ namespace LogicaDeNegocios
         /// <value>The bus identifier.</value>
         public int BusId { get => busId; set => busId = value; }
         public string Asiento { get => asiento; set => asiento = value; }
+        public int BoletoID { get => boletoID; set => boletoID = value; }
 
         // public string Cooperativa { get => cooperativa; set => cooperativa = value; }
         Bus bus = new Bus();

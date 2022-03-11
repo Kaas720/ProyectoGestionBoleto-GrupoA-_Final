@@ -72,7 +72,7 @@ namespace Presentacion
         /// </summary>
         private void IniciarFromPrinciapl()
         {
-            BuscarBus Frm = new BuscarBus();
+            BuscarBus Frm = new BuscarBus("");
             Frm.TopLevel = false;
             PanelContenedor.Controls.Add(Frm);
             Frm.Show();
@@ -126,7 +126,7 @@ namespace Presentacion
         private void BotonHome_Click(object sender, EventArgs e)
         {
             this.PanelContenedor.Controls.Clear();
-            BuscarBus Frm = new BuscarBus();
+            BuscarBus Frm = new BuscarBus("");
             Frm.TopLevel = false;
             PanelContenedor.Controls.Add(Frm);
             Frm.Show();

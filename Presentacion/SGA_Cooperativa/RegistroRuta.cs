@@ -104,7 +104,7 @@ namespace Presentacion
             // Al validar que los campos se llenaron correctamente se guarda el regitro y se envia al formulario cliente
                 if (validar())
                 {
-                    Ruta registrar = new Ruta(id, origen, destino, cooperativa, disco,asiento, precio, fecha,  hora);
+                    Ruta registrar = new Ruta(id,2 ,origen, destino, cooperativa, disco,asiento, precio, fecha,  hora);
                     registro.RegistrarRuta(registrar);
                     MessageBox.Show("Registro de chofer realizado con éxito");
                     Limpiar();

@@ -49,7 +49,7 @@ namespace Presentacion.UsuarioCliente
         {
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.Box1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnImprimir = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTotal = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,9 +60,14 @@ namespace Presentacion.UsuarioCliente
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
-            this.guna2GroupBox1.SuspendLayout();
+            this.PanelSegundario = new Guna.UI2.WinForms.Guna2Panel();
+            this.Btn_Guardar = new Guna.UI2.WinForms.Guna2Button();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.Box1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.PanelSegundario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -71,41 +76,40 @@ namespace Presentacion.UsuarioCliente
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // guna2GroupBox1
+            // Box1
             // 
-            this.guna2GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GroupBox1.BorderRadius = 20;
-            this.guna2GroupBox1.Controls.Add(this.btnImprimir);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2GroupBox1.Controls.Add(this.txtTotal);
-            this.guna2GroupBox1.Controls.Add(this.InfBoleto);
-            this.guna2GroupBox1.Controls.Add(this.btnCancelar);
-            this.guna2GroupBox1.Controls.Add(this.btnPagar);
-            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Ivory;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(41, 64);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(605, 374);
-            this.guna2GroupBox1.TabIndex = 37;
-            this.guna2GroupBox1.Text = "Información boleto";
+            this.Box1.BackColor = System.Drawing.Color.Transparent;
+            this.Box1.BorderRadius = 20;
+            this.Box1.Controls.Add(this.guna2HtmlLabel1);
+            this.Box1.Controls.Add(this.txtTotal);
+            this.Box1.Controls.Add(this.InfBoleto);
+            this.Box1.Controls.Add(this.btnCancelar);
+            this.Box1.Controls.Add(this.btnPagar);
+            this.Box1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(78)))), ((int)(((byte)(95)))));
+            this.Box1.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Box1.ForeColor = System.Drawing.Color.Ivory;
+            this.Box1.Location = new System.Drawing.Point(41, 64);
+            this.Box1.Name = "Box1";
+            this.Box1.Size = new System.Drawing.Size(605, 374);
+            this.Box1.TabIndex = 37;
+            this.Box1.Text = "Información boleto";
             // 
             // btnImprimir
             // 
             this.btnImprimir.AutoRoundedCorners = true;
-            this.btnImprimir.BorderRadius = 20;
+            this.btnImprimir.BorderRadius = 31;
             this.btnImprimir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnImprimir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnImprimir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnImprimir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnImprimir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
             this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(446, 141);
+            this.btnImprimir.Location = new System.Drawing.Point(149, 144);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(138, 42);
+            this.btnImprimir.Size = new System.Drawing.Size(315, 65);
             this.btnImprimir.TabIndex = 18;
             this.btnImprimir.Text = "IMPRIMIR";
-            this.btnImprimir.Visible = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // guna2HtmlLabel1
@@ -239,22 +243,69 @@ namespace Presentacion.UsuarioCliente
             this.BotonRetroceder.UseVisualStyleBackColor = false;
             this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
             // 
+            // PanelSegundario
+            // 
+            this.PanelSegundario.Controls.Add(this.btnImprimir);
+            this.PanelSegundario.Controls.Add(this.iconPictureBox1);
+            this.PanelSegundario.Controls.Add(this.Btn_Guardar);
+            this.PanelSegundario.Location = new System.Drawing.Point(32, 64);
+            this.PanelSegundario.Name = "PanelSegundario";
+            this.PanelSegundario.Size = new System.Drawing.Size(614, 357);
+            this.PanelSegundario.TabIndex = 39;
+            this.PanelSegundario.Visible = false;
+            // 
+            // Btn_Guardar
+            // 
+            this.Btn_Guardar.AutoRoundedCorners = true;
+            this.Btn_Guardar.BorderRadius = 31;
+            this.Btn_Guardar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Guardar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Guardar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_Guardar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Guardar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.Btn_Guardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Guardar.ForeColor = System.Drawing.Color.White;
+            this.Btn_Guardar.Location = new System.Drawing.Point(149, 242);
+            this.Btn_Guardar.Name = "Btn_Guardar";
+            this.Btn_Guardar.Size = new System.Drawing.Size(315, 65);
+            this.Btn_Guardar.TabIndex = 19;
+            this.Btn_Guardar.Text = "GUARDAR PDF";
+            this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 116;
+            this.iconPictureBox1.Location = new System.Drawing.Point(247, 26);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(116, 127);
+            this.iconPictureBox1.TabIndex = 20;
+            this.iconPictureBox1.TabStop = false;
+            // 
             // Pagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(687, 450);
+            this.Controls.Add(this.PanelSegundario);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2GroupBox1);
+            this.Controls.Add(this.Box1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pagar";
             this.Text = "Pagar";
-            this.guna2GroupBox1.ResumeLayout(false);
-            this.guna2GroupBox1.PerformLayout();
+            this.Box1.ResumeLayout(false);
+            this.Box1.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.PanelSegundario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,7 +319,7 @@ namespace Presentacion.UsuarioCliente
         /// <summary>
         /// The guna2 group box1
         /// </summary>
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2GroupBox Box1;
         /// <summary>
         /// The BTN pagar
         /// </summary>
@@ -297,5 +348,8 @@ namespace Presentacion.UsuarioCliente
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtTotal;
         private Guna.UI2.WinForms.Guna2Button btnImprimir;
+        private Guna.UI2.WinForms.Guna2Panel PanelSegundario;
+        private Guna.UI2.WinForms.Guna2Button Btn_Guardar;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }

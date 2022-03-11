@@ -77,6 +77,7 @@ namespace LogicaDeNegocios
             bool validacion = false;        
             try
             {
+                MessageBox.Show(Cedula_cliente);
                 MessageBoxButtons ob = MessageBoxButtons.YesNoCancel;
                 DialogResult obj = MessageBox.Show("Desea confirmar el pago","Titulo",ob, MessageBoxIcon.Question);
                 if (obj == DialogResult.Yes)
@@ -143,7 +144,7 @@ namespace LogicaDeNegocios
                     tablas += "</tr>";
                     precio = precio + Convert.ToDouble(lector["Precio"]);
                     MNumeroboleto--;
-                    cliente = lector["Cedula_cliente"].ToString();
+                    cliente = lector["Nombre_cliente"].ToString();
                 }
                 list.Add(tablas);
                 list.Add(Convert.ToString(precio));

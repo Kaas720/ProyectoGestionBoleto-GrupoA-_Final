@@ -68,7 +68,8 @@ namespace Presentacion
         /// </summary>
         private void InicializarPanelConFromRutas()
         {
-            BuscarBus Frm = new BuscarBus();
+            string cedula = ProcedimientosPaginaprincipal.getCedula();
+            BuscarBus Frm = new BuscarBus(cedula);
             Frm.TopLevel = false;
             PanelContenedor.Controls.Add(Frm);
             Frm.Show();

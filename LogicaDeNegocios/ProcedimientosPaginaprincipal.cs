@@ -128,7 +128,7 @@ namespace LogicaDeNegocios
                 while (lector.Read())
                 {
                     generarInformacionBoleto = new Ruta(
-                    Convert.ToInt32(lector["Idbus"].ToString()), lector["salida"].ToString(), lector["FechaSalida"].ToString(), lector["destino"].ToString(),
+                    Convert.ToInt32(lector["Id_generearBoleto"].ToString()), Convert.ToInt32(lector["idBus"].ToString()), lector["salida"].ToString(), lector["FechaSalida"].ToString(), lector["destino"].ToString(),
                     lector["HoraSalida"].ToString(), lector["nombreCooperativa"].ToString(), lector["Disco"].ToString(), lector["CantidadAsiento"].ToString(), lector["Precio"].ToString()
                     );
                     
@@ -196,7 +196,7 @@ namespace LogicaDeNegocios
                     dataGridInf.Rows.Add(1);
                     dataGridInf.Rows[numerofila].Cells[0].Value = lector["nombreCooperativa"].ToString();
                     dataGridInf.Rows[numerofila].Cells[1].Value = lector["HoraSalida"].ToString();
-                    dataGridInf.Rows[numerofila].Cells[2].Value = lector["FechaSalida"].ToString();
+                    dataGridInf.Rows[numerofila].Cells[2].Value = lector["FechaSalida"];
                     dataGridInf.Rows[numerofila].Cells[3].Value = lector["Precio"].ToString();
                     dataGridInf.Rows[numerofila].Cells[4].Value = "Seleccionar...";
                 }

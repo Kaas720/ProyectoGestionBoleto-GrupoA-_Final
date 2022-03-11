@@ -103,7 +103,8 @@ namespace LogicaDeNegocios
                         mySqlCommand.ExecuteNonQuery();
                         num--;
                     }
-                       boleto.Clear();
+                    boleto.Clear();
+                    InfoBoleto.Clear();
                     MessageBox.Show("Se realizó el pago con éxito ");
                     validacion = true;
                 }
@@ -131,7 +132,6 @@ namespace LogicaDeNegocios
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {
-                    MessageBox.Show("HOLAAA");
                     tablas += "<tr>";
                     tablas += "<td>" + lector["Id_compra"].ToString() + "</td>";
                     tablas += "<td>" + lector["cooperativa"].ToString() + "</td>";

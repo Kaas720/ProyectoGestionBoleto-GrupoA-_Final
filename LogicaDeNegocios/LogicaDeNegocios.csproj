@@ -86,6 +86,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Cooperativa.cs" />
     <Compile Include="CredencialUsuario.cs" />
+    <Compile Include="Imprimir.cs" />
     <Compile Include="Ruta.cs" />
     <Compile Include="Pago.cs" />
     <Compile Include="Persona.cs" />

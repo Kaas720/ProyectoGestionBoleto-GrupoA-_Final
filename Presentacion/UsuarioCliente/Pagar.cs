@@ -124,7 +124,7 @@ namespace Presentacion.UsuarioCliente
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
-        {
+        {/*
             SaveFileDialog guardar = new SaveFileDialog();
             guardar.FileName = "BoletoGenerado" + DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
             guardar.Filter = "Pdf Files|*.pdf";
@@ -149,15 +149,63 @@ namespace Presentacion.UsuarioCliente
                     PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDocument, stream);
                     pdfDocument.Open();
                     pdfDocument.Add(new Phrase());
+                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101, System.Drawing.Imaging.ImageFormat.Png);
+                    img.ScaleToFit(100, 100);
+                    img.Alignment = iTextSharp.text.Image.UNDERLYING;
+                    img.SetAbsolutePosition(pdfDocument.LeftMargin, pdfDocument.Top - 80);
+                    pdfDocument.Add(img);
                     using (StringReader sr = new StringReader(paginaHtml_text))
                     {
-                        XMLWorkerHelper.GetInstance().ParseXHtml(pdfWriter, pdfDocument,sr);
+                        XMLWorkerHelper.GetInstance().ParseXHtml(pdfWriter, pdfDocument, sr);
                     }
-                        pdfDocument.Close();
+                    pdfDocument.Close();
                     stream.Close();
                 }
-                
+                MessageBox.Show("El boleto se guardo correctamente");
+                this.Close();
+                BuscarBus.Ventana_ventaBoletos.Close();
+                Program.principal.Show();
+                Comprar.VaciarLista();*/
+            //}
+            string paginaHtml_text = Properties.Resources.Presentar.ToString();
+            paginaHtml_text = paginaHtml_text.Replace("@fechas", DateTime.Now.ToString("dd/MM/yyyy"));
+            List<string> lista = Pago.GuardarPdf();
+            if (lista[2] == "")
+            {
+                paginaHtml_text = paginaHtml_text.Replace("@cliente", "Consumidor Final");
             }
+            else
+            {
+                paginaHtml_text = paginaHtml_text.Replace("@cliente", lista[2]);
+            }
+            paginaHtml_text = paginaHtml_text.Replace("@Filax", lista[0]);
+            paginaHtml_text = paginaHtml_text.Replace("@Total", lista[1]);
+            string ruta = @"C:\Users\Kevin Arevalo\Videos\Captures\BoletoGenerado"+".pdf";
+                using (FileStream stream = new FileStream(ruta, FileMode.Create))
+                {
+                    Document pdfDocument = new Document(PageSize.A4, 20, 20, 20, 20);
+                    PdfWriter pdfWriter = PdfWriter.GetInstance(pdfDocument, stream);
+                    pdfDocument.Open();
+                    pdfDocument.Add(new Phrase());
+                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.pngtree_blue_big_car_illustration_cartoon_shuttle_blue_bus_gray_glass_png_image_4543101, System.Drawing.Imaging.ImageFormat.Png);
+                    img.ScaleToFit(100, 100);
+                    img.Alignment = iTextSharp.text.Image.UNDERLYING;
+                    img.SetAbsolutePosition(pdfDocument.LeftMargin, pdfDocument.Top - 80);
+                    pdfDocument.Add(img);
+                    using (StringReader sr = new StringReader(paginaHtml_text))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(pdfWriter, pdfDocument, sr);
+                    }
+                    pdfDocument.Close();
+                    stream.Close();
+                }
+                /*MessageBox.Show("El boleto se guardo correctamente");
+                this.Close();
+                BuscarBus.Ventana_ventaBoletos.Close();
+                Program.principal.Show();
+                Comprar.VaciarLista(); */
+             Imprimir imprimir = new Imprimir();
+            imprimir.printPDFWithAcrobat(ruta); 
         }
     }
 }

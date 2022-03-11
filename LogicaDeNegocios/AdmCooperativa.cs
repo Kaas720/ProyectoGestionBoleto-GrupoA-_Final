@@ -11,6 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,6 +70,11 @@ namespace LogicaDeNegocios
             {
                 throw new ControlExcepcion("Error al eliminar intetar más tarde");
             }
+        }
+
+        public void LLenarCombos(Guna2ComboBox cbBus, Guna2ComboBox cbRuta)
+        {
+            procedimientos.LLenarCombos(1, cbBus, cbRuta);
         }
     }
 }

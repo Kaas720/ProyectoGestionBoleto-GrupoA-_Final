@@ -12,6 +12,7 @@
 // <summary></summary>
 // ***********************************************************************
 using Datos;
+using Guna.UI2.WinForms;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -74,6 +75,52 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <value>The nombre cooperativa.</value>
         public string NombreCooperativa { get => nombreCooperativa; set => nombreCooperativa = value; }
+
+        internal void LLenarCombos(int idCooperativa, Guna2ComboBox cbBus, Guna2ComboBox cbRuta)
+        {
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_Buscarbus", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@idCooperativa", idCooperativa);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                int x=0;
+                while (lector.Read())
+                {
+                    x++;
+                    string anexar = x+ ")  " + lector["Placa"].ToString();
+                    cbBus.Items.Add(anexar);
+                    ;
+                    ; 
+                }
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            Conexion cone = new Conexion();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarRutA", cone.conectar());
+                mySqlCommand.Parameters.AddWithValue("@idCooperativa", idCooperativa);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    string anexar = lector["idRuta"].ToString()+")  De: "+ lector["Salida"].ToString()+ "  A: "+ lector["Destino"].ToString();;
+                    cbRuta.Items.Add(anexar);
+                    ;
+                    ;
+                }
+                cone.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+        }
+
         /// <summary>
         /// Gets or sets the ruc.
         /// </summary>

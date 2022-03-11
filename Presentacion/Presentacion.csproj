@@ -175,6 +175,12 @@
     <Compile Include="SGA_Chofer\RegistroChofer.Designer.cs">
       <DependentUpon>RegistroChofer.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGA_Cooperativa\GenerarBoleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SGA_Cooperativa\GenerarBoleto.Designer.cs">
+      <DependentUpon>GenerarBoleto.cs</DependentUpon>
+    </Compile>
     <Compile Include="SGA_Cooperativa\InterfazCooperativa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Chofer\RegistroChofer.resx">
       <DependentUpon>RegistroChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SGA_Cooperativa\GenerarBoleto.resx">
+      <DependentUpon>GenerarBoleto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SGA_Cooperativa\InterfazCooperativa.resx">
       <DependentUpon>InterfazCooperativa.cs</DependentUpon>

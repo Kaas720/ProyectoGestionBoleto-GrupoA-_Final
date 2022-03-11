@@ -78,12 +78,18 @@ namespace LogicaDeNegocios
         public void LlenarComboCooperativa(ComboBox cbCooperativa, string origen, string destino)
         {
             List<string> coopeativa = new List<string>();
+            string Coop = string.Empty;
             coopeativa = procedimientos.CargarCooperativa(origen,destino);
             if (coopeativa.Count != 0)
             {
                 foreach (string coopeativafx in coopeativa)
                 {
-                    cbCooperativa.Items.Add(coopeativafx);
+                    if (coopeativafx != Coop)
+                    {
+                        cbCooperativa.Items.Add(coopeativafx);
+                        Coop = coopeativafx;
+                    }
+                    
                 }
             }
         }

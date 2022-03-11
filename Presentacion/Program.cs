@@ -14,6 +14,7 @@
 using LogicaDeNegocios;
 using Presentacion.InicioFroms;
 using Presentacion.SGA_Administrador;
+using Presentacion.SGA_Cooperativa;
 using Presentacion.UsuarioCliente;
 using System;
 using System.Windows.Forms;
@@ -47,7 +48,7 @@ namespace Presentacion
             //Application.Run(new InterfazCliente(4));
             //Application.Run(new RegistroCooperativa());
             //  Application.Run(new RegistroAdministrador());
-            //Application.Run(new RegistroRuta());
+            //Application.Run(new GenerarBoleto());
         }
     }
 }

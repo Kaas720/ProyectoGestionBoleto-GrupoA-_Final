@@ -19,6 +19,8 @@ namespace LogicaDeNegocios
 
         //}
         public  static int MNumeroboleto;
+        public static string NombreConsumidor;
+        public static string CedulaConsumidor;
         public Pago() { }
         private static List<string> boleto = new List<string>();
 
@@ -67,23 +69,24 @@ namespace LogicaDeNegocios
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             bool validacion = false;
+            MessageBox
             try
             {
                 MessageBoxButtons ob = MessageBoxButtons.YesNoCancel;
                 DialogResult obj = MessageBox.Show("Desea confirmar el pago","Titulo",ob, MessageBoxIcon.Question);
                 if (obj == DialogResult.Yes)
                 {
-                    MessageBox.Show(""+ MNumeroboleto);
-                    while (MNumeroboleto>0)
+                    int num = MNumeroboleto;
+                    while (num > 0)
                     {
                         MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_pago", con.conectar());
                         mySqlCommand.Parameters.AddWithValue("@id_bus", Id_bus);
                         mySqlCommand.Parameters.AddWithValue("@cedula_cliente", Cedula_cliente);
                         mySqlCommand.Parameters.AddWithValue("@FechaActual", DateTime.Now);
                         mySqlCommand.ExecuteNonQuery();
-                        MNumeroboleto--;
+                        num--;
                     }
-                        boleto.Clear();
+                       boleto.Clear();
                     MessageBox.Show("Se realizó el pago con éxito ");
                     validacion = true;
                 }
@@ -95,5 +98,46 @@ namespace LogicaDeNegocios
             return validacion;
         }
 
+        public static List<string> GuardarPdf()
+        {
+            List<string> list = new List<string>();
+            string tablas = string.Empty;
+            double precio=0;
+            string cliente= string.Empty;
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            try
+            {
+                MessageBox.Show(""+ MNumeroboleto);
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("ImprimirBoleto", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@cantboleto", MNumeroboleto);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    MessageBox.Show("HOLAAA");
+                    tablas += "<tr>";
+                    tablas += "<td>" + lector["Id_compra"].ToString() + "</td>";
+                    tablas += "<td>" + lector["cooperativa"].ToString() + "</td>";
+                    tablas += "<td>" + lector["Placa"].ToString() + "</td>";
+                    tablas += "<td>" + lector["Cedula_Comprador"].ToString() + "</td>";
+                    tablas += "<td>" + lector["Fecha_Salida"].ToString() + "</td>";
+                    tablas += "<td>" + lector["HoraSalida"].ToString() + "</td>";
+                    tablas += "<td>" + lector["HoraSalida"].ToString() + "</td>";
+                    tablas += "</tr>";
+                    precio = precio + Convert.ToDouble(lector["Precio"]);
+                    MNumeroboleto--;
+                    cliente = lector["Cedula_cliente"].ToString();
+                }
+                list.Add(tablas);
+                list.Add(Convert.ToString(precio));
+                list.Add(cliente);
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("Error emitido por: " + ex);
+            }
+            return list;
+        }
     }
 }

@@ -48,7 +48,6 @@ namespace Presentacion.UsuarioCliente
             InitializeComponent();
             AdmPago ap = new AdmPago();
             txtTotal.Text += ap.calcularTotalPagar(Comprar.getPrecio());
-
             InfBoleto.Text += texto;
             this.idBusNuevo = idBusNuevo;
             this.cedula = cedula;
@@ -130,7 +129,19 @@ namespace Presentacion.UsuarioCliente
             guardar.FileName = "BoletoGenerado" + DateTime.Now.ToString("ddMMyyyyHHmmss") + ".pdf";
             guardar.Filter = "Pdf Files|*.pdf";
             string paginaHtml_text = Properties.Resources.Presentar.ToString();
-            if(guardar.ShowDialog() == DialogResult.OK)
+            paginaHtml_text = paginaHtml_text.Replace("@fechas", DateTime.Now.ToString("dd/MM/yyyy"));
+            List<string> lista = Pago.GuardarPdf();
+            if (lista[2]=="")
+            {
+                paginaHtml_text = paginaHtml_text.Replace("@cliente", "Consumidor Final");
+            }
+            else
+            {
+                paginaHtml_text = paginaHtml_text.Replace("@cliente", lista[2]);
+            }
+            paginaHtml_text = paginaHtml_text.Replace("@Filax",lista[0]);
+            paginaHtml_text = paginaHtml_text.Replace("@Total", lista[1]);
+            if (guardar.ShowDialog() == DialogResult.OK)
             {
                 using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
                 {

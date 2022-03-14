@@ -62,7 +62,6 @@ namespace Presentacion
             this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
-            this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -85,7 +84,6 @@ namespace Presentacion
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
@@ -202,7 +200,6 @@ namespace Presentacion
             this.PanelSuperior.Controls.Add(this.BotonRetroceder);
             this.PanelSuperior.Controls.Add(this.Fecha_Sistema);
             this.PanelSuperior.Controls.Add(this.BotonParaMinimizarVentana);
-            this.PanelSuperior.Controls.Add(this.BotonCierreDeAplicacion);
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
@@ -252,29 +249,12 @@ namespace Presentacion
             this.BotonParaMinimizarVentana.IconColor = System.Drawing.Color.Yellow;
             this.BotonParaMinimizarVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BotonParaMinimizarVentana.IconSize = 34;
-            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(840, 7);
+            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(882, 3);
             this.BotonParaMinimizarVentana.Name = "BotonParaMinimizarVentana";
             this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(39, 34);
             this.BotonParaMinimizarVentana.TabIndex = 1;
             this.BotonParaMinimizarVentana.TabStop = false;
             this.BotonParaMinimizarVentana.Click += new System.EventHandler(this.BotonParaMinimizarVentana_Click);
-            // 
-            // BotonCierreDeAplicacion
-            // 
-            this.BotonCierreDeAplicacion.BackColor = System.Drawing.Color.Transparent;
-            this.BotonCierreDeAplicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonCierreDeAplicacion.ForeColor = System.Drawing.Color.Yellow;
-            this.BotonCierreDeAplicacion.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.BotonCierreDeAplicacion.IconColor = System.Drawing.Color.Yellow;
-            this.BotonCierreDeAplicacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonCierreDeAplicacion.IconSize = 37;
-            this.BotonCierreDeAplicacion.Location = new System.Drawing.Point(855, 4);
-            this.BotonCierreDeAplicacion.Name = "BotonCierreDeAplicacion";
-            this.BotonCierreDeAplicacion.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.BotonCierreDeAplicacion.Size = new System.Drawing.Size(64, 37);
-            this.BotonCierreDeAplicacion.TabIndex = 0;
-            this.BotonCierreDeAplicacion.TabStop = false;
-            this.BotonCierreDeAplicacion.Click += new System.EventHandler(this.BotonCierreDeAplicacion_Click);
             // 
             // panel1
             // 
@@ -672,7 +652,6 @@ namespace Presentacion
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -736,10 +715,6 @@ namespace Presentacion
         /// The boton para minimizar ventana
         /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
-        /// <summary>
-        /// The boton cierre de aplicacion
-        /// </summary>
-        private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
         /// <summary>
         /// The panel1
         /// </summary>

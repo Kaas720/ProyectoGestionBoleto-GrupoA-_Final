@@ -50,19 +50,19 @@ namespace Presentacion.UsuarioCliente
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Box1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnImprimir = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.InfBoleto = new System.Windows.Forms.RichTextBox();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
             this.btnPagar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnImprimir = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
             this.PanelSegundario = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_Guardar = new Guna.UI2.WinForms.Guna2Button();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.Btn_Guardar = new Guna.UI2.WinForms.Guna2Button();
+            this.BotonRetroceder = new FontAwesome.Sharp.IconButton();
             this.Box1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -93,24 +93,6 @@ namespace Presentacion.UsuarioCliente
             this.Box1.Size = new System.Drawing.Size(605, 374);
             this.Box1.TabIndex = 37;
             this.Box1.Text = "Información boleto";
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.AutoRoundedCorners = true;
-            this.btnImprimir.BorderRadius = 31;
-            this.btnImprimir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnImprimir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnImprimir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnImprimir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnImprimir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
-            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(149, 144);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(315, 65);
-            this.btnImprimir.TabIndex = 18;
-            this.btnImprimir.Text = "IMPRIMIR";
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -186,6 +168,24 @@ namespace Presentacion.UsuarioCliente
             this.btnPagar.Text = "PAGAR";
             this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.AutoRoundedCorners = true;
+            this.btnImprimir.BorderRadius = 31;
+            this.btnImprimir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnImprimir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnImprimir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnImprimir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnImprimir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(196)))), ((int)(((byte)(214)))));
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.Location = new System.Drawing.Point(149, 144);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(315, 65);
+            this.btnImprimir.TabIndex = 18;
+            this.btnImprimir.Text = "IMPRIMIR";
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
@@ -223,26 +223,6 @@ namespace Presentacion.UsuarioCliente
             this.guna2PictureBox1.TabIndex = 41;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // BotonRetroceder
-            // 
-            this.BotonRetroceder.BackColor = System.Drawing.Color.Transparent;
-            this.BotonRetroceder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonRetroceder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BotonRetroceder.FlatAppearance.BorderSize = 0;
-            this.BotonRetroceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BotonRetroceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BotonRetroceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonRetroceder.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.BotonRetroceder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.BotonRetroceder.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonRetroceder.IconSize = 37;
-            this.BotonRetroceder.Location = new System.Drawing.Point(628, 0);
-            this.BotonRetroceder.Name = "BotonRetroceder";
-            this.BotonRetroceder.Size = new System.Drawing.Size(59, 44);
-            this.BotonRetroceder.TabIndex = 40;
-            this.BotonRetroceder.UseVisualStyleBackColor = false;
-            this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
-            // 
             // PanelSegundario
             // 
             this.PanelSegundario.Controls.Add(this.btnImprimir);
@@ -253,6 +233,20 @@ namespace Presentacion.UsuarioCliente
             this.PanelSegundario.Size = new System.Drawing.Size(614, 357);
             this.PanelSegundario.TabIndex = 39;
             this.PanelSegundario.Visible = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 116;
+            this.iconPictureBox1.Location = new System.Drawing.Point(247, 26);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(116, 127);
+            this.iconPictureBox1.TabIndex = 20;
+            this.iconPictureBox1.TabStop = false;
             // 
             // Btn_Guardar
             // 
@@ -272,19 +266,26 @@ namespace Presentacion.UsuarioCliente
             this.Btn_Guardar.Text = "GUARDAR PDF";
             this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
             // 
-            // iconPictureBox1
+            // BotonRetroceder
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(121)))), ((int)(((byte)(158)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 116;
-            this.iconPictureBox1.Location = new System.Drawing.Point(247, 26);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(116, 127);
-            this.iconPictureBox1.TabIndex = 20;
-            this.iconPictureBox1.TabStop = false;
+            this.BotonRetroceder.BackColor = System.Drawing.Color.Transparent;
+            this.BotonRetroceder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonRetroceder.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BotonRetroceder.FlatAppearance.BorderSize = 0;
+            this.BotonRetroceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BotonRetroceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BotonRetroceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonRetroceder.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.BotonRetroceder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BotonRetroceder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BotonRetroceder.IconSize = 37;
+            this.BotonRetroceder.Location = new System.Drawing.Point(628, 0);
+            this.BotonRetroceder.Name = "BotonRetroceder";
+            this.BotonRetroceder.Size = new System.Drawing.Size(59, 44);
+            this.BotonRetroceder.TabIndex = 40;
+            this.BotonRetroceder.UseVisualStyleBackColor = false;
+            this.BotonRetroceder.Visible = false;
+            this.BotonRetroceder.Click += new System.EventHandler(this.BotonRetroceder_Click);
             // 
             // Pagar
             // 
@@ -329,10 +330,6 @@ namespace Presentacion.UsuarioCliente
         /// </summary>
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         /// <summary>
-        /// The boton retroceder
-        /// </summary>
-        private FontAwesome.Sharp.IconButton BotonRetroceder;
-        /// <summary>
         /// The guna2 picture box1
         /// </summary>
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
@@ -351,5 +348,6 @@ namespace Presentacion.UsuarioCliente
         private Guna.UI2.WinForms.Guna2Panel PanelSegundario;
         private Guna.UI2.WinForms.Guna2Button Btn_Guardar;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconButton BotonRetroceder;
     }
 }

@@ -193,8 +193,16 @@ namespace Presentacion
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void BotonRetroceder_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Program.principal.Show();
+            if (cedula == "")
+            {
+                this.Close();
+                Program.principal.Show();
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
 
        // string j ="";
@@ -204,7 +212,7 @@ namespace Presentacion
             boletos += Environment.NewLine + "-----------------------------------" + Environment.NewLine + "Cedula: " + txtCedula.Text + Environment.NewLine + "Nombre: " + TxtNombre.Text + Environment.NewLine
             + "Cooperativa: " + TxtCooperativa.Text + Environment.NewLine + "Hora Salida: " + TxtHoraSalida.Text + Environment.NewLine
             + "Fecha Salida: " + TxtFechaSalida.Text + Environment.NewLine + "Disco del bus: " + TxtNDisco.Text + Environment.NewLine
-            + "Asiento:" + CbNumeroAsientos.Text;           
+            + "Asiento:" + CbNumeroAsientos.Text + Environment.NewLine + "Precio Unitario: "+TxtPrecio.Text;           
             boletosNuveos.Add(CbNumeroAsientos.Text);
             setPrecio(Convert.ToDouble(TxtPrecio.Text));
             Pago.InfoBoleto.Add(new Pago(TxtNombre.Text, txtCedula.Text));

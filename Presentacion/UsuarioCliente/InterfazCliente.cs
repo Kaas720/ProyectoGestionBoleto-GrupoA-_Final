@@ -21,6 +21,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -174,6 +175,27 @@ namespace Presentacion
         {
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        /// <summary>
+        /// Sends the message.
+        /// </summary>
+        /// <param name="hwnd">The HWND.</param>
+        /// <param name="wmsg">The WMSG.</param>
+        /// <param name="wparam">The wparam.</param>
+        /// <param name="lparam">The lparam.</param>
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        /// <summary>
+        /// Handles the MouseMove event of the PanelSuperior control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="MouseEventArgs"/> instance containing the event data.</param>
+        private void PanelSuperior_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

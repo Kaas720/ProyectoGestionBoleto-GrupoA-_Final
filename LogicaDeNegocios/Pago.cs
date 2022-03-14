@@ -142,7 +142,6 @@ namespace LogicaDeNegocios
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             try
             {
-                MessageBox.Show(""+ MNumeroboleto);
                 MySqlCommand mySqlCommand = conector.ConectarProcedimiento("ImprimirBoleto", con.conectar());
                 mySqlCommand.Parameters.AddWithValue("@cantboleto", MNumeroboleto);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();

@@ -42,6 +42,8 @@ namespace LogicaDeNegocios
         public Administrador(string cedula, string nombre, string sexo, string telefono, string codigoAcceso, double sueldo, CredencialUsuario credencialUsuario)
             :base(cedula, nombre, sexo, telefono)
         {
+            this.codigoAcceso = codigoAcceso;
+            this.sueldo = sueldo;
             this.credencialUsuario = credencialUsuario;
         }
         public Administrador() { }
@@ -99,7 +101,7 @@ namespace LogicaDeNegocios
                     mySqlCommand.Parameters.AddWithValue("@NombreFx", Admin.Nombre);
                     mySqlCommand.Parameters.AddWithValue("@SexoFx", Admin.Sexo);
                     mySqlCommand.Parameters.AddWithValue("@TelefonoFx", Admin.Telefono);
-                    mySqlCommand.Parameters.AddWithValue("@TelefonoFx", Admin.CodigoAcceso);
+                    mySqlCommand.Parameters.AddWithValue("@CodAccesoFx", Admin.CodigoAcceso);
                     mySqlCommand.Parameters.AddWithValue("@SueldoFx", Admin.Sueldo);
                     mySqlCommand.Parameters.AddWithValue("@CorreoFx", Admin.CredencialUsuario.Correo);
                     mySqlCommand.Parameters.AddWithValue("@ContrasenaFx", Admin.CredencialUsuario.Contrasena);

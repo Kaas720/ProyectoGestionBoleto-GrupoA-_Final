@@ -33,7 +33,7 @@ namespace LogicaDeNegocios
         public bool RegistrarAdministrador(Administrador admin)
         {
             Administrador registrar = admin;
-            //registrar.InsertarAdministrador(registrar);
+            registrar.InsertarAdministrador(registrar);
             return true;
         }
         /// <summary>

@@ -186,6 +186,7 @@ namespace Presentacion.SGA_Cooperativa
             this.cbBus.Name = "cbBus";
             this.cbBus.Size = new System.Drawing.Size(228, 36);
             this.cbBus.TabIndex = 5;
+            this.cbBus.SelectedIndexChanged += new System.EventHandler(this.cbBus_SelectedIndexChanged);
             // 
             // guna2HtmlLabel4
             // 

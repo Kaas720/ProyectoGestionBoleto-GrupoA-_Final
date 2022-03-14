@@ -17,13 +17,19 @@ namespace Presentacion.SGA_Cooperativa
         public GenerarBoleto()
         {
             InitializeComponent();
-            admCooperativa.LLenarCombos(cbBus,cbRuta);
+            admCooperativa.LLenarCombos(cbRuta);
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {
             string x = cbRuta.Text;
             char first = x.FirstOrDefault();
-            MessageBox.Show(first.ToString());
+            MessageBox.Show(FechaSalida.Text);
+            admCooperativa.GenerarBoleto(first,cbBus.Text,FechaSalida.Text,HoraSalida.Text,Precio.Text);
+        }
+
+        private void cbBus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

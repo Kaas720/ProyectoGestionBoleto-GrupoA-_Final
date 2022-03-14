@@ -76,10 +76,10 @@ namespace LogicaDeNegocios
         /// <value>The nombre cooperativa.</value>
         public string NombreCooperativa { get => nombreCooperativa; set => nombreCooperativa = value; }
 
-        internal void LLenarCombos(int idCooperativa, Guna2ComboBox cbBus, Guna2ComboBox cbRuta)
+        internal void LLenarCombos(int idCooperativa, Guna2ComboBox cbRuta)
         {
-            Conexion con = new Conexion();
-            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+           //Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();/*
             try
             {
                 MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_Buscarbus", con.conectar());
@@ -89,7 +89,7 @@ namespace LogicaDeNegocios
                 while (lector.Read())
                 {
                     x++;
-                    string anexar = x+ ")  " + lector["Placa"].ToString();
+                    string anexar = lector["Placa"].ToString();
                     cbBus.Items.Add(anexar);
                     ;
                     ; 
@@ -99,7 +99,7 @@ namespace LogicaDeNegocios
             catch (MySqlException ex)
             {
                 Console.WriteLine("Error emitido por: " + ex);
-            }
+            }*/
             Conexion cone = new Conexion();
             try
             {
@@ -118,6 +118,29 @@ namespace LogicaDeNegocios
             catch (MySqlException ex)
             {
                 Console.WriteLine("Error emitido por: " + ex);
+            }
+        }
+
+        internal void GenerarBOleto(char first, string placaBus, string fecha, string hora, string precio)
+        {
+            Conexion con = new Conexion();
+            // Se llama a la clase  ConectorDeProcedimientos y se crea el objeto conector que permite realizar el procedimiento de inserta un nuevo cliente
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("InsertarRuta", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@idRuta", Convert.ToInt32(first)) ;
+                mySqlCommand.Parameters.AddWithValue("@placas", placaBus);
+                mySqlCommand.Parameters.AddWithValue("@fecha", Convert.ToDateTime(fecha));
+                mySqlCommand.Parameters.AddWithValue("@hora",hora);
+                mySqlCommand.Parameters.AddWithValue("@Precios", Convert.ToDouble(precio));
+                mySqlCommand.ExecuteReader();
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+
+                Console.WriteLine(ex);
             }
         }
 

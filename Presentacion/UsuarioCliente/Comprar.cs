@@ -29,6 +29,7 @@ namespace Presentacion
     /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Comprar : Form
     {
+        List<string> asientos = new List<string>();
         int idBusNuevo = 0;
         // Se llama al clase Validacion  y se crea el objeto validacion  para llamar a los metodos que contiene
         /// <summary>
@@ -264,6 +265,7 @@ namespace Presentacion
                 {
                     CambiarTextoCarrito();
                     LLenarInformacionBoletoCarro();
+                    asientos.Add(CbNumeroAsientos.Text);
                     VaciarCampos();
                 }
             }
@@ -288,7 +290,7 @@ namespace Presentacion
                 if (ValidarCarrito())
                 {
                     Pago.MNumeroboleto = Convert.ToInt32(CarritoBtn.Text);  
-                    Pagar pagar = new Pagar(boletos, idBusNuevo, cedula);
+                    Pagar pagar = new Pagar(boletos, idBusNuevo, cedula,asientos);
                     BuscarBus.Ventana_ventaBoletos.Hide();
                     pagar.ShowDialog();  
                 }

@@ -61,7 +61,6 @@ namespace Presentacion
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.Fecha_Sistema = new System.Windows.Forms.Label();
             this.BotonParaMinimizarVentana = new FontAwesome.Sharp.IconPictureBox();
-            this.BotonCierreDeAplicacion = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -73,7 +72,6 @@ namespace Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +128,7 @@ namespace Presentacion
             this.RutasFavoritas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RutasFavoritas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RutasFavoritas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.RutasFavoritas.IconChar = FontAwesome.Sharp.IconChar.Bus;
+            this.RutasFavoritas.IconChar = FontAwesome.Sharp.IconChar.TicketAlt;
             this.RutasFavoritas.IconColor = System.Drawing.Color.White;
             this.RutasFavoritas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.RutasFavoritas.IconSize = 40;
@@ -139,7 +137,7 @@ namespace Presentacion
             this.RutasFavoritas.Name = "RutasFavoritas";
             this.RutasFavoritas.Size = new System.Drawing.Size(205, 55);
             this.RutasFavoritas.TabIndex = 5;
-            this.RutasFavoritas.Text = "Horario de recorrido";
+            this.RutasFavoritas.Text = "Generar boleto";
             this.RutasFavoritas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RutasFavoritas.UseVisualStyleBackColor = false;
             this.RutasFavoritas.Click += new System.EventHandler(this.RutasFavoritas_Click);
@@ -153,7 +151,7 @@ namespace Presentacion
             this.History.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.History.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.History.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(246)))), ((int)(((byte)(249)))));
-            this.History.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.History.IconChar = FontAwesome.Sharp.IconChar.Bus;
             this.History.IconColor = System.Drawing.Color.White;
             this.History.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.History.IconSize = 40;
@@ -162,7 +160,7 @@ namespace Presentacion
             this.History.Name = "History";
             this.History.Size = new System.Drawing.Size(205, 55);
             this.History.TabIndex = 4;
-            this.History.Text = "Historial de rutas";
+            this.History.Text = "Agregar Bus";
             this.History.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.History.UseVisualStyleBackColor = false;
             this.History.Click += new System.EventHandler(this.History_Click);
@@ -237,6 +235,7 @@ namespace Presentacion
             // 
             // guna2CirclePictureBox1
             // 
+            this.guna2CirclePictureBox1.Image = global::Presentacion.Properties.Resources.c82646ff36e2523350d01fff093938f6;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(55, 40);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
@@ -251,13 +250,13 @@ namespace Presentacion
             this.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.PanelSuperior.Controls.Add(this.Fecha_Sistema);
             this.PanelSuperior.Controls.Add(this.BotonParaMinimizarVentana);
-            this.PanelSuperior.Controls.Add(this.BotonCierreDeAplicacion);
             this.PanelSuperior.Cursor = System.Windows.Forms.Cursors.NoMove2D;
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
             this.PanelSuperior.Name = "PanelSuperior";
             this.PanelSuperior.Size = new System.Drawing.Size(923, 35);
             this.PanelSuperior.TabIndex = 32;
+            this.PanelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelSuperior_MouseMove);
             // 
             // Fecha_Sistema
             // 
@@ -281,27 +280,12 @@ namespace Presentacion
             this.BotonParaMinimizarVentana.IconColor = System.Drawing.Color.Yellow;
             this.BotonParaMinimizarVentana.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BotonParaMinimizarVentana.IconSize = 34;
-            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(846, 3);
+            this.BotonParaMinimizarVentana.Location = new System.Drawing.Point(885, 1);
             this.BotonParaMinimizarVentana.Name = "BotonParaMinimizarVentana";
             this.BotonParaMinimizarVentana.Size = new System.Drawing.Size(39, 34);
             this.BotonParaMinimizarVentana.TabIndex = 1;
             this.BotonParaMinimizarVentana.TabStop = false;
-            // 
-            // BotonCierreDeAplicacion
-            // 
-            this.BotonCierreDeAplicacion.BackColor = System.Drawing.Color.Transparent;
-            this.BotonCierreDeAplicacion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonCierreDeAplicacion.ForeColor = System.Drawing.Color.Yellow;
-            this.BotonCierreDeAplicacion.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.BotonCierreDeAplicacion.IconColor = System.Drawing.Color.Yellow;
-            this.BotonCierreDeAplicacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BotonCierreDeAplicacion.IconSize = 37;
-            this.BotonCierreDeAplicacion.Location = new System.Drawing.Point(861, 0);
-            this.BotonCierreDeAplicacion.Name = "BotonCierreDeAplicacion";
-            this.BotonCierreDeAplicacion.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.BotonCierreDeAplicacion.Size = new System.Drawing.Size(64, 37);
-            this.BotonCierreDeAplicacion.TabIndex = 0;
-            this.BotonCierreDeAplicacion.TabStop = false;
+            this.BotonParaMinimizarVentana.Click += new System.EventHandler(this.BotonParaMinimizarVentana_Click);
             // 
             // panel1
             // 
@@ -350,6 +334,7 @@ namespace Presentacion
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PanelContenedor
@@ -380,7 +365,6 @@ namespace Presentacion
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonParaMinimizarVentana)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonCierreDeAplicacion)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -410,10 +394,6 @@ namespace Presentacion
         /// The boton para minimizar ventana
         /// </summary>
         private FontAwesome.Sharp.IconPictureBox BotonParaMinimizarVentana;
-        /// <summary>
-        /// The boton cierre de aplicacion
-        /// </summary>
-        private FontAwesome.Sharp.IconPictureBox BotonCierreDeAplicacion;
         /// <summary>
         /// The panel1
         /// </summary>

@@ -70,14 +70,13 @@ namespace LogicaDeNegocios
         {
             return boleto;
         }
-        public static bool pagarBoleto(int Id_bus, string Cedula_cliente)
+        public static bool pagarBoleto(int Id_bus, string Cedula_cliente, List<string> asientos)
         {
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             bool validacion = false;        
             try
             {
-                MessageBox.Show(Cedula_cliente);
                 MessageBoxButtons ob = MessageBoxButtons.YesNoCancel;
                 DialogResult obj = MessageBox.Show("Desea confirmar el pago","Titulo",ob, MessageBoxIcon.Question);
                 if (obj == DialogResult.Yes)
@@ -95,7 +94,6 @@ namespace LogicaDeNegocios
                         {         
                             if (x == num)
                             {
-                                MessageBox.Show(p.nombreConsumidor);
                                 mySqlCommand.Parameters.AddWithValue("@Nombre_comprador", p.nombreConsumidor);
                                 mySqlCommand.Parameters.AddWithValue("@cedula_Comprador", p.cedulaConsumidor);
                             }
@@ -109,6 +107,23 @@ namespace LogicaDeNegocios
                     MessageBox.Show("Se realizó el pago con éxito ");
                     validacion = true;
                 }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                Conexion cono = new Conexion();
+                foreach (string p in asientos)
+                {
+                    MySqlCommand mySqlCommand = conector.ConectarProcedimiento("InactivarAsientos", cono.conectar());
+                    mySqlCommand.Parameters.AddWithValue("@asiento", p);
+                    mySqlCommand.Parameters.AddWithValue("@Idboleto", Id_bus);
+                    mySqlCommand.ExecuteNonQuery();
+                }
+                
+                cono.cerrar();
             }
             catch (MySqlException ex)
             {

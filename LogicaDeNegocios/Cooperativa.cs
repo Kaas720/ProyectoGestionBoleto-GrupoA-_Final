@@ -128,10 +128,10 @@ namespace LogicaDeNegocios
             
         }
 
-        internal void GenerarBOleto(int first, string placaBus, string fecha, string hora, string precio)
+        internal bool GenerarBOleto(int first, string placaBus, string fecha, string hora, string precio)
         {
+            bool validar = true;
             Conexion con = new Conexion();
-            // Se llama a la clase  ConectorDeProcedimientos y se crea el objeto conector que permite realizar el procedimiento de inserta un nuevo cliente
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             try
             {
@@ -146,7 +146,7 @@ namespace LogicaDeNegocios
             }
             catch (MySqlException ex)
             {
-
+                validar = false;
                 Console.WriteLine(ex);
             }
             Conexion cone = new Conexion();
@@ -159,9 +159,10 @@ namespace LogicaDeNegocios
             }
             catch (MySqlException ex)
             {
-
+                validar = false;
                 Console.WriteLine(ex);
             }
+            return validar;
         }
 
         /// <summary>

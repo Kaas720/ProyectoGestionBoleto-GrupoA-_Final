@@ -13,17 +13,19 @@ namespace Presentacion.SGA_Cooperativa
 {
     public partial class GenerarBoleto : Form
     {
+        int idCooperativa;
         AdmCooperativa admCooperativa = new AdmCooperativa();
-        public GenerarBoleto()
+        public GenerarBoleto(int idCooperativa)
         {
             InitializeComponent();
-            admCooperativa.LLenarCombos(cbRuta,0);
+            this.idCooperativa = idCooperativa;
+            admCooperativa.LLenarCombos(idCooperativa,cbRuta, 0);
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            if (cbBus.Text=="")
+            if (cbBus.Text==""||cbRuta.Text=="")
             {
-                MessageBox.Show("Por favor llenar todos los campos");
+                MessageBox.Show("Por favor ingresar datos validos");
             }
             else
             {
@@ -31,7 +33,18 @@ namespace Presentacion.SGA_Cooperativa
                 char first = x.FirstOrDefault();
                 string numero = first.ToString();
                 int xx = Convert.ToInt32(numero);
-                admCooperativa.GenerarBoleto(xx, cbBus.Text, FechaSalida.Text, HoraSalida.Text, Precio.Text);
+                try
+                {
+                  admCooperativa.GenerarBoleto(xx, cbBus.Text, FechaSalida.Text, HoraSalida.Text, Precio.Text);
+                    MessageBox.Show("Boleto generado con exito");
+                    Precio.Text = null;
+                    cbBus.Text = null;
+                }
+                catch (ControlExcepcion ex)
+                {
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             
         }
@@ -48,7 +61,7 @@ namespace Presentacion.SGA_Cooperativa
             char first = x.FirstOrDefault();
             string numero = first.ToString();
             int xx = Convert.ToInt32(numero);
-            admCooperativa.LLenarCombos(cbBus,xx);
+            admCooperativa.LLenarCombos(idCooperativa,cbBus, xx);
         }
     }
 }

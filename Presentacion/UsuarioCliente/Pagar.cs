@@ -35,6 +35,7 @@ namespace Presentacion.UsuarioCliente
     {
         int idBusNuevo;
         string cedula;
+        List<string> asientos = new List<string>();
         AdmPago admpago = new AdmPago();
         Pago p = new Pago();
         /// <summary>
@@ -44,7 +45,7 @@ namespace Presentacion.UsuarioCliente
         /// <param name="cooperativa">The cooperativa.</param>
         /// <param name="fechaSalida">The fecha salida.</param>
         /// <param name="horaSalida">The hora salida.</param>
-        public Pagar(string texto, int idBusNuevo, string cedula)
+        public Pagar(string texto, int idBusNuevo, string cedula, List<string> asientos)
         {
             InitializeComponent();
             AdmPago ap = new AdmPago();
@@ -52,6 +53,7 @@ namespace Presentacion.UsuarioCliente
             InfBoleto.Text += texto;
             this.idBusNuevo = idBusNuevo;
             this.cedula = cedula;
+            this.asientos = asientos;
         }
         /// <summary>
         /// Releases the capture.
@@ -95,7 +97,7 @@ namespace Presentacion.UsuarioCliente
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            if (Pago.pagarBoleto(idBusNuevo, cedula))
+            if (Pago.pagarBoleto(idBusNuevo, cedula,asientos))
             {
                 btnPagar.Visible = false;
                 InfBoleto.Text = null;

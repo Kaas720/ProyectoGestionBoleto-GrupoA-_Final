@@ -72,15 +72,18 @@ namespace LogicaDeNegocios
             }
         }
 
-        public void LLenarCombos(Guna2ComboBox combo,int x)
+        public void LLenarCombos(int idCoop,Guna2ComboBox combo,int x)
         {
             
-            procedimientos.LLenarCombos(1, combo,x);
+            procedimientos.LLenarCombos(idCoop, combo,x);
         }
 
         public void GenerarBoleto(int first, string PlacaBus, string fecha, string hora, string precio)
         {
-            procedimientos.GenerarBOleto(first, PlacaBus, fecha, hora, precio);
+            if(!procedimientos.GenerarBOleto(first, PlacaBus, fecha, hora, precio))
+            {
+                throw new ControlExcepcion("Error al generar boleto");
+            }
         }
     }
 }

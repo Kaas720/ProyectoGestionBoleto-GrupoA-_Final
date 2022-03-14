@@ -39,7 +39,7 @@ namespace Presentacion.SGA_Administrador
             this.CedulaCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CorreoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar_Cliente = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.BtnConsultar = new FontAwesome.Sharp.IconPictureBox();
             this.TxtChofer = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -94,7 +94,7 @@ namespace Presentacion.SGA_Administrador
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(191)))), ((int)(((byte)(207)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(12)))), ((int)(((byte)(14)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -172,6 +172,8 @@ namespace Presentacion.SGA_Administrador
             this.Editar.HeaderText = "Editar";
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // BtnConsultar
             // 
@@ -220,7 +222,7 @@ namespace Presentacion.SGA_Administrador
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Cédula:";
             // 
-            // EliminarChofer
+            // ConsultarChofer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +230,7 @@ namespace Presentacion.SGA_Administrador
             this.ClientSize = new System.Drawing.Size(713, 389);
             this.Controls.Add(this.guna2GroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "EliminarChofer";
+            this.Name = "ConsultarChofer";
             this.Text = "EliminarChofer";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
@@ -249,6 +251,6 @@ namespace Presentacion.SGA_Administrador
         private System.Windows.Forms.DataGridViewTextBoxColumn CedulaCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn CorreoCliente;
         private System.Windows.Forms.DataGridViewButtonColumn Eliminar_Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
     }
 }

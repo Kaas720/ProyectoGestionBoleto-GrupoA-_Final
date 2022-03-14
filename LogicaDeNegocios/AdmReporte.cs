@@ -13,7 +13,7 @@ namespace LogicaDeNegocios
     {
         public bool LlenarDatagridReporte(Guna2DataGridView dataGridReporte, int idConsulta,string dato)
         {
-            DateTime tiempo = new DateTime(2008, 5, 1);
+            DateTime tiempo = new DateTime(2022, 03, 13);
             Conexion con = new Conexion();
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             string consulta = "";

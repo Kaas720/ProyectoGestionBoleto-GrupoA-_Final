@@ -50,10 +50,10 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="busId">The bus identifier.</param>
         /// <param name="cbNumeroAsientos">The cb numero asientos.</param>
-        public void LlenarComboAsientos(int busId, ComboBox cbNumeroAsientos)
+        public void LlenarComboAsientos(int busId, ComboBox cbNumeroAsientos,int BoletoID)
         {
             // Se crea una lista string llamada  NumeroAsiento en la que se almacenara los numeros de asientos de un bus en particular.
-            List<string> NumeroAsiento = procedimientos.BuscarNumerosAsientos(busId);
+            List<string> NumeroAsiento = procedimientos.BuscarNumerosAsientos(busId, BoletoID);
             if (NumeroAsiento.Count != 0)
             {
                 foreach (string asiento in NumeroAsiento)

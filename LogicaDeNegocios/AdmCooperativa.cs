@@ -72,12 +72,13 @@ namespace LogicaDeNegocios
             }
         }
 
-        public void LLenarCombos(Guna2ComboBox cbRuta)
+        public void LLenarCombos(Guna2ComboBox combo,int x)
         {
-            procedimientos.LLenarCombos(1,cbRuta);
+            
+            procedimientos.LLenarCombos(1, combo,x);
         }
 
-        public void GenerarBoleto(char first, string PlacaBus, string fecha, string hora, string precio)
+        public void GenerarBoleto(int first, string PlacaBus, string fecha, string hora, string precio)
         {
             procedimientos.GenerarBOleto(first, PlacaBus, fecha, hora, precio);
         }

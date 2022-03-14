@@ -17,19 +17,38 @@ namespace Presentacion.SGA_Cooperativa
         public GenerarBoleto()
         {
             InitializeComponent();
-            admCooperativa.LLenarCombos(cbRuta);
+            admCooperativa.LLenarCombos(cbRuta,0);
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            string x = cbRuta.Text;
-            char first = x.FirstOrDefault();
-            MessageBox.Show(FechaSalida.Text);
-            admCooperativa.GenerarBoleto(first,cbBus.Text,FechaSalida.Text,HoraSalida.Text,Precio.Text);
+            if (cbBus.Text=="")
+            {
+                MessageBox.Show("Por favor llenar todos los campos");
+            }
+            else
+            {
+                string x = cbRuta.Text;
+                char first = x.FirstOrDefault();
+                string numero = first.ToString();
+                int xx = Convert.ToInt32(numero);
+                admCooperativa.GenerarBoleto(xx, cbBus.Text, FechaSalida.Text, HoraSalida.Text, Precio.Text);
+            }
+            
         }
 
         private void cbBus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbRuta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbBus.Items.Clear();
+            string x = cbRuta.Text;
+            char first = x.FirstOrDefault();
+            string numero = first.ToString();
+            int xx = Convert.ToInt32(numero);
+            admCooperativa.LLenarCombos(cbBus,xx);
         }
     }
 }

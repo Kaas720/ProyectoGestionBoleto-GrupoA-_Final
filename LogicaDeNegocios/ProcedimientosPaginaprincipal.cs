@@ -85,13 +85,14 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="busId">The bus identifier.</param>
         /// <returns>List&lt;System.String&gt;.</returns>
-        public List<string> BuscarNumerosAsientos(int busId)
+        public List<string> BuscarNumerosAsientos(int busId, int BoletoID)
         {
             List<string> asientos = new List<string>();
             try
             {
                 MySqlCommand mySqlCommand = ConectarProcedimiento("BuscarAsientos");
                 mySqlCommand.Parameters.AddWithValue("@idBus", busId);
+                mySqlCommand.Parameters.AddWithValue("@BoletoID", BoletoID);
                 MySqlDataReader lector = mySqlCommand.ExecuteReader();
                 while (lector.Read())
                 {

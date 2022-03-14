@@ -248,6 +248,7 @@ namespace Presentacion.SGA_Cooperativa
             this.cbRuta.Name = "cbRuta";
             this.cbRuta.Size = new System.Drawing.Size(234, 36);
             this.cbRuta.TabIndex = 0;
+            this.cbRuta.SelectedIndexChanged += new System.EventHandler(this.cbRuta_SelectedIndexChanged);
             // 
             // GenerarBoleto
             // 

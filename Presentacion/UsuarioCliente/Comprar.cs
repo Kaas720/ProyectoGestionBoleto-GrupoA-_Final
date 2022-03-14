@@ -105,6 +105,7 @@ namespace Presentacion
             /// Se utiliza el bucle foreach para realizar la agregacion de los datos que poseee un boleto y el usuario pueda completar con sus datos para posterior a ello almacenadas dentro de la base de datos
             foreach (Ruta item in generarInformacionBoleto)
             {
+                
                 idBusNuevo = item.BoletoID;
                 TxtCooperativa.Text = item.Cooperativa;
                 TxtDestino.Text = item.Lugardestino;
@@ -113,7 +114,7 @@ namespace Presentacion
                 TxtLugarSalida.Text = item.LugarSalida;
                 TxtNDisco.Text = item.Numerodico;
                 TxtPrecio.Text = item.Precio;
-                consultasProcedemientos.LlenarComboAsientos(item.BusId,CbNumeroAsientos);
+                consultasProcedemientos.LlenarComboAsientos(item.BusId,CbNumeroAsientos, idBusNuevo);
             }
             
         }

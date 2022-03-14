@@ -76,52 +76,59 @@ namespace LogicaDeNegocios
         /// <value>The nombre cooperativa.</value>
         public string NombreCooperativa { get => nombreCooperativa; set => nombreCooperativa = value; }
 
-        internal void LLenarCombos(int idCooperativa, Guna2ComboBox cbRuta)
+        internal void LLenarCombos(int idCooperativa, Guna2ComboBox combo,int x)
         {
-           //Conexion con = new Conexion();
-            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();/*
-            try
+           Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            if (x != 0)
             {
-                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_Buscarbus", con.conectar());
-                mySqlCommand.Parameters.AddWithValue("@idCooperativa", idCooperativa);
-                MySqlDataReader lector = mySqlCommand.ExecuteReader();
-                int x=0;
-                while (lector.Read())
+                Console.WriteLine("KKKKK"+x);
+                try
                 {
-                    x++;
-                    string anexar = lector["Placa"].ToString();
-                    cbBus.Items.Add(anexar);
-                    ;
-                    ; 
+                    Console.WriteLine(idCooperativa + "" + x);
+                    MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_Buscarbus", con.conectar());
+                    mySqlCommand.Parameters.AddWithValue("@idCooperativa", idCooperativa);
+                    mySqlCommand.Parameters.AddWithValue("@idRuta", x);
+                    MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                    while (lector.Read())
+                    {
+                        Console.WriteLine("jjjjjjjjjjjjjjjjjjjjjjjj");
+                        string anexar = lector["Placa"].ToString();
+                        combo.Items.Add(anexar);
+                        ;
+                        ;
+                    }
+                    con.cerrar();
                 }
-                con.cerrar();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("Error emitido por: " + ex);
-            }*/
-            Conexion cone = new Conexion();
-            try
-            {
-                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarRutA", cone.conectar());
-                mySqlCommand.Parameters.AddWithValue("@idCooperativa", idCooperativa);
-                MySqlDataReader lector = mySqlCommand.ExecuteReader();
-                while (lector.Read())
+                catch (MySqlException ex)
                 {
-                    string anexar = lector["idRuta"].ToString()+")  De: "+ lector["Salida"].ToString()+ "  A: "+ lector["Destino"].ToString();;
-                    cbRuta.Items.Add(anexar);
-                    ;
-                    ;
+                    Console.WriteLine("Error emitido por: " + ex);
                 }
-                cone.cerrar();
             }
-            catch (MySqlException ex)
+            else
             {
-                Console.WriteLine("Error emitido por: " + ex);
+                try
+                {
+                    MySqlCommand mySqlCommand = conector.ConectarProcedimiento("spl_BuscarRutA", con.conectar());
+                    mySqlCommand.Parameters.AddWithValue("@idCooperativa", idCooperativa);
+                    MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                    while (lector.Read())
+                    {
+                        string anexar = lector["idRuta"].ToString() + ")  De: " + lector["Salida"].ToString() + "  A: " + lector["Destino"].ToString(); ;
+                        combo.Items.Add(anexar);
+                    }
+                    con.cerrar();
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine("Error emitido por: " + ex);
+                }
             }
+            
+            
         }
 
-        internal void GenerarBOleto(char first, string placaBus, string fecha, string hora, string precio)
+        internal void GenerarBOleto(int first, string placaBus, string fecha, string hora, string precio)
         {
             Conexion con = new Conexion();
             // Se llama a la clase  ConectorDeProcedimientos y se crea el objeto conector que permite realizar el procedimiento de inserta un nuevo cliente
@@ -129,13 +136,26 @@ namespace LogicaDeNegocios
             try
             {
                 MySqlCommand mySqlCommand = conector.ConectarProcedimiento("InsertarRuta", con.conectar());
-                mySqlCommand.Parameters.AddWithValue("@idRuta", Convert.ToInt32(first)) ;
+                mySqlCommand.Parameters.AddWithValue("@idRuta", first) ;
                 mySqlCommand.Parameters.AddWithValue("@placas", placaBus);
                 mySqlCommand.Parameters.AddWithValue("@fecha", Convert.ToDateTime(fecha));
                 mySqlCommand.Parameters.AddWithValue("@hora",hora);
                 mySqlCommand.Parameters.AddWithValue("@Precios", Convert.ToDouble(precio));
                 mySqlCommand.ExecuteReader();
                 con.cerrar();
+            }
+            catch (MySqlException ex)
+            {
+
+                Console.WriteLine(ex);
+            }
+            Conexion cone = new Conexion();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("IngresarAsientos", cone.conectar());
+                mySqlCommand.Parameters.AddWithValue("@placas", placaBus);
+                mySqlCommand.ExecuteReader();
+                cone.cerrar();
             }
             catch (MySqlException ex)
             {

@@ -85,5 +85,20 @@ namespace LogicaDeNegocios
                 throw new ControlExcepcion("Error al generar boleto");
             }
         }
+
+        public List<string> ConsultarCooperativa(string v)
+        {
+            List<string> lista = new List<string>();
+            if (v=="")
+            {
+
+            }
+            else
+            {
+                if (v == "Inicio") v = "";
+                lista = Cooperativa.buscarCoop(v);
+            }
+            return lista;
+        }
     }
 }

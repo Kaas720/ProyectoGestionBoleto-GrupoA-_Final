@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogicaDeNegocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,20 @@ namespace Presentacion.SGA_Administrador
 {
     public partial class ConsultarCooperativa : Form
     {
+        AdmCooperativa admCooperatica = new AdmCooperativa();
         public ConsultarCooperativa()
         {
             InitializeComponent();
+            List<string> lista = admCooperatica.ConsultarCooperativa("Inicio");
+            LlenarDataGrid(lista);
+        }
+
+        private void LlenarDataGrid(List<string> lista)
+        {
+            foreach (string x in lista)
+            {
+                
+            }
         }
     }
 }

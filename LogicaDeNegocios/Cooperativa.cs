@@ -128,6 +128,31 @@ namespace LogicaDeNegocios
             
         }
 
+        internal static List<string> buscarCoop(string v)
+        {
+            List<string> lista = new List<string>();
+            Conexion con = new Conexion();
+            ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
+            try
+            {
+                MySqlCommand mySqlCommand = conector.ConectarProcedimiento("BuscarCoop", con.conectar());
+                mySqlCommand.Parameters.AddWithValue("@Dato", v);
+                MySqlDataReader lector = mySqlCommand.ExecuteReader();
+                while (lector.Read())
+                {
+                    lista.Add(lector["id"].ToString());
+                    lista.Add(lector["cooperativa"].ToString());
+                    lista.Add(lector["Nombre"].ToString());
+                }
+                con.cerrar();
+            }
+            catch (MySqlException ex)
+            {            
+                Console.WriteLine(ex);
+            }
+            return lista;
+        }
+
         internal bool GenerarBOleto(int first, string placaBus, string fecha, string hora, string precio)
         {
             bool validar = true;

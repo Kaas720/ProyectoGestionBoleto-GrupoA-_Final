@@ -26,15 +26,9 @@ namespace Presentacion
     public partial class RegistroAdministrador : Form
     {
         /// <summary>
-        /// The cedula
-        /// </summary>
-        private string cedula;
-        // Se llama al clase  RegistroClienteProcedimiento y se crea el objeto registroClienteProcedimiento para llamar a los metodos que contiene
-        /// <summary>
         /// The registro
         /// </summary>
         AdmAdministrador registro = new AdmAdministrador();
-
         /// <summary>
         /// Releases the capture.
         /// </summary>

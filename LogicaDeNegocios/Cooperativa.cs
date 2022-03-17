@@ -225,11 +225,8 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <param name="cooperativa">The cooperativa.</param>
         public void InsertarCooperativa(Cooperativa cooperativa)
-        { //spl_insertarCooperativa
-
-            // Se llama a la clase conexion para hacer la conexion con la base de dados
+        {
             Conexion con = new Conexion();
-            // Se llama a la clase  ConectorDeProcedimientos y se crea el objeto conector que permite realizar el procedimiento de inserta un nuevo cliente
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             try
             {

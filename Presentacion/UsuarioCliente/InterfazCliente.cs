@@ -63,13 +63,13 @@ namespace Presentacion
             InitializeComponent();
             InicializarPanelConFromRutas();
         }
-
+        string cedula;
         /// <summary>
         /// Inicializars the panel con from rutas.
         /// </summary>
         private void InicializarPanelConFromRutas()
         {
-            string cedula = ProcedimientosPaginaprincipal.getCedula();
+            cedula = ProcedimientosPaginaprincipal.getCedula();
             BuscarBus Frm = new BuscarBus(cedula);
             Frm.TopLevel = false;
             PanelContenedor.Controls.Add(Frm);
@@ -99,7 +99,6 @@ namespace Presentacion
             iconButton.ForeColor = colorBotoneOriginal;
             iconButton.BackColor = Color.FromArgb(66, 121, 158);
         }
-
         /// <summary>
         /// Handles the Tick event of the timer1 control.
         /// </summary>
@@ -125,7 +124,6 @@ namespace Presentacion
             }        
             
         }
-
         /// <summary>
         /// Handles the Click event of the Home control.
         /// </summary>
@@ -133,8 +131,13 @@ namespace Presentacion
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Home_Click(object sender, EventArgs e)
         {
+            this.PanelContenedor.Controls.Clear();
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
+            BuscarBus Frm = new BuscarBus(cedula);
+            Frm.TopLevel = false;
+            PanelContenedor.Controls.Add(Frm);
+            Frm.Show();
         }
 
         /// <summary>
@@ -164,6 +167,10 @@ namespace Presentacion
         {
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
+            BuscarBus Frm = new BuscarBus(cedula);
+            Frm.TopLevel = false;
+            PanelContenedor.Controls.Add(Frm);
+            Frm.Show();
         }
 
         /// <summary>

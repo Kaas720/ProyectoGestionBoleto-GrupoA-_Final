@@ -40,22 +40,6 @@ namespace LogicaDeNegocios
         {
             this.cooperativa = cooperativa;
         }
-
-
-
-
-        /*public Pago(string cooperativa, string destino, string fechaSalida, string horaSalida, string lugarSalida, string numeroDisco, double precios)
-        {
-            this.cooperativa = cooperativa;
-            this.destino = destino;
-            this.fechaSalida = fechaSalida;
-            this.horaSalida = horaSalida;
-            this.LugarSalida = lugarSalida;
-            this.numeroDisco = numeroDisco;
-            this.precios = precios;
-
-        }
-        */
         public static List<string> getBoleto()
         {
             return boleto;

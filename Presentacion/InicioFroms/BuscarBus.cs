@@ -97,7 +97,7 @@ namespace Presentacion.InicioFroms
                         string horario_salida = DataGridInf.Rows[x].Cells[2].Value.ToString();
                         Ventana_ventaBoletos = new Comprar(cooperativa, fecha_salida, horario_salida,cedula);
                         Program.principal.Hide();
-                        Ventana_ventaBoletos.Show();
+                        Ventana_ventaBoletos.ShowDialog();
                     }
                 }
                 catch (ControlExcepcion ex)

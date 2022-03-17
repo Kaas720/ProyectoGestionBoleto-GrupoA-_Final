@@ -155,7 +155,6 @@ namespace Presentacion
             Frm.Show();
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
-
         }
 
         /// <summary>

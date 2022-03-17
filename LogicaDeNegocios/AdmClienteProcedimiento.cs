@@ -13,7 +13,6 @@
 // ***********************************************************************
 using System;
 using System.Collections.Generic;
-using Guna.UI2.WinForms;
 namespace LogicaDeNegocios
 {
     /// <summary>
@@ -53,7 +52,7 @@ namespace LogicaDeNegocios
         /// <summary>
         /// Consultars the cliente.
         /// </summary>
-        /// <param name="cedula">The cedula.</param>
+        /// <param name="Dato">The cedula.</param>
         /// <exception cref="LogicaDeNegocios.ControlExcepcion">Cliente no registrado</exception>
        public List<Cliente> ConsultarCliente(string Dato )
         {

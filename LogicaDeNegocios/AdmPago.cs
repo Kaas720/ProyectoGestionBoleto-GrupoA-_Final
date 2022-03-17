@@ -1,14 +1,15 @@
-﻿using Guna.UI2.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
    public class AdmPago
     {
+        /// <summary>
+        /// Se realiza el medodo para obtener el total a pagar
+        /// </summary>
+        /// <param name="precio"></param>
+        /// <returns></returns>
         public double calcularTotalPagar(List<double> precio)
         {
             double totalPagar = 0;

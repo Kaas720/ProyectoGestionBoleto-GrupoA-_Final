@@ -38,6 +38,8 @@ namespace LogicaDeNegocios
         /// <param name="nombre">The nombre.</param>
         /// <param name="sexo">The sexo.</param>
         /// <param name="telefono">The telefono.</param>
+        /// <param name="codigoAcceso">The telefono.</param>
+        /// <param name="sueldo">The telefono.</param>
         /// <param name="credencialUsuario">The credencial usuario.</param>
         public Administrador(string cedula, string nombre, string sexo, string telefono, string codigoAcceso, double sueldo, CredencialUsuario credencialUsuario)
             :base(cedula, nombre, sexo, telefono)

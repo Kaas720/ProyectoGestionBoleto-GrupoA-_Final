@@ -75,6 +75,7 @@ namespace LogicaDeNegocios
         /// <summary>
         /// Modificars the specified cedula.
         /// </summary>
+        /// <param name="cedula">The telefono.</param>
         /// <param name="telefono">The telefono.</param>
         /// <param name="correo">The correo.</param>
         /// <param name="contrasena">The contrasena.</param>

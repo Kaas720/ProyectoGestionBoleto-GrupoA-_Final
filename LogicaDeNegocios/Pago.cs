@@ -1,23 +1,13 @@
 ﻿using Datos;
 using MySqlConnector;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Guna.UI2.WinForms;
 using System.Windows.Forms;
 
 namespace LogicaDeNegocios
 {
     public class Pago
     {
-        //public List<Object> boletos = new List<Object>();
-        //public Pago(Object c)
-        //{
-
-        //}
         public  static int MNumeroboleto;
         private string nombreConsumidor;
         private string cedulaConsumidor;

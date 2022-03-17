@@ -64,9 +64,9 @@ namespace LogicaDeNegocios
         /// <param name="client">The client.</param>
         public void InsertarCliente(Cliente client)
             {
-                // Se llama a la clase conexion para hacer la conexion con la base de dados
+               
                 Conexion con = new Conexion();
-                // Se llama a la clase  ConectorDeProcedimientos y se crea el objeto conector que permite realizar el procedimiento de inserta un nuevo cliente
+                /// Se llama a la clase  ConectorDeProcedimientos y se crea el objeto conector que permite realizar el procedimiento de inserta un nuevo cliente
                 ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
                 try
                 {
@@ -114,7 +114,6 @@ namespace LogicaDeNegocios
             return x;
         }
 
-        //public static Cliente BuscarClientePorId(String cedula)
         /// <summary>
         /// Buscars the cliente.
         /// </summary>

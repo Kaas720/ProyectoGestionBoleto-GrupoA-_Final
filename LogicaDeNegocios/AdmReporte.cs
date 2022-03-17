@@ -2,15 +2,21 @@
 using Guna.UI2.WinForms;
 using MySqlConnector;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
+    /// <summary>
+    /// Class reporte
+    /// </summary>
     public class AdmReporte
     {
+        /// <summary>
+        /// Metodo para realizar re´porte
+        /// </summary>
+        /// <param name="dataGridReporte"></param>
+        /// <param name="idConsulta"></param>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         public bool LlenarDatagridReporte(Guna2DataGridView dataGridReporte, int idConsulta,string dato)
         {
             DateTime tiempo = new DateTime(2022, 03, 13);

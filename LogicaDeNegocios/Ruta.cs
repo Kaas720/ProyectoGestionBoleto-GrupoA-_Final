@@ -133,14 +133,15 @@ namespace LogicaDeNegocios
         public int BusId { get => busId; set => busId = value; }
         public string Asiento { get => asiento; set => asiento = value; }
         public int BoletoID { get => boletoID; set => boletoID = value; }
-
-        // public string Cooperativa { get => cooperativa; set => cooperativa = value; }
         Bus bus = new Bus();
+        /// <summary>
+        /// Para insertar nueva ruta
+        /// </summary>
+        /// <param name="ruta"></param>
         public void InsertarRuta(Ruta ruta)
         {
-            // Se llama a la clase conexion para hacer la conexion con la base de dados
             Conexion con = new Conexion();
-            // Se llama a la clase  ConectorDeProcedimientos y se crea el objeto conector que permite realizar el procedimiento de inserta un nuevo cliente
+            /// Se llama a la clase  ConectorDeProcedimientos y se crea el objeto conector que permite realizar el procedimiento de inserta un nuevo cliente
             ConectorDeProcedimientos conector = new ConectorDeProcedimientos();
             try
             {

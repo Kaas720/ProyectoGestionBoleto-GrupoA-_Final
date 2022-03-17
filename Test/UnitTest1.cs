@@ -144,14 +144,9 @@ namespace Test
             var resultadoObtenido = true;
             Assert.AreEqual(resultadoEsperado, resultadoObtenido);
         }
-
-        /* [TestMethod]
-         public void PruebaInicioSeccion()
-         {
-             ConsultasProcedimientos consultasProcedimientos = new ConsultasProcedimientos();
-             int result = consultasProcedimientos.Login("Kaas7520@hotmail.com", "1234");
-             Assert.AreEqual(0, result);
-         }*/
+        /// <summary>
+        /// PruebaValidacionCedula
+        /// </summary>
         [TestMethod]
         public void PruebaValidacionCedula()
         {
@@ -159,6 +154,9 @@ namespace Test
             bool result = validacion.ValidarCedula("0302527742");
             Assert.AreEqual(true, result);
         }
+        /// <summary>
+        /// Validacion de telefono
+        /// </summary>
         [TestMethod]
         public void PruebaValidacionTelefono()
         {
@@ -166,6 +164,9 @@ namespace Test
             bool result = validacion.ValidarTelefono("0991887965");
             Assert.AreEqual(true, result);
         }
+        /// <summary>
+        /// Validacion de correo
+        /// </summary>
         [TestMethod]
         public void PruebaValidacioCorreo()
         {

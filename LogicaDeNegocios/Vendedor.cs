@@ -128,6 +128,11 @@ namespace LogicaDeNegocios
             }
             return mensaje;
         }
+        /// <summary>
+        /// Buscar vendedor
+        /// </summary>
+        /// <param name="datoVendedor"></param>
+        /// <returns></returns>
         internal List<Vendedor> BuscarVendedor(string datoVendedor)
         {
             Conexion con = new Conexion();
@@ -154,7 +159,11 @@ namespace LogicaDeNegocios
             }
             return ListVendedor;
         }
-
+        /// <summary>
+        /// Eliminar vendedor
+        /// </summary>
+        /// <param name="cedulaNombre"></param>
+        /// <returns></returns>
         internal static bool EliminarVendedor(string cedulaNombre)
         {
 

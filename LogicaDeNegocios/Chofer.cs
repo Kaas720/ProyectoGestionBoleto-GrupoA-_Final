@@ -97,7 +97,11 @@ namespace LogicaDeNegocios
             }
             return ListChofer;
         }
-
+        /// <summary>
+        /// Eliminar cedula
+        /// </summary>
+        /// <param name="cedula"></param>
+        /// <returns></returns>
         internal static bool EliminarChofer(string cedula)
         {
             bool x = false;

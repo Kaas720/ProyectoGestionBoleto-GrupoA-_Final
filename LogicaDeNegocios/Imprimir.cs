@@ -8,9 +8,15 @@ using System.Threading;
 using System.Windows.Forms;
 
 namespace LogicaDeNegocios
-{
+{/// <summary>
+/// Class imprimir
+/// </summary>
     public class Imprimir
     {
+        /// <summary>
+        /// Metodo para imprimir
+        /// </summary>
+        /// <param name="ruta"></param>
 public void printPDFWithAcrobat(string ruta)
     {
         string Filepath = ruta;

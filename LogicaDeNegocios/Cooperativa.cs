@@ -16,9 +16,6 @@ using Guna.UI2.WinForms;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogicaDeNegocios
 {
@@ -75,7 +72,12 @@ namespace LogicaDeNegocios
         /// </summary>
         /// <value>The nombre cooperativa.</value>
         public string NombreCooperativa { get => nombreCooperativa; set => nombreCooperativa = value; }
-
+        /// <summary>
+        /// llenea los combos para agregar boletos
+        /// </summary>
+        /// <param name="idCooperativa"></param>
+        /// <param name="combo"></param>
+        /// <param name="x"></param>
         internal void LLenarCombos(int idCooperativa, Guna2ComboBox combo,int x)
         {
            Conexion con = new Conexion();
@@ -127,7 +129,11 @@ namespace LogicaDeNegocios
             
             
         }
-
+        /// <summary>
+        /// Busca la cooperativa
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
         internal static List<string> buscarCoop(string v)
         {
             List<string> lista = new List<string>();
@@ -152,7 +158,15 @@ namespace LogicaDeNegocios
             }
             return lista;
         }
-
+        /// <summary>
+        /// Metodo generar boleto
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="placaBus"></param>
+        /// <param name="fecha"></param>
+        /// <param name="hora"></param>
+        /// <param name="precio"></param>
+        /// <returns></returns>
         internal bool GenerarBOleto(int first, string placaBus, string fecha, string hora, string precio)
         {
             bool validar = true;

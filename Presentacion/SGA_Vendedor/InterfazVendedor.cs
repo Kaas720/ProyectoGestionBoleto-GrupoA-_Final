@@ -21,9 +21,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion
@@ -69,6 +66,7 @@ namespace Presentacion
         /// </summary>
         private void InicializarPanelConFromRutas()
         {
+            this.PanelContenedor.Controls.Clear();
             BuscarBus Frm = new BuscarBus("");
             Frm.TopLevel = false;
             PanelContenedor.Controls.Add(Frm);
@@ -132,6 +130,11 @@ namespace Presentacion
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Home_Click(object sender, EventArgs e)
         {
+            this.PanelContenedor.Controls.Clear();
+            BuscarBus Frm = new BuscarBus("");
+            Frm.TopLevel = false;
+            PanelContenedor.Controls.Add(Frm);
+            Frm.Show();
             RestablecerColorOriginalBotones();
             GenerarNuevoColorBoton(sender);
         }

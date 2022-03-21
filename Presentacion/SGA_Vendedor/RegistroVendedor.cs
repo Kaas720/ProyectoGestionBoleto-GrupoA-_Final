@@ -82,7 +82,7 @@ namespace Presentacion
                    adm.RegistrarVendedor(vendedor);
                     MessageBox.Show("Registro de vendedor realizado con éxito");
                     Limpiar();
-                    this.Hide();
+                    //this.Hide();
                    // InterfazCliente interfazCliente= new InterfazCliente();
                     //interfazCliente.Show();
                 }

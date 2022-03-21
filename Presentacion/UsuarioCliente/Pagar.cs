@@ -143,7 +143,7 @@ namespace Presentacion.UsuarioCliente
             }
             paginaHtml_text = paginaHtml_text.Replace("@Filax", lista[0]);
             paginaHtml_text = paginaHtml_text.Replace("@Total", lista[1]);
-            string ruta = @"C:\Users\Kevin Arevalo\Videos\Captures\BoletoGenerado"+".pdf";
+            string ruta = @"C:\Users\sergi\Documents\6TO SEMESTRE\Construccion de software\AcrobatXIPortable" + ".pdf";
                 using (FileStream stream = new FileStream(ruta, FileMode.Create))
                 {
                     Document pdfDocument = new Document(PageSize.A4, 20, 20, 20, 20);
